@@ -1,0 +1,94 @@
+<template>
+    <template if:true={showDetails}>
+        <template if:false={isCarousel}>
+            <div class="m40-bottom">
+                <h2 class="headerCSS slds-align_absolute-center">
+                    <b>{header}</b>
+                </h2>
+                <p class="slds-align_absolute-center headerDescriptionCSS">{headerDescription}</p>
+            </div>
+            <template if:true={isShopByCategory}>
+                <div class="slds-grid slds-wrap" style="padding-bottom:40px">
+                    <template for:each={imageDetails} for:item="objImage">
+                        <div class={imageSizeCss} key={objImage.Id}>
+                            <a href={objImage.NavigationURL__c} target={objImage.TargetForURL__c}>
+                                <img src={objImage.ImageURL__c} alt={objImage.ButtonLabel__c} 
+                                    style="cursor:pointer; display:block; margin-left:auto; margin-right:auto;"
+                                    class="setSize">
+                                <p class="imageDescriptionCSS">{objImage.ImageDescription__c}</p>
+                                <p class="categoryButtonCSS">{objImage.ButtonLabel__c}</p>
+                            </a>
+                        </div>
+                    </template>
+                </div>
+            </template>
+            <template if:true={isBioMaterial}>
+                <div class='slds-grid slds-gutters slds-grid_align-center slds-wrap'> 
+                    <template for:each={imageDetails} for:item="objImage">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size--2-of-4 slds-large-size--1-of-4" key={objImage.Id}>
+                        <div class='new-product-block slds-m-bottom_medium'>
+                            <div class="m24-around">
+                                <div class="img-holder m24-bottom">
+                                    <img src={objImage.ImageURL__c} alt={objImage.ImageTitle__c}>
+                                </div>
+                                <div class="m24-bottom">
+                                    <div class='new-product-title slds-m-bottom_small'>{objImage.ImageTitle__c}</div>
+                                    <div class='new-product-description'>{objImage.ImageDescription__c}</div>
+                                </div>
+                                <div class="btn-bottom">
+                                <a href={objImage.NavigationURL__c} target={objImage.TargetForURL__c}>
+                                    <template if:true={isZimvieBrand}>
+                                        <button class="slds-button_stretch slds-button slds-button_brand slds-button-cstm slds-button_brand-cstm-zimvie"
+                                                name={objImage.ProductSKUCode__c}>
+                                                {objImage.ButtonLabel__c}
+                                            <div class="white-arrow">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" style="margin-left: 10px;">
+                                                    <path d="M11.5 4.51367L16.5 9.51367M16.5 9.51367L11.5 14.5137M16.5 9.51367L3.5 9.51367" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                                </svg>
+                                            </div>
+                                            <div class="yello-arrow">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" style="margin-left: 10px;">
+                                                    <path d="M11.5 4.51367L16.5 9.51367M16.5 9.51367L11.5 14.5137M16.5 9.51367L3.5 9.51367" stroke="#E6DC19" stroke-width="1.5" stroke-linecap="round"/>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    </template>
+                                    <template if:false={isZimvieBrand}>
+                                        <button class="slds-button_stretch slds-button slds-button_brand slds-button-cstm slds-button_brand-cstm-azure"
+                                                name={objImage.ProductSKUCode__c}>
+                                                {objImage.ButtonLabel__c}
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" style="margin-left: 10px;">
+                                                    <path d="M11.5 4.51367L16.5 9.51367M16.5 9.51367L11.5 14.5137M16.5 9.51367L3.5 9.51367" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                                </svg>
+                                        </button>                                    
+                                    </template>
+                                </a>
+                                </div>
+                                <template if:true={objImage.IsNewProduct__c}>
+                                    <div class={newTagCSS}>New</div>
+                                </template>
+                            </div>
+                        </div>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </template>
+        <template if:true={isCarousel}>
+            <div class="slds-text-align_center ml--86 mr--86 mt--16">
+                <lightning-carousel>
+                    <template for:each={imageDetails} for:item="objImage">
+                        <lightning-carousel-image
+                            key={objImage.ImageTitle__c}
+                            src={objImage.ImageURL__c}
+                            header={objImage.ImageTitle__c}
+                            description={objImage.ImageDescription__c}
+                            alternative-text={objImage.ImageTitle__c}
+                            href={objImage.NavigationURL__c}>
+                        </lightning-carousel-image>
+                    </template>
+                </lightning-carousel>
+            </div>
+        </template>
+    </template>
+</template>

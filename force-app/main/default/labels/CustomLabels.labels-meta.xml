@@ -1,0 +1,4313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ADD_ALL_TO_CART</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ADD ALL TO CART</shortDescription>
+        <value>ADD ALL TO CART</value>
+    </labels>
+    <labels>
+        <fullName>ALREADY_A_CUSTOMER</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ALREADY A CUSTOMER</shortDescription>
+        <value>ALREADY A CUSTOMER</value>
+    </labels>
+    <labels>
+        <fullName>APPLY</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>APPLY</shortDescription>
+        <value>APPLY</value>
+    </labels>
+    <labels>
+        <fullName>Account</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account</shortDescription>
+        <value>Account</value>
+    </labels>
+    <labels>
+        <fullName>Account_Management</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Management</shortDescription>
+        <value>Account Management</value>
+    </labels>
+    <labels>
+        <fullName>Account_Profile</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Profile</shortDescription>
+        <value>Account Profile</value>
+    </labels>
+    <labels>
+        <fullName>Activate_User_Confirmation</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Activate User Confirmation</shortDescription>
+        <value>Activating user will send confirmation Email to registered email address. User will have to set new credentials post email verification. Continue?</value>
+    </labels>
+    <labels>
+        <fullName>Activation_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Activation Msg</shortDescription>
+        <value>Member is reactivated.</value>
+    </labels>
+    <labels>
+        <fullName>AddAddress</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AddAddress</shortDescription>
+        <value>Add Address</value>
+    </labels>
+    <labels>
+        <fullName>AddToList</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AddToList</shortDescription>
+        <value>Save For Later</value>
+    </labels>
+    <labels>
+        <fullName>Add_Member</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add Member</shortDescription>
+        <value>Add Member</value>
+    </labels>
+    <labels>
+        <fullName>Add_New_Address</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>+ Add New Address</shortDescription>
+        <value>+ Add New Address</value>
+    </labels>
+    <labels>
+        <fullName>Add_New_Card</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add New Card</shortDescription>
+        <value>Add New Card</value>
+    </labels>
+    <labels>
+        <fullName>Add_New_Credit_Card</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add New Credit Card</shortDescription>
+        <value>Add New Credit Card</value>
+    </labels>
+    <labels>
+        <fullName>Add_Row</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add Row</shortDescription>
+        <value>Add Row</value>
+    </labels>
+    <labels>
+        <fullName>Address</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Address</shortDescription>
+        <value>Address</value>
+    </labels>
+    <labels>
+        <fullName>AddressType</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AddressType</shortDescription>
+        <value>Address Type</value>
+    </labels>
+    <labels>
+        <fullName>Address_Updated</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Address Updated</shortDescription>
+        <value>Address Updated</value>
+    </labels>
+    <labels>
+        <fullName>Addresses</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Addresses</shortDescription>
+        <value>Addresses</value>
+    </labels>
+    <labels>
+        <fullName>AddtoCartLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AddtoCartLabel</shortDescription>
+        <value>Add to Cart</value>
+    </labels>
+    <labels>
+        <fullName>All_Addresses</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>All Addresses</shortDescription>
+        <value>All Addresses</value>
+    </labels>
+    <labels>
+        <fullName>AlreadyCustomer</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AlreadyCustomer</shortDescription>
+        <value>ALREADY A CUSTOMER</value>
+    </labels>
+    <labels>
+        <fullName>Already_A_Customer_Registration</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Already A Customer Registration</shortDescription>
+        <value>Already A Customer Registration</value>
+    </labels>
+    <labels>
+        <fullName>Already_Customer_Description_Label</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Already Customer Description Label</shortDescription>
+        <value>If you already have a customer number and would like to activate your online account, fill out the form below and submit your request. If you have any questions about your online activation, please contact Customer Service at</value>
+    </labels>
+    <labels>
+        <fullName>Already_Customer_Description_Label2</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Already Customer Description Label2</shortDescription>
+        <value>or by email at</value>
+    </labels>
+    <labels>
+        <fullName>Already_Customer_Email</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Already Customer Email</shortDescription>
+        <value>DentalCS@ZimVie.com</value>
+    </labels>
+    <labels>
+        <fullName>Already_Customer_Number</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Already Customer Number</shortDescription>
+        <value>1-800-342-5454</value>
+    </labels>
+    <labels>
+        <fullName>And_Label</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>And Label</shortDescription>
+        <value>and</value>
+    </labels>
+    <labels>
+        <fullName>AssignBtn</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AssignBtn</shortDescription>
+        <value>Assign</value>
+    </labels>
+    <labels>
+        <fullName>AssignSuccessSummary</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AssignSuccessSummary</shortDescription>
+        <value>The opportunities you selected and their attached open activities have successfully been reassigned.</value>
+    </labels>
+    <labels>
+        <fullName>AssignSuccessTitle</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AssignSuccessTitle</shortDescription>
+        <value>Reassignment successfully completed!</value>
+    </labels>
+    <labels>
+        <fullName>AssignToBtn</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AssignToBtn</shortDescription>
+        <value>Assign to:</value>
+    </labels>
+    <labels>
+        <fullName>AssigningBtn</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AssigningBtn</shortDescription>
+        <value>In progress ...</value>
+    </labels>
+    <labels>
+        <fullName>Azure</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Azure</shortDescription>
+        <value>Azure</value>
+    </labels>
+    <labels>
+        <fullName>B2B_AddToCart_SpinnerMessage</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_AddToCart_SpinnerMessage</shortDescription>
+        <value>Adding product to cart</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Add_To_Cart_Error_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Add To Cart Error Msg</shortDescription>
+        <value>{0} could not be added to your cart at this time. Please try again later.</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Add_To_Cart_Success_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Add To Cart Success Msg</shortDescription>
+        <value>Your cart has been updated.</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Address_Error_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Address Error Msg</shortDescription>
+        <value>Please select a valid address.</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Address_Line_1</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Address Line 1</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Address_Line_2</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Address Line 2</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Address_Success_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Address Success Msg</shortDescription>
+        <value>Shipping Address has been updated for this order.</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Back_Btn</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>B2B_CVV</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_CVV</shortDescription>
+        <value>Credit Card CVV</value>
+    </labels>
+    <labels>
+        <fullName>B2B_CVV_Info</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>CVV Info</value>
+    </labels>
+    <labels>
+        <fullName>B2B_CalculateDiscount_SpinnerMessage</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_CalculateDiscount_SpinnerMessage</shortDescription>
+        <value>Calculating discount please wait</value>
+    </labels>
+    <labels>
+        <fullName>B2B_CalculateTax_SpinnerMessage</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_CalculateTax_SpinnerMessage</shortDescription>
+        <value>Calculating tax please wait</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Captured_Payment_Message</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Captured_Payment_Message</shortDescription>
+        <value>Payment is already captured!</value>
+    </labels>
+    <labels>
+        <fullName>B2B_CardHolder_Name_Label</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Card Holder Name</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Card_CVV_Label</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Cart Cvv Number</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Card_Exp_Month_Label</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Expiry Month</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Card_Exp_Year_Label</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Expiry Year</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Card_Name</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Card_Name</shortDescription>
+        <value>Credit Card Holder Name</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Card_Nick_Name</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Card_Nick_Name</shortDescription>
+        <value>Credit Card Nick Name</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Card_Number</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Card_Number</shortDescription>
+        <value>Credit Card Number</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Card_Place_Holder</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Card_Place_Holder</shortDescription>
+        <value>Card Place Holder</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Card_Type</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Card_Type</shortDescription>
+        <value>Credit Card Type</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Card_Validation_Generic_Error</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Card_Validation_Generic_Error</shortDescription>
+        <value>B2B_Card_Validation_Generic_Error</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Cart_Error_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Cart Error Msg</shortDescription>
+        <value>Quantity cannot be less than 1</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Cart_Quantity_Error_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Cart Quantity Error Msg</shortDescription>
+        <value>Please enter a valid Quantity.</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Cart_RMA_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Cart RMA Msg</shortDescription>
+        <value>This cart contains RMA items, do you want to proceed to modify the cart, this will delete your exsting RMA requests ?</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Cart_Wishlist_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Cart Wishlist Msg</shortDescription>
+        <value>Item is added to wishlist</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Checkout_Address_Error</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Checkout_Address_Error</shortDescription>
+        <value>&lt;span&gt;
+                &lt;p style=&quot;text-align: center;&quot;&gt;
+                    &lt;span style=&quot;font-size: 16px;&quot;&gt;Something went wrong. Cancel the current checkout process and try again.&lt;/span&gt;
+                &lt;/p&gt;
+                &lt;p style=&quot;text-align: center;&quot;&gt;
+                    &lt;span style=&quot;font-size: 16px;&quot;&gt;Error: There seems to be an error on this order.  Our system administer has been notified and we will contact you if we require further information and let you know when this issue is resolved.&lt;br&gt;&lt;br&gt;If you need to place the orders urgently, please contact our order team directly for now while we investigate this ordering error on 3D Systems Shop.  We apologize for any inconvenience.  Thank you.&lt;/span&gt;
+&lt;br/&gt;
+US orders: &lt;a href = &quot;mailto: Order@3dsystems.com&quot;&gt;Order@3dsystems.com&lt;/a&gt;
+EMEA orders: &lt;a href = &quot;mailto: Customerservice.de@3dsystems.com&quot;&gt;Customerservice.de@3dsystems.com&lt;/a&gt;
+                &lt;/p&gt;
+            &lt;/span&gt;</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Checkout_CreditCard</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Checkout_CreditCard</shortDescription>
+        <value>Credit Card</value>
+    </labels>
+    <labels>
+        <fullName>B2B_City</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Address City</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Country</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Address Country</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Credit_Card</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Credit Card :</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Credit_Card_Base_Amount</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>0</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Error_In_Transaction</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Error_In_Transaction</shortDescription>
+        <value>Error in Transaction! Check Record Data</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Error_Msg_Label</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Error Msg Label</shortDescription>
+        <value>Error</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Expiry_Month</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Expiry_Month</shortDescription>
+        <value>Credit Card Expiry Month</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Expiry_Year</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Expiry_Year</shortDescription>
+        <value>Credit Card Expiry Year</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Generic_Error</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Generic_Error</shortDescription>
+        <value>Please enter valid data in all the fields</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Invalid_CVV</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Invalid CVV Number</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Invalid_Card_Error</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Invalid_Card_Error</shortDescription>
+        <value>Please enter valid Card Number</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Invalid_Card_Number</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Invalid Card Number</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Invalid_Date_Error</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Invalid_Date_Error</shortDescription>
+        <value>Please enter valid Expiry Month or Expiry Year</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Loading_Message</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Loading_Message</shortDescription>
+        <value>Loading</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Manage_Member_Success_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Manage Member Success Msg</shortDescription>
+        <value>Member added successfully. Welcome Email is sent.</value>
+    </labels>
+    <labels>
+        <fullName>B2B_My_Wallet</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>My Wallet</value>
+    </labels>
+    <labels>
+        <fullName>B2B_PA_Created</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_PA_Created</shortDescription>
+        <value>Record was created!</value>
+    </labels>
+    <labels>
+        <fullName>B2B_PDP_Error_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B PDP Error Msg</shortDescription>
+        <value>Quantiy cannot be 0.Please update the quantity</value>
+    </labels>
+    <labels>
+        <fullName>B2B_PDP_Wishlist_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B PDP Wishlist Msg</shortDescription>
+        <value>Item has been added to wishlist</value>
+    </labels>
+    <labels>
+        <fullName>B2B_PO_Label</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Purchase Order</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Payment_Method</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Payment Methods</value>
+    </labels>
+    <labels>
+        <fullName>B2B_PostalCode</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Address Postal Code</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Reset_Password_Link</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Reset Password Link</shortDescription>
+        <value>https://zimvie-oktatest.oktapreview.com/signin/forgot-password</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Save_Payment_Label</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Save Payment</value>
+    </labels>
+    <labels>
+        <fullName>B2B_State</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Address State</value>
+    </labels>
+    <labels>
+        <fullName>B2B_StoreUrl</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>https://zimvieglobal--ecommerce.sandbox.my.site.com</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Submit_Payment</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Submit Payment</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Success_Label</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Success Label</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Term_and_Condition</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Term and Condition</shortDescription>
+        <value>I agree this order will be bound by the terms set forth herein in 3D Systems’ Standard Terms and Conditions for Online Purchases, available at &lt;a href=&quot;https://www.3dsystems.com/sites/default/files/terms/3d-systems-terms-and-conditions-online-purchases-en.pdf&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;www.3dsystems.com &lt;/a&gt;, which are incorporated herein in their entirety.</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Transaction_Field_PA_Created</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B_Transaction_Field_PA_Created</shortDescription>
+        <value>Transaction got failed! Check {0} Record {1}!</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Warning_Label</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Warning Label</shortDescription>
+        <value>Warning</value>
+    </labels>
+    <labels>
+        <fullName>B2B_WishList_Error</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B WishList Error</shortDescription>
+        <value>Error occured. Please try again later.</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Wishlist_Delete_Success_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Wishlist Delete Success Msg</shortDescription>
+        <value>Wishlist deleted successfully.</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Wishlist_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Wishlist Msg</shortDescription>
+        <value>Do you really want to delete this wishlist?</value>
+    </labels>
+    <labels>
+        <fullName>B2B_Wishlist_Warning_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Wishlist Warning Msg</shortDescription>
+        <value>Please enter valid wishlist name.</value>
+    </labels>
+    <labels>
+        <fullName>B2B_card_Number_Label</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Card Number</value>
+    </labels>
+    <labels>
+        <fullName>B2B_card_Type_Label</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Card Type</value>
+    </labels>
+    <labels>
+        <fullName>B2B_logging_identifier</fullName>
+        <categories>B2B</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>for payment Page</shortDescription>
+        <value>Loggin Identifier</value>
+    </labels>
+    <labels>
+        <fullName>B2B_wishlist_Name_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B wishlist Name Msg</shortDescription>
+        <value>Please enter new wishlist name</value>
+    </labels>
+    <labels>
+        <fullName>BackOrder</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BackOrder</shortDescription>
+        <value>Backordered</value>
+    </labels>
+    <labels>
+        <fullName>BackToCart</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BackToCart</shortDescription>
+        <value>Back To Cart</value>
+    </labels>
+    <labels>
+        <fullName>Back_to_All_Orders</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Back to All Orders</shortDescription>
+        <value>Back to All Orders</value>
+    </labels>
+    <labels>
+        <fullName>Balance_Due</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Balance Due</shortDescription>
+        <value>Balance Due</value>
+    </labels>
+    <labels>
+        <fullName>BillingAddress</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BillingAddress</shortDescription>
+        <value>Billing Address</value>
+    </labels>
+    <labels>
+        <fullName>CANCEL</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CANCEL</shortDescription>
+        <value>CANCEL</value>
+    </labels>
+    <labels>
+        <fullName>CLEAR</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLEAR</shortDescription>
+        <value>CLEAR</value>
+    </labels>
+    <labels>
+        <fullName>Call_800_345_6789</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Call: 800-345-6789</shortDescription>
+        <value>Call: 800-345-6789</value>
+    </labels>
+    <labels>
+        <fullName>CancelOrder</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CancelOrder</shortDescription>
+        <value>Cancel Order</value>
+    </labels>
+    <labels>
+        <fullName>Cancel_Button</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cancel Button</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Cancelandclose</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cancelandclose</shortDescription>
+        <value>Cancel and close</value>
+    </labels>
+    <labels>
+        <fullName>CardNumber</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CardNumber</shortDescription>
+        <value>Card Number</value>
+    </labels>
+    <labels>
+        <fullName>Careers</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Careers</shortDescription>
+        <value>Careers</value>
+    </labels>
+    <labels>
+        <fullName>CartHeader</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CartHeader</shortDescription>
+        <value>Shopping Cart</value>
+    </labels>
+    <labels>
+        <fullName>Category</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Category</shortDescription>
+        <value>Category</value>
+    </labels>
+    <labels>
+        <fullName>CheckoutTermsEmail</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CheckoutTermsEmail</shortDescription>
+        <value>Dental.AR@zimvie.com</value>
+    </labels>
+    <labels>
+        <fullName>CheckoutTermsFaxNumber</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CheckoutTermsFaxNumber</shortDescription>
+        <value>574-373-3591</value>
+    </labels>
+    <labels>
+        <fullName>CheckoutTermsPhoneNumber</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CheckoutTermsPhoneNumber</shortDescription>
+        <value>1-888-800-8035</value>
+    </labels>
+    <labels>
+        <fullName>City</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>City</shortDescription>
+        <value>City</value>
+    </labels>
+    <labels>
+        <fullName>Class</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Class</shortDescription>
+        <value>Class</value>
+    </labels>
+    <labels>
+        <fullName>Clear_All</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Clear All</shortDescription>
+        <value>Clear All</value>
+    </labels>
+    <labels>
+        <fullName>Clickheretocanceltheorder</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Clickheretocanceltheorder</shortDescription>
+        <value>Click here to cancel the order.</value>
+    </labels>
+    <labels>
+        <fullName>Clickheretochangethecountry</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Clickheretochangethecountry</shortDescription>
+        <value>Click here to change the country</value>
+    </labels>
+    <labels>
+        <fullName>Close</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Close</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>CloseDateCriteriaLabel</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CloseDateCriteriaLabel</shortDescription>
+        <value>Closed Date</value>
+    </labels>
+    <labels>
+        <fullName>ClosedCartLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ClosedCartLabel</shortDescription>
+        <value>The cart that you requested isn&apos;t available.</value>
+    </labels>
+    <labels>
+        <fullName>Combobox</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Combobox</shortDescription>
+        <value>Combobox</value>
+    </labels>
+    <labels>
+        <fullName>Comments</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Comments</shortDescription>
+        <value>Comments</value>
+    </labels>
+    <labels>
+        <fullName>Company_Name</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Company Name</shortDescription>
+        <value>Company Name</value>
+    </labels>
+    <labels>
+        <fullName>ContactEmail</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ContactEmail</shortDescription>
+        <value>Contact Email</value>
+    </labels>
+    <labels>
+        <fullName>Contact_US</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact US</shortDescription>
+        <value>Contact US</value>
+    </labels>
+    <labels>
+        <fullName>ContentURLDomain</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ContentURLDomain</shortDescription>
+        <value>https://zimmer.secure.force.com</value>
+    </labels>
+    <labels>
+        <fullName>ContinueShopping</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ContinueShopping</shortDescription>
+        <value>Continue Shopping</value>
+    </labels>
+    <labels>
+        <fullName>Coordinator_Email</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Coordinator Email:</shortDescription>
+        <value>Coordinator Email:</value>
+    </labels>
+    <labels>
+        <fullName>Coordinator_Name</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Coordinator Name:</shortDescription>
+        <value>Coordinator Name:</value>
+    </labels>
+    <labels>
+        <fullName>Copyright_2023_ZimVie_Inc</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Copyright 2023 ZimVie Inc.</shortDescription>
+        <value>Copyright 2023 ZimVie Inc.</value>
+    </labels>
+    <labels>
+        <fullName>Country</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Country</shortDescription>
+        <value>Country</value>
+    </labels>
+    <labels>
+        <fullName>CountrySelector</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CountrySelector</shortDescription>
+        <value>Country Selector</value>
+    </labels>
+    <labels>
+        <fullName>Courtesy_Implant_Replacement</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Courtesy Implant Replacement</shortDescription>
+        <value>Courtesy Implant Replacement</value>
+    </labels>
+    <labels>
+        <fullName>Courtesy_Implant_Replacement_Request</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Courtesy Implant Replacement Request</shortDescription>
+        <value>Courtesy Implant Replacement Request</value>
+    </labels>
+    <labels>
+        <fullName>CreatedDateAsc</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CreatedDateAsc</shortDescription>
+        <value>Date Added - Oldest First</value>
+    </labels>
+    <labels>
+        <fullName>CreatedDateCriteriaLabel</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CreatedDateCriteriaLabel</shortDescription>
+        <value>Created date:</value>
+    </labels>
+    <labels>
+        <fullName>CreatedDateDesc</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CreatedDateDesc</shortDescription>
+        <value>Date Added - Newest First</value>
+    </labels>
+    <labels>
+        <fullName>CriteriaSearchSection</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CriteriaSearchSection</shortDescription>
+        <value>Search with a search criteria</value>
+    </labels>
+    <labels>
+        <fullName>CustomerService</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CustomerService</shortDescription>
+        <value>Customer-Service</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Number</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Number</shortDescription>
+        <value>Customer Number</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Service</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Service</shortDescription>
+        <value>Customer Service</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Service_Request_An_Account</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Service Request An Account</shortDescription>
+        <value>Customer Service Request An Account</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Services</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Services</shortDescription>
+        <value>Customer Services</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Speciality</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Speciality</shortDescription>
+        <value>Customer Speciality</value>
+    </labels>
+    <labels>
+        <fullName>Customer_support</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customersupport</shortDescription>
+        <value>Customer Support</value>
+    </labels>
+    <labels>
+        <fullName>Days_Late</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Days Late</shortDescription>
+        <value>Days Late</value>
+    </labels>
+    <labels>
+        <fullName>Deactivate_User_Confirmation</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Deactivate User Confirmation</shortDescription>
+        <value>Deactivating user will revoke login access. You can anytime activate them later. Continue?</value>
+    </labels>
+    <labels>
+        <fullName>Deactivation_Msg</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Deactivation Msg</shortDescription>
+        <value>Member is deactivated.</value>
+    </labels>
+    <labels>
+        <fullName>Default</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default</shortDescription>
+        <value>Default</value>
+    </labels>
+    <labels>
+        <fullName>Delete</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>Delete_All</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete All</shortDescription>
+        <value>Delete All</value>
+    </labels>
+    <labels>
+        <fullName>Delete_card</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete card</shortDescription>
+        <value>Delete card</value>
+    </labels>
+    <labels>
+        <fullName>Delete_card_confirmation</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete card confirmation</shortDescription>
+        <value>Are you sure you want to delete the card?</value>
+    </labels>
+    <labels>
+        <fullName>Description</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Description</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>DescriptionLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DescriptionLabel</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>DiameterLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DiameterLabel</shortDescription>
+        <value>Diameter</value>
+    </labels>
+    <labels>
+        <fullName>Discount</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Discount</shortDescription>
+        <value>Discount</value>
+    </labels>
+    <labels>
+        <fullName>DisplayViewLabel</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DisplayViewLabel</shortDescription>
+        <value>Display:</value>
+    </labels>
+    <labels>
+        <fullName>DocuSign_Batch_Size_Limit_Msg</fullName>
+        <categories>DocuSign Account Batch</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DocuSign Batch Size Limit Msg</shortDescription>
+        <value>Batch size should be 10 or less than 10</value>
+    </labels>
+    <labels>
+        <fullName>DueDate</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DueDate</shortDescription>
+        <value>Due Date</value>
+    </labels>
+    <labels>
+        <fullName>EDUCATION</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EDUCATION</shortDescription>
+        <value>EDUCATION</value>
+    </labels>
+    <labels>
+        <fullName>Edit</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Edit</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>EditAddress</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EditAddress</shortDescription>
+        <value>Edit Address</value>
+    </labels>
+    <labels>
+        <fullName>Email</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email</shortDescription>
+        <value>Email</value>
+    </labels>
+    <labels>
+        <fullName>Emergence_Profile</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Emergence Profile</shortDescription>
+        <value>Emergence Profile</value>
+    </labels>
+    <labels>
+        <fullName>EmptyCartBodyLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EmptyCartBodyLabel</shortDescription>
+        <value>Search or browse products, and add them to your cart. Your selections appear here.</value>
+    </labels>
+    <labels>
+        <fullName>EmptyCartHeaderLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EmptyCartHeaderLabel</shortDescription>
+        <value>Your cart’s empty</value>
+    </labels>
+    <labels>
+        <fullName>EndDate</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EndDate</shortDescription>
+        <value>End Date</value>
+    </labels>
+    <labels>
+        <fullName>Ending_in</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ending in</shortDescription>
+        <value>Ending in</value>
+    </labels>
+    <labels>
+        <fullName>EnrollSKU</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EnrollSKU</shortDescription>
+        <value>ELP1YR</value>
+    </labels>
+    <labels>
+        <fullName>Enroll_in_Loyalty_Program</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Enroll in Loyalty Program</shortDescription>
+        <value>Enroll in Loyalty Program</value>
+    </labels>
+    <labels>
+        <fullName>Enrollment</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Enrollment:</shortDescription>
+        <value>Enrollment:</value>
+    </labels>
+    <labels>
+        <fullName>EnrollmentStatus</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EnrollmentStatus</shortDescription>
+        <value>Enrollment Status</value>
+    </labels>
+    <labels>
+        <fullName>Enter_PO_Number</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Enter PO Number</shortDescription>
+        <value>Enter PO Number</value>
+    </labels>
+    <labels>
+        <fullName>Event_US_Ortho_Sales</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Event US Ortho Sales</shortDescription>
+        <value>0120r00000095iCAAQ</value>
+    </labels>
+    <labels>
+        <fullName>Event_date</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Event date</shortDescription>
+        <value>Event date</value>
+    </labels>
+    <labels>
+        <fullName>Excel_Loyalty_Program</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Excel Loyalty Program</shortDescription>
+        <value>Excel Loyalty Program</value>
+    </labels>
+    <labels>
+        <fullName>Excel_Loyalty_Program_Education</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Excel Loyalty Program - Education</shortDescription>
+        <value>Excel Loyalty Program - Education</value>
+    </labels>
+    <labels>
+        <fullName>Exchange</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Exchange</shortDescription>
+        <value>Exchange</value>
+    </labels>
+    <labels>
+        <fullName>Exp</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Exp:</shortDescription>
+        <value>Exp:</value>
+    </labels>
+    <labels>
+        <fullName>Expiry_Date</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Expiry Date</shortDescription>
+        <value>Expiry Date</value>
+    </labels>
+    <labels>
+        <fullName>Export</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Export</shortDescription>
+        <value>Export</value>
+    </labels>
+    <labels>
+        <fullName>FEATUREDPRODUCTS</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FEATUREDPRODUCTS</shortDescription>
+        <value>Featured Products</value>
+    </labels>
+    <labels>
+        <fullName>Favorites</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Favorites</shortDescription>
+        <value>Favorites</value>
+    </labels>
+    <labels>
+        <fullName>Fax</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Fax</shortDescription>
+        <value>Fax</value>
+    </labels>
+    <labels>
+        <fullName>Filter_by_date</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Filter by date</shortDescription>
+        <value>Filter by date</value>
+    </labels>
+    <labels>
+        <fullName>Filters</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Filters</shortDescription>
+        <value>Filters</value>
+    </labels>
+    <labels>
+        <fullName>Find_A_Encode_Empower_Lab_EEL</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Find A Encode Empower Lab (EEL)</shortDescription>
+        <value>Find A Encode Empower Lab (EEL)</value>
+    </labels>
+    <labels>
+        <fullName>First_Name</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>First Name</shortDescription>
+        <value>First Name</value>
+    </labels>
+    <labels>
+        <fullName>GMI_BackTo</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Back To used in Google Maps</shortDescription>
+        <value>Back to</value>
+    </labels>
+    <labels>
+        <fullName>GMI_GenerateKey</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please generate a Google maps API key used in Google Maps</shortDescription>
+        <value>Please generate a Google maps API key</value>
+    </labels>
+    <labels>
+        <fullName>GMI_GoogleLanguageCode</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Google Maps Language Code</shortDescription>
+        <value>en</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalAddressFound</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Location displayed using address used in Google Maps</shortDescription>
+        <value>Location displayed using address</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalAddressNotFound</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Address not found by Google used in Google Maps</shortDescription>
+        <value>Address not found by Google</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalShowMap</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Show in Google used in Google Maps</shortDescription>
+        <value>Show in Google</value>
+    </labels>
+    <labels>
+        <fullName>GMI_UpdateComponent</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please update the GoogleMapsInternational component used in Google Maps</shortDescription>
+        <value>Please update the GoogleMapsInternational component with a new key which can be generated from</value>
+    </labels>
+    <labels>
+        <fullName>GMI_WebsiteNeeded</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The website URL needed is used in Google Maps</shortDescription>
+        <value>The website URL needed is</value>
+    </labels>
+    <labels>
+        <fullName>GMI_googleMapURL</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Google Maps URL</shortDescription>
+        <value>http://maps.google.com</value>
+    </labels>
+    <labels>
+        <fullName>Global_Contacts</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Global Contacts</shortDescription>
+        <value>Global Contacts</value>
+    </labels>
+    <labels>
+        <fullName>Gold</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Gold</shortDescription>
+        <value>Gold</value>
+    </labels>
+    <labels>
+        <fullName>HeaderText</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HeaderText</shortDescription>
+        <value>Mass reassign opportunities</value>
+    </labels>
+    <labels>
+        <fullName>Id</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Id</shortDescription>
+        <value>Id</value>
+    </labels>
+    <labels>
+        <fullName>In_Reselleable_Condition</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>In Reselleable Condition?</shortDescription>
+        <value>In Reselleable Condition?</value>
+    </labels>
+    <labels>
+        <fullName>InstockLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InstockLabel</shortDescription>
+        <value>In stock</value>
+    </labels>
+    <labels>
+        <fullName>Investors</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Investors</shortDescription>
+        <value>Investors</value>
+    </labels>
+    <labels>
+        <fullName>InvoiceDate</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InvoiceDate</shortDescription>
+        <value>Invoice Date</value>
+    </labels>
+    <labels>
+        <fullName>InvoiceNumber</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InvoiceNumber</shortDescription>
+        <value>Invoice Number</value>
+    </labels>
+    <labels>
+        <fullName>Invoice_Accesss_Payment</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Invoice Accesss &amp; Payment</shortDescription>
+        <value>Invoice Accesss &amp; Payment</value>
+    </labels>
+    <labels>
+        <fullName>Invoice_number</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Invoice number</shortDescription>
+        <value>Invoice #</value>
+    </labels>
+    <labels>
+        <fullName>Invoices</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Invoices</shortDescription>
+        <value>Invoices</value>
+    </labels>
+    <labels>
+        <fullName>IsDefault</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IsDefault</shortDescription>
+        <value>Is Default</value>
+    </labels>
+    <labels>
+        <fullName>Item_Summary</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Item Summary</shortDescription>
+        <value>Item Summary</value>
+    </labels>
+    <labels>
+        <fullName>Items</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Items</shortDescription>
+        <value>Items</value>
+    </labels>
+    <labels>
+        <fullName>Last_Name</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Last Name</shortDescription>
+        <value>Last Name</value>
+    </labels>
+    <labels>
+        <fullName>Leadership_Communications_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Leadership Communications Id</shortDescription>
+        <value>0F92h0000008SszCAE</value>
+    </labels>
+    <labels>
+        <fullName>Legal_Notices</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Legal Notices</shortDescription>
+        <value>Legal Notices</value>
+    </labels>
+    <labels>
+        <fullName>LengthLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LengthLabel</shortDescription>
+        <value>Length</value>
+    </labels>
+    <labels>
+        <fullName>Lifetime_Implant_Waanty_Program</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lifetime Implant Waanty Program</shortDescription>
+        <value>Lifetime Implant Waanty Program</value>
+    </labels>
+    <labels>
+        <fullName>LoadingCartItems</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LoadingCartItems</shortDescription>
+        <value>Loading Cart Items</value>
+    </labels>
+    <labels>
+        <fullName>LoadingProducts</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LoadingProducts</shortDescription>
+        <value>Loading products...</value>
+    </labels>
+    <labels>
+        <fullName>Logout</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Logout</shortDescription>
+        <value>Logout</value>
+    </labels>
+    <labels>
+        <fullName>Lotnumber</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lotnumber</shortDescription>
+        <value>Lot#</value>
+    </labels>
+    <labels>
+        <fullName>Loyalty_Coordinator_Name</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Loyalty Coordinator Name</shortDescription>
+        <value>Loyalty Coordinator Name</value>
+    </labels>
+    <labels>
+        <fullName>Make_Default</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Make Default</shortDescription>
+        <value>Make Default</value>
+    </labels>
+    <labels>
+        <fullName>Makethismydefaultaddress</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Makethismydefaultaddress</shortDescription>
+        <value>Make this my default address</value>
+    </labels>
+    <labels>
+        <fullName>Member_Details</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Member Details</shortDescription>
+        <value>Member Details</value>
+    </labels>
+    <labels>
+        <fullName>Members</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Members</shortDescription>
+        <value>Members</value>
+    </labels>
+    <labels>
+        <fullName>My_Account</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>My Account</shortDescription>
+        <value>My Account</value>
+    </labels>
+    <labels>
+        <fullName>My_Lists</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>My Lists</shortDescription>
+        <value>My Lists</value>
+    </labels>
+    <labels>
+        <fullName>My_Profile</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>My Profile</shortDescription>
+        <value>My Profile</value>
+    </labels>
+    <labels>
+        <fullName>My_profile_and_password</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>My Profile &amp; Password</shortDescription>
+        <value>My Profile &amp; Password</value>
+    </labels>
+    <labels>
+        <fullName>NEWPRODUCTS</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NEWPRODUCTS</shortDescription>
+        <value>New Products</value>
+    </labels>
+    <labels>
+        <fullName>NEW_TO_ZIMVIE_DENTAL</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NEW TO ZIMVIE DENTAL</shortDescription>
+        <value>NEW TO ZIMVIE DENTAL</value>
+    </labels>
+    <labels>
+        <fullName>NPI_Number</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NPI Number</shortDescription>
+        <value>NPI Number</value>
+    </labels>
+    <labels>
+        <fullName>Name</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>NameAsc</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NameAsc</shortDescription>
+        <value>Name - A to Z</value>
+    </labels>
+    <labels>
+        <fullName>NameDesc</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NameDesc</shortDescription>
+        <value>Name - Z to A</value>
+    </labels>
+    <labels>
+        <fullName>NewAddress</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Address</shortDescription>
+        <value>New Address</value>
+    </labels>
+    <labels>
+        <fullName>NewToZimvie</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NewToZimvie</shortDescription>
+        <value>NEW TO ZIMVIE DENTAL</value>
+    </labels>
+    <labels>
+        <fullName>NewViewLinkLabel</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NewViewLinkLabel</shortDescription>
+        <value>Create new view</value>
+    </labels>
+    <labels>
+        <fullName>Nick_Name</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Nick Name</shortDescription>
+        <value>Nick Name</value>
+    </labels>
+    <labels>
+        <fullName>NoResultSummary</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NoResultSummary</shortDescription>
+        <value>Please modify your search criteria</value>
+    </labels>
+    <labels>
+        <fullName>NoResultTitle</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NoResultTitle</shortDescription>
+        <value>No results</value>
+    </labels>
+    <labels>
+        <fullName>NoViewSelection</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NoViewSelection</shortDescription>
+        <value>- None -</value>
+    </labels>
+    <labels>
+        <fullName>No_Invoive</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Invoive</shortDescription>
+        <value>You don&apos;t have any invoices or credits for your account. Please contact to customer care if required.</value>
+    </labels>
+    <labels>
+        <fullName>Note_for_tissue</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Note for tissue</shortDescription>
+        <value>Note: Human Tissues are excluded from Returns/Exchanges.</value>
+    </labels>
+    <labels>
+        <fullName>OKTA_AUTHORIZATION_ID</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OKTA AUTHORIZATION ID</shortDescription>
+        <value>SSWS00WzdhHqNoS4sJx0sB5h5vtUQL0GiuO_oorOtbz-rV</value>
+    </labels>
+    <labels>
+        <fullName>OKTA_COMMERCE_GROUP_ID</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OKTA_COMMERCE_GROUP_ID</shortDescription>
+        <value>00g3cnswluCN4XtKr1d7</value>
+    </labels>
+    <labels>
+        <fullName>Oka_Group_ID</fullName>
+        <categories>Okta Config</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Oka Group ID</shortDescription>
+        <value>00g3cnswluCN4XtKr1d7</value>
+    </labels>
+    <labels>
+        <fullName>Okta_Sign_in_URL</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Okta Sign in URL</shortDescription>
+        <value>https://zimvie-oktatest.oktapreview.com/home/zimvie-oktatest_salesforceecommercesaml_1/0oa90xebtgJBX7R1H1d7/aln90xmc0zX6zUZOi1d7</value>
+    </labels>
+    <labels>
+        <fullName>OnlineAvailabilityLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OnlineAvailabilityLabel</shortDescription>
+        <value>Availability</value>
+    </labels>
+    <labels>
+        <fullName>Oracle_Order</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Oracle Order</shortDescription>
+        <value>Oracle Order</value>
+    </labels>
+    <labels>
+        <fullName>Order</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order</shortDescription>
+        <value>Order</value>
+    </labels>
+    <labels>
+        <fullName>OrderLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderLabel</shortDescription>
+        <value>Order</value>
+    </labels>
+    <labels>
+        <fullName>Order_Date</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Date</shortDescription>
+        <value>Order Date</value>
+    </labels>
+    <labels>
+        <fullName>Order_Details</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Details</shortDescription>
+        <value>Order Details</value>
+    </labels>
+    <labels>
+        <fullName>Order_Number</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Number</shortDescription>
+        <value>Order Number</value>
+    </labels>
+    <labels>
+        <fullName>Ordered_Date</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ordered Date</shortDescription>
+        <value>Ordered Date</value>
+    </labels>
+    <labels>
+        <fullName>Ordernumb</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ordernumb</shortDescription>
+        <value>Order#</value>
+    </labels>
+    <labels>
+        <fullName>Orders</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Orders</shortDescription>
+        <value>Orders</value>
+    </labels>
+    <labels>
+        <fullName>Organization_Phone_Number</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Organization Phone Number</shortDescription>
+        <value>Organization Phone Number</value>
+    </labels>
+    <labels>
+        <fullName>Organization_Practice_Billing_Zip_Code</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Organization/Practice Billing Zip Code</shortDescription>
+        <value>Organization/Practice Billing Zip Code</value>
+    </labels>
+    <labels>
+        <fullName>Original</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Original</shortDescription>
+        <value>Original</value>
+    </labels>
+    <labels>
+        <fullName>OriginalPriceLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OriginalPriceLabel</shortDescription>
+        <value>Original Price</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_ADS_Growth</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ADS Growth Header</shortDescription>
+        <value>ADS Growth</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_ChartJS_Error</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error loading ChartJS</shortDescription>
+        <value>Error loading ChartJS</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Chart_Data_Error</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error getting data</shortDescription>
+        <value>Error retrieving report data.</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Chart_Default_Color_Scheme</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default color scheme: https://bit.ly/2PwVwkW</shortDescription>
+        <value>brewer.Paired12</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Chart_Donut_Color_Scheme</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default color scheme: https://bit.ly/2PwVwkW</shortDescription>
+        <value>brewer.PuBu3</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Comment_Not_Allowed</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ortho Comment Not Allowed</shortDescription>
+        <value>You do not have permission to comment on this post</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Communications_Posted_By</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Posted by in Ortho Communications</shortDescription>
+        <value>Posted By</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Current_Year_Sales</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Current Year Sales Header</shortDescription>
+        <value>CY Sales</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Default_Listview_Loading</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Loading text in Ortho Default Listview</shortDescription>
+        <value>Taking a while? Try pulling down to refresh.</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Filter_Placeholder</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Placeholder for Ortho Chart Filters</shortDescription>
+        <value>Select Filter</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Group_Selector_Label</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Group Selector Label</shortDescription>
+        <value>Filter</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Group_Selector_Placeholder</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Group Selector Placeholder</shortDescription>
+        <value>Select Group</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Header_Greeting</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Header greeting</shortDescription>
+        <value>Hello</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Invalid_Territory_Error_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Invalid territory assigned to opportunity</shortDescription>
+        <value>The Opportunity can&apos;t be assigned to selected Territory. Please select a relevant Territory.</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_KPI_Month_Performance</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Month Performance Label</shortDescription>
+        <value>Month Performance to Time Elapsed</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_KPI_Month_Target_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ortho KPI Month Target Text</shortDescription>
+        <value>MTD Target</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_KPI_Off_Target_Color</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Backgorund Color for off target KPIs</shortDescription>
+        <value>#f28e2b</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_KPI_On_Target_Color</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Backgorund Color for on target KPIs</shortDescription>
+        <value>#4e79a7</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_KPI_Quarter_Performance</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quarter Performance Label</shortDescription>
+        <value>Quarter Performance to Time Elapsed</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_KPI_Quarter_Target_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ortho KPI Quarter Target Text</shortDescription>
+        <value>QTD Target</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_KPI_Year_Target_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ortho KPI Year Target Text</shortDescription>
+        <value>YTD Target</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_KPI_Year_wo_Qtr_Target_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ortho_KPI_Year_wo_Qtr_Target_Text</shortDescription>
+        <value>YTD excl. Q1</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Mobile_Chart_Performance_to_Target_Labels</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Comma separated Performance to Target Labels</shortDescription>
+        <value>Performance,Remaining</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Mobile_Chart_Performance_to_Target_Title</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Performance to Target Title</shortDescription>
+        <value>Pay For Performance</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Mobile_Chart_Year_Over_Year_Title</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Year over Year Title</shortDescription>
+        <value>Year Over Year Growth</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Mobile_Detail_Save_Button</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save button</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Mobile_Detail_Save_Success_Message</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save toast message</shortDescription>
+        <value>Record Saved Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Mobile_Detail_Save_Title</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save toast title</shortDescription>
+        <value>Success!</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Mobile_My_App_Apps_Label</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Apps Label</shortDescription>
+        <value>Apps</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Mobile_My_App_Default_Title</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default Title</shortDescription>
+        <value>Message</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Mobile_My_App_Error_Title</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Title</shortDescription>
+        <value>Error!</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Mobile_My_App_Favorites_Label</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Favorites Label</shortDescription>
+        <value>Favorites</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Mobile_My_App_Success_Title</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Success Title</shortDescription>
+        <value>Success!</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Mobile_Tabs_Communications_Label</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Communications Label</shortDescription>
+        <value>Communications</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Mobile_Tabs_Dashboard_Label</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Dashboard Label</shortDescription>
+        <value>Dashboard</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Mobile_Tabs_My_Apps_Label</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>My Apps Label</shortDescription>
+        <value>My Apps</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_New_Task</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Task label</shortDescription>
+        <value>New Task</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_No_Territory_Found</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Territory Found for opportunity</shortDescription>
+        <value>No Territory found for this opportunity.</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Open_In_Tableau</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Open in Tableau Link Text</shortDescription>
+        <value>Open in Tableau</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Opportunity_Access_Error</fullName>
+        <categories>Ortho Sales</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ortho Opportunity Access Error</shortDescription>
+        <value>Sorry, You do not have access to update this opportunity.</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Previous_Year_Sales</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Previous Year Sales Header</shortDescription>
+        <value>LY Sales</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Reassign_Team_Not_Selected</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ortho Reassign Team Not Selected</shortDescription>
+        <value>Team Not Selected</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Reassign_Territories_Not_Available</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ortho Reassign Territories Not Available</shortDescription>
+        <value>Territories Not Available.</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Reassign_select_one_team</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ortho Reassign select one team</shortDescription>
+        <value>Please select atleast one team</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Reassign_unable_to_update</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ortho Reassign unable to update</shortDescription>
+        <value>Unable to update selected team. Please contact System admin.</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Select_Team</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select Team Label For Ortho Reassign opportunity</shortDescription>
+        <value>Select Team</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Territory_Model</fullName>
+        <categories>Ortho Sales</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ortho Top Level Territory</shortDescription>
+        <value>Zimmer_Biomet</value>
+    </labels>
+    <labels>
+        <fullName>Ortho_Timeframe</fullName>
+        <categories>Ortho Mobile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Table Timeframe Header</shortDescription>
+        <value>Period</value>
+    </labels>
+    <labels>
+        <fullName>Other_Websites_Mobile_Apps</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Other Websites &amp; Mobile Apps</shortDescription>
+        <value>Other Websites &amp; Mobile Apps</value>
+    </labels>
+    <labels>
+        <fullName>OutStock</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OutStock</shortDescription>
+        <value>Out of stock</value>
+    </labels>
+    <labels>
+        <fullName>PO_Number</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PO Number</shortDescription>
+        <value>PO Number</value>
+    </labels>
+    <labels>
+        <fullName>Page_s</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Page(s)</shortDescription>
+        <value>Page(s)</value>
+    </labels>
+    <labels>
+        <fullName>Password</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Password</shortDescription>
+        <value>Password</value>
+    </labels>
+    <labels>
+        <fullName>Patient_ID</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Patient ID</shortDescription>
+        <value>Patient ID</value>
+    </labels>
+    <labels>
+        <fullName>PayNow</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PayNow</shortDescription>
+        <value>Pay Now</value>
+    </labels>
+    <labels>
+        <fullName>PaymentMethod</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PaymentMethod</shortDescription>
+        <value>Payment Method</value>
+    </labels>
+    <labels>
+        <fullName>Payment_By_Term</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Payment By Term</shortDescription>
+        <value>Payment Terms</value>
+    </labels>
+    <labels>
+        <fullName>Phone</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Phone</shortDescription>
+        <value>Phone</value>
+    </labels>
+    <labels>
+        <fullName>Place_Order</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Place Order</shortDescription>
+        <value>Place Order</value>
+    </labels>
+    <labels>
+        <fullName>Place_Order_W</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Place Order W</shortDescription>
+        <value>Place Order W</value>
+    </labels>
+    <labels>
+        <fullName>Placed_By</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Placed By</shortDescription>
+        <value>Placed By</value>
+    </labels>
+    <labels>
+        <fullName>Points</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Points:</shortDescription>
+        <value>Points:</value>
+    </labels>
+    <labels>
+        <fullName>PointsBalance</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PointsBalance</shortDescription>
+        <value>Points Balance</value>
+    </labels>
+    <labels>
+        <fullName>PorductDetailsAltText</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PorductDetailsAltText</shortDescription>
+        <value>Loading product information..</value>
+    </labels>
+    <labels>
+        <fullName>PostalCode</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostalCode</shortDescription>
+        <value>Postal Code</value>
+    </labels>
+    <labels>
+        <fullName>PriceUnavailable</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PriceUnavailable</shortDescription>
+        <value>Price Unavailable</value>
+    </labels>
+    <labels>
+        <fullName>PriceUnavailableLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PriceUnavailableLabel</shortDescription>
+        <value>Price Unavailable</value>
+    </labels>
+    <labels>
+        <fullName>Privacy_Notice</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Privacy Notice</shortDescription>
+        <value>Privacy Notice</value>
+    </labels>
+    <labels>
+        <fullName>Privacy_Policy</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Privacy Policy</shortDescription>
+        <value>Privacy Policy</value>
+    </labels>
+    <labels>
+        <fullName>ProductOptionsLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProductOptionsLabel</shortDescription>
+        <value>Filter Options</value>
+    </labels>
+    <labels>
+        <fullName>Product_Experience_Complaints_PER</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Experience &amp; Complaints(PER)</shortDescription>
+        <value>Product Experience &amp; Complaints(PER)</value>
+    </labels>
+    <labels>
+        <fullName>Profile</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Profile</shortDescription>
+        <value>Profile</value>
+    </labels>
+    <labels>
+        <fullName>PurchaseOrder</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PurchaseOrder</shortDescription>
+        <value>Purchase Order</value>
+    </labels>
+    <labels>
+        <fullName>Purchase_Order_Number</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Purchase Order Number</shortDescription>
+        <value>Purchase Order Number</value>
+    </labels>
+    <labels>
+        <fullName>QuantityLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QuantityLabel</shortDescription>
+        <value>Quantity</value>
+    </labels>
+    <labels>
+        <fullName>Questions_on_your_account_information</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Questions on your account information?</shortDescription>
+        <value>Questions on your account information?</value>
+    </labels>
+    <labels>
+        <fullName>RESET</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RESET</shortDescription>
+        <value>RESET</value>
+    </labels>
+    <labels>
+        <fullName>Reason</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reason</shortDescription>
+        <value>Reason</value>
+    </labels>
+    <labels>
+        <fullName>Recent_Orders</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Recent Orders</shortDescription>
+        <value>Recent Orders</value>
+    </labels>
+    <labels>
+        <fullName>Register</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Register</shortDescription>
+        <value>Register</value>
+    </labels>
+    <labels>
+        <fullName>Register_Available_Label</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Register Available Label</shortDescription>
+        <value>Available 24/7 for quoting and order placement</value>
+    </labels>
+    <labels>
+        <fullName>Register_Customer_Name</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Register Customer Name</shortDescription>
+        <value>Customer Name (Organization/ Practice)</value>
+    </labels>
+    <labels>
+        <fullName>Register_Request</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Register Request</shortDescription>
+        <value>Request a ZimVie Dental account today and take advantage of the convenience of ordering online!</value>
+    </labels>
+    <labels>
+        <fullName>Register_Shipping_Label</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Register Shipping Label</shortDescription>
+        <value>2-Day Free Shipping with any online order</value>
+    </labels>
+    <labels>
+        <fullName>Register_Status_Label</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Register Status Label</shortDescription>
+        <value>Check the status of your orders and tracking information</value>
+    </labels>
+    <labels>
+        <fullName>Register_Term</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Register Term</shortDescription>
+        <value>By creating a ZimVie Dental Portal eAccount, you agree to ZimVie Dental</value>
+    </labels>
+    <labels>
+        <fullName>RelatedToAccount</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RelatedToAccount</shortDescription>
+        <value>Related To Account</value>
+    </labels>
+    <labels>
+        <fullName>RelatedToContact</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RelatedToContact</shortDescription>
+        <value>Related To Contact</value>
+    </labels>
+    <labels>
+        <fullName>Remove</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Remove</shortDescription>
+        <value>Remove</value>
+    </labels>
+    <labels>
+        <fullName>Remove_from_list</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Remove from list</shortDescription>
+        <value>Remove from list</value>
+    </labels>
+    <labels>
+        <fullName>Renew</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Renew</shortDescription>
+        <value>Renew</value>
+    </labels>
+    <labels>
+        <fullName>RenewSKU</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RenewSKU</shortDescription>
+        <value>ELPRENEW</value>
+    </labels>
+    <labels>
+        <fullName>Reorder_Item_no</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reorder Item no</shortDescription>
+        <value>Reorder Item#</value>
+    </labels>
+    <labels>
+        <fullName>Reorder_Quantity</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reorder Quantity</shortDescription>
+        <value>Reorder Quantity</value>
+    </labels>
+    <labels>
+        <fullName>Reset_Password</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reset Password</shortDescription>
+        <value>Reset Password</value>
+    </labels>
+    <labels>
+        <fullName>Resources</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Resources</shortDescription>
+        <value>Resources</value>
+    </labels>
+    <labels>
+        <fullName>Restorative_Reimbursement_Benefit</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Restorative Reimbursement Benefit</shortDescription>
+        <value>Restorative Reimbursement Benefit</value>
+    </labels>
+    <labels>
+        <fullName>Result</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Result</shortDescription>
+        <value>Result</value>
+    </labels>
+    <labels>
+        <fullName>ResultBlockTitle</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ResultBlockTitle</shortDescription>
+        <value>Results</value>
+    </labels>
+    <labels>
+        <fullName>Return</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return</shortDescription>
+        <value>Return</value>
+    </labels>
+    <labels>
+        <fullName>Return_Reason</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return Reason</shortDescription>
+        <value>Return Reason</value>
+    </labels>
+    <labels>
+        <fullName>Return_Replace</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return &amp; Replace</shortDescription>
+        <value>Return &amp; Replace</value>
+    </labels>
+    <labels>
+        <fullName>Returns_Exchanges</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Returns &amp; Exchanges</shortDescription>
+        <value>Returns &amp; Exchanges</value>
+    </labels>
+    <labels>
+        <fullName>SELECTFILTERS</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SELECTFILTERS</shortDescription>
+        <value>SELECT FILTERS</value>
+    </labels>
+    <labels>
+        <fullName>SIGNIN</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SIGNIN</shortDescription>
+        <value>SIGNIN</value>
+    </labels>
+    <labels>
+        <fullName>SILVER</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SILVER</shortDescription>
+        <value>SILVER</value>
+    </labels>
+    <labels>
+        <fullName>SKULabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SKULabel</shortDescription>
+        <value>SKU</value>
+    </labels>
+    <labels>
+        <fullName>SKUNO</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SKUNO</shortDescription>
+        <value>SKU#</value>
+    </labels>
+    <labels>
+        <fullName>SM_FCO_Lbl_Error1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SM_FCO_Lbl_Error1</shortDescription>
+        <value>Error - CSV file is not found, please attach csv file and activate the process again.</value>
+    </labels>
+    <labels>
+        <fullName>SM_FCO_Lbl_Error2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SM_FCO_Lbl_Error2</shortDescription>
+        <value>Error - No Assets Found.</value>
+    </labels>
+    <labels>
+        <fullName>SM_FCO_Lbl_Error3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SM_FCO_Lbl_Error3</shortDescription>
+        <value>Error - Asset ID column is not found, please make sure to include the asset ID as the first column in the file.</value>
+    </labels>
+    <labels>
+        <fullName>SM_FCO_Lbl_Process</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SM_FCO_Lbl_Process</shortDescription>
+        <value>In Process.</value>
+    </labels>
+    <labels>
+        <fullName>SM_FCO_Lbl_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SM_FCO_Lbl_Success</shortDescription>
+        <value>Success - {0} Applicable FCO records created.</value>
+    </labels>
+    <labels>
+        <fullName>SM_ZB_Domain</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SM ZB Domain</shortDescription>
+        <value>https://zimmerbiometglobal.lightning.force.com/</value>
+    </labels>
+    <labels>
+        <fullName>START_REORDER</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>START REORDER</shortDescription>
+        <value>START REORDER</value>
+    </labels>
+    <labels>
+        <fullName>Save</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Save_This_Card_For_Future_Purchase</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save This Card For Future Purchase?</shortDescription>
+        <value>Save This Card For Future Purchase?</value>
+    </labels>
+    <labels>
+        <fullName>SearchAddress</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Search Address</shortDescription>
+        <value>Search for addresses</value>
+    </labels>
+    <labels>
+        <fullName>SearchBlockTitle</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SearchBlockTitle</shortDescription>
+        <value>Search opportunities</value>
+    </labels>
+    <labels>
+        <fullName>SearchBtn</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SearchBtn</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>SearchingBtn</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SearchingBtn</shortDescription>
+        <value>Searching ...</value>
+    </labels>
+    <labels>
+        <fullName>SelectLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SelectLabel</shortDescription>
+        <value>Select</value>
+    </labels>
+    <labels>
+        <fullName>Select_Wishlist</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select Wishlist</shortDescription>
+        <value>Select Wishlist</value>
+    </labels>
+    <labels>
+        <fullName>Selected_Address</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Selected Address</shortDescription>
+        <value>Selected Address</value>
+    </labels>
+    <labels>
+        <fullName>Sequence</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sequence</shortDescription>
+        <value>Seq</value>
+    </labels>
+    <labels>
+        <fullName>Shipment</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shipment</shortDescription>
+        <value>Shipment</value>
+    </labels>
+    <labels>
+        <fullName>Shipment_Details</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shipment Details</shortDescription>
+        <value>Shipment Details</value>
+    </labels>
+    <labels>
+        <fullName>Shipment_Method</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shipment Method</shortDescription>
+        <value>Shipment Method:</value>
+    </labels>
+    <labels>
+        <fullName>ShippingAddress</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ShippingAddress</shortDescription>
+        <value>Shipping Address</value>
+    </labels>
+    <labels>
+        <fullName>ShippingCosts</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ShippingCosts</shortDescription>
+        <value>Shipping Costs</value>
+    </labels>
+    <labels>
+        <fullName>ShippingMethod</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ShippingMethod</shortDescription>
+        <value>Shipping Method</value>
+    </labels>
+    <labels>
+        <fullName>ShippingMethodMessage</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ShippingMethodMessage</shortDescription>
+        <value>Please select a shipping address to see available options</value>
+    </labels>
+    <labels>
+        <fullName>Show_Open_Invoices</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Show Open Invoices</shortDescription>
+        <value>Show Open Invoices</value>
+    </labels>
+    <labels>
+        <fullName>Showing</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Showing</shortDescription>
+        <value>Showing</value>
+    </labels>
+    <labels>
+        <fullName>SignToBuy</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SignToBuy</shortDescription>
+        <value>Sign In To Order</value>
+    </labels>
+    <labels>
+        <fullName>SortBy</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SortBy</shortDescription>
+        <value>Sort By</value>
+    </labels>
+    <labels>
+        <fullName>Source</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Source</shortDescription>
+        <value>Source</value>
+    </labels>
+    <labels>
+        <fullName>StartDate</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StartDate</shortDescription>
+        <value>Start Date</value>
+    </labels>
+    <labels>
+        <fullName>StartReOrder</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StartReOrder</shortDescription>
+        <value>Start Reorder</value>
+    </labels>
+    <labels>
+        <fullName>Start_New_List</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Start New List</shortDescription>
+        <value>Start New List</value>
+    </labels>
+    <labels>
+        <fullName>State</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>State</shortDescription>
+        <value>State</value>
+    </labels>
+    <labels>
+        <fullName>State_And_Province</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>State And Province</shortDescription>
+        <value>State/Province</value>
+    </labels>
+    <labels>
+        <fullName>State_License_Number</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>State License Number</shortDescription>
+        <value>State License Number</value>
+    </labels>
+    <labels>
+        <fullName>Status</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status</shortDescription>
+        <value>Status</value>
+    </labels>
+    <labels>
+        <fullName>StatusTier</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StatusTier</shortDescription>
+        <value>Status Tier</value>
+    </labels>
+    <labels>
+        <fullName>Status_Tier</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status Tier:</shortDescription>
+        <value>Status Tier:</value>
+    </labels>
+    <labels>
+        <fullName>Street</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Street</shortDescription>
+        <value>Street</value>
+    </labels>
+    <labels>
+        <fullName>Submit_Button</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submit Button</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>Submit_Label</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submit Label</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>Subtotal</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Subtotal</shortDescription>
+        <value>Sub total</value>
+    </labels>
+    <labels>
+        <fullName>Success</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Success</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>Surgeon_360_Rating_Label_Bronze</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Surgeon 360 Rating Label Bronze</shortDescription>
+        <value>Bronze</value>
+    </labels>
+    <labels>
+        <fullName>Surgeon_360_Rating_Label_Gold</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Surgeon 360 Rating Label Gold</shortDescription>
+        <value>Gold</value>
+    </labels>
+    <labels>
+        <fullName>Surgeon_360_Rating_Label_Silver</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Surgeon 360 Rating Label Silver</shortDescription>
+        <value>Silver</value>
+    </labels>
+    <labels>
+        <fullName>Tableau_Knee_dashboard_AVP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tableau_Knee_dashboard_AVP</shortDescription>
+        <value>https://tableau.zimmerbiomet.com/t/USCommercialSales/views/KneePipeline/KneePerformanceFunnel?iframeSizedToWindow=true&amp;:embed=y&amp;:showAppBanner=false&amp;:display_count=no&amp;:showVizHome=no</value>
+    </labels>
+    <labels>
+        <fullName>Tableau_Knee_dashboard_CSD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tableau Knee dashboard CSD</shortDescription>
+        <value>https://tableau.zimmerbiomet.com/t/USCommercialSales/views/KneePipeline_1/KneePerformanceFunnel?iframeSizedToWindow=true&amp;:embed=y&amp;:showAppBanner=false&amp;:display_count=no&amp;:showVizHome=no</value>
+    </labels>
+    <labels>
+        <fullName>Tableau_Knee_dashboard_Corporate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tableau Knee dashboard Corporate</shortDescription>
+        <value>https://tableau.zimmerbiomet.com/t/USCommercialSales/views/KneePipeline_0/KneePerformanceFunnel?iframeSizedToWindow=true&amp;:embed=y&amp;:showAppBanner=false&amp;:display_count=no&amp;:showVizHome=no</value>
+    </labels>
+    <labels>
+        <fullName>Tableau_Knee_dashboard_TL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tableau Knee dashboard TL</shortDescription>
+        <value>https://tableau.zimmerbiomet.com/t/USCommercialSales/views/KneePipeline_2/KneePerformanceFunnel?iframeSizedToWindow=true&amp;:embed=y&amp;:showAppBanner=false&amp;:display_count=no&amp;:showVizHome=no</value>
+    </labels>
+    <labels>
+        <fullName>Tantalum</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tantalum</shortDescription>
+        <value>Tantalum</value>
+    </labels>
+    <labels>
+        <fullName>Taxes</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Taxes</shortDescription>
+        <value>Taxes</value>
+    </labels>
+    <labels>
+        <fullName>Term</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Term</shortDescription>
+        <value>Term</value>
+    </labels>
+    <labels>
+        <fullName>Terms</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Terms</shortDescription>
+        <value>Terms</value>
+    </labels>
+    <labels>
+        <fullName>TermsMessage</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TermsMessage</shortDescription>
+        <value>If you would like assistance paying your open invoices or need any copies please contact our accounting department at:</value>
+    </labels>
+    <labels>
+        <fullName>Terms_Condition_Disclaimer</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Terms &amp; Condition Disclaimer</shortDescription>
+        <value>I accept and agree to the [[{countryName} Terms and Conditions]] of sale.</value>
+    </labels>
+    <labels>
+        <fullName>Terms_and_Conditions_Label</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Terms and Conditions Label</shortDescription>
+        <value>Terms and Conditions</value>
+    </labels>
+    <labels>
+        <fullName>ThankYouforYourPurchase</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ThankYouforYourPurchase</shortDescription>
+        <value>Thank You for Your Purchase</value>
+    </labels>
+    <labels>
+        <fullName>This_account_is_not_enrolled_in_Loyalty_program</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This account is not enrolled in Loyalty program.</shortDescription>
+        <value>This account is not enrolled in Loyalty program.</value>
+    </labels>
+    <labels>
+        <fullName>Titanium</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Titanium</shortDescription>
+        <value>Titanium</value>
+    </labels>
+    <labels>
+        <fullName>Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Title</shortDescription>
+        <value>Message of the Day!</value>
+    </labels>
+    <labels>
+        <fullName>TooManyRowsError</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TooManyRowsError</shortDescription>
+        <value>The total number of open activities on the opportunities you selected is greater than the system can handle. Please reduce the number of opportunities to reassign</value>
+    </labels>
+    <labels>
+        <fullName>TooManyRowsSummary</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TooManyRowsSummary</shortDescription>
+        <value>The view you selected returned more than 1000 rows. Only the 1000 first ones will be displayed</value>
+    </labels>
+    <labels>
+        <fullName>TooManyRowsTitle</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TooManyRowsTitle</shortDescription>
+        <value>Too many rows returned</value>
+    </labels>
+    <labels>
+        <fullName>Total</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total</shortDescription>
+        <value>Total</value>
+    </labels>
+    <labels>
+        <fullName>TotalAmountWithTax</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TotalAmountWithTax</shortDescription>
+        <value>Total Amount With Tax</value>
+    </labels>
+    <labels>
+        <fullName>TotalFooterLabel</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TotalFooterLabel</shortDescription>
+        <value>Number</value>
+    </labels>
+    <labels>
+        <fullName>TotalPrice</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TotalPrice</shortDescription>
+        <value>Total Price</value>
+    </labels>
+    <labels>
+        <fullName>TotalRecords</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TotalRecords</shortDescription>
+        <value>Total Records</value>
+    </labels>
+    <labels>
+        <fullName>TotalTax</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TotalTax</shortDescription>
+        <value>Total Tax</value>
+    </labels>
+    <labels>
+        <fullName>Total_Records</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total Records:</shortDescription>
+        <value>Total Records:</value>
+    </labels>
+    <labels>
+        <fullName>Tracking</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tracking</shortDescription>
+        <value>Tracking</value>
+    </labels>
+    <labels>
+        <fullName>Transaction_Date</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Transaction Date</shortDescription>
+        <value>Transaction Date</value>
+    </labels>
+    <labels>
+        <fullName>USOrthoOpportunityRT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>USOrthoOpportunityRT</shortDescription>
+        <value>US Knee,US Biologics,US Cement,US Extremities,US Foot and Ankle,US Foot and Ankle DSF,US Gel-One,US Hip,US Sports Medicine,US Trauma</value>
+    </labels>
+    <labels>
+        <fullName>US_Meeting_US_Ortho_Sales</fullName>
+        <categories>RecordType</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>US Meeting US Ortho Sales</shortDescription>
+        <value>0123b000000Qg4eAAC</value>
+    </labels>
+    <labels>
+        <fullName>US_Task_Call</fullName>
+        <categories>RecordType (18)</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>US Task Call</shortDescription>
+        <value>0123b000000Qg4fAAC</value>
+    </labels>
+    <labels>
+        <fullName>US_Task_Email</fullName>
+        <categories>RecordType (18)</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>US Task Email</shortDescription>
+        <value>0123b000000Qg4gAAC</value>
+    </labels>
+    <labels>
+        <fullName>US_Task_Internal_Note</fullName>
+        <categories>RecordType</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>US Task Internal Note</shortDescription>
+        <value>0123b000000Qg4hAAC</value>
+    </labels>
+    <labels>
+        <fullName>US_Task_Zimmer_Standard</fullName>
+        <categories>RecordType</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>US Task Zimmer Standard</shortDescription>
+        <value>012800000003YR8AAM</value>
+    </labels>
+    <labels>
+        <fullName>UnitPrice</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UnitPrice</shortDescription>
+        <value>Unit Price</value>
+    </labels>
+    <labels>
+        <fullName>Username_email_address</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Username (email address)</shortDescription>
+        <value>Username (email address)</value>
+    </labels>
+    <labels>
+        <fullName>VIEW_ALL_ORDERS</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VIEW ALL ORDERS</shortDescription>
+        <value>VIEW ALL ORDERS</value>
+    </labels>
+    <labels>
+        <fullName>ViewCart</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ViewCart</shortDescription>
+        <value>View Cart</value>
+    </labels>
+    <labels>
+        <fullName>ViewDetailsLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ViewDetailsLabel</shortDescription>
+        <value>View Details</value>
+    </labels>
+    <labels>
+        <fullName>ViewOptions</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ViewOptions</shortDescription>
+        <value>View Options</value>
+    </labels>
+    <labels>
+        <fullName>ViewSearchSection</fullName>
+        <categories>Opty Reassign Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ViewSearchSection</shortDescription>
+        <value>Search with a view</value>
+    </labels>
+    <labels>
+        <fullName>Wallet</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Wallet</shortDescription>
+        <value>Wallet</value>
+    </labels>
+    <labels>
+        <fullName>Website</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Website</shortDescription>
+        <value>Website</value>
+    </labels>
+    <labels>
+        <fullName>WholeNumberLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WholeNumberLabel</shortDescription>
+        <value>Enter a whole number.</value>
+    </labels>
+    <labels>
+        <fullName>X1_000_000_pts</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>1,000,000+ pts</shortDescription>
+        <value>1,000,000+ pts</value>
+    </labels>
+    <labels>
+        <fullName>X1_199_999_pts</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>1-199,999 pts</shortDescription>
+        <value>1-199,999 pts</value>
+    </labels>
+    <labels>
+        <fullName>X200_000_499_999_pts</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>200,000-499,999 pts</shortDescription>
+        <value>200,000-499,999 pts</value>
+    </labels>
+    <labels>
+        <fullName>X500_000_999_999_pts</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>500,000-999,999 pts</shortDescription>
+        <value>500,000-999,999 pts</value>
+    </labels>
+    <labels>
+        <fullName>Youcancancelthisorder</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Youcancancelthisorder</shortDescription>
+        <value>You can cancel this order within:</value>
+    </labels>
+    <labels>
+        <fullName>Your_Loyalty_Points</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Your Loyalty Points</shortDescription>
+        <value>Your Loyalty Points</value>
+    </labels>
+    <labels>
+        <fullName>Your_Price</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Your Price</shortDescription>
+        <value>Your Price</value>
+    </labels>
+    <labels>
+        <fullName>Yourorder</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Yourorder</shortDescription>
+        <value>Your order</value>
+    </labels>
+    <labels>
+        <fullName>Zimvie</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Zimvie</shortDescription>
+        <value>Zimvie</value>
+    </labels>
+    <labels>
+        <fullName>Zimvie_Policy_Text</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Zimvie Policy Text</shortDescription>
+        <value>Zimvie Policy Text</value>
+    </labels>
+    <labels>
+        <fullName>Zip_And_PostalCode</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Zip And PostalCode</shortDescription>
+        <value>Zip/Postal Code</value>
+    </labels>
+    <labels>
+        <fullName>apply_credits</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>apply credits</shortDescription>
+        <value>To apply credits contact customer service</value>
+    </labels>
+    <labels>
+        <fullName>card_ending_no</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>card ending no.</shortDescription>
+        <value>Ending in</value>
+    </labels>
+    <labels>
+        <fullName>checkbox</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>checkbox</shortDescription>
+        <value>checkbox</value>
+    </labels>
+    <labels>
+        <fullName>checkoutCartSummary_DiscountAdjustments</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>checkoutCartSummary_DiscountAdjustments</shortDescription>
+        <value>Discount Adjustments</value>
+    </labels>
+    <labels>
+        <fullName>checkoutCartSummary_OrderSubtotal</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>checkoutCartSummary_OrderSubtotal</shortDescription>
+        <value>Order Subtotal</value>
+    </labels>
+    <labels>
+        <fullName>checkoutCartSummary_OrderSummary</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>checkoutCartSummary_OrderSummary</shortDescription>
+        <value>Order Summary</value>
+    </labels>
+    <labels>
+        <fullName>checkoutCartSummary_Shipping</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>checkoutCartSummary_Shipping</shortDescription>
+        <value>Shipping</value>
+    </labels>
+    <labels>
+        <fullName>checkoutCartSummary_ShippingDiscount</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>checkoutCartSummary_ShippingDiscount</shortDescription>
+        <value>Shipping Discount</value>
+    </labels>
+    <labels>
+        <fullName>checkoutCartSummary_ShippingTax</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>checkoutCartSummary_ShippingTax</shortDescription>
+        <value>Shipping Tax</value>
+    </labels>
+    <labels>
+        <fullName>checkoutCartSummary_Tax</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>checkoutCartSummary_Tax</shortDescription>
+        <value>Tax</value>
+    </labels>
+    <labels>
+        <fullName>checkoutCartSummary_TissueHandlingFee</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>checkoutCartSummary_TissueHandlingFee</shortDescription>
+        <value>Tissue Handling Fee</value>
+    </labels>
+    <labels>
+        <fullName>checkoutCartSummary_Totals</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>checkoutCartSummary_Totals</shortDescription>
+        <value>Total</value>
+    </labels>
+    <labels>
+        <fullName>clearCartButton</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>clearCartButton</shortDescription>
+        <value>Clear Cart</value>
+    </labels>
+    <labels>
+        <fullName>communityURL</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>communityURL</shortDescription>
+        <value>https://zimvieglobal--zimpartial.sandbox.my.site.com/Zimvie</value>
+    </labels>
+    <labels>
+        <fullName>contact_for_credits</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>contact for credits</shortDescription>
+        <value>800-345-6789</value>
+    </labels>
+    <labels>
+        <fullName>countrySelectorTermsContent</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>countrySelectorTermsContent</shortDescription>
+        <value>The content of this website are intended exclusively for health professionals and not suitable for patients.</value>
+    </labels>
+    <labels>
+        <fullName>date</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>date</shortDescription>
+        <value>date</value>
+    </labels>
+    <labels>
+        <fullName>eReturns</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>eReturns</shortDescription>
+        <value>eReturns</value>
+    </labels>
+    <labels>
+        <fullName>eStore_Shopping_Experience</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>eStore Shopping Experience</shortDescription>
+        <value>eStore Shopping Experience</value>
+    </labels>
+    <labels>
+        <fullName>fsc_AccessLevel</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccessLevel</shortDescription>
+        <value>Access Level</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Back</fullName>
+        <categories>Buttons,Filters,Title</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Back</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ButtonIsNotSupportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ButtonIsNotSupportedMessage</shortDescription>
+        <value>Following buttons are note supported:</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ConditionLogicHelpText</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConditionLogicHelpText</shortDescription>
+        <value>Use parentheses, AND, OR, and NOT to customize the logic. For example, if you enter “(1 AND 2 AND 3) OR 4”, the flow evaluates whether the first three conditions are true or only the fourth condition is true.</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Delete</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>fsc_FieldIsNotSupportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FieldIsNotSupportedMessage</shortDescription>
+        <value>Following fields are not supported:</value>
+    </labels>
+    <labels>
+        <fullName>fsc_FieldTypeNotSuportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fsc_FieldTypeNotSuportedMessage</shortDescription>
+        <value>You provided an unsupported value for the DataTypeFilter input on Object and Field Picker. Currently the only supported value is ’picklist’</value>
+    </labels>
+    <labels>
+        <fullName>fsc_For</fullName>
+        <categories>Buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>For</shortDescription>
+        <value>For</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Key_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Key Label</shortDescription>
+        <value>Key</value>
+    </labels>
+    <labels>
+        <fullName>fsc_LackingPermissions</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LackingPermissions</shortDescription>
+        <value>You don\&apos;t have the proper permissions for ths action</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ManagerEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ManagerEmptyMessage</shortDescription>
+        <value>&quot;Manager APEX Class&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_MultipleGroupsForRole</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MultipleGroupsForRole</shortDescription>
+        <value>There are multiple groups for that role</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Name</fullName>
+        <categories>quicklinks, Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>fsc_NonePicklistValueLabel</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NonePicklistValueLabel</shortDescription>
+        <value>-- None --</value>
+    </labels>
+    <labels>
+        <fullName>fsc_OWDReadWrite</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OWDReadWrite</shortDescription>
+        <value>Sharing Settings must be private or public read/write to enable manual sharing</value>
+    </labels>
+    <labels>
+        <fullName>fsc_OwnerAdminModify</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OwnerAdminModify</shortDescription>
+        <value>Only the record owner or administrators can modify permissions</value>
+    </labels>
+    <labels>
+        <fullName>fsc_PublicGroups</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PublicGroups</shortDescription>
+        <value>Public Groups</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Queues</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Queues</shortDescription>
+        <value>Queues</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Read</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Read</shortDescription>
+        <value>Read</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ReadWrite</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReadWrite</shortDescription>
+        <value>Read / Write</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Reason</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reason</shortDescription>
+        <value>Reason</value>
+    </labels>
+    <labels>
+        <fullName>fsc_RelatedUsers</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RelatedUsers</shortDescription>
+        <value>Related Users</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Roles</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Roles</shortDescription>
+        <value>Roles</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Search</fullName>
+        <categories>Actions,Buttons,quicklinks</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Search in</shortDescription>
+        <value>Search in</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SearchFor</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SearchFor</shortDescription>
+        <value>For</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SetAccessLevel</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SetAccessLevel</shortDescription>
+        <value>Set Access Level</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedAddCapabilitiesEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedAddCapabilitiesEmptyMessage</shortDescription>
+        <value>&quot;Add Capabilities&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedButtonsEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedButtonsEmptyMessage</shortDescription>
+        <value>&quot;Supported Buttons&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedEditCapabilitiesEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedEditCapabilitiesEmptyMessage</shortDescription>
+        <value>&quot;Edit Capabilities&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_TooManyResultsMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TooManyResultsMessage</shortDescription>
+        <value>Your search found more than 200 results.  Keep typing to make it more specific</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Type</fullName>
+        <categories>Buttons,Filters,Title</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Type</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>fsc_UserOrGroup</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserOrGroup</shortDescription>
+        <value>User Or Group</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Users</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Users</shortDescription>
+        <value>Users</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Value_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Value Label</shortDescription>
+        <value>Value</value>
+    </labels>
+    <labels>
+        <fullName>item</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>item</shortDescription>
+        <value>Item</value>
+    </labels>
+    <labels>
+        <fullName>loading</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>loading</shortDescription>
+        <value>Loading...</value>
+    </labels>
+    <labels>
+        <fullName>menulabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>menulabel</shortDescription>
+        <value>menu.label</value>
+    </labels>
+    <labels>
+        <fullName>orderNumber</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>orderNumber</shortDescription>
+        <value>orderNumber</value>
+    </labels>
+    <labels>
+        <fullName>orderplaced</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>orderplaced</shortDescription>
+        <value>has successfully been placed and a confirmation email has been sent to the email address below</value>
+    </labels>
+    <labels>
+        <fullName>picklist</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>picklist</shortDescription>
+        <value>picklist</value>
+    </labels>
+    <labels>
+        <fullName>progress</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>progress</shortDescription>
+        <value>progress</value>
+    </labels>
+    <labels>
+        <fullName>qtyLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>qtyLabel</shortDescription>
+        <value>Qty</value>
+    </labels>
+    <labels>
+        <fullName>recommendedReportLabel</fullName>
+        <categories>ZimvieStoreLabel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>recommendedReportLabel</shortDescription>
+        <value>Recommended Products</value>
+    </labels>
+</CustomLabels>

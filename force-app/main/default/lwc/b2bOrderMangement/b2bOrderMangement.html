@@ -1,0 +1,564 @@
+<template>
+   <template if:true={loaderEnabled}>
+      <c-custom_spinner></c-custom_spinner>
+   </template>
+   <lightning-tabset style="zoom:80%;">
+
+      <lightning-tab label={labels.Return} value={labels.Return} onactive={handleNavigatedesktop}>
+         <p class="slds-p-around_small">{labels.Zimvie_Policy_Text} </p>
+         <p class="slds-p-around_small"><b>{labels.Note_for_tissue}</b></p>
+         <lightning-card>
+            <!-- <lightning-spinner if:true={isSpinner} variant="brand" size="large"> </lightning-spinner> -->
+            <div class="slds-grid slds-gutters">
+               <div class="slds-col">
+                  <c-b2-b_-custom-lookup label="" placeholder="SHIP TO ADDRESS" selected-icon-name="standard:address"
+                     object-label="Contact Point Address" account-id={accId} object-api-name="ContactPointAddress"
+                     field-api-name="Name" other-field-api-name="ORAAddressId__c" handle-remove-flag={handleRemoveFlag}
+                     onvalueselected={handleValueSelectedOnShipTo} help-text=""
+                     onvalueremoved={handleValueRemovedOnShipTo} required>
+                  </c-b2-b_-custom-lookup>
+               </div>
+               <div class="slds-col slds-align-bottom">
+                  <lightning-button class="slds-float_right" variant="brand" label="Submit"
+                     onclick={submitForSaveRMA}></lightning-button>
+               </div>
+            </div>
+
+            <template if:true={isModalOpen}>
+               <div class="modal-backdrop slds-backdrop slds-backdrop_open"></div>
+               <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                  aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                  <div class="slds-modal__container">
+                     <header class="slds-modal__header modalHeader">
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium modalHeaderTextColor"><b>RMA ITEM</b>
+                        </h2>
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                           title="Close" onclick={closeModal}>
+                           <lightning-icon icon-name="utility:close" size="small"></lightning-icon>
+                           <span class="slds-assistive-text">Close</span>
+                        </button>
+                     </header>
+                     <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <!--  <lightning-record-edit-form object-api-name="OrderItem">
+                              <lightning-input-field field-name="Product2Id" 
+                              name="accItem" data-name="accItem" data-index={index} value={filterData.Item}
+                              variant="label-hidden" placeholder="" onchange={handleChange}
+                              required> </lightning-input-field>
+                           </lightning-record-edit-form> -->
+                        <!-- <lightning-input type="text" name="accItem" data-name="accItem" data-index={index}
+                           value={filterData.Item} variant="label-hidden" placeholder="" style="display:none;padding-top: var(--dxp-g-spacing-small);"  >
+                           </lightning-input> -->
+                        <c-b2-b_-custom-lookup label={labels.item} selected-icon-name="standard:product" object-label=""
+                           object-api-name="Product2" field-api-name="StockKeepingUnit" other-field-api-name="Name"
+                           index={index} onvalueselected={handleValueSelectedOnRMA} help-text=""
+                           onvalueremoved={handleValueRemovedOnRMA} required>
+                        </c-b2-b_-custom-lookup>
+
+                        <lightning-input type="number" name="accQuantity" data-name="accQuantity" data-index={index}
+                           value={Quantity} label={labels.QuantityLabel} required>
+                        </lightning-input>
+                        <!-- <input type="number" data-name="accQuantity" data-index={index}
+                           value={filterData.Quantity}
+                              variant="label-hidden" onchange={handleChange}/> -->
+
+                        <lightning-input type="text" name="accLot" data-name="accLot" data-index={index} value={Lot}
+                           label={labels.Lotnumber} placeholder="" required>
+                        </lightning-input>
+                        <!--         <td>
+                           <lightning-input type="text"  data-name="accOrder" data-index={index} placeholder=""
+                           value={filterData.Order} variant="label-hidden" onchange={handleChange}>
+                           </lightning-input>
+                           <lightning-input type="text" data-name="accOrderId" data-index={index} placeholder=""
+                           value={filterData.OrderId} variant="label-hidden" style="display:none ;">
+                           </lightning-input>
+                        </td> 
+                        </td> -->
+
+                        <lightning-input type="text" name="accInvoice" data-name="accInvoice" data-index={index}
+                           value={Invoice} placeholder="" label={labels.Invoice_number}>
+                        </lightning-input>
+
+                        <lightning-combobox name="accReturn" data-index={index} data-name="accReturn" value={Return}
+                           label={labels.Return_Reason} placeholder="Select" options={dropdownOptions} required
+                           style="padding-top: var(--dxp-g-spacing-small);">
+                        </lightning-combobox>
+
+                        <lightning-input type="text" name="accComments" data-name="accComments" data-index={index}
+                           placeholder="" label={labels.Comments} value={Comments}>
+                        </lightning-input>
+
+                        <lightning-input type="checkbox" name="accResell" data-name="accResell" data-index={index}
+                           label={labels.In_Reselleable_Condition} value={Resell} checked={isChecked} required>
+                        </lightning-input>
+
+                        <!-- <lightning-button-icon data-index={filterData.id} class="slds-float--right"
+                              icon-name="action:new" onclick={handleAddRow}></lightning-button-icon> 
+                           <lightning-button-icon data-index={filterData.id} class="slds-float--right"
+                              icon-name="action:delete" onclick={handleRemoveRow}></lightning-button-icon>-->
+                     </div>
+                     <footer class="slds-modal__footer">
+                        <!-- Add a button to update the row -->
+                        <div>
+                           <template if:false={isEdit}>
+                              <lightning-button class="slds-float--right slds-m-around_small" variant="brand"
+                                 label="Add RMA" onclick={addRow}></lightning-button>
+                           </template>
+                           <template if:true={isEdit}>
+                              <lightning-button class="slds-float--right slds-m-around_small" variant="brand"
+                                 label="Update Row" onclick={updateRow}></lightning-button>
+                           </template>
+                        </div>
+                     </footer>
+                  </div>
+               </section>
+            </template>
+            <div class="slds-p-left_small slds-p-vertical_small">
+               <lightning-button-group>
+                  <lightning-button variant="neutral" label={labels.Add_Row} title={labels.Add_Row}
+                     icon-name="utility:add" onclick={handleAddRow}></lightning-button>
+                  <lightning-button class="slds-p-right_small" variant="brand" label={labels.Delete_All}
+                     title={labels.Delete_All} icon-name="utility:recycle_bin_full"
+                     onclick={removeAllRows}></lightning-button>
+                  <div>
+                  </div>
+               </lightning-button-group>
+            </div>
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+               <thead>
+                  <tr style="background-color:#005DA6;">
+                     <th scope="col">ItemSku</th>
+                     <th scope="col">Quantity</th>
+                     <th scope="col">Lot Number</th>
+                     <th scope="col">Invoice</th>
+                     <th scope="col">Return Reason</th>
+                     <th scope="col">Comment</th>
+                     <th scope="col">Resale Condition?</th>
+
+                     <th scope="col">Actions</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <template for:each={tableData} for:item="row">
+                     <tr key={row.id}>
+                        <td>{row.itemSku}</td>
+                        <td>{row.quantity}</td>
+                        <td>{row.lotNumber}</td>
+                        <td>{row.Invoice}</td>
+                        <td>{row.returnReson}</td>
+                        <td>{row.Comments}</td>
+                        <td>{row.resaleCondition}</td>
+                        <td>
+                           <lightning-button-icon icon-name="utility:delete" alternative-text="Delete" title="Delete"
+                              onclick={deleteRow} data-row-id={row.id}></lightning-button-icon>
+                        </td>
+                     </tr>
+                  </template>
+               </tbody>
+            </table>
+
+         </lightning-card>
+      </lightning-tab>
+      <!-- Exchange Tab -->
+      <lightning-tab label={labels.Exchange} title={labels.Exchange} value="Exchange" onactive={handleNavigatedesktop}>
+         <p class="slds-p-around_small">{labels.Zimvie_Policy_Text} </p>
+         <p class="slds-p-around_small"><b>{labels.Note_for_tissue}</b></p>
+         <lightning-card>
+            <lightning-button class="slds-float--right slds-m-around_small" variant="brand" label="Submit"
+               onclick={saveRows}>
+            </lightning-button>
+            <div class="slds-p-horizontal_small" style="min-height:500px;">
+               <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-border_left slds-border_right"
+                  aria-labelledby="element-with-table-label other-element-with-table-label">
+                  <thead>
+                     <tr>
+                        <th>
+                           <div class="d-flex">
+                              <div>{labels.item}</div>
+                              <div class="required"></div>
+                           </div>
+                        </th>
+                        <th>
+                           <div class="d-flex">
+                              <div>{labels.QuantityLabel}</div>
+                              <div class="required"></div>
+                           </div>
+                        </th>
+                        <th>
+                           <div class="d-flex">
+                              <div>{labels.Lotnumber}</div>
+                              <div class="required"></div>
+                           </div>
+                        </th>
+                        <th>{labels.Expiry_Date}</th>
+                        <th>{labels.Ordernumb}</th>
+                        <th>{labels.Invoice_number}</th>
+                        <th class="slds-cell-wrap" style="width:1rem;">
+                           <div class="d-flex" style="align-items:center">
+                              <div>{labels.In_Reselleable_Condition}</div>
+                              <div class="required"></div>
+                           </div>
+                        </th>
+                        <th>
+                           <div class="d-flex">
+                              <div>{labels.Return_Reason}</div>
+                              <div class="required"></div>
+                           </div>
+                        </th>
+                        <th>{labels.Comments}</th>
+                        <th class="slds-cell-wrap" style="width:1rem;">
+                           <div class="d-flex">
+                              <div>{labels.Reorder_Item_no}</div>
+                              <div class="required"></div>
+                           </div>
+                        </th>
+                        <th class="slds-cell-wrap" style="width:1rem;">
+                           <div class="d-flex">
+                              <div>{labels.Reorder_Quantity}</div>
+                              <div class="required"></div>
+                           </div>
+                        </th>
+                        <th></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <template for:each={filterListExchange} for:item="filterData" for:index="index">
+                        <tr key={filterData}>
+                           <td style="width:17rem;">
+
+                              <!-- <lightning-record-edit-form object-api-name="OrderItem">
+                                 <lightning-input-field field-name="Product2Id" 
+                                 name="accItem" data-index={index} 
+                                 variant="label-hidden" placeholder="" onchange={handleChange}
+                                 value={filterData.Item} required > </lightning-input-field>
+                              </lightning-record-edit-form> -->
+                              <c-b2-b_-custom-lookup label={undefinedVal} selected-icon-name="standard:product"
+                                 object-label="" object-api-name="Product2" field-api-name="StockKeepingUnit"
+                                 other-field-api-name="Name" index={index} onvalueselected={handleValueSelectedOnRMA}
+                                 help-text="" onvalueremoved={handleValueRemovedOnRMA} required>
+                              </c-b2-b_-custom-lookup>
+
+                           </td>
+                           <td style="width:5rem;">
+
+                              <lightning-input type="text" name="accQuantity" data-name="accQuantity" data-index={index}
+                                 value={filterData.Quantity} variant="label-hidden" onchange={handleChange} required>
+                              </lightning-input>
+
+                           </td>
+                           <td>
+                              <lightning-input type="text" name="accLot" data-name="accLot" data-index={index}
+                                 variant="label-hidden" placeholder="" onchange={handleChange} value={filterData.Lot}
+                                 required>
+                              </lightning-input>
+
+                           </td>
+                           <td>
+
+                              <lightning-input type="date" name="accExpirydate" data-name="accExpirydate"
+                                 data-index={index} value={filterData.Expirydate} variant="label-hidden" placeholder=""
+                                 onchange={handleChange}>
+                              </lightning-input>
+
+                           </td>
+                           <td>
+                              <lightning-input type="text" name="accOrder" data-index={index} placeholder=""
+                                 value={filterData.Order} variant="label-hidden" onchange={handleChange}>
+                              </lightning-input>
+                              <lightning-input type="text" data-name="accOrderId" data-index={index} placeholder=""
+                                 value={filterData.OrderId} variant="label-hidden" style="display:none ;">
+                              </lightning-input>
+                           </td>
+                           <td>
+                              <lightning-input type="text" name="accInvoice" data-index={index} placeholder=""
+                                 value={filterData.Invoice} variant="label-hidden" onchange={handleChange}>
+                              </lightning-input>
+                           </td>
+                           <td>
+                              <lightning-input type="checkbox" name="accResell" data-name="accResell" data-index={index}
+                                 value={filterData.Resell} variant="label-hidden" onchange={handleChange}>
+                              </lightning-input>
+                           </td>
+                           <td>
+
+                              <lightning-combobox name="accReturn" data-name="accReturn" data-index={index}
+                                 variant="label-hidden" placeholder="Select" onchange={handleChange}
+                                 value={filterData.ReturnReason} required options={dropdownOptionsExchange}>
+                              </lightning-combobox>
+
+                           </td>
+                           <td>
+                              <lightning-input type="text" name="accComments" data-index={index} placeholder=""
+                                 value={filterData.Comments} variant="label-hidden" onchange={handleChange}>
+                              </lightning-input>
+                           </td>
+                           <td style="width:17rem;">
+
+                              <!-- <lightning-record-edit-form object-api-name="OrderItem">
+                                 <lightning-input-field field-name="Product2Id" 
+                                 name="accReorderItem" data-index={index}
+                                 variant="label-hidden" placeholder="" onchange={handleChange}
+                                 value={filterData.ReorderItem} required > </lightning-input-field>
+                              </lightning-record-edit-form> -->
+                              <c-b2-b_-custom-lookup label={undefinedVal} selected-icon-name="standard:product"
+                                 object-label="" object-api-name="Product2" field-api-name="StockKeepingUnit"
+                                 other-field-api-name="Name" index={index}
+                                 onvalueselected={handleValueSelectedOnReturnRMA} help-text=""
+                                 onvalueremoved={handleValueRemovedOnReturnRMA} required>
+                              </c-b2-b_-custom-lookup>
+
+                           </td>
+                           <td>
+
+                              <lightning-input type="text" name="accReorderQuantity" data-name="accReorderQuantity"
+                                 data-index={index} value={filterData.ReorderQuantity} variant="label-hidden"
+                                 onchange={handleChange} required>
+                              </lightning-input>
+
+                           </td>
+                           <td>
+                              <!-- <lightning-button-icon data-index={filterData.id} class="slds-float--right"
+                                 icon-name="action:new" onclick={handleAddRow}></lightning-button-icon> -->
+                              <lightning-button-icon data-index={filterData.id} class="slds-float--right"
+                                 icon-name="action:delete" onclick={handleRemoveRow}></lightning-button-icon>
+                           </td>
+                        </tr>
+                     </template>
+                  </tbody>
+               </table>
+               <div class="slds-p-left_small slds-p-vertical_small">
+                  <lightning-button-group>
+                     <lightning-button variant="neutral" label={labels.Add_Row} title={labels.Add_Row}
+                        icon-name="utility:add" onclick={handleAddRow}></lightning-button>
+                     <lightning-button class="slds-p-right_small" variant="brand" label={labels.Delete_All}
+                        title={labels.Delete_All} icon-name="utility:recycle_bin_full"
+                        onclick={removeAllRows}></lightning-button>
+                  </lightning-button-group>
+               </div>
+            </div>
+         </lightning-card>
+      </lightning-tab>
+      <lightning-tab label={labels.Courtesy_Implant_Replacement_Request} value="Courtesy"
+         onactive={handleNavigatedesktop} if:true={country}>
+         <p class="slds-p-around_small">{labels.Zimvie_Policy_Text} </p>
+         <lightning-card>
+            <lightning-button class="slds-m-around_small" variant="brand" label="Submit" slot="actions"
+               onclick={saveRows}></lightning-button>
+            <div class="slds-p-horizontal_small">
+               <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-border_left slds-border_right"
+                  aria-labelledby="element-with-table-label other-element-with-table-label">
+                  <thead>
+                     <tr>
+                        <th>
+                           <div class="d-flex">
+                              <div>{labels.item}</div>
+                              <div class="required"></div>
+                           </div>Item
+                        </th>
+                        <th>
+                           <div class="d-flex">
+                              <div>{labels.QuantityLabel}</div>
+                              <div class="required"></div>
+                           </div>
+                        </th>
+                        <th>
+                           <div class="d-flex">
+                              <div>{labels.Lotnumber}</div>
+                              <div class="required"></div>
+                           </div>
+                        </th>
+                        <th>{labels.Expiry_Date}</th>
+                        <th>{labels.Ordernumb}</th>
+                        <th>{labels.Invoice_number}</th>
+                        <th>
+                           <div class="d-flex">
+                              <div>{labels.Return_Reason}</div>
+                              <div class="required"></div>
+                           </div>
+                        </th>
+                        <th>{labels.Comments}</th>
+                        <th class="slds-cell-wrap" style="width:1rem;">
+                           <div class="d-flex" style="align-items:center">
+                              <div>{labels.Reorder_Item_no}</div>
+                              <div class="required"></div>
+                           </div>
+                        </th>
+                        <th class="slds-cell-wrap" style="width:1rem;">
+                           <div class="d-flex" style="align-items:center">
+                              <div>{labels.Reorder_Quantity}</div>
+                              <div class="required"></div>
+                           </div>
+                        </th>
+                        <th>
+                           <div class="d-flex">
+                              <div>{labels.Patient_ID}</div>
+                              <div class="required"></div>
+                           </div>
+                        </th>
+                        <th>
+                           <div class="d-flex">
+                              <div>{labels.Event_date}</div>
+                              <div class="required"></div>
+                           </div>
+                        </th>
+                        <th></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <template for:each={filterListCourtsey} for:item="filterData" for:index="index">
+                        <tr key={filterData}>
+                           <td style="width:17rem;">
+
+                              <!-- <lightning-record-edit-form object-api-name="OrderItem">
+                                 <lightning-input-field field-name="Product2Id" 
+                                 name="accItem" data-index={index}
+                                 variant="label-hidden" placeholder="" onchange={handleChange}
+                                 value={filterData.Item} required > </lightning-input-field>
+                              </lightning-record-edit-form> -->
+                              <c-b2-b_-custom-lookup label={undefinedVal} selected-icon-name="standard:product"
+                                 object-label="" object-api-name="Product2" field-api-name="StockKeepingUnit"
+                                 other-field-api-name="Name" index={index} onvalueselected={handleValueSelectedOnRMA}
+                                 help-text="" onvalueremoved={handleValueRemovedOnRMA} required>
+                              </c-b2-b_-custom-lookup>
+
+                           </td>
+
+                           <td style="width:5rem;">
+
+                              <lightning-input type="text" name="accQuantity" data-name="accQuantity" data-index={index}
+                                 value={filterData.Quantity} variant="label-hidden" disabled={disableFieldQuantity}
+                                 onchange={handleChange}>
+                              </lightning-input>
+
+                           </td>
+                           <td>
+
+                              <lightning-input type="text" name="accLot" data-name="accLot" data-index={index}
+                                 variant="label-hidden" placeholder="" onchange={handleChange} required
+                                 value={filterData.Lot}>
+                              </lightning-input>
+
+                           </td>
+                           <td>
+
+                              <lightning-input type="date" name="accExpirydate" data-name="accExpirydate"
+                                 data-index={index} value={filterData.Expirydate} variant="label-hidden" placeholder=""
+                                 onchange={handleChange}>
+                              </lightning-input>
+
+                           </td>
+                           <td>
+                              <lightning-input type="text" name="accOrder" data-name="accOrder" data-index={index}
+                                 placeholder="" value={filterData.Order} variant="label-hidden" onchange={handleChange}>
+                              </lightning-input>
+                              <lightning-input type="text" data-name="accOrderId" data-index={index} placeholder=""
+                                 value={filterData.OrderId} variant="label-hidden" style="display:none ;">
+                              </lightning-input>
+                           </td>
+                           <td>
+                              <lightning-input type="text" name="accInvoice" data-name="accInvoice" data-index={index}
+                                 placeholder="" value={filterData.Invoice} variant="label-hidden"
+                                 onchange={handleChange}>
+                              </lightning-input>
+                           </td>
+
+                           <td>
+
+                              <lightning-combobox name="accReturn" data-name="accReturn" data-index={index}
+                                 variant="label-hidden" placeholder="Select" onchange={handleChange}
+                                 value={filterData.ReturnReasonCourtsey} options={dropdownOptionsCourtesy} required>
+                              </lightning-combobox>
+
+                           </td>
+                           <td>
+                              <lightning-input type="text" name="accComments" data-name="accComments" data-index={index}
+                                 placeholder="" value={filterData.Comments} variant="label-hidden"
+                                 onchange={handleChange}>
+                              </lightning-input>
+                           </td>
+                           <td style="width:17rem;">
+
+                              <!-- <lightning-record-edit-form object-api-name="OrderItem">
+                                 <lightning-input-field field-name="Product2Id" 
+                                 name="accReorderItem" data-index={index}
+                                 variant="label-hidden" placeholder="" onchange={handleChange}
+                                 value={filterData.ReorderItem} required > </lightning-input-field>
+                              </lightning-record-edit-form> -->
+                              <c-b2-b_-custom-lookup label={undefinedVal} selected-icon-name="standard:product"
+                                 object-label="" object-api-name="Product2" field-api-name="StockKeepingUnit"
+                                 other-field-api-name="Name" index={index}
+                                 onvalueselected={handleValueSelectedOnReturnRMA} help-text=""
+                                 onvalueremoved={handleValueRemovedOnReturnRMA} required>
+                              </c-b2-b_-custom-lookup>
+                           </td>
+                           <td>
+
+                              <lightning-input type="text" name="accReorderQuantity" data-name="accReorderQuantity"
+                                 data-index={index} value={filterData.ReorderQuantity} variant="label-hidden"
+                                 onchange={handleChange} disabled={disableFieldQuantity}>
+                              </lightning-input>
+
+                           </td>
+                           <td>
+
+                              <lightning-input type="text" name="accPatientId" data-name="accPatientId"
+                                 data-index={index} value={filterData.PatientId} variant="label-hidden"
+                                 onchange={handleChange} required>
+                              </lightning-input>
+
+                           </td>
+                           <td>
+
+                              <lightning-input type="date" name="accEventDate" data-name="accEventDate"
+                                 data-index={index} value={filterData.EventDate} variant="label-hidden"
+                                 onchange={handleChange} required>
+                              </lightning-input>
+
+                           </td>
+                           <td>
+                              <lightning-button-icon data-index={filterData.id} class="slds-float--right"
+                                 icon-name="action:delete" onclick={handleRemoveRow}></lightning-button-icon>
+                           </td>
+                        </tr>
+                     </template>
+                  </tbody>
+               </table>
+               <div class="slds-p-left_small slds-p-vertical_small">
+                  <lightning-button-group>
+                     <lightning-button variant="neutral" label={labels.Add_Row} title={labels.Add_Row}
+                        icon-name="utility:add" onclick={handleAddRow}></lightning-button>
+                     <lightning-button class="slds-p-right_small" variant="brand" label={labels.Delete_All}
+                        title={labels.Delete_All} icon-name="utility:recycle_bin_full"
+                        onclick={removeAllRows}></lightning-button>
+                  </lightning-button-group>
+
+               </div>
+            </div>
+            <!-- <div slot="footer" style="text-align:left">
+            <h2 class="slds-p-bottom_small" style="font-size: larger;font-weight: 600;">Additional Information</h2>
+            <div class="slds-grid slds-wrap">
+               <div class="slds-col slds-size_2-of-12 slds-p-around_small slds-align_absolute-center slds-border_bottom slds-border_left slds-border_right slds-border_top" style="font-weight: 600;background: #fef6f6;">
+                  <span>Patient ID</span>
+               </div>
+               <div class="slds-col slds-size_1-of-12 slds-p-around_small slds-border_bottom slds-border_left slds-border_right slds-border_top" style="">
+                  <span>John Doe</span>
+               </div>
+               <div class="slds-col slds-size_9-of-12 slds-p-around_small">
+                  <span></span>
+               </div>
+               
+               <div class="slds-col slds-size_2-of-12 slds-p-around_small slds-align_absolute-center slds-border_bottom slds-border_left slds-border_right slds-border_top" style="font-weight: 600;background: #fef6f6;">
+                  <span>Event Date</span>
+               </div>
+               <div class="slds-col slds-size_1-of-12 slds-p-around_small slds-border_bottom slds-border_left slds-border_right slds-border_top" style="">
+                  <span>04/10/2023</span>
+               </div>
+               <div class="slds-col slds-size_9-of-12 slds-p-around_small">
+                  <span></span>
+               </div>
+            </div>
+         </div> -->
+         </lightning-card>
+      </lightning-tab>
+   </lightning-tabset>
+
+</template>

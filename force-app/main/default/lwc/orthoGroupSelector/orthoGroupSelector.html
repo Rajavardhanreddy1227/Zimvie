@@ -1,0 +1,12 @@
+<template>
+  <template if:true={groups.data}>
+    <lightning-combobox
+      name="group"
+      label={labels.Ortho_Group_Selector_Label}
+      value={value}
+      placeholder={labels.Ortho_Group_Selector_Placeholder}
+      options={options}
+      onchange={handleChange}
+    ></lightning-combobox>
+  </template>
+</template>

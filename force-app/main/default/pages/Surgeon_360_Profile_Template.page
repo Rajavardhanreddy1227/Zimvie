@@ -1,0 +1,243 @@
+<apex:page sidebar="false" showheader="false" standardStylesheets="false" title="Profile">
+    <ion-view title="Profile">
+        <ion-content class="surgeonProfile {{ profile.accountLevelStyleClass }}">
+            <div class="profileTop">
+                <div class="row responsive-sm responsive-md photo" ng-if="profile.personalData.photo">
+                    <div class="col photo-container">
+                        <div class="back" style="left: 16px; top: 16px;">
+                            <span class="backText" ng-click="close();">&lt; Back</span>
+                        </div>
+                        <img class="blurred" src="{{ profile.personalData.photo }}" />
+                        <img class="centered" src="{{ profile.personalData.photo }}" />
+                    </div>
+                </div>
+                <div class="row responsive-sm responsive-md" ng-if="!profile.personalData.photo">
+                    <div class="col">
+                        <div class="back" style="left: 16px; top: 16px;">
+                            <span class="backText" ng-click="close();">&lt; Back</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row responsive-sm responsive-md titleContainer">
+                    <div class="col">
+                        <div class="iconHolder">
+                            <img class="logo" src="{!URLFOR($Resource.surgeon_360_styling, 'css/zlogo-blue.svg')}" /> 
+                        </div>
+                        <div class="nameContainer">
+                            <h5 class="name">{{ profile.personalData.firstname }} {{ profile.personalData.lastName }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profileMain">
+                <div class="row account" ng-if="profile.rating">
+                    <div class="col col-10">
+                        <span class="icon fa fa-star"></span> 
+                    </div>
+                    <div class="col col-offset-2 accountContainer">
+                        <span class="smallText accountHeader">Rating</span>
+                        <div class="levelContainer">
+                            <span class="icon fa fa-circle"></span>
+                            <span class="level">{{ profile.accountLevel }} Account</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row address">
+                    <div class="col col-10">
+                        <span class="icon fa fa-map-marker"></span> 
+                    </div>
+                    <div class="col col-offset-2 addressContainer">
+                        <span class="addressPart street">{{profile.personalData.personMailingAddress.street}}</span>
+                        <span class="addressPart city">{{profile.personalData.personMailingAddress.city}}</span>
+                        <span class="addressPart state">{{profile.personalData.personMailingAddress.state}}</span>
+                        <span class="addressPart code">{{profile.personalData.personMailingAddress.postalCode}}</span>
+                        <span class="addressPart country">{{profile.personalData.personMailingAddress.country}}</span>            
+                    </div>
+                </div>
+
+                <div class="relatedObjects">
+                    <a href="#" ng-click="$event.preventDefault();  goToList('Product_Usage_Account__r');">
+                        <div class="row relatedContainer">
+                            <div class="col col-center">
+                                <span class="icon fa fa-pie-chart"></span> 
+                            </div>
+                            <div class="col col-66 col-offset-2">
+                                <span class="name">ZB Usage - Last 12 months</span>
+                            </div>
+                            <div class="col col-offset-2 center">
+                                <span class="badge badge-assertive">{{profile.profileSummary.zbUsage}}</span>
+                            </div>
+                            <div class="col right">
+                                <span class="caret"> > </span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- rlid = 00NC0000006VKUZ -->
+                    <a href="#" ng-click="$event.preventDefault();goToList('Physician_Payment_Sunshine_Act__r');">
+                        <div class="row relatedContainer">
+                            <div class="col">
+                                <span class="icon fa fa-dollar"></span> 
+                            </div>
+                            <div class="col col-66 col-offset-2">
+                                <span class="name">Sunshine Payments</span>
+                            </div>
+                            <div class="col col-offset-2 center">
+                                <span class="badge badge-assertive">${{profile.profileSummary.sunshinePayments}}K</span>
+                            </div>
+                            <div class="col right">
+                                <span class="caret"> > </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" ng-click="$event.preventDefault();  goToList('OpenActivities');">
+                        <div class="row relatedContainer">
+                            <div class="col">
+                                <span class="icon fa fa-bar-chart"></span> 
+                            </div>
+                            <div class="col col-66 col-offset-2">
+                                <span class="name">Activities - Last 24 Months</span>
+                            </div>
+                            <div class="col col-offset-2 center">
+                                <span class="badge badge-assertive">{{profile.profileSummary.activities}}</span>
+                            </div>
+                            <div class="col right">
+                                <span class="caret"> > </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" ng-click="$event.preventDefault();  goToList('Schedule_Account__r');">
+                        <div class="row relatedContainer">
+                            <div class="col">
+                                <span class="icon fa fa-calendar"></span> 
+                            </div>
+                            <div class="col col-66 col-offset-2">
+                                <span class="name">Surgery Schedules</span>
+                            </div>
+                            <div class="col col-offset-2 center">
+                                <span class="badge badge-assertive">{{profile.profileSummary.surgerySchedules}}</span>
+                            </div>
+                            <div class="col right">
+                                <span class="caret"> > </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" ng-click="$event.preventDefault();  goToList('Healthcare_Facility_Surgeon__r');">
+                        <div class="row relatedContainer">
+                            <div class="col">
+                                <span class="icon fa fa-heart"></span> 
+                            </div>
+                            <div class="col col-66 col-offset-2">
+                                <span class="name">Healthcare Facility Relationships</span>
+                            </div>
+                            <div class="col col-offset-2 center">
+                                <span class="badge badge-assertive">{{profile.profileSummary.healthcareFacilityRelationships}}</span>
+                            </div>
+                            <div class="col right">
+                                <span class="caret"> > </span>
+                            </div>
+                        </div>
+                    </a> 
+                    <a href="#" ng-click="$event.preventDefault();  goToList('Product_Usage_Account__r');">
+                        <div class="row relatedContainer">
+                            <div class="col">
+                                <span class="icon fa fa-bar-chart"></span> 
+                            </div>
+                            <div class="col col-66 col-offset-2">
+                                <span class="name">Market Usage - Last 12 months</span>
+                            </div>
+                            <div class="col col-offset-2 center">
+                                <span class="badge badge-assertive">{{profile.profileSummary.marketUsage}}</span>
+                            </div>
+                            <div class="col right">
+                                <span class="caret"> > </span>
+                            </div>
+                        </div>
+                    </a> 
+                    <a href="#" ng-click="$event.preventDefault();  goToDetail();">
+                        <div class="row relatedContainer">
+                            <div class="col">
+                                <span class="icon fa fa-bullhorn"></span> 
+                            </div>
+                            <div class="col col-66 col-offset-2">
+                                <span class="name">Campaigns - Last 24 months</span>
+                            </div>
+                            <div class="col col-offset-2 center">
+                                <span class="badge badge-assertive">{{profile.profileSummary.campaigns}}</span>
+                            </div>
+                            <div class="col right">
+                                <span class="caret"> > </span>
+                            </div>
+                        </div>
+                    </a> 
+                    <a href="#" ng-click="$event.preventDefault();  goToList('Payors__r');">
+                        <div class="row relatedContainer">
+                            <div class="col">
+                                <span class="icon fa fa-money"></span> 
+                            </div>
+                            <div class="col col-66 col-offset-2">
+                                <span class="name">Active Payers</span>
+                            </div>
+                            <div class="col col-offset-2 center">
+                                <span class="badge badge-assertive">{{profile.profileSummary.activePayers}}</span>
+                            </div>
+                            <div class="col right">
+                                <span class="caret"> > </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" ng-click="$event.preventDefault();  goToList('Peer_Network__pr');">
+                        <div class="row relatedContainer">
+                            <div class="col">
+                                <span class="icon fa fa-users"></span> 
+                            </div>
+                            <div class="col col-66 col-offset-2">
+                                <span class="name">Peer Networks</span>
+                            </div>
+                            <div class="col col-offset-2 center">
+                                <span class="badge badge-assertive">{{profile.profileSummary.peerNetwork}}</span>
+                            </div>
+                            <div class="col right">
+                                <span class="caret"> > </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" ng-click="$event.preventDefault();  goToList('Public_Engagements_del1__r');">
+                        <div class="row relatedContainer">
+                            <div class="col">
+                                <span class="icon fa fa-comments-o"></span> 
+                            </div>
+                            <div class="col col-66 col-offset-2">
+                                <span class="name">Public Engagement - Last 24 Months</span>
+                            </div>
+                            <div class="col col-offset-2 center">
+                                <span class="badge badge-assertive">{{profile.profileSummary.publicEngagement}}</span>
+                            </div>
+                            <div class="col right">
+                                <span class="caret"> > </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" ng-click="$event.preventDefault();  goToOpportunityPage();">
+                        <div class="row relatedContainer">
+                            <div class="col">
+                                <span class="icon fa fa-comments-o"></span> 
+                            </div>
+                            <div class="col col-66 col-offset-2">
+                                <span class="name">Opportunities</span>
+                            </div>
+                            <div class="col col-offset-2 center">
+                                <span class="badge badge-assertive">${{profile.profileSummary.opportunities}}K</span>
+                            </div>
+                            <div class="col right">
+                                <span class="caret"> > </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </ion-content>
+    </ion-view>
+</apex:page>

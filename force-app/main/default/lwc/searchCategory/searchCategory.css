@@ -1,0 +1,25 @@
+.c-filter-card{
+     box-shadow: none;
+     border:0
+ }
+ .c-filter-head{
+     font-weight: bold;
+     font-size:14px;
+ }
+ .c-filter-content .slds-form-element__label {
+    color: var(--zim-vie-primary-navy, #0A2043);
+font-family: Soleil;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.d-flex{
+    display:flex;
+}
+.ml-auto{
+    margin-right:auto;
+}
+.mr-auto{
+    margin-left:auto;
+}

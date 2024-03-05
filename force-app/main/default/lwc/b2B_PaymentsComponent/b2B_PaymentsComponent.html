@@ -1,0 +1,49 @@
+<!--
+  @description       : 
+  @author            : asood@rafter.one
+  @group             : 
+  @last modified on  : 08-14-2023
+  @last modified by  : asood@rafter.one
+-->
+<template>
+  <div class="slds-m-left_medium">
+ <!--Tab set started -->
+  <lightning-tabset>
+    <lightning-tab label={labels.CreditCard}> 
+     
+      <!--Digital Wallet/ Stored Payment Components-->
+      <c-b2-b_-stored-payment-list onstoredpaymentvaluechange={handleStorePaymentSelectionP} hide-all-wallets={hideWallets} ></c-b2-b_-stored-payment-list>
+      <!--Cyber Source Paument Form-->
+      <c-b2-b_-cyber-source-payment-form oncardradiochanged={handleCardRadioSelection} render-cyber-source-form={randerForm} is-term-selected={isTermSelected} payment-id={storePaymentId}></c-b2-b_-cyber-source-payment-form>
+    </lightning-tab>
+
+    <template if:true={showTabTwo}>
+
+    <lightning-tab label={labels.Payment_By_Term}>
+      <c-b2-b_-payment-by-term ontermselected={handlePaymentTerm} is-show-spinner={isTermLoader}></c-b2-b_-payment-by-term>
+    </lightning-tab>
+  </template>   
+  </lightning-tabset>
+</div>
+  <!--Tab set End -->
+  <div class="slds-clearfix slds-m-top_small slds-m-bottom_medium">
+    <div class="slds-float_right">
+      <!-- <lightning-button label="Previous" onclick={handlePreviousButton} class="slds-m-left_x-small">
+      </lightning-button> -->
+      <!-- <template if:true={randerForm}>
+        <lightning-button label={labels.Place_Order} onclick={handlePayClickP} class="slds-m-left_x-small" variant="brand">
+        </lightning-button>
+      </template> -->
+
+      <!-- <template if:true={renderPaymentTerm}>
+        <lightning-button disabled={isOrderPlaced} label="Place Order" onclick={handlePayClickTerm} class="slds-m-left_x-small" variant="brand">
+        </lightning-button>
+      </template> -->
+
+      <!-- <template if:false={hideWallets}>
+        <lightning-button label={labels.Place_Order_W} onclick={useStoredPaymentP} class="slds-m-left_x-small" variant="brand">
+        </lightning-button>
+      </template> -->
+    </div>
+  </div>
+</template>

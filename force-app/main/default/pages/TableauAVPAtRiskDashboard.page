@@ -1,0 +1,16 @@
+<!----------------------------------------------------------------------------
+    Page Name:    TableauAVPAtRiskDashboard
+    Purpose:      to display the tableau At Risk dashboards to AVPs in the Grid Buddy
+                  At Risk Page
+    Developed By: Prosenjit Saha
+
+----------------------------------------------------------------------------->
+<apex:page standardController="account">
+  
+  <!-- Custom Settings (hierarchy type): TableauDashboardAssignment created to get the URL of the AVP specific urls  -->
+  <apex:iframe src="{!$Setup.TableauDashboardAssignment__c.At_Risk_URL__c}?:embed=y&:showShareOptions=false&:toolbar=false&:display_count=no&:showVizHome=no" 
+               height="500px" 
+               width="100%"
+               id="theIframe" />
+  
+</apex:page>

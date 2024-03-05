@@ -1,0 +1,71 @@
+<!-- 
+When called from home page it shows only Detailed discussion board 
+-->
+<apex:page showHeader="false" sidebar="false"
+name="Bulletin Board"   controller="Discussion_Board" title="Bulletin Board" label="Bulletin Board"  > <!-- pageStyle="backcolor:steelblue;forecolor:beige"> -->
+
+<!--<img id="img1" src="/servlet/servlet.ImageServer?id=01580000000Qk47&oid=00DL00000008bpd"/>-->
+<!--<img id="img1" src="/servlet/servlet.ImageServer?id=015M00000004oPc&oid=00DM00000009ZUh" height="80" width="200"/>-->
+<img id="img1" src="/servlet/servlet.ImageServer?id=015C0000001aGO5&oid=00D80000000KvI9" height="80" width="200"/>
+<apex:form >
+<title>{!$Label.Title}</title>
+<script src="/soap/ajax/10.0/connection.js" type="text/javascript">
+</script>
+<script type="text/javascript" src="/js/functions.js">
+</script>
+<script type="text/javascript" >
+ sforce.connection.sessionId ='{!$Api.Session_ID}';var userId = "{!$User.Id}"; 
+  function userCheck()
+  { 
+
+    var UserObj= new sforce.SObject("User");
+    UserObj.id = userId;
+    UserObj.Bulletin_Board__c = true;
+    var d = new Date();
+    UserObj.Bulletin_Board_Date__c = d;
+    var result = sforce.connection.update([UserObj]);
+   
+  if (result[0].getBoolean("success"))
+  {
+  window.close();
+
+  return false;
+  }
+  else
+  {
+  alert('Error:Please contact Administrator');
+  }
+  
+  }
+ 
+//window.onload  = loadfns;
+function loadfns()
+{
+if (window.document.referrer != '')
+{
+    window.close();
+}   
+    window.name = "Bulletin Board";
+    //alert(window.document.referrer);
+}
+</script>
+    <apex:pageBlock >
+     <apex:pageBlockButtons >
+         <apex:commandButton onclick="window.close(); return false" title="Remind me later!" value="Remind me later!"  />
+         <apex:commandButton onclick="userCheck();window.close();return false" title="Don't Show Me This Page Again" value="Don't Show Me This Page Again" />
+     </apex:pageBlockButtons>
+    
+    <!-- <apex:OutputPanel layout="block">
+       <apex:pageBlockSection columns="1" >
+            <apex:pageBlockTable style="width:100%" value="{!discussionDetail}" var="temp" id="EntrdRecTable13"   >
+                <apex:column Id="v" style="height:10px" breakBefore="true" >
+                    <apex:outputField value="{!temp.Full_Content__c}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageblockSection>
+     </apex:OutputPanel>-->
+
+   </apex:pageBlock>
+</apex:form>
+<img id="img1" src="/servlet/servlet.ImageServer?id=015C0000001aGO5&oid=00D80000000KvI9" height="80" width="200"/>
+</apex:page><!-- End of visual force page -->

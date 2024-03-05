@@ -1,0 +1,144 @@
+.nested-dropdowns {
+  display: flex;
+  /* Reset list styles */
+  list-style-type: none;
+}
+.clr {
+  clear: both;
+}
+.pl-80{
+  padding-left:80px;
+}
+.nested-dropdowns li, .nested-dropdowns li a{
+  color: var(--textColour, #ffffff);
+  /*font-family: Arial;*/
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.32px;
+  white-space: nowrap;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.nested-dropdowns ul li, .child-nested-dropdowns  li a{
+  color: var(--textColour, #ffffff);
+  /*font-family: Arial;*/
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  white-space: nowrap;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.nested-dropdowns ul {
+  /* Border 
+  border: 1px solid #000000;*/
+
+  /* Hidden by default */
+  display: none;
+
+  /* Absolute position */
+  left: 0;
+  position: absolute;
+  top: 100%;
+
+  /* Reset styles */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+/* shadow */
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15)
+}
+
+.nested-dropdowns li {
+  background-color: var(--tabColour, #0A2043);
+}
+
+.nested-dropdowns li:hover > ul {
+  display: block;
+}
+
+.nested-dropdowns li:hover {
+  background-color: #2C9DD8;
+}
+
+.nested-dropdowns ul ul {
+  left: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.topMenuItemPadding {
+  /*padding: 10px 5px 10px 5px; old*/
+  padding: 14px 12px;
+}
+
+.menuItemPadding {
+  padding: 10px 36px 10px 20px;
+}
+
+.topAnchorPadding {
+  display: block;
+  /*padding: 10px 5px 10px 5px; old */
+  padding: 14px 12px;
+}
+
+.anchorPadding {
+  display: block;
+  padding: 10px 14px 10px 20px;
+}
+
+.topAnchorPadding:hover{
+  text-decoration: none;
+}
+
+.anchorPadding:hover{
+  text-decoration: none;
+}
+
+.menu-item li a{
+  background: var(--hoverBGColour, #ffffff);
+  color: var(--hoverTextColour, #0A2043);
+}
+
+.menu-item li a:hover {
+  background-color: #2C9DD8;
+  color: white;
+}
+
+.sub-item div{
+  background: var(--hoverBGColour, #ffffff);
+  color: var(--hoverTextColour, #0A2043);
+}
+
+.sub-item div:hover{
+  background-color: #2C9DD8;
+  color: white;
+}
+
+.mobileshow { 
+  display:none; 
+}
+.desktopshow {
+  display:block;
+}
+@media screen and (max-width: 600px) {
+.mobileshow { 
+  display:block; 
+  }
+  .desktopshow {
+  display:none;
+}
+}
+.bgColour {
+    background: var(--tabColour, #0A2043);
+    border-bottom: solid 1px;
+}

@@ -1,0 +1,10 @@
+.borderClass{
+    background-color: #f0f1f3;
+    height: 200px !important;
+    /*min-height: 200px;*/
+    border: none;
+    border-radius: 10px;
+}
+.fontbold{
+    font-weight: 600;
+}

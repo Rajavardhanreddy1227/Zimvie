@@ -1,0 +1,77 @@
+<apex:page showHeader="false" sidebar="false" title="ASC Company Targets ">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_ASC_Targets" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"pageAPIName": "GBTabs_ASC_Targets",
+	"showSidebar": false,
+	"showHeader": false,
+	"height": "",
+	"object": "0",
+	"globalButtons": true,
+	"description": "",
+	"selectedCustomJSIds": [],
+	"selectedCustomCSSIds": [],
+	"id": 1589982404563,
+	"tabs": [
+		{
+			"id": 1589982404563,
+			"content": "{!gridPage}gname=ASC Accounts&amp;sh=0&amp;sfname=default",
+			"name": "ASC Accounts"
+		},
+		{
+			"name": "ASC Focus Accounts",
+			"content": "{!gridPage}gname=ASC Focus Accounts&amp;sh=0&amp;sfname=default",
+			"id": 1589982443337
+		},
+		{
+			"name": "Summary ",
+			"content": "{!gridPage}gname=ASC Opportunity Pipeline&amp;sh=0&amp;sfname=default",
+			"id": 1589982444177
+		},
+		{
+			"name": "Knee",
+			"content": "{!gridPage}gname=ASC Opportunity Knees&amp;sh=0&amp;sfname=default",
+			"id": 1589982444723
+		},
+		{
+			"name": "Hips ",
+			"content": "{!gridPage}gname=ASC Opportunity Hips&amp;sh=0&amp;sfname=default",
+			"id": 1589982446259
+		},
+		{
+			"name": "Extremities",
+			"content": "{!gridPage}gname=ASC Opportunity Extremities&amp;sh=0&amp;sfname=default",
+			"id": 1589982446851
+		},
+		{
+			"name": "Foot &amp; Ankle ",
+			"content": "{!gridPage}gname=ASC Opportunity FootAnkle&amp;sh=0&amp;sfname=default",
+			"id": 1589982447287
+		},
+		{
+			"name": "Cement",
+			"content": "{!gridPage}gname=ASC Opportunity Cement&amp;sh=0&amp;sfname=default",
+			"id": 1589982477439
+		},
+		{
+			"name": "Sports Medicine ",
+			"content": "{!gridPage}gname=ASC Opportunity Sports Medicine&amp;sh=0&amp;sfname=default",
+			"id": 1589982478134
+		},
+		{
+			"name": "Trauma",
+			"content": "{!gridPage}gname=ASC Opportunity Trauma&amp;sh=0&amp;sfname=default",
+			"id": 1589982490099
+		},
+		{
+			"name": "Early Intervention ",
+			"content": "{!gridPage}gname=ASC Opportunity Early Intervention&amp;sh=0&amp;sfname=default",
+			"id": 1589982496999
+		}
+	],
+	"name": "ASC Company Targets "
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

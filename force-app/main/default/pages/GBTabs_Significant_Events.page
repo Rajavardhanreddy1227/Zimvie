@@ -1,0 +1,32 @@
+<apex:page standardController="Territory_Level_Plan__c" showHeader="false" sidebar="false" title="Significant Events">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Significant_Events" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Significant Events",
+	"tabs": [
+		{
+			"name": "Significant Events",
+			"content": "{!gridPage}gname=Significant Events&sh=0&sfname=default",
+			"id": 1548279688897
+		},
+		{
+			"name": "Significant Events - Archive",
+			"content": "{!gridPage}gname=Significant Events Archived&sh=0&sfname=default",
+			"id": 1548279755516
+		}
+	],
+	"id": 1548279688897,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "Significant Events",
+	"globalButtons": false,
+	"object": "Territory_Level_Plan__c",
+	"height": "1200",
+	"showHeader": false,
+	"showSidebar": false,
+	"pageAPIName": "GBTabs_Significant_Events"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

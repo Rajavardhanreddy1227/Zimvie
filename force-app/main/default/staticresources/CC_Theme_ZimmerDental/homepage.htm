@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cloudburst - Responsive - Homepage</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+	<link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
+	<link href="css/styles.css" rel="stylesheet" type="text/css" />
+	<link href="css/fonts.css" rel="stylesheet" type="text/css" />
+	<link href="css/bootstrap_overwrite.css" rel="stylesheet" media="screen">
+
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" type="text/css" href="css/ie8.css">
+		<![endif]-->
+	</head>
+
+	<body>
+		<!-- PHONE VIEW -->
+		<div class="container visible-phone phoneLayout">
+
+			<div class="loadingContainer " style="display: none;">
+				<div class="loadingOverlay overlay"></div>
+				<div class="circleContainer overlay">
+					<div class="circle"></div>
+					<div class="circle1"></div>
+				</div>
+			</div>
+
+			<div class="header_menu" id="menuHeader">
+				<div class="navbar main_navigation_container">
+					<div class="navbar-inner">
+						<div class="container">
+							<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">          
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="brand_phone visible-phone" id="phoneLogo" href="#"><img src="images/phone_logo.png" style="height:39px" width="200px" height="39px"></a>
+							<a class="brand visible-tablet">Main Navigation</a>
+							<div class="nav-collapse collapse">
+								<ul class="nav">
+
+
+									<li class="dropdown">
+										<a data-toggle="dropdown" class="dropdown-toggle" href="">Navigation Item #1 <b class="caret"></b></a>
+										<ul class="dropdown-menu sub-menu">
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #1</a></li>
+
+
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #2</a></li>
+
+
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #3</a></li>
+
+
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #4</a></li>
+
+
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #5</a></li>
+
+
+
+										</ul>
+									</li>
+
+
+
+									<li class="dropdown">
+										<a data-toggle="dropdown" class="dropdown-toggle" href="">Navigation Item #2 <b class="caret"></b></a>
+										<ul class="dropdown-menu sub-menu">
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #1</a></li>
+
+
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #2</a></li>
+
+
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #3</a></li>
+
+
+
+										</ul>
+									</li>
+
+
+
+
+
+
+
+									<li><a href="javascript:void(0);">Navigation Item #3</a></li>
+
+
+
+
+
+
+
+
+									<li><a href="javascript:void(0);">Navigation Item #4</a></li>
+
+
+
+
+
+
+
+
+									<li><a href="javascript:void(0);">Navigation Item #5</a></li>
+
+
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="phone_header" id="accountHeader">
+				<div class="phone_header">
+					<div class="products_phone">
+						<p><a href="#products" data-toggle="modal" id="productHeaderLink">Products</a></p>
+					</div>
+
+					<div id="products" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h3 id="myModalLabel">Products Navigation</h3>
+						</div>
+						<div class="modal-body" id="productListHeader">
+							<ul class="modal-navigation">
+								
+								<li><a href="#" class="categoryLink" data-id="a0UZ0000001V9ocMAC">Security Appliances</a></li>
+								
+								<li><a href="#" class="categoryLink" data-id="a0UZ0000001V9obMAC">Storage Devices</a></li>
+								
+								<li><a href="#" class="categoryLink" data-id="a0UZ0000001V9oZMAS">Peripherals</a></li>
+								
+								<li><a href="#" class="categoryLink" data-id="a0UZ0000001V9oYMAS">Managed Servers</a></li>
+								
+								<li><a href="#" class="categoryLink" data-id="a0UZ0000001V9oaMAC">Servers</a></li>
+								
+							</ul>
+						</div>
+					</div>
+
+					<div class="account_sign_in_products">
+						<p>
+
+
+							<a href="#login" data-toggle="modal">Login</a>
+
+
+						</p>
+					</div>
+
+					<div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h3 id="myModalLabel">Login</h3>
+						</div>
+						<div class="modal-body">
+							<div class="message_container" style="display:none;">
+								<span class="error-msg">
+
+								</span>
+							</div>
+							<form>
+								<label>Email Address</label>
+								<input name="" type="email" id="modal_email">
+								<label>Password</label>
+								<input name="" type="password" id="modal_password">
+							</form>
+						</div>
+						<div class="modal-footer">
+							<input type="button" class="btn btn-primary" id="signInButton" value="Sign In">
+							<a href="#" id="forgotPasswordButton" style="margin-top:10px;float:right;">Forgot Password</a>
+						</div>
+					</div>
+
+					<div id="forgotPassword" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h3 id="myModalLabel">Forgot Password</h3>
+						</div>
+						<div class="modal-body">
+							<form>
+								<p>Please enter your E-Mail below and we'll send you a new password.</p>
+								<label>Email Address</label>
+								<input name="" type="email" id="fpEmailField">
+							</form>
+						</div>
+						<div class="modal-footer">
+							<input type="button" class="btn btn-primary" id="submitBtn" value="Submit">
+							<a href="#" id="backToLogin" style="margin-top:10px;float:right;">Back to Login</a>
+						</div>
+					</div>
+
+					<div id="account" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h3 id="myModalLabel">Account</h3>
+						</div>
+						<div class="modal-body">
+							<ul class="modal-navigation">
+								<li><a href="#" id="goToAccount">My Account</a></li>
+								<li><a href="#" class="gotoAddressBook">Address Book</a></li>
+								<li><a href="#" class="gotoCarts">My Carts</a></li>
+								<li><a href="#" class="gotoOrders">My Orders</a></li>
+								<li><a href="#" class="gotoWishlists">My Wishlists</a></li>
+								<li><a href="#" class="doLogout">Logout</a></li>  
+							</ul>
+						</div>
+					</div>
+
+					<div class="cart_products" id="cartHeader">
+						<p><a href="#cart" id="cart_btn_phone" data-toggle="modal">0/$0.00</a></p>
+					</div>
+
+					<div id="cart" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h3 id="myModalLabel">My Cart</h3>
+						</div>
+						<div class="modal-body">
+							<div id="cartBody">
+
+							</div>
+							<div class="dropdown_cart_total">
+
+							</div>
+						</div>
+						<div class="modal-footer">
+							<input type="button" value="Check Out" class="btn btn-primary">
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span3">
+						<div class="left_column" id="productSearch">
+							<div class="left_column">
+								<div class="product_search_container">
+									<h2 class="title">Product Search</h2>
+									<div class="product_search">
+										<input name="" id="searchText" type="text" value="Search Products" onfocus="myFocus(this);" onblur="myBlur(this);">
+										<input name="" id="doSearch" class="search_button" type="Submit" value="&gt;&gt;">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="breadcrumb"></div>
+					</div>
+				</div>
+			</div>
+			<div class="span6">
+				<div class="center_column phone_center_column">
+					<div class="phone_center_top"></div>
+					<div class="home-template"></div>
+					<div class="phone_center_mid">
+
+						<div class="products_1_row_medium_container">
+							<h2 class="title">
+
+								Spotlight Products
+
+							</h2>
+							<div class="products_1_row_medium">
+
+								<div class="products_1_row_medium_item">
+									<div class="product_listing_viewport">
+										<a href="#" class="productName" data-id="626474-001">
+											<img class="spot" src="images/product_1.jpg" alt="Product Name" data-id="626474-001">
+										</a>
+									</div>
+									<p>
+										<a href="#" class="productName" data-id="626474-001">Product Name</a>
+									</p>
+									<p class="included_items">
+										<a class="included_items" href="#additional_info626474-001" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+									</p><div id="additional_info626474-001" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										<h3 id="myModalLabel">Product Name Details</h3>
+									</div>
+									<div class="modal-body">
+
+									</div>
+								</div>
+								<p></p>
+								<p>
+									<span>
+										<strong class="price">
+											$889.99
+										</strong>
+									</span>
+								</p>
+								<p class="">Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.</p>
+							</div>   
+
+							<div class="products_1_row_medium_item">
+								<div class="product_listing_viewport">
+									<a href="#" class="productName" data-id="633724-001">
+										<img class="spot" src="images/product_2.jpg" alt="Product Name" data-id="633724-001">
+									</a>
+								</div>
+								<p>
+									<a href="#" class="productName" data-id="633724-001">Product Name</a>
+								</p>
+								<p class="included_items">
+									<a class="included_items" href="#additional_info633724-001" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+								</p><div id="additional_info633724-001" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									<h3 id="myModalLabel">Product Name Details</h3>
+								</div>
+								<div class="modal-body">
+
+								</div>
+							</div>
+							<p></p>
+							<p>
+								<span>
+									<strong class="price">
+										$329.99
+									</strong>
+								</span>
+							</p>
+							<p class="">Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+							</p></div>   
+
+							<div class="products_1_row_medium_item">
+								<div class="product_listing_viewport">
+									<a href="#" class="productName" data-id="G-01">
+										<img class="spot" src="images/product_3.jpg" alt="Product Name" data-id="G-01">
+									</a>
+								</div>
+								<p>
+									<a href="#" class="productName" data-id="G-01">Product Name</a>
+								</p>
+								<p class="included_items">
+									<a class="included_items" href="#additional_infoG-01" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+								</p><div id="additional_infoG-01" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									<h3 id="myModalLabel">Product Name Details</h3>
+								</div>
+								<div class="modal-body">
+
+								</div>
+							</div>
+							<p></p>
+							<p>
+								<span>
+									<strong class="price">
+										$249.99
+									</strong>
+								</span>
+							</p>
+							<p class="">Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+							</p></div>   
+
+						</div>
+					</div>
+
+
+					<div class="products_1_row_medium_container">
+						<h2 class="title">
+
+							Featured Products
+
+						</h2>
+						<div class="products_1_row_medium">
+
+							<div class="products_1_row_medium_item">
+								<div class="product_listing_viewport">
+									<a href="#" class="productName" data-id="7944N2U">
+										<img class="featured" src="images/product_4.jpg" alt="Product Name" data-id="7944N2U">
+									</a>
+								</div>
+								<p>
+									<a href="#" class="productName" data-id="7944N2U">Product Name</a>
+								</p>
+								<p class="included_items">
+									<a class="included_items" href="#additional_info7944N2U" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+								</p><div id="additional_info7944N2U" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									<h3 id="myModalLabel">Product Name Details</h3>
+								</div>
+								<div class="modal-body">
+
+								</div>
+							</div>
+							<p></p>
+							<p>
+								<span>
+									<strong class="price">
+										$6,339.99
+									</strong>
+								</span>
+							</p>
+							<p class="">Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+							</p></div>   
+
+							<div class="products_1_row_medium_item">
+								<div class="product_listing_viewport">
+									<a href="#" class="productName" data-id="600426-005">
+										<img class="featured" src="images/product_5.jpg" alt="Product Name" data-id="600426-005">
+									</a>
+								</div>
+								<p>
+									<a href="#" class="productName" data-id="600426-005">Product Name</a>
+								</p>
+								<p class="included_items">
+									<a class="included_items" href="#additional_info600426-005" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+								</p><div id="additional_info600426-005" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									<h3 id="myModalLabel">Product Name Details</h3>
+								</div>
+								<div class="modal-body">
+
+								</div>
+							</div>
+							<p></p>
+							<p>
+								<span>
+									<strong class="price">
+										$1,569.99
+									</strong>
+								</span>
+							</p>
+							<p class="">Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+							</p></div>   
+
+							<div class="products_1_row_medium_item">
+								<div class="product_listing_viewport">
+									<a href="#" class="productName" data-id="920-002825">
+										<img class="featured" src="images/product_6.jpg" alt="Product Name" data-id="920-002825">
+									</a>
+								</div>
+								<p>
+									<a href="#" class="productName" data-id="920-002825">Product Name</a>
+								</p>
+								<p class="included_items">
+									<a class="included_items" href="#additional_info920-002825" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+								</p><div id="additional_info920-002825" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									<h3 id="myModalLabel">Product Name Details</h3>
+								</div>
+								<div class="modal-body">
+
+								</div>
+							</div>
+							<p></p>
+							<p>
+								<span>
+									<strong class="price">
+										$33.99
+									</strong>
+								</span>
+							</p>
+							<p class="">Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+							</p></div>   
+
+							<div class="products_1_row_medium_item">
+								<div class="product_listing_viewport">
+									<a href="#" class="productName" data-id="CG221-BK">
+										<img class="featured" src="images/product_7.jpg" alt="Product Name" data-id="CG221-BK">
+									</a>
+								</div>
+								<p>
+									<a href="#" class="productName" data-id="CG221-BK">Product Name</a>
+								</p>
+								<p class="included_items">
+									<a class="included_items" href="#additional_infoCG221-BK" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+								</p><div id="additional_infoCG221-BK" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									<h3 id="myModalLabel">Product Name Details</h3>
+								</div>
+								<div class="modal-body">
+
+								</div>
+							</div>
+							<p></p>
+							<p>
+								<span>
+									<strong class="price">
+										$5,499.99
+									</strong>
+								</span>
+							</p>
+							<p class="">Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+							</p></div>   
+
+							<div class="products_1_row_medium_item">
+								<div class="product_listing_viewport">
+									<a href="#" class="productName" data-id="35427">
+										<img class="featured" src="images/product_8.jpg" alt="Product Name" data-id="35427">
+									</a>
+								</div>
+								<p>
+									<a href="#" class="productName" data-id="35427">Product Name</a>
+								</p>
+								<p class="included_items">
+									<a class="included_items" href="#additional_info35427" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+								</p><div id="additional_info35427" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									<h3 id="myModalLabel">Product Name Details</h3>
+								</div>
+								<div class="modal-body">
+
+								</div>
+							</div>
+							<p></p>
+							<p>
+								<span>
+									<strong class="price">
+										$274.99
+									</strong>
+								</span>
+							</p>
+							<p class="">Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+							</p></div>   
+
+							<div class="products_1_row_medium_item">
+								<div class="product_listing_viewport">
+									<a href="#" class="productName" data-id="RV220W-A-K9-NA">
+										<img class="featured" src="images/product_9.jpg" alt="Product Name" data-id="RV220W-A-K9-NA">
+									</a>
+								</div>
+								<p>
+									<a href="#" class="productName" data-id="RV220W-A-K9-NA">Product Name</a>
+								</p>
+								<p class="included_items">
+									<a class="included_items" href="#additional_infoRV220W-A-K9-NA" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+								</p><div id="additional_infoRV220W-A-K9-NA" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									<h3 id="myModalLabel">Product Name Details</h3>
+								</div>
+								<div class="modal-body">
+
+								</div>
+							</div>
+							<p></p>
+							<p>
+								<span>
+									<strong class="price">
+										$269.99
+									</strong>
+								</span>
+							</p>
+							<p class="">Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+							</p></div>   
+
+						</div>
+					</div>
+
+				</div>
+				<div class="phone_center_bot">
+					<div class="promo_container promo_phone_container">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid clear">
+			<div class="span12">
+				<div class="footer footerPhone">
+
+					<p>
+						<a href="http://www.edlconsulting.com/" target="_blank">EDL Consulting</a>
+					</p>
+
+					<p>
+						<a href="http://www.cloud-craze.com/" target="_blank">CloudCraze Home</a>
+					</p>
+
+					<p>
+						<a href="http://www.cloud-craze.com/product_info.php" target="_blank">Product Information</a>
+					</p>
+
+					<p>
+						<a href="http://www.cloud-craze.com/request_demo.php" target="_blank">View Cloud-Craze Demo</a>
+					</p>
+
+					<p>
+						<a href="http://www.edlconsulting.com/about.php" target="_blank">About US</a>
+					</p>
+
+					<p>
+						<a href="http://www.edlconsulting.com/search.php" target="_blank">Search</a>
+					</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END PHONE VIEW -->
+
+	<!-- DESKTOP/TABLET VIEW -->
+	<div class="container hidden-phone deskLayout">
+
+		<div class="row-fluid">
+			<div class="span12 header">
+				<div class="top_navigation">
+					<div class="search_form">
+						<div class="search_form">
+							&nbsp;&nbsp;<input name="" id="searchText" type="text" value="Search Products" onfocus="myFocus(this);" onblur="myBlur(this);">
+							<input id="doSearch" class="search_button" type="Submit" value="&gt;&gt;" style="margin-left:0px;height:22px;margin-top:-.5px;">
+						</div>
+					</div>
+					<p>
+						<span>
+							<span>
+								<a class="acct" id="goToAccount" href="#">My Account</a> |
+							</span>
+
+
+							<span>
+								<a id="cartHeader" class="chead cartHeaderLink" href="#">
+									My Cart: 0 item,&nbsp;
+									<span class="cartHeadInfo">
+										<span class="cartHeadTot">
+											$0.00
+										</span>
+									</span>
+								</a> |
+							</span>
+							<span class="loginoutsec">
+
+
+								<a href="#login" class="goToLogin">Login</a>
+
+
+							</span>
+						</span>
+					</p>
+				</div>
+
+				<div class="logo_tagline hidden-phone">
+					<div class="logo">
+						<a href="#" id="logoUrl">
+							<img src="images/homepage_header_graphic.png">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu_container">
+			<div class="navbar main_navigation_container">
+				<div class="navbar-inner">
+					<div class="container">
+						<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">          
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="brand_phone visible-phone" id="phoneLogo" href="#"><img src="images/phone_logo.png" width="200" height="39"></a>
+						<a class="brand visible-tablet">Main_Navigation</a>
+						<div class="nav-collapse collapse">
+							<ul class="nav">
+
+
+								<li class="dropdown">
+									<a data-toggle="dropdown" class="dropdown-toggle " href="">Navigation Item #1  <b class="caret"></b></a>
+									<ul class="dropdown-menu">
+
+
+
+
+
+
+
+										<li><a href="javascript:void(0);">Sub Navigation #1</a></li>
+
+
+
+
+
+
+
+
+										<li><a href="javascript:void(0);">Sub Navigation #2</a></li>
+
+
+
+
+
+
+
+
+										<li><a href="javascript:void(0);">Sub Navigation #3</a></li>
+
+
+
+
+
+
+
+
+										<li><a href="javascript:void(0);">Sub Navigation #4</a></li>
+
+
+
+
+
+
+
+
+										<li><a href="javascript:void(0);">Sub Navigation #5</a></li>
+
+
+
+
+									</ul>
+								</li>
+
+
+
+								<li class="dropdown">
+									<a data-toggle="dropdown" class="dropdown-toggle " href="">Navigation Item #2  <b class="caret"></b></a>
+									<ul class="dropdown-menu">
+
+
+
+
+
+
+
+										<li><a href="javascript:void(0);">Sub Navigation #1</a></li>
+
+
+
+
+
+
+
+
+										<li><a href="javascript:void(0);">Sub Navigation #2</a></li>
+
+
+
+
+
+
+
+
+										<li><a href="javascript:void(0);">Sub Navigation #3</a></li>
+
+
+
+
+									</ul>
+								</li>
+
+
+
+
+
+
+
+								<li><a href="javascript:void(0);">Navigation Item #3</a></li>
+
+
+
+
+
+
+
+
+								<li><a href="javascript:void(0);">Navigation Item #4</a></li>
+
+
+
+
+
+
+
+
+								<li><a href="javascript:void(0);">Navigation Item #5</a></li>
+
+
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="home_slider"><span id="HomePage:cc_tmpl_ThreeColRD:cc_tmpl_Storefront:j_id35" style="display: none;"></span><span id="HomePage:cc_tmpl_ThreeColRD:cc_tmpl_Storefront:j_id43">
+			<div class="carousel slide " id="myCarousel">
+				<div class="carousel-inner">
+					<div class="item active"><span id="HomePage:cc_tmpl_ThreeColRD:cc_tmpl_Storefront:j_id43:cc_Splash:j_id46:0:j_id48">
+
+
+						<span id="HomePage:cc_tmpl_ThreeColRD:cc_tmpl_Storefront:j_id43:cc_Splash:j_id46:0:j_id48:cc_Image:j_id66">
+
+							<img alt="" class="" src="images/featured_slider_1.png">
+						</span></span>
+					</div>
+					<div class="item"><span id="HomePage:cc_tmpl_ThreeColRD:cc_tmpl_Storefront:j_id43:cc_Splash:j_id46:1:j_id48">
+
+
+						<span id="HomePage:cc_tmpl_ThreeColRD:cc_tmpl_Storefront:j_id43:cc_Splash:j_id46:1:j_id48:cc_Image:j_id66">
+
+							<img alt="" class="" src="images/featured_slider_2.png">
+						</span></span>
+					</div>
+					<div class="item"><span id="HomePage:cc_tmpl_ThreeColRD:cc_tmpl_Storefront:j_id43:cc_Splash:j_id46:2:j_id48">
+
+
+						<span id="HomePage:cc_tmpl_ThreeColRD:cc_tmpl_Storefront:j_id43:cc_Splash:j_id46:2:j_id48:cc_Image:j_id66">
+
+							<img alt="" class="" src="images/featured_slider_3.png">
+						</span></span>
+					</div> 
+				</div><div id="HomePage:cc_tmpl_ThreeColRD:cc_tmpl_Storefront:j_id43:cc_Splash:j_id78">
+				<a class="carousel-control_left left" data-slide="prev" href="#myCarousel"></a>
+				<a class="carousel-control_right right" data-slide="next" href="#myCarousel"></a></div>
+			</div></span>
+			<div id="breadcrumb_desktop_container">
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span3 hidden-tablet">
+					<div class="left_column">
+						<div id="categories-left-nav">
+							<div class="categories_side_container">
+								<h2 class="title">Categories</h2>
+
+								<ul class="side_navigation_dropdown" id="side_nav">
+
+									<li><a href="#">Main Product 1</a>
+										<ul>
+											<li><a href="#">Product 1</a>
+												<ul>
+													<li><a href="#">Part A</a></li>
+													<li><a href="#">Part B</a></li>
+													<li><a href="#">Part C</a></li>
+													<li><a href="#">Part D</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Product 2</a>
+												<ul>
+													<li><a href="#">Part A</a></li>
+													<li><a href="#">Part B</a></li>
+													<li><a href="#">Part C</a></li>
+													<li><a href="#">Part D</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Product 3</a>
+												<ul>
+													<li><a href="#">Part A</a></li>
+													<li><a href="#">Part B</a></li>
+													<li><a href="#">Part C</a></li>
+													<li><a href="#">Part D</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Main Product 2</a>
+										<ul>
+											<li><a href="#">Product 4</a></li>
+											<li><a href="#">Product 5</a></li>
+											<li><a href="#">Product 6</a></li>
+											<li><a href="#">Product 7</a></li>
+											<li><a href="#">Product 8</a></li>
+											<li><a href="#">Product 9</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Main Product 3</a>
+										<ul>
+											<li><a href="#">Product 10</a></li>
+											<li><a href="#">Product 11</a>
+												<ul>
+													<li><a href="#">Part E</a></li>
+													<li><a href="#">Part F</a></li>
+													<li><a href="#">Part G</a></li>
+													<li><a href="#">Part H</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Product 12</a></li>
+											<li><a href="#">Product 13</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Main Product 4</a>
+										<ul>
+											<li><a href="#">Product 14</a></li>
+											<li><a href="#">Product 15</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Main Product 5</a>
+										<ul>
+											<li><a href="#">Product 16</a></li>
+											<li><a href="#">Product 17</a></li>
+											<li><a href="#">Product 18</a></li>
+											<li><a href="#">Product 19</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Services</a>
+										<ul>
+											<li><a href="#">Service 1</a>
+												<ul>
+													<li><a href="#">Service Detail A</a></li>
+													<li><a href="#">Service Detail B</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Service 2</a>
+												<ul>
+													<li><a href="#">Service Detail C</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Service 3</a>
+												<ul>
+													<li><a href="#">Service Detail D</a></li>
+													<li><a href="#">Service Detail E</a></li>
+													<li><a href="#">Service Detail F</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Service 4</a></li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+						<div class="promotion-box-LeftNav">
+							<div class="promo_container promo_side_container">
+
+								<div class="promotion_side promo_desk a1DZ0000000WIeVMAW">
+
+									<img src="images/promo_1.jpg" alt="" class="promo_desk promo_nolink">
+
+								</div>
+
+								<div class="promotion_side promo_desk a1DZ0000000WIeUMAW">
+
+									<img src="images/promo_2.jpg" alt="" class="promo_desk promo_nolink">
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="span6">
+					<div class="center_column desktop_center_column">
+						<div class="promotion-box-Banner">
+							<div class="promo_container promo_banner_container">
+
+							</div>
+						</div>
+						<div class="cart-template"></div>
+						<div class="featured-prod">
+
+							<div class="product_spotlight_container">
+								<h2 class="title">
+
+									Spotlight Products
+
+								</h2>
+								<div class="product_spotlight">
+
+									<div class="product_spotlight_item">
+										<div class="product_spotlight_viewport">
+											<a href="javascript:void(0);" class="productName" data-id="626474-001">
+												<img class="spot" src="images/product_1.jpg" alt="HP ProLiant ML110 G7 - Xeon E3-1220 3.1 GHz" data-id="626474-001">
+											</a>
+										</div>
+										<p>
+											<a href="javascript:void(0);" class="productName" data-id="626474-001">Product Name</a>
+											<br>
+											<strong>SKU:</strong>&nbsp;626474-001
+										</p>
+										<div class="description richtext">
+											Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+										</div>
+
+										<!--*******************************************-->
+										<p class="price">
+											Price: <strong>$889.99</strong>
+										</p>
+
+									</div>
+
+									<div class="product_spotlight_item">
+										<div class="product_spotlight_viewport">
+											<a href="javascript:void(0);" class="productName" data-id="633724-001">
+												<img class="spot" src="images/product_2.jpg" alt="HP ProLiant MicroServer - Athlon II Neo N36L 1.3 GHz" data-id="633724-001">
+											</a>
+										</div>
+										<p>
+											<a href="javascript:void(0);" class="productName" data-id="633724-001">Product Name</a>
+											<br>
+											<strong>SKU:</strong>&nbsp;633724-001
+										</p>
+										<div class="description richtext">
+											Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+										</div>
+
+										<!--*******************************************-->
+										<p class="price">
+											Price: <strong>$329.99</strong>
+										</p>
+
+									</div>
+
+									<div class="product_spotlight_item">
+										<div class="product_spotlight_viewport">
+											<a href="javascript:void(0);" class="productName" data-id="G-01">
+												<img class="spot" src="images/product_3.jpg" alt="Gold Tier Managed Server" data-id="G-01">
+											</a>
+										</div>
+										<p>
+											<a href="javascript:void(0);" class="productName" data-id="G-01">Product Name</a>
+											<br>
+											<strong>SKU:</strong>&nbsp;G-01
+										</p>
+										<div class="description richtext">
+											Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+										</div>
+
+										<!--*******************************************-->
+										<p class="price">
+											Price: <strong>$249.99</strong>
+										</p>
+
+									</div>
+
+								</div>
+							</div>
+
+
+							<div class="featured_products_container">
+								<h2 class="title">
+
+									Featured Products
+
+								</h2>
+								<div class="featured_products"> 
+
+									<div class="featured_products_item0">
+										<div class="featured_products_viewport">
+											<a href="javascript:void(0);" class="productName" data-id="7944N2U">
+												<img class="featured" src="images/product_4.jpg" alt="IBM System x3550 M3 7944 - Xeon X5680 3.33 GHz" data-id="7944N2U">
+											</a>
+										</div>
+										<p>
+											<a href="javascript:void(0);" class="productName" data-id="7944N2U">Product Name</a>
+											<br>
+											<strong>SKU:</strong>&nbsp;7944N2U
+										</p>
+										<div class="description">
+											Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+										</div>
+
+										<!--*******************************************-->
+										<p class="price">
+											Price: <strong>$6,339.99</strong>
+										</p>
+
+									</div>
+
+									<div class="featured_products_item1">
+										<div class="featured_products_viewport">
+											<a href="javascript:void(0);" class="productName" data-id="600426-005">
+												<img class="featured" src="images/product_5.jpg" alt="HP ProLiant ML350 G6 Special Server - Xeon E5620 2.4 GHz" data-id="600426-005">
+											</a>
+										</div>
+										<p>
+											<a href="javascript:void(0);" class="productName" data-id="600426-005">Product Name</a>
+											<br>
+											<strong>SKU:</strong>&nbsp;600426-005
+										</p>
+										<div class="description">
+											Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+										</div>
+
+										<!--*******************************************-->
+										<p class="price">
+											Price: <strong>$1,569.99</strong>
+										</p>
+
+									</div>
+
+									<div class="featured_products_item0">
+										<div class="featured_products_viewport">
+											<a href="javascript:void(0);" class="productName" data-id="920-002825">
+												<img class="featured" src="images/product_6.jpg" alt="Product Name" data-id="920-002825">
+											</a>
+										</div>
+										<p>
+											<a href="javascript:void(0);" class="productName" data-id="920-002825">Product Name</a>
+											<br>
+											<strong>SKU:</strong>&nbsp;920-002825
+										</p>
+										<div class="description">
+											Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+										</div>
+
+										<!--*******************************************-->
+										<p class="price">
+											Price: <strong>$33.99</strong>
+										</p>
+
+									</div>
+
+									<div class="featured_products_item1">
+										<div class="featured_products_viewport">
+											<a href="javascript:void(0);" class="productName" data-id="CG221-BK">
+												<img class="featured" src="images/product_7.jpg" alt="Product Name" data-id="CG221-BK">
+											</a>
+										</div>
+										<p>
+											<a href="javascript:void(0);" class="productName" data-id="CG221-BK">Product Name</a>
+											<br>
+											<strong>SKU:</strong>&nbsp;CG221-BK
+										</p>
+										<div class="description">
+											Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+										</div>
+
+										<!--*******************************************-->
+										<p class="price">
+											Price: <strong>$5,499.99</strong>
+										</p>
+
+									</div>
+
+									<div class="featured_products_item0">
+										<div class="featured_products_viewport">
+											<a href="javascript:void(0);" class="productName" data-id="35427">
+												<img class="featured" src="images/product_8.jpg" alt="Product Name" data-id="35427">
+											</a>
+										</div>
+										<p>
+											<a href="javascript:void(0);" class="productName" data-id="35427">Product Name</a>
+											<br>
+											<strong>SKU:</strong>&nbsp;35427
+										</p>
+										<div class="description">
+											Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+										</div>
+
+										<!--*******************************************-->
+										<p class="price">
+											Price: <strong>$274.99</strong>
+										</p>
+
+									</div>
+
+									<div class="featured_products_item1">
+										<div class="featured_products_viewport">
+											<a href="javascript:void(0);" class="productName" data-id="RV220W-A-K9-NA">
+												<img class="featured" src="images/product_9.jpg" alt="Product Name" data-id="RV220W-A-K9-NA">
+											</a>
+										</div>
+										<p>
+											<a href="javascript:void(0);" class="productName" data-id="RV220W-A-K9-NA">Product Name</a>
+											<br>
+											<strong>SKU:</strong>&nbsp;RV220W-A-K9-NA
+										</p>
+										<div class="description">
+											Short description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla sapien. Curabitur ligula diam, rutrum nec sodales in, accumsan sit amet quam.
+										</div>
+
+										<!--*******************************************-->
+										<p class="price">
+											Price: <strong>$269.99</strong>
+										</p>
+
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="span3">
+					<div class="right_column">
+						<div class="minicart">
+							<div class="products_1_row_medium_container">
+								<h2 class="title">My Cart</h2>
+								<div class="my_cart mini_cart">
+
+									<p>You have no items in your shopping cart.</p>
+
+								</div>
+							</div>
+						</div>
+						<div id="categories-right-nav"></div> 
+						<div class="widgetSection"></div>
+						<div class="quick-order">
+							<h2 class="title">Quick Order</h2>
+							<div class="quick_order" id="quick_order">
+								<p>Have the product numbers from our catalog? Enter them below for a quicker shopping experience.</p>
+								<form id="skuQtyForm">
+									<p>
+									</p><div class="row">
+
+									<span>
+										<div class="sku"><input type="text" class="input_medium addToCartOnEnter" placeholder="SKU" name="quickorder[0].sku"></div>
+										<div class="qty"><input type="text" value="1" class="input_medium addToCartOnEnter" placeholder="QTY" name="quickorder[0].qty"></div>
+									</span>
+
+									<span>
+										<div class="sku"><input type="text" class="input_medium addToCartOnEnter" placeholder="SKU" name="quickorder[1].sku"></div>
+										<div class="qty"><input type="text" value="1" class="input_medium addToCartOnEnter" placeholder="QTY" name="quickorder[1].qty"></div>
+									</span>
+
+									<span>
+										<div class="sku"><input type="text" class="input_medium addToCartOnEnter" placeholder="SKU" name="quickorder[2].sku"></div>
+										<div class="qty"><input type="text" value="1" class="input_medium addToCartOnEnter" placeholder="QTY" name="quickorder[2].qty"></div>
+									</span>
+								</div>
+								<p></p>
+							</form>
+							<p>
+								<input type="button" class="addToCart form-button" value="Add To Cart">
+								<input type="button" class=" form-button addMore" value="Add More">
+							</p>
+						</div>
+					</div>
+					<div class="promotion-box-RightNav">
+						<div class="promo_container promo_side_container">
+
+							<div class="promotion_side promo_desk a1DZ0000000WIeWMAW">
+
+								<img src="images/promo_3.jpg" alt="" class="promo_desk promo_nolink">
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid clear">
+			<div class="span12 footerBrowser">
+				<div class="footer">
+					<p>
+
+						<a href="http://www.edlconsulting.com/" target="_blank">EDL Consulting</a>
+
+						<a href="http://www.cloud-craze.com/" target="_blank">CloudCraze Home</a>
+
+						<a href="http://www.cloud-craze.com/product_info.php" target="_blank">Product Information</a>
+
+						<a href="http://www.cloud-craze.com/request_demo.php" target="_blank">View Cloud-Craze Demo</a>
+
+						<a href="http://www.edlconsulting.com/about.php" target="_blank">About US</a>
+
+						<a href="http://www.edlconsulting.com/search.php" target="_blank">Search</a>
+
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END DESKTOP/TABLET VIEW -->
+
+
+<!-- NEW JS CODE AT BOTTOM OF THE PAGE CODE -->
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="js/js-image-slider.js"></script>
+<script type="text/javascript" src="js/controllers_new_slider.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery.hoverIntent.minified.js"></script>
+<script type="text/javascript" src="js/jquery.accordion.2.7.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- END JS CODE AT BOTTOM OF THE PAGE CODE -->
+
+</body>
+</html>

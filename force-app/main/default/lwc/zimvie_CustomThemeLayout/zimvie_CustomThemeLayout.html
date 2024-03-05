@@ -1,0 +1,48 @@
+<template>
+    <div class="customClass" >
+        <header class="header" data-f6-region>
+            <!-- slds-container_x-large slds-container_large slds-container_medium slds-container_small  -->
+            <div class="slds-container_x-large slds-container_center">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_12-of-12">
+                    <slot name="brandbar"></slot>
+                </div>
+                <div class="slds-col slds-size_2-of-12 slds-p-around_small slds-m-top_medium">
+                    <slot name="sitelogo"></slot>
+                </div>
+                <div class="slds-col slds-size_6-of-12 slds-p-around_small slds-m-top_medium">
+                    <slot name="searchbar"></slot>
+                </div>
+                <div class="slds-col slds-size_3-of-12 slds-p-around_small slds-m-top_medium">
+                    <slot name="navlinks"></slot>
+                </div>
+                <!--div class="slds-col slds-size_1-of-12 slds-p-around_small slds-m-top_medium">
+                    <slot name="logout"></slot>
+                </div-->
+                <!--div class="slds-col slds-size_1-of-12 slds-p-around_small slds-m-top_medium">
+                    <slot name="countrybar"></slot>
+                </div-->
+                
+                <div class="slds-col slds-size_1-of-12 slds-p-around_small slds-m-top_medium">
+                    <div class="pr-90">
+                    <lightning-layout style="float:right;">
+                        <!--lightning-layout-item ><slot name="icon2"></slot></lightning-layout-item>
+                        <lightning-layout-item ><slot name="icon1"></slot></lightning-layout-item-->
+                        <lightning-layout-item ><slot name="icon3"></slot></lightning-layout-item>
+                    </lightning-layout>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_12-of-12">
+                    <slot name="navBar" onmouseover={makeContentFaded} onmouseout={makecontentvisible}></slot>
+                </div>
+            </div>
+            </div>
+        </header>
+        <section class="content" data-f6-region>
+            <slot></slot>
+        </section>
+        <footer data-f6-region>
+            <slot name="footer"></slot>
+        </footer>
+    </div>
+</template>

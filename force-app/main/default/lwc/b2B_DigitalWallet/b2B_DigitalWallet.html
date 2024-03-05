@@ -1,0 +1,87 @@
+<!--
+  @description       : 
+  @author            : asood@rafter.one
+  @group             : 
+  @last modified on  : 07-11-2023
+  @last modified by  : asood@rafter.one
+-->
+<template>
+    <lightning-spinner variant="brand" if:true={isLoading}>
+    </lightning-spinner>
+    <template if:true={isWalletPage}>
+        <div style="font-size: 24px;font-weight: 700;">{labels.B2B_My_Wallet}</div><br />
+    </template>
+    <div class="slds-p-around_medium">
+        <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered"
+            aria-labelledby="element-with-table-label other-element-with-table-label">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <template if:false={isWalletPage}>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title=""></div>
+                        </th>
+                    </template>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title={labels.B2B_card_Type_Label}>{labels.B2B_card_Type_Label}
+                        </div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title={labels.B2B_card_Number_Label}>
+                            {labels.B2B_card_Number_Label}</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title={labels.B2B_Card_Exp_Date}>{labels.B2B_Card_Exp_Date}</div>
+                    </th>
+                    <template if:true={isWalletPage}>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title={labels.B2B_Card_Action}>{labels.B2B_Card_Action}</div>
+                        </th>
+                    </template>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={digitalWallets} for:item="digitalWallet">
+                    <tr class="slds-hint-parent" key={digitalWallet.Id}>
+                        <template if:false={isWalletPage}>
+                            <th scope="row">
+                                <div class="slds-truncate">
+                                    <input type="radio" id={digitalWallet.Id} name="digitalWallet"
+                                        value={digitalWallet.Id} onchange={selectWallet}></input>
+                                </div>
+                            </th>
+                        </template>
+                        <td>
+                            <div class="slds-truncate">{digitalWallet.Card_Type__c}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{digitalWallet.Display_Card_Number__c}</div>
+                        </td>
+                        <td>
+                            <template if:true={digitalWallet.isExpired}>
+                                <div class="slds-truncate" style="color:red">
+                                    {digitalWallet.ExpiryMonth__c}/{digitalWallet.ExpiryYear__c}</div>
+                            </template>
+                            <template if:false={digitalWallet.isExpired}>
+                                <div class="slds-truncate">
+                                    {digitalWallet.ExpiryMonth__c}/{digitalWallet.ExpiryYear__c}</div>
+                            </template>
+
+                        </td>
+                        <template if:true={isWalletPage}>
+                            <td>
+                                <div class="slds-truncate">
+                                    <lightning-icon icon-name="utility:edit" size="small" data-id={digitalWallet.Id} alternative-text={labels.B2B_Edit} onclick={editDigitalWallet} title={labels.B2B_Edit} style="cursor: pointer;"></lightning-icon>
+                                    <lightning-icon icon-name="utility:delete" size="small" data-id={digitalWallet.Id} alternative-text={labels.B2B_Cart_Remove} onclick={removeDigitalWallet} title={labels.B2B_Cart_Remove} class="slds-p-left_small" style="cursor: pointer;"></lightning-icon>
+                                </div>
+                            </td>
+                        </template>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+        <br />
+        <template if:false={hasWallets}>
+            {labels.B2B_NO_Saved_Cards}
+        </template>
+    </div>
+</template>

@@ -1,0 +1,34 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" title="Foot and Ankle Opportunities">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Foot_and_Ankle_Opportunities" customJsIds="a1218000003FCbdAAG" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Foot and Ankle Opportunities",
+	"tabs": [
+		{
+			"name": "Foot And Ankle Opportunities",
+			"content": "{!gridPage}gname=Foot And Ankle Grid&amp;sh=0&amp;sfname=default",
+			"id": 1565276200638
+		},
+		{
+			"name": "DSF Opportunities",
+			"content": "{!gridPage}gname=Foot And Ankle DSF Opportunity&amp;sh=0&amp;sfname=default",
+			"id": 1565276238423
+		}
+	],
+	"id": 1565276200638,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [
+		"a1218000003FCbdAAG"
+	],
+	"description": "",
+	"globalButtons": false,
+	"object": "Opportunity",
+	"height": "750",
+	"showHeader": false,
+	"showSidebar": false,
+	"pageAPIName": "GBTabs_Foot_and_Ankle_Opportunities"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

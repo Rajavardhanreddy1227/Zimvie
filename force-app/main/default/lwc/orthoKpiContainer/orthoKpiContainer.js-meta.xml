@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Ortho KPIs</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage">
+            <property name="product" type="String" description="Ortho product to display" label="Product" datasource="Cement,Early Intervention,Extremities,Foot &amp; Ankle,Hips,Knees,Non-Recon,Recon,Sports Medicine,Trauma,Upper Extremities,Large Joint"/>
+            <property name="reportLink" type="String" description="Link to tableau report" label="Tableau Link"/>
+            <property name="showReportLink" type="Boolean" description="Whether or not to show the link" label="Show Report Link"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

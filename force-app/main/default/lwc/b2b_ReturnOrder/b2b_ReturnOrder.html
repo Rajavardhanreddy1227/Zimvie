@@ -1,0 +1,17 @@
+<template >
+        <lightning-button variant="brand" label="Retun Order" title="Retun Order"></lightning-button>
+   
+    <lightning-card title="Order Return Form">
+        <div class="slds-p-around_medium">
+            <!-- Form fields -->
+            <lightning-input label="Order Number" name={labels.orderNumber}></lightning-input>
+            <lightning-textarea label="Reason for Return" name="returnReason"></lightning-textarea>
+            <!-- Add more fields as required -->
+
+            <!-- Submit button -->
+            <div class="slds-m-top_medium">
+                <lightning-button variant="brand" label="Submit" ></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

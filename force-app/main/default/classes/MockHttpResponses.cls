@@ -1,0 +1,12 @@
+@isTest
+    public class MockHttpResponses implements HttpCalloutMock {
+        public HTTPResponse respond(HTTPRequest req) {
+          // Create a fake response
+        HttpResponse res = new HttpResponse();
+        res.setHeader('Content-Type', 'application/json');
+      //  res.setBody('{"strxml":"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><PricingRequest TrackingGUID=\"6a767441-cafa-409d-942b-2b48615b49b3\"><OrderHeader HeaderID=\"0a68L000000CgV0QAK\"><OrderNumber>0a68L000000CgV0QAK</OrderNumber><CustomerID>null</CustomerID><CustomerNumber>null</CustomerNumber><CurrencyCode>USD</CurrencyCode></OrderHeader><OrderLines><OrderLine LineID=\"1\"><ItemNumber>PC-110</ItemNumber><PricingQuantity>3</PricingQuantity><UnitListPrice>10.89</UnitListPrice></OrderLine></OrderLines></PricingRequest>","1":{"attributes":{"type":"CartItem","url":"/services/data/v58.0/sobjects/CartItem/0a98L000000Cii8QAC"},"Id":"0a98L000000Cii8QAC","CartId":"0a68L000000CgV0QAK","CartDeliveryGroupId":"0a78L000000CgAWQA0","CurrencyIsoCode":"USD","Product2Id":"01t8L0000018ShQQAU","Quantity":3,"ListPrice":10.89,"TotalPrice":30.00,"TotalPromoAdjustmentAmount":0.00,"Cart":{"attributes":{"type":"WebCart","url":"/services/data/v58.0/sobjects/WebCart/0a68L000000CgV0QAK"},"Id":"0a68L000000CgV0QAK","AccountId":"0018L00000J8fcKQAR"},"CartDeliveryGroup":{"attributes":{"type":"CartDeliveryGroup","url":"/services/data/v58.0/sobjects/CartDeliveryGroup/0a78L000000CgAWQA0"},"Id":"0a78L000000CgAWQA0","DeliverToName":"OrderDeliver"},"Product2":{"attributes":{"type":"Product2","url":"/services/data/v58.0/sobjects/Product2/01t8L0000018ShQQAU"},"Id":"01t8L0000018ShQQAU","ProductCode":"PC-110"}}}');
+       res.setBody('<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><PricingRequest TrackingGUID=\"2608a39b-c7bd-4165-a4c4-6f78821af7f7\"><OrderHeader HeaderID=\"0a68L000000CgtvQAC\"><OrderNumber>0a68L000000CgtvQAC</OrderNumber><CustomerID>null</CustomerID><CustomerNumber>null</CustomerNumber><CurrencyCode>USD</CurrencyCode></OrderHeader><OrderLines><OrderLine LineID=\"1\"><ItemNumber>PC-110</ItemNumber><PricingQuantity>3</PricingQuantity><UnitListPrice>null</UnitListPrice></OrderLine></OrderLines></PricingRequest>');
+            res.setStatusCode(200);
+        return res;
+    }
+    }

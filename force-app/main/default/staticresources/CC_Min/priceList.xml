@@ -1,0 +1,38 @@
+<document>
+ <row>
+  <NAME>Gold Accounts</NAME >
+  <CURRENCYISOCODE__C>USD</CURRENCYISOCODE__C >
+  <CUSTOMERTYPECODE__C>General</CUSTOMERTYPECODE__C >
+  <DESC__C>Gold Accounts 20% off List</DESC__C >
+  <ENABLED__C>TRUE</ENABLED__C >
+  <PRICELISTID__C>1</PRICELISTID__C >
+  <STOREFRONT__C>DefaultStore</STOREFRONT__C >
+ </row>
+ <row>
+  <NAME>PortalAccount</NAME >
+  <CURRENCYISOCODE__C>USD</CURRENCYISOCODE__C >
+  <CUSTOMERTYPECODE__C>General</CUSTOMERTYPECODE__C >
+  <DESC__C>PortalAccount Price List</DESC__C >
+  <ENABLED__C>TRUE</ENABLED__C >
+  <PRICELISTID__C>2</PRICELISTID__C >
+  <STOREFRONT__C>DefaultStore</STOREFRONT__C >
+ </row>
+ <row>
+  <NAME>Enterprise</NAME >
+  <CURRENCYISOCODE__C>USD</CURRENCYISOCODE__C >
+  <CUSTOMERTYPECODE__C>General</CUSTOMERTYPECODE__C >
+  <DESC__C>Enterprise Price List</DESC__C >
+  <ENABLED__C>TRUE</ENABLED__C >
+  <PRICELISTID__C>3</PRICELISTID__C >
+  <STOREFRONT__C>DefaultStore</STOREFRONT__C >
+ </row>
+<row>
+  <NAME>Euro Enterprise</NAME >
+  <CURRENCYISOCODE__C>EUR</CURRENCYISOCODE__C >
+  <CUSTOMERTYPECODE__C>General</CUSTOMERTYPECODE__C >
+  <DESC__C>Enterprise Price List (EUR)</DESC__C >
+  <ENABLED__C>TRUE</ENABLED__C >
+  <PRICELISTID__C>300</PRICELISTID__C >
+  <STOREFRONT__C>DefaultStore</STOREFRONT__C >
+ </row>
+</document>

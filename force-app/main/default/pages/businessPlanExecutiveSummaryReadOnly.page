@@ -1,0 +1,7 @@
+<apex:page standardController="Business_Plan__c" extensions="businessPlanExecutiveSummary" >
+        <td width="2%" align="right"><b></b></td>
+        <td width="10%" align="right"><b></b></td>         
+        <td width="55px" align="right"><b><apex:outputField value="{!ExeSum.Executive_Summary_fld__c}"/></b>&nbsp;&nbsp;</td>
+        <td width="50px;"><b>&nbsp;&nbsp; </b></td>
+        <td width="50px;"><b>&nbsp;&nbsp; </b></td>
+</apex:page>

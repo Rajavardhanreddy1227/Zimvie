@@ -1,0 +1,13 @@
+.lightningInputRichText {
+    height: 750px;
+    line-height: 750px;
+}
+
+.THIS .slds-textarea {
+    height:500px !important;
+}
+
+.blockheight{
+    line-height:750px;
+    min-height: 750px;
+}

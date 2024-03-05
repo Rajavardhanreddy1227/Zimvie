@@ -1,0 +1,109 @@
+<template>
+   <article class="slds-card c-filter-card">
+      <lightning-accordion allow-multiple-sections-open onsectiontoggle={handleSectionToggle} active-section-name={activeSections} >
+         <lightning-accordion-section name="category" label={labels.Category}>
+            <ul class='c-filter-content'>
+               <li class="slds-p-top_medium slds-p-left_large slds-text-title_bold slds-truncate" title={category.name} >
+                  <lightning-formatted-rich-text value={category.name} ></lightning-formatted-rich-text>
+               </li>
+               <div class="slds-form-element__control slds-p-top_medium slds-p-left_large slds-truncate">
+                  <template for:each={children} for:item="child">
+                     <span key={child.id} class="slds-checkbox slds-p-around_xx-small slds-m-bottom_small">
+                     <input type="checkbox" id={child.id} name="checkboxForCategory" data-category-id={child.id} value={child.id} onclick={notifyCategorySelection}/>
+                     <label class="slds-checkbox__label" for={child.id}>
+                     <span class="slds-checkbox_faux"></span>
+                     <span class="slds-form-element__label slds-m-left_small">
+                     {child.displayName}
+                     </span>
+                     </label>
+                     </span>
+                  </template>
+               </div>
+            </ul>
+         </lightning-accordion-section>
+         <!--lightning-accordion-section name="Connection type" label="Connection type">
+            <fieldset class="slds-form-element slds-m-left_small slds-m-top_small">
+               <div class="slds-form-element__control">
+                  <div id="dropdown-content" class="dropdown-content">
+                     <div class="slds-checkbox slds-m-bottom_small">
+                        <input type="checkbox" name="options" id="checkbox-unique-id-11" value="checkbox-unique-id-11" checked />
+                        <label class="slds-checkbox__label" for="checkbox-unique-id-11">
+                        <span class="slds-checkbox_faux"></span>
+                        <span class="slds-form-element__label">Test 1</span>
+                        </label>
+                     </div>
+                     <div class="slds-checkbox slds-m-bottom_small">
+                        <input type="checkbox" name="options" id="checkbox-unique-id-12" value="checkbox-unique-id-12" />
+                        <label class="slds-checkbox__label" for="checkbox-unique-id-12">
+                        <span class="slds-checkbox_faux"></span>
+                        <span class="slds-form-element__label">Test 2</span>
+                        </label>
+                     </div>
+                     <div class="slds-checkbox slds-m-bottom_small">
+                        <input type="checkbox" name="options" id="checkbox-unique-id-13" value="checkbox-unique-id-13" />
+                        <label class="slds-checkbox__label" for="checkbox-unique-id-13">
+                        <span class="slds-checkbox_faux"></span>
+                        <span class="slds-form-element__label">Test 3</span>
+                        </label>
+                     </div>
+                  </div>
+               </div>
+            </fieldset>
+         </lightning-accordion-section>
+         <lightning-accordion-section name="implant Body" label="Implant Body">
+            <fieldset class="slds-form-element slds-m-left_small slds-m-top_small">
+               <div class="slds-form-element__control">
+                  <div class="slds-checkbox slds-m-bottom_small">
+                     <input type="checkbox" name="options" id="checkbox-unique-id-21" value="checkbox-unique-id-11" checked />
+                     <label class="slds-checkbox__label" for="checkbox-unique-id-21">
+                     <span class="slds-checkbox_faux"></span>
+                     <span class="slds-form-element__label">Test 1</span>
+                     </label>
+                  </div>
+                  <div class="slds-checkbox slds-m-bottom_small">
+                     <input type="checkbox" name="options" id="checkbox-unique-id-22" value="checkbox-unique-id-12" />
+                     <label class="slds-checkbox__label" for="checkbox-unique-id-22">
+                     <span class="slds-checkbox_faux"></span>
+                     <span class="slds-form-element__label">Test 2</span>
+                     </label>
+                  </div>
+                  <div class="slds-checkbox slds-m-bottom_small">
+                     <input type="checkbox" name="options" id="checkbox-unique-id-23" value="checkbox-unique-id-13" />
+                     <label class="slds-checkbox__label" for="checkbox-unique-id-23">
+                     <span class="slds-checkbox_faux"></span>
+                     <span class="slds-form-element__label">Test 3</span>
+                     </label>
+                  </div>
+               </div>
+            </fieldset>
+         </lightning-accordion-section>
+         <lightning-accordion-section name="Emergency Profile" label="Emergency Profile">
+            <fieldset class="slds-form-element slds-m-left_small slds-m-top_small">
+               <div class="slds-form-element__control">
+                  <div class="slds-checkbox slds-m-bottom_small">
+                     <input type="checkbox" name="options" id="checkbox-unique-id-101" value="checkbox-unique-id-11" checked="" />
+                     <label class="slds-checkbox__label" for="checkbox-unique-id-101">
+                     <span class="slds-checkbox_faux"></span>
+                     <span class="slds-form-element__label">Test</span>
+                     </label>
+                  </div>
+                  <div class="slds-checkbox slds-m-bottom_small">
+                     <input type="checkbox" name="options" id="checkbox-unique-id-121" value="checkbox-unique-id-12" />
+                     <label class="slds-checkbox__label" for="checkbox-unique-id-121">
+                     <span class="slds-checkbox_faux"></span>
+                     <span class="slds-form-element__label">Test</span>
+                     </label>
+                  </div>
+                  <div class="slds-checkbox slds-m-bottom_small">
+                     <input type="checkbox" name="options" id="checkbox-unique-id-131" value="checkbox-unique-id-12" />
+                     <label class="slds-checkbox__label" for="checkbox-unique-id-131">
+                     <span class="slds-checkbox_faux"></span>
+                     <span class="slds-form-element__label">Test</span>
+                     </label>
+                  </div>
+               </div>
+            </fieldset>
+         </lightning-accordion-section-->
+      </lightning-accordion>
+   </article>
+</template>

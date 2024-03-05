@@ -1,0 +1,285 @@
+<template>
+    <template if:false={showFilterOptions}>
+        <div class="maincls">
+            <span class="prodname soleil">{name}</span></br>
+            <span class="prodsku soleil">{labels.SKULabel}:{sku}</span></br>
+            <span if:false={isguest} class="prodpricelabel soleil">{labels.Your_Price} : 
+                <lightning-formatted-number if:false={isVariationParent} value={price.negotiated} class="prodprice soleil" format-style="currency" currency-code={price.currency}></lightning-formatted-number>
+                <lightning-formatted-number if:true={isVariationParent} value={priceFirstRange} class="prodprice soleil" format-style="currency" currency-code={priceCurrency}></lightning-formatted-number>
+                <span class="prodprice" if:true={isVariationParent}>-</span>
+                <lightning-formatted-number if:true={isVariationParent} value={priceLastRange} class="prodprice soleil" format-style="currency" currency-code={priceCurrency}></lightning-formatted-number>
+            </span></br></br>
+        <template if:true={isVariationParent}>
+            <template if:true={filteredProducts}>
+                <template if:true={isguest}>
+                    <div class="slds-p-vertical_small">
+                        <!--<lightning-button class="slds-float_right" variant="brand-outline" label={labels.SignToBuy} title={labels.SignToBuy} onclick={goToLogin} ></lightning-button>-->
+                        <button onclick={goToLogin}  class="signinbtnls soleil" >{labels.SignToBuy}</button>
+                    </div>
+                </template>
+                <div class="slds-m-top_large">
+                <span class="desclabelcls soleil">{labels.DescriptionLabel}</span> <lightning-icon icon-name={descIcon} size="x-small" class="my-icon soleil" alternative-text="Down" onclick={handleShowDesc}></lightning-icon></br>
+                    <p if:true={showDesc}>
+                        <span class="desccls soleil">{description}</span></br>
+                        <span if:true={media} for:each={media} for:item="mediaItem" key={mediaItem.id}>
+                            <a href={mediaItem.url} >{mediaItem.title}</a>&nbsp;&nbsp;
+                        </span>
+                    </p>
+                </div>
+            </template>
+        </template>
+        <template if:false={isVariationParent}>
+            <div if:true={inStock} class="slds-p-bottom_small">
+                <lightning-icon
+                    icon-name="utility:check"
+                    class="iconcls"
+                    size="x-small"
+                ></lightning-icon>
+                <span class="slds-p-horizontal_small instocklabel soleil">{labels.InstockLabel}</span>
+            </div>
+            <div if:false={inStock} class="slds-p-bottom_small">
+                <lightning-icon
+                    icon-name="utility:back"
+                    size="x-small"
+                    class="iconcls"
+                    
+                ></lightning-icon>
+                <span class="slds-p-horizontal_small instocklabel soleil">{labels.BackOrder}</span>
+            </div>
+
+            <!--div class="slds-p-vertical_small">
+                    <span if:false={hasPrice}>Price Unavailable</span>
+                    <b>Your Price: </b>
+                    <lightning-formatted-number
+                        if:true={hasPrice}
+                        currency-code={price.currency}
+                        format-style="currency"
+                        value={price.negotiated}
+                    >
+                    </lightning-formatted-number>
+                </div-->
+                <div class="slds-p-vertical_small">
+                    <template if:true={isguest}>
+                        <!-- <lightning-button variant="brand-outline" label={labels.SignToBuy} title={labels.SignToBuy} onclick={goToLogin} ></lightning-button>-->
+                         <button onclick={goToLogin}  class="signinbtnls soleil" >{labels.SignToBuy}</button>
+                     </template>
+                    <template if:false={isguest}>
+                        <lightning-layout  multiple-rows="true">
+                            <lightning-layout-item size="12">
+                                <lightning-layout>
+                                    <div if:false={hideQuantity}>
+                                    <lightning-layout-item size="2">
+                                        <lightning-input
+                                            type="number"
+                                            name="quantity"
+                                            label={labels.QuantityLabel}
+                                            value="1"
+                                            min="1"
+                                            max="9999"
+                                            step="1"
+                                            class="prodsku"
+                                            message-when-step-mismatch={labels.WholeNumberLabel}
+                                            oncommit={handleQuantityChange}
+                                        >
+                                        </lightning-input>
+                                    </lightning-layout-item>
+                                </div>
+                                <div if:false={hideAddToCart}>
+                                    <lightning-layout-item style="margin-bottom: 16px;" size="10">
+                                        <!--<lightning-button
+                                            label={labels.AddtoCartLabel}
+                                            data-name="parentButton"
+                                            variant="brand"
+                                            class="slds-m-left_x-small"
+                                            disabled={_isAddToCartDisabled}
+                                            onclick={notifyAddToCart}
+                                        >
+                                        </lightning-button>-->
+                                        <button onclick={notifyAddToCart} data-name="parentButton" disabled={_isAddToCartDisabled} class="btncls soleil">{labels.AddtoCartLabel}</button>
+                                    </lightning-layout-item>
+                                </div>
+                                </lightning-layout>
+                            </lightning-layout-item>
+                            <div if:false={hideSaveForLater}>
+                            <lightning-layout-item size="12">
+                                <!--<lightning-layout-item style="margin-bottom: 16px;">
+                                <lightning-button
+                                    label="Save for Later"
+                                    variant="brand"
+                                    class="slds-m-left_x-small"
+                                    onclick={notifyAddToList}
+                                >
+                                </lightning-button>
+                            </lightning-layout-item>-->
+                            <lightning-icon icon-name="utility:favorite_alt" size="x-small" class="my-icon"> </lightning-icon><a onclick={notifyAddToList} class="whishlistcls soleil">{labels.AddToList}</a>
+
+                            </lightning-layout-item></div>
+                        </lightning-layout>
+                    </template>
+                    <div class="slds-m-top_large">
+                    <span class="desclabelcls soleil">{labels.DescriptionLabel}</span> <lightning-icon icon-name={descIcon} size="x-small" class="my-icon soleil" alternative-text="Down" onclick={handleShowDesc}></lightning-icon></br>
+                    <p if:true={showDesc}>
+                        <span class="desccls soleil">{description}</span></br>
+                        <span if:true={media} for:each={media} for:item="mediaItem" key={mediaItem.id}>
+                            <a href={mediaItem.url} >{mediaItem.title}</a>&nbsp;&nbsp;
+                        </span>
+                    </p>
+                    </div>
+                </div>
+
+                
+                <!--<lightning-accordion active-section-name="description" allow-multiple-sections-open>
+                    <lightning-accordion-section name="description" label={labels.DescriptionLabel}></lightning-accordion-section>
+                    <lightning-formatted-rich-text value={description}></lightning-formatted-rich-text>
+                </lightning-accordion>-->
+                
+        </template>
+    </div>
+    </template>
+    <template if:true={showFilterOptions}>
+        <template if:true={isVariationParent}>
+            <lightning-card  if:true={showFilterOptions}>
+                <h3 slot="title">
+                    <span class="optionTitle soleil">{labels.ProductOptionsLabel}</span>
+                </h3>
+                <div class="slds-m-around_medium slds-p-around_large">
+                    <div class="slds-grid slds-gutters slds-wrap"  >
+                        <div class="slds-col slds-size_6-of-12 slds-medium-size_3-of-12 slds-large-size_3-of-12" for:each={filterattributes} for:item="attribute" key={attribute.apiName}>
+                            <lightning-combobox label={attribute.label} value={attribute.value} options={attribute.options} onchange={handleAttributeChange} data-id={attribute.apiName}></lightning-combobox>
+                            </div>
+                         
+                    </div>
+                </div> 
+<!--slds-max-medium-table_stacked-horizontal-->
+                <div class="table-position">
+                    <div class="my-res-table">
+                <table class="slds-table slds-table_striped slds-no-row-hover c-table">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th  scope="col" class="" style="width:11.1%">
+                                <div class="slds-cell-wrap tableHeading soleil" title={labels.SKULabel}>{labels.SKULabel}</div>
+                            </th>
+                            <!--<th  scope="col" class="" style="width:11.1%">
+                                <div class="slds-cell-wrap tableHeading soleil" title={labels.DiameterLabel}>{labels.DiameterLabel}</div>
+                            </th>
+                            <th  scope="col" class="" style="width:11.1%">
+                                <div class="slds-cell-wrap tableHeading soleil" title={labels.Profile}>{labels.Profile}</div>
+                            </th>
+                            <th  scope="col" class="" style="width:11.1%">
+                                <div class="slds-cell-wrap tableHeading soleil" title={labels.LengthLabel}>{labels.LengthLabel}</div>
+                            </th>-->
+                            <th  scope="col" class="" style="width:11.1%" for:each={attributesLable} for:item="attrlabel" key={attrlabel.apiName}>
+                                <div class="slds-cell-wrap tableHeading soleil" title={attrlabel.label}>{attrlabel.label}</div>
+                            </th>
+                            <th  scope="col" class="" style="width:11.1%">
+                                <div class="slds-cell-wrap tableHeading soleil" title={labels.QuantityLabel}>{labels.QuantityLabel}</div>
+                            </th>
+                            <th  scope="col" class="" style="width:11.1%">
+                                <div class="slds-cell-wrap tableHeading soleil" title={labels.UnitPrice}>{labels.UnitPrice}</div>
+                            </th>
+                            <th  scope="col" class="" style="width:11.1%">
+                                <div class="slds-cell-wrap tableHeading soleil" title={labels.OnlineAvailabilityLabel}>{labels.OnlineAvailabilityLabel}</div>
+                            </th>
+                            
+                            <th  scope="col" if:false={isguest} class="" style="width:11.1%">
+                                <div class="slds-cell-wrap tableHeading soleil" title={labels.OrderLabel}>{labels.OrderLabel}</div>
+                            </th>
+                            <th  scope="col" if:false={isguest} class="" style="width:11.1%"></th>
+                            
+                            
+                        </tr>
+                    </thead>
+                    <tbody if:true={filterProdExist}>
+                        <template for:each={filteredProducts} for:item="product" if:true={isFilterResult}>
+                            <tr class="slds-hint-parent" key={product.SKU}>
+                                <td data-label={labels.SKULabel} class="">
+                                    <div class="slds-cell-wrap tableData soleil" title={product.SKU}>{product.SKU}</div>
+                                </td>
+                                <td data-label={labels.DiameterLabel} class="" for:each={product.attributes} for:item="prodattributes" key={prodattributes.apiName}>
+                                    <div class="slds-cell-wrap tableData soleil" title={prodattributes.label}>{prodattributes.value}</div>
+                                </td>
+                               <!-- <td data-label={labels.DiameterLabel} class="">
+                                    <div class="slds-cell-wrap tableData soleil" title={product.attributes.Diameter__c}>{product.attributes.Diameter__c}</div>
+                                </td>
+                                <td data-label={labels.LengthLabel} class="" >
+                                    <div if:true={product.attributes.Emergency_Profile__c} class="slds-cell-wrap tableData soleil" title={product.attributes.Emergency_Profile__c}>{product.attributes.Emergency_Profile__c}</div>
+                                    <div if:false={product.attributes.Emergency_Profile__c} class="slds-cell-wrap tableData soleil" title="--">--</div>
+                                </td>
+                                <td data-label={labels.LengthLabel} class="">
+                                    <div class="slds-cell-wrap tableData soleil" title={product.attributes.Length__c}>{product.attributes.Length__c}</div>
+                                </td>-->
+                                <td data-label={labels.QuantityLabel} class="">
+                                    <div class="slds-cell-wrap " title="Quantity"><!--lightning-combobox label="qty" value="0" variant="label-hidden" data-id={product.Id} onchange={setVariantQty} options={qtyOptions}></lightning-combobox-->
+                                        <lightning-input type="number" label="qty" value="0" variant="label-hidden" data-id={product.Id} onchange={setVariantQty}></lightning-input>
+                                    </div>
+                                </td>
+                                <td data-label={labels.QuantityLabel} class="">
+                                    <div class="slds-cell-wrap tableData" title="Price">
+                                        <lightning-formatted-number if:false={isguest} value={product.Price} class="prodprice soleil" format-style="currency" currency-code={product.Currency}></lightning-formatted-number></br>
+                                    </div>
+                                </td>
+                                <td data-label={labels.OnlineAvailabilityLabel} class="">
+                                    <div class="slds-cell-wrap">
+                                        <!--<template if:true={product.InStock}>
+                                            <lightning-icon
+                                                icon-name="utility:check"
+                                                variant="success"
+                                                size="x-small"
+                                            ></lightning-icon>
+                                            &nbsp;
+                                        </template>-->
+                                        <span if:true={product.InStock} class="tableData soleil">{labels.InstockLabel}</span>
+                                        <!--<template if:false={product.InStock}>
+                                            <lightning-icon
+                                                icon-name="utility:back"
+                                                variant="error"
+                                                size="xx-small"
+                                            ></lightning-icon>
+                                            &nbsp;
+                                        </template>-->
+                                        <span if:false={product.InStock} class="tableData soleil">{labels.BackOrder}</span>
+                                        
+                                    </div>
+                                </td>
+                                
+                                <td data-label={labels.OrderLabel} if:false={isguest} class="">
+                                        <div class="slds-cell-wrap">
+                                            <!--<lightning-button
+                                                label={labels.AddtoCartLabel}
+                                                data-name="childButton"
+                                                data-id={product.Id}
+                                                variant="brand"
+                                                class="slds-m-left_x-small"
+                                                onclick={notifyAddToCart}
+                                            >
+                                            </lightning-button>-->
+                                            <button onclick={notifyAddToCart} data-name="childButton" data-id={product.Id} class="filterbtncls soleil">{labels.AddtoCartLabel}</button>
+                                            
+                                        </div>
+                                </td>
+                                <td data-label={labels.OrderLabel} if:false={isguest} class="">
+                                    <div class="slds-cell-wrap">
+                                       
+                                        <a data-id={product.Id} onclick={notifyVariationAddToList}><lightning-icon data-id={product.Id} icon-name="utility:favorite_alt" size="x-small" class="my-icon"> </lightning-icon></a>
+                                        
+                                    </div>
+                            </td>
+                            
+                                
+                            </tr>
+                        </template>
+                        
+                    </tbody>
+                    
+                </table>
+                <p if:false={filterProdExist} style="color:red;text-align:center;">No Products Found.</p>
+                <tempalte if:false={isFilterResult}>
+                    <c-custom_spinner></c-custom_spinner>
+                </tempalte>
+            </div>
+        </div>
+                
+            </lightning-card>
+        </template>
+    </template>
+</template>

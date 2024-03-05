@@ -1,0 +1,127 @@
+<template>
+    <c-b2b-spinner 
+        if:true={loading}
+        message-state={messageState}>
+    </c-b2b-spinner>
+    <!-- <template if:true={loading}>
+        <c-custom_spinner></c-custom_spinner>
+    </template> -->
+    <!-- <lightning-spinner
+        if:true={loading}
+        size="large"
+        variant="base"
+    >
+    </lightning-spinner> -->
+    <template if:true={showWishlistEditNameModal}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container" style="width:25% !important;">
+                <div style="border-radius: 5px;" class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <div class="slds-p-bottom_medium"><b>Edit List Name</b>
+                        <lightning-icon icon-name="utility:close"  alternative-text="close" title="close" onclick={closeModal} style="float:right;" size="small"></lightning-icon>
+                    </div>
+                    <lightning-input type="text" variant="label-stacked" name="name" label="List Name" value={editedWishlistName} placeholder="type here..." onchange={setWishlistName} required></lightning-input>
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_1-of-2 slds-p-top_medium">
+                        <span><button onclick={closeModal} class="slds-button_white">CANCEL</button></span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 slds-p-top_medium">
+                        <span><button onclick={saveNewWishlistName} class="slds-button_blue">SAVE</button></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+    <div class="slds-p-around_medium">
+        <template if:false={showcheckboxes}>
+            <div class="header-lg xxslds-m-bottom_medium">{labels.My_Lists}</div>
+            <div>
+                <lightning-accordion class="example-accordion" 
+                        onsectiontoggle={handleToggleSection}
+                        active-section-name={selectedWishlist}>
+                    <template for:each={wishlists} for:item="item">
+                        <lightning-accordion-section key={item.Id} name={item.Id} label={item.CustomName}>
+                            <div slot="actions" class="slds-text-align_right"> 
+                                <button class="slds-button btn" data-record-id={item.Id} data-name={item.Name} onclick={handleEditName}>{labels.Edit} </button> <span class="textbar">|</span> <button class="slds-button btn" data-record-id={item.Id} onclick={handleDeleteClick}>{labels.Delete}</button> 
+                            </div>
+                            <template if:true={wishlistSummaryData}>
+                                <template for:each={wishlistSummaryData.items} for:item="rec" > 
+                                    <!--div key={rec.wishlistItemId} class="slds-col slds-size_1-of-2">
+                                        <span>
+                                            <img style="width: 100px;height: 100px;" src={rec.productSummary.thumbnailImage.url}></img>&nbsp;&nbsp;{rec.productSummary.name}
+                                        </span>
+                                    </div>
+                                    <div key={rec.wishlistItemId} class="slds-p-top_large slds-col slds-size_1-of-2">
+                                        <span>
+                                            <lightning-button-group>
+                                                <lightning-button variant="destructive" label="Remove Item" data-id={rec.wishlistItemId} onclick={handleRemove}></lightning-button>
+                                                <lightning-button label="Add to Cart" data-id={rec.productSummary.productId} onclick={handleAddToCart}></lightning-button>
+                                            </lightning-button-group>
+                                        </span>
+                                    </div-->
+
+
+                                    <div key={rec.wishlistItemId} class="slds-grid slds-wrap slds-gutters slds-p-top_medium slds-p-bottom_medium slds-border_bottom" >
+                                        <div class="slds-col slds-size--1-of-5 slds-small-size--1-of-5 slds-medium-size--1-of-5">
+                                            <div class="img-ctr xslds-align_absolute-center"> 
+                                                <img style="width: 150px;height: 150px;" src={rec.productSummary.thumbnailImage.url}></img>
+                                            </div>
+                                            </div>
+                                            <div class="slds-col slds-size--3-of-5 slds-small-size--3-of-5 slds-medium-size--3-of-5"> 
+                                            <div class="product-name" data-id={rec.productSummary.productId} onclick={navigateToProduct}>{rec.productSummary.name}</div>
+                                            <p class="product-sku">{labels.SKULabel} {rec.productSummary.fields.StockKeepingUnit}</p>
+                                            <p class="product-diementions">{rec.productSummary.fields.Description}</p>
+                                            <p class="product-price"><lightning-formatted-number value={rec.salesPrice} format-style="currency" currency-code={rec.currencyIsoCode}></lightning-formatted-number></p>
+                                            </div>
+                                            <div class="slds-col slds-size--1-of-5 slds-small-size--1-of-5 slds-medium-size--1-of-5 slds-text-align_right" > 
+                                            
+                                            <button class="slds-button slds-button_brand custmBtn" data-id={rec.productSummary.productId} onclick={handleAddToCart}>{labels.AddtoCartLabel}</button>
+                                            <br />
+                                            <button class="slds-button" data-id={rec.wishlistItemId} onclick={handleRemove}>{labels.Remove_from_list}</button>
+                                            </div>
+                                    </div>
+                                </template>
+                                <template if:true={item.productAvailable}>
+                                    <button style="float:right;" class="slds-button slds-button_brand custmBtn" onclick={addFullWishlist}>{labels.ADD_ALL_TO_CART}</button><br/><br/>
+                                </template>
+                                
+                            </template>
+                        </lightning-accordion-section>
+                    </template>
+                </lightning-accordion>
+            </div>
+        </template>
+        <template if:true={showcheckboxes}>
+            <div class="slds-form-element__control slds-p-around_small section-sub-head">{labels.Select_Wishlist}</div>
+            <div class="slds-form-element__control slds-p-around_small">
+                <span class="slds-radio slds-p-around_xx-small">
+                    <input type="radio" id="createnewwishlist" name="radioButtonforWishlist"  onclick={handleNewWishlistCreation}/>
+                    <label class="slds-radio__label" for="createnewwishlist">
+                        <span class="slds-radio_faux"></span>
+                        <span class="slds-form-element__label" style="font-size:14px;">{labels.Start_New_List}</span>
+                    </label>
+                </span>
+                <lightning-layout if:true={showNewWishlistInput}>
+                    <lightning-layout-item padding="around-small">
+                        <lightning-input variant="label-hidden" placeholder="List Name" class="newwishlistinput" label="List Name" type="text" ></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small">
+                        <lightning-button-icon icon-name="utility:save"  alternative-text="Save" title="Save" onclick={setWishlistNameFunc}></lightning-button-icon>
+                    </lightning-layout-item>
+                </lightning-layout>
+                
+                
+                <template for:each={wishlists} for:item="rec" > 
+                    <span key={rec.Id} class="slds-radio slds-p-around_xx-small">
+                        <input type="radio" id={rec.Id} name="radioButtonforWishlist"  data-id={rec.Id} value={rec.Id} onclick={handleWishlistSelection}/>
+                        <label class="slds-radio__label" for={rec.Id}>
+                            <span class="slds-radio_faux"></span>
+                            <span class="slds-form-element__label" style="font-size:14px;">{rec.Name}</span>
+                        </label>
+                    </span>
+                </template>
+            </div>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,6 @@
+<apex:page standardController="Asset"  sidebar="true" showHeader="true"  tabStyle="Asset" > 
+  
+  
+   <font size="5" color="black"> <b> Attention: This record must be created by using the SPM Wizards. </b> </font>
+
+</apex:page>

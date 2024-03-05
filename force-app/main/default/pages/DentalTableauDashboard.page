@@ -1,0 +1,19 @@
+<!----------------------------------------------------------------------------
+    Page Name:    DentalTableauDashboard
+    Purpose:      to display the tableau dashboard in the salesforce
+                  Home page
+    Developed By: Mohit Gulati
+
+----------------------------------------------------------------------------->
+<apex:page showHeader="false" sidebar="false">
+    
+    <apex:iframe src="{!$Setup.DentalTableauDashboard_URL__c.Tableau_Dashboard_URL__c}?:embed=y&:showShareOptions=false&:toolbar=false&:display_count=no&:showVizHome=no" 
+               height="500px" 
+               width="100%"
+               id="theIframe" />
+    
+ <!--<a href="{!$Setup.DentalTableauDashboard_URL__c.Tableau_Dashboard_URL__c}?:embed=y&:showShareOptions=false&:toolbar=false&:display_count=no&:showVizHome=no" 
+               height="500px" 
+     width="100%" target='_blank'> Dashboard </a> -->
+  
+</apex:page>

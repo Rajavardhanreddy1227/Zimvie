@@ -1,0 +1,22 @@
+<apex:page sidebar="false" showHeader="false" lightningStylesheets="true">
+    <apex:includeLightning />
+    
+    <div id="lightning"/>
+    
+    <script> 
+    
+    //get record Id from URL
+    var recordId = "{!$CurrentPage.parameters.id}";
+    
+    //Create Lightning Component
+    $Lightning.use("c:ReassignLightningOutApp", function() {
+        $Lightning.createComponent("c:Ortho_Reassign_Opportunity",
+                                   {"recordId" : recordId, "viewFrom" : "VFPage"},//Pass Parameter
+                                   "lightning",
+                                   function(cmp){
+                                       console.log('Component created');
+                                   });
+    });
+    </script>
+    
+</apex:page>

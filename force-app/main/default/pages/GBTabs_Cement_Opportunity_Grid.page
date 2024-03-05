@@ -1,0 +1,31 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" title="Cement Opportunity Grid">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Cement_Opportunity_Grid" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Cement Opportunity Grid",
+	"tabs": [
+		{
+			"name": "Grow &amp; Recapture Opportunities",
+			"content": "{!gridPage}gname=Cement Opportunity Grid&sh=0&sfname=default",
+			"id": 1544816585502
+		},
+		{
+			"name": "Palacos Opportunties",
+			"content": "{!gridPage}gname=Cement Palacos Opportunity Grid&sh=0&sfname=default",
+			"id": 1544816718896
+		}
+	],
+	"id": 1544816585485,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "Cement Opportunity Grid",
+	"globalButtons": false,
+	"object": "Opportunity",
+	"height": "600",
+	"showHeader": false,
+	"showSidebar": false
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

@@ -1,0 +1,31 @@
+<apex:page standardController="Business_Plan__c" showHeader="false" sidebar="false" title="Cement Sales Summary">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Cement_Sales_Summary" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Cement Sales Summary",
+	"tabs": [
+		{
+			"name": "Cement Sales Summary",
+			"content": "{!gridPage}gname=Cement Sales Summary&amp;sh=0&amp;sfname=default&amp;fpf=Business_Plan__c&amp;fpv={!Business_Plan__c.id}",
+			"id": 1556824944976
+		},
+		{
+			"name": "Chart",
+			"content": "/apex/BP_ProductSalesSummaryChart?bpid={!Business_Plan__c.id}&amp;productgroup=Cement",
+			"id": 1556824961330
+		}
+	],
+	"id": 1556824944976,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": false,
+	"object": "Business_Plan__c",
+	"height": "750",
+	"showHeader": false,
+	"showSidebar": false
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

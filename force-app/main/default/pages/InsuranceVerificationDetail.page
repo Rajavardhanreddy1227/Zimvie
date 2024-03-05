@@ -1,0 +1,504 @@
+<apex:page standardcontroller="Insurance_Verification__c" renderAs="PDF" >
+ <head>
+<style type="text/css">
+
+
+@page {
+ margin: 30px 10px 10px 20px ;}
+  
+
+@top-right
+        {
+        content: “Page ” counter(page);
+        }
+    }
+   
+</style>
+</head>
+    <apex:form id="requestForm">
+    <!--<apex:inputHidden id="test" value="{!Insurance_Verification__c.Patient__r}"/>
+  <apex:inputHidden id="test1" value="{!Insurance_Verification__c.Name}"/>
+  -->  
+    <body>
+    <div style="page-break-after:always;">
+    <Table Width="100%" Height="100%" Border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <Table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#FFFFFF">
+                    <tr>
+                        <td>
+                            <Table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#FFFFFF">
+                                <tr>
+                                    <td Width="30%" align="Center"><apex:image url="{!$Resource.logo_tl}" /></td>
+                                    <td Width="70%"></td>
+                                </tr>
+                             </Table>
+                         </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <Table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                
+                                <tr>
+                                    <td width="100%">
+                                        <Strong>Insurance Verification Detail</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <Table Width="100%">
+                                            <tr>
+                                                <td width="25" align="Centre">Patient</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Patient__r.Name}"/></td>
+                                                <td Width="25%" align="Center">IV Number</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Name}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Doctor</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Doctor__r.Name}"/></td>
+                                                <td Width="25%">&nbsp;</td>
+                                                <td Width="25%">&nbsp;</td>
+                                            </tr>
+                                        </Table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100%">
+                                        <Strong>Comments</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <Table Width="100%">
+                                            <tr>
+                                                <td width="25%" align="Centre">Comments</td>
+                                                <td width="73%">:<apex:outputField value="{!Insurance_Verification__c.Comments__c}"/></td>
+                                                <td Width="1%"></td>
+                                                <td Width="1%">&nbsp;</td>
+                                            </tr>
+                                        </Table>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td width="100%">
+                                        <Strong>Payer Details</strong>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>
+                                        <Table Width="100%">
+                                            <tr>
+                                                <td width="25%" align="Centre">Primary Payer</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Payer__r.name}"/></td>
+                                                <td width="25%" align="Centre">Secondary Payer</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Payer__r.name}"/></td>
+                                            </tr>
+                                        </Table>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td width="100%">
+                                        <Strong>Patient Primary Insurance Information</strong>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>
+                                        <Table Width="100%">
+                                            <tr>
+                                                <td width="25%" align="Centre">Primary Employer Name</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Employer_Name__c}"/></td>
+                                                <td width="25%" align="Centre">Primary Insurance Co Name</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Insurance_Co_Name__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25" align="Centre">Primary Insurance Co Subscriber's First</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Insurance_Co_Subscriber_s_First__c}"/></td>
+                                                <td width="25%" align="Centre">Primary Insurance Co Policy Number</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Insurance_Co_Policy_Number__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Primary Insurance Co Subscriber's Last</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Insurance_Co_Subscriber_s_Last__c}"/></td>
+                                                <td width="25%" align="Centre">Primary Insurance Co Group Number</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Insurance_Co_Group_Number__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Primary Insurance Co Subscriber's DOB</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Insurance_Co_Subscriber_s_DOB__c}"/></td>
+                                                <td width="25%" align="Centre">Primary Insurance Co Office Number</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Insurance_Co_Office_Number__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Primary Ins/Co Subscriber's Relationship</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Ins_Co_Subscriber_s_Relationship__c}"/></td>
+                                                <td width="25%" align="Centre">&nbsp;</td>
+                                                <td Width="25%">&nbsp;</td>
+                                            </tr>
+                                        </Table>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td width="100%">
+                                        <Strong>Primary Patient Eligibility and Benefits Information</strong>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>
+                                        <Table Width="100%">
+                                            <tr>
+                                                <td width="25%" align="Centre">Primary_Plan Type</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Plan_Type__c}"/></td>
+                                                <td width="25%" align="Centre">Primary Coverage Terminated</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Coverage_Terminated__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Primary Effective Date</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Effective_Date__c}"/></td>
+                                                <td width="25%" align="Centre">Primary Coverage Termination Date</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Coverage_Termination_Date__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Primary Benefits for Treatment</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Benefits_for_Treatment__c}"/></td>
+                                                <td width="25%">&nbsp;</td>
+                                                <td Width="25%">&nbsp;</td>
+                                            </tr>
+                                        </Table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100%">
+                                        <Strong>Primary Patient In-Network Benefits</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <Table Width="100%">
+                                            <tr>
+                                                <td width="25%" align="Centre">Primary Copayment Amount</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Copayment_Amount__c}"/></td>
+                                                <td width="25%" align="Centre">Primary Deductible Amount</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Deductible_Amount__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Primary Coinsurance Amount</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Coinsurance_Amount__c}"/></td>
+                                                <td width="25%" align="Centre">Primary Deductible Met</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Deductible_Met__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Other Out-of-Pocket Expense</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Other_Out_of_Pocket_Expense__c}"/></td>
+                                                <td width="25%" align="Centre">Remaining Deductible Amount</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Remaining_Deductible_Amount__c}"/></td>
+                                            </tr>
+                                        </Table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100%">
+                                    <Strong>Patient Referral</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <Table Width="100%">
+                                            <tr>
+                                                <td width="25%" align="Centre">Referral Required</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Referral_Required__c}"/></td>
+                                                <td width="25%" align="Centre">Referral Office Number</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Referral_Office_Number__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Referral Contact First</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Referral_Contact_First__c}"/></td>
+                                                <td width="25%" align="Centre">Referral Fax Number</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Referral_Fax_Number__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Referral Contact Last</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Referral_Contact_Last__c}"/></td>
+                                                <td width="25%" align="Centre">Referral Comments</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Referral_Comments__c}"/></td>
+                                            </tr>
+                                        </Table>
+                                    </td>
+                                </tr> 
+                             </Table>   
+                        </td>
+                    </tr>
+                </Table>
+            </td>
+        </tr>
+    </Table>
+    </div>
+    <div style="page-break-after:always;">
+    <Table Width="100%" Height="100%" Border="0" align="center" cellpadding="0" cellspacing="1">
+        <tr>
+            <td>
+                <Table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#FFFFFF">
+                    <tr>
+                        <td>
+                            <Table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#FFFFFF">                            
+                                <tr>
+                                    <td width="100%">
+                                        <Strong>Primary Patient Out of Network Benefits</strong>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                    <td>
+                                        <Table Width="100%">
+                                            <tr>
+                                                <td width="25%" align="Centre">Primary Out-of-Network Copayment Amount</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Out_of_Network_Copayment_Amount__c}"/></td>
+                                                <td width="25%" align="Centre">Primary Out-of-Network Deductible Met</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Out_of_Network_Deductible_Met__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Primary Out-of-Network Coinsurance Amt</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Out__c}"/></td>
+                                                <td width="25%" align="Centre">Primary Out-of-Network Deductible Amount</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Out_of_Network_Deductible_Amount__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Primary Out-of-Network Comments</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Primary_Out_of_Network_Comments__c}"/></td>
+                                                <td width="25%">&nbsp;</td>
+                                                <td Width="25%">&nbsp;</td>
+                                            </tr>
+                                        </Table>
+                                    </td>
+                                </tr>
+                                                                 
+                           
+                                
+                                <tr>
+                                    <td width="100%">
+                                    <Strong>Patient Prior Authorization Requirement</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <Table Width="100%">
+                                            <tr>
+                                                <td width="25%" align="Centre">Prior Authorization Required</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Prior_Authorization_Required__c}"/></td>
+                                                <td width="25%" align="Centre">Prior Authorization Office Number</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Prior_Authorization_Office_Number__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Prior Authorization Contact First</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Prior_Authorization_Contact_First__c}"/></td>
+                                                <td width="25%" align="Centre">Prior Authorization Fax</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Prior_Authorization_Fax__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Prior Authorization Contact Last</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Prior_Authorization_Contact_Last__c}"/></td>
+                                                <td width="25%" align="Centre">Authorization Number</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Authorization_Number__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Prior Authorization Comments</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Prior_Authorization_Comments__c}"/></td>
+                                                <td width="25%">&nbsp;</td>
+                                                <td Width="25%">&nbsp;</td>
+                                            </tr>
+                                        </Table>
+                                    </td>
+                                </tr> 
+                                      <tr>
+                                    <td width="100%">
+                                    <Strong>Specialty Pharmacy</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <Table Width="100%">
+                                            <tr>
+                                                <td width="25%" align="Centre">Specific Specialty Pharmacy Requested</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Specific_Specialty_Pharmacy_Requested__c}"/></td>
+                                                <td width="25%" align="Centre">Specialty Pharmacy</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Specialty_Pharmacy__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Specialty Pharmacy First</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Specialty_Pharmacy_First__c}"/></td>
+                                                <td width="25%" align="Centre">Specialty Pharmacy ID</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Specialty_Pharmacy_ID__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Specialty Pharmacy Last</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Specialty_Pharmacy_Last__c}"/></td>
+                                                <td width="25%" align="Centre">Specialty Pharmacy Office</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Specialty_Pharmacy_Office__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Specialty Pharmacy Email</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Specialty_Pharmacy_Email__c}"/></td>
+                                                <td width="25%" align="Centre">Specialty Pharmacy Alternate Office</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Specialty_Pharmacy_Alternate_Office__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Specific Specialty Pharmacy Comments</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Specific_Specialty_Pharmacy_Comments__c}"/></td>
+                                                <td width="25%" align="Centre">Specialty Pharmacy Fax</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Specialty_Pharmacy_Fax__c}"/></td>
+                                            </tr>
+                                        </Table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100%">
+                                    <Strong>Patient Secondary Insurance Information</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <Table Width="100%">
+                                            <tr>
+                                                <td width="25%" align="Centre">Secondary Employer Name</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Employer_Name__c}"/></td>
+                                                <td width="25%" align="Centre">Secondary Insurance Co Name</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Insurance_Co_Name__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Secondary Insurance Co Subscriber First</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Insurance_Co_Subscriber_First__c}"/></td>
+                                                <td width="25%" align="Centre">Secondary Insurance Co Policy Number</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Insurance_Co_Policy_Number__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Secondary Insurance Co Subscriber Last</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Insurance_Co_Subscriber_Last__c}"/></td>
+                                                <td width="25%" align="Centre">Secondary Insurance Co Group Number</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Insurance_Co_Group_Number__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Secondary Insurance Co Subscriber's DOB</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Insurance_Co_Subscriber_s_DOB__c}"/></td>
+                                                <td width="25%" align="Centre">Secondary Insurance Co Office Number</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Insurance_Co_Office_Number__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Secondary Ins/Co Subscriber Relationship</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Ins_Co_Subscriber_Relationship__c}"/></td>
+                                                <td width="25%">&nbsp;</td>
+                                                <td Width="25%">&nbsp;</td>
+                                            </tr>
+                                        </Table>
+                                    </td>
+                                </tr>
+                               
+                            
+                                    </Table>
+                                    </td>
+                                </tr> 
+                             </Table>   
+                        </td>
+                    </tr>
+                </Table>
+            </div>
+    
+    <Table Width="100%" Height="100%" Border="0" align="center" cellpadding="0" cellspacing="1">
+        <tr>
+            <td>
+                <Table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#FFFFFF">
+                    <tr>
+                        <td>
+                            <Table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#FFFFFF">                            
+                                    
+                               
+                                    <tr>
+                                    <td width="100%">
+                                    <Strong>Secondary Patient Eligibility and Benefits Information</strong>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>
+                                        <Table Width="100%">
+                                            <tr>
+                                                <td width="25%" align="Centre">Secondary Plan Type</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Plan_Type__c}"/></td>
+                                                <td width="25%" align="Centre">Secondary Coverage Terminated</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Coverage_Terminated__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Secondary Effective Date</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Effective_Date__c}"/></td>
+                                                <td width="25%" align="Centre">Secondary Coverage Termination Date</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Coverage_Termination_Date__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Secondary Benefits for Treatment</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Benefits_for_Treatment__c}"/></td>
+                                                <td width="25%">&nbsp;</td>
+                                                <td Width="25%">&nbsp;</td>
+                                            </tr>
+                                         </Table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100%">
+                                    <Strong>Secondary Patient In-Network Benefits</strong>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>
+                                        <Table Width="100%">
+                                            <tr>
+                                                <td width="25%" align="Centre">Secondary Copayment Amount</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Copayment_Amount__c}"/></td>
+                                                <td width="25%" align="Centre">Secondary Deductible Met</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Deductible_Met__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Secondary Coinsurance Amount</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Coinsurance_Amount__c}"/></td>
+                                                <td width="25%" align="Centre">Secondary Deductible Amount</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Deductible_Amount__c}"/></td>
+                                            </tr>
+                                         </Table>
+                                        </td>
+                                       </tr>
+                                <tr>
+                                    <td width="100%">
+                                    <Strong>Secondary Patient Out of Network Benefits</strong>
+                                    </td>
+                                </tr> 
+                                    <tr>
+                                    <td>
+                                        <Table Width="100%">
+                                            <tr>
+                                                <td width="25%" align="Centre">Secondary Out-of-Network Copayment Amt</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Out_of_Network_Copayment_Amt__c}"/></td>
+                                                <td width="25%" align="Centre">Secondary Out-of-Network Deductible Met</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Out_of_Network_Deductible_Met__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Secondary Out-of-Network Coinsurance Amt</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Out_of_Network_Coinsurance_Amt__c}"/></td>
+                                                <td width="25%" align="Centre">Secondary Out-of-Network Deductible Amt</td>
+                                                <td Width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Out_of_Network_Deductible_Amt__c}"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%" align="Centre">Secondary Out-of-Network Comments</td>
+                                                <td width="25%">:<apex:outputField value="{!Insurance_Verification__c.Secondary_Out_of_Network_Comments__c}"/></td>
+                                                <td width="25%">&nbsp;</td>
+                                                <td Width="25%">&nbsp;</td>
+                                            </tr>
+                                         </Table>
+                                    </td>
+                                </tr>
+                            </Table>
+                        </td>
+                    </tr>
+                </Table>
+             </td>
+        </tr>
+    </Table>
+   
+   
+    </body>
+   </apex:form>
+ </apex:page>

@@ -1,0 +1,18 @@
+.ortho-chart {
+  display: none;
+  background-color: #fff;
+  position: relative;
+}
+
+.filter-bar{
+  width: 100%;
+  background-color: #fff;
+}
+.ortho-chart.show {
+  background-color: #fff;
+  display: flex;
+}
+
+.filters {
+  background-color: #fff;
+}

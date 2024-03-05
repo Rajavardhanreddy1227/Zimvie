@@ -1,0 +1,12 @@
+<template>
+    <template if:true={loader}>
+        <lightning-spinner alternative-text={labels.loading} size="large"></lightning-spinner>
+    </template>
+    <template if:true={showReorder}>
+        <button onclick={handleReOrder} class="slds-button slds-button_brand slds-m-right_large">{labels.StartReOrder}</button>
+    </template>
+    <template if:true={isButtonVisible}>
+        <button onclick={handleCancel} class="slds-button slds-button_neutral">{labels.CancelOrder}</button>
+        <div class="timerDiv">{labels.Youcancancelthisorder}&nbsp;{minutes}m&nbsp;{seconds}s&nbsp;</div>
+    </template>
+</template>

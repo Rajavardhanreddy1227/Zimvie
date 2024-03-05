@@ -1,0 +1,151 @@
+<apex:page standardController="Account" extensions="EMEA_AccountPrintableViewController" renderAs="advanced_pdf" title="Account Information" showHeader="false" applyBodyTag="false" applyHtmlTag="false">
+<html>
+    <head>
+        <style>
+            @page{
+            size: A4 landscape;
+            @bottom-center {
+                        content: "Page " counter(page) " of " counter(pages);
+                    }
+            }
+    		#col1{width:49%;display:inline-block; float:left}
+            #col2{width:49%;display:inline-block; float:right}
+            #col3 {width:100%;display:inline-block;}
+            #both{width:100%;display:inline-block;float:left}
+   		</style>
+    </head>
+    <body>
+        <div class="header">
+            <div style="float: left;">
+                <img src="{!$Resource.EMEA_Logo_Account_Printable_View}" width="50%" />
+            </div>
+            <div style="float: right;">
+                <p><b> Date: {!YEAR(TODAY())}/{!MONTH(TODAY())}/{!DAY(TODAY())}</b></p>
+            </div>
+        </div>
+
+        <!-- General Information about the Account -->
+        <div id="both">
+            <center><h1>Account Information</h1></center>
+            <p><b>Account Name: </b> <apex:outputText value=" {!account.Name}"/></p>
+            <p><b>Account Type: </b> <apex:outputText value=" {!account.EMEA_Account_Type__c}"/></p>
+            <p><b>Account Ownership:</b> <apex:outputText value=" {!account.Ownership}"/></p>
+            <p><b>Account City:</b> <apex:outputText value=" {!account.BillingCity}"/></p>
+        </div>
+
+        <div id="col1">
+            <!-- Partner Information about the Account -->
+            <div style="page-break-inside: avoid;  page-break-after:auto;">
+                <apex:pageBlock title="Partner Information" rendered="{!partners.size>0}" >
+                    <apex:dataTable var="partner" value="{!partners}" width="100%" border="2" style="text-align:center;"  >
+                        <apex:column value="{!partner.AccountTo.Name}" headerValue="Partner Name"/>
+                        <apex:column value="{!partner.Role}" headerValue="Role"/>
+                    </apex:dataTable>
+                </apex:pageBlock>
+            </div>
+
+            <!-- Account Team Member Information about the Account -->
+            <div style="page-break-inside: avoid;  page-break-after:auto;">
+                <apex:pageBlock title="Account Team Members Information" rendered="{!teamMembers.size>0}" >
+                    <apex:dataTable var="member" value="{!teamMembers}" width="100%" border="2" style="text-align:center;" >
+                        <apex:column value="{!member.User.Name}" headerValue="Member Name"/>
+                        <apex:column value="{!member.TeamMemberRole}" headerValue="Role"/>
+                    </apex:dataTable>
+                </apex:pageBlock>
+            </div>
+
+            <!-- Account Segmentation Information about the Account -->
+            <div style="page-break-inside: avoid;  page-break-after:auto;">
+                <apex:pageBlock title="Account Segmentation" rendered="{!accountSegmentation.size>0}" >
+                    <apex:dataTable var="segment" value="{!accountSegmentation}" width="100%" border="2" style="text-align:center;"  >
+                        <apex:column value="{!segment.EMEA_Business_Unit__c}" headerValue="Business Unit"/>
+                        <apex:column value="{!segment.EMEA_Business_Segment__c}" headerValue="Business Segment"/>
+                        <apex:column value="{!segment.EMEA_Avalanche_Segment__c}" headerValue="Avalanche Segment"/>
+                        <apex:column value="{!segment.EMEA_Impact__c}" headerValue="Impact"/>
+                        <apex:column value="{!segment.EMEA_Year__c}" headerValue="Year"/>
+                    </apex:dataTable>
+                </apex:pageBlock>
+            </div>
+        </div>
+
+        <div id="col2">
+            <!-- Open Activities Information about the Account -->
+            <div style="page-break-inside: avoid;  page-break-after:auto;">
+                <apex:variable var="v" value="'{!account.OpenActivities}'"/>
+                <apex:variable var="v2" value="'[]'"/>
+                <apex:pageBlock title="Open Activities on Account" rendered="{!v != v2}">
+                    <apex:dataTable value="{!account.OpenActivities}" var="act" width="100%" border="2" style="text-align:center;">
+                        <apex:column value="{!act.Subject}"  headerValue="Subject"/>
+                        <apex:column value="{!act.ActivityType}"  headerValue="Type"/>
+                        <apex:column value="{!act.ActivityDate}"  headerValue="Date"/>
+                    </apex:dataTable>
+                </apex:pageBlock>
+            </div>
+
+            <!-- Contact Information about the Account -->
+            <div style="page-break-inside: avoid;  page-break-after:auto;">
+                <apex:pageBlock title="Key Contacts" rendered="{!contacts.size>0}" >
+                    <apex:dataTable var="ct" value="{!contacts}" width="100%" border="2" style="text-align:center;"   >
+                        <apex:column value="{!ct.Name}" headerValue="Name"/>
+                        <apex:column value="{!ct.EMEA_Function__c}" headerValue="Function"/>
+                        <apex:column value="{!ct.Department}" headerValue="Department"/>
+                    </apex:dataTable>
+                </apex:pageBlock>
+            </div>
+
+            <!-- Competitor Analysis Information about the Account -->
+            <div style="page-break-inside: avoid;  page-break-after:auto;">
+                <apex:pageBlock title="Competitor Analysis Information"  rendered="{!competitorAnalysis.size>0 && $Profile.Name != 'EMEA-Commercial Operations' && $Profile.Name != 'EMEA-Customer Service'}" >
+                    <apex:dataTable var="comp" value="{!competitorAnalysis}" width="100%" border="2" style="text-align:center;"  >
+                        <apex:column value="{!comp.EMEA_Product__r.Name}" headerValue=" Product"/>
+                        <apex:column value="{!comp.EMEA_Competitor__c}" headerValue="Competitor"/>
+                        <apex:column value="{!comp.EMEA_Segment__c}" headerValue="Segment"/>
+                        <apex:column value="{!comp.EMEA_Surgeries_per_Year__c}" headerValue="Surgeries per Year"/>
+                    </apex:dataTable>
+                </apex:pageBlock>
+            </div>
+        </div>
+
+
+        <div id="both"  style="page-break-inside: avoid;  page-break-after:auto; ">
+            <!-- Account Plan Information about the Account -->
+            <div style="page-break-inside: avoid;  page-break-after:auto;">
+                <apex:pageBlock title="Account Plans"  rendered="{!accountplans.size>0 && $Profile.Name != 'EMEA-Commercial Operations' && $Profile.Name != 'EMEA-Customer Service'}"  >
+                    <apex:dataTable var="a" value="{!accountplans}" width="100%" border="2" style="text-align:center;"    >
+                        <apex:column value="{!a.EMEA_Status__c}" headerValue="Status" />
+                        <apex:column value="{!a.Name}" headerValue="Name" />
+                        <apex:column value="{!a.EMEA_Business_Unit__c}" headerValue="Business Unit"/>
+                        <apex:column value="{!a.EMEA_Business_Segment__c}" headerValue="Business Segment" />
+                        <apex:column value="{!a.EMEA_Target_Revenue__c}" headerValue="Target Revenue" />
+                        <apex:column headerValue="Objective Type">
+                            <apex:repeat value="{!a.Objectives__r}" var="obj">
+                                <p><apex:outputText value="{!obj.EMEA_Type__c}"/> </p>
+                            </apex:repeat>
+                        </apex:column>
+                        <apex:column headerValue="Tactics Next Step">
+                            <apex:repeat value="{!a.Tactics__r}" var="tact">
+                                <p><apex:outputText value="{!tact.EMEA_Next_Step__c}"/></p>
+                            </apex:repeat>
+                        </apex:column>
+                        <apex:column value="{!a.EMEA_End_Date__c}" headerValue="Date" />
+                    </apex:dataTable>
+                </apex:pageBlock>
+            </div>
+
+            <!-- Opportunity Information about the Account -->
+            <div style="page-break-inside: avoid;  page-break-after:auto;">
+                <apex:pageBlock title="Opportunities" rendered="{!opportunities.size>0}">
+                    <apex:dataTable var="opp" value="{!opportunities}"  width="100%" border="2" style="text-align:center;" >
+                        <apex:column value="{!opp.Name}" headerValue="Name"/>
+                        <apex:column value="{!opp.Type}" headerValue="Type"/>
+                        <apex:column value="{!opp.CloseDate}" headerValue="Close Date"/>
+                        <apex:column value="{!opp.StageName}" headerValue="Stage"/>
+                        <apex:column value="{!opp.Probability}" headerValue="Probability"/>
+                        <apex:column value="{!opp.Amount}" headerValue="Amount"/>
+                    </apex:dataTable>
+                </apex:pageBlock>
+            </div>
+        </div>
+    </body>
+</html>
+</apex:page>

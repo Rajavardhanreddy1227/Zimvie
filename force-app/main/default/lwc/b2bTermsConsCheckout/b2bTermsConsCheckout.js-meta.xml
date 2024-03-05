@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>57.0</apiVersion>
+	<isExposed>true</isExposed>
+	<masterLabel>B2B Checkout Terms Conditions </masterLabel>
+	 <targets>
+    <target>lightningCommunity__Page</target>
+    <target>lightningCommunity__Default</target>
+  </targets>
+  <targetConfigs>
+    <targetConfig targets="lightningCommunity__Default">
+      <property 
+        label="Checked by Default" 
+        name="checkedByDefault" 
+        type="Boolean" 
+        default="false"/>
+      <property 
+        label="Disclaimer" 
+        name="disclaimer" 
+        type="String" 
+        default=""/>
+      <property 
+        label="Link URL" 
+        name="link" 
+        type="String" 
+        default=""/>
+      <property 
+        label="Error Message" 
+        name="error" 
+        type="String" 
+        default="Please click the checkbox to accept the terms and conditions"/>
+    </targetConfig>
+	</targetConfigs>
+</LightningComponentBundle>

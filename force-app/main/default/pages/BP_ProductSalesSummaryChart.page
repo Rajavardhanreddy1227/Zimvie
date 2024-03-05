@@ -1,0 +1,37 @@
+<apex:page controller="ChartController" sidebar="false" showHeader="false" >
+    <apex:panelGrid columns="3">
+    <apex:chart height="400" width="400" data="{!Sales}" colorSet="#008000" >
+        <apex:axis type="Numeric" position="left" fields="amount"
+                title="$ Amount" minimum="{!min}" >
+                <apex:chartLabel />
+        </apex:axis>        
+        <apex:axis type="Category" position="bottom" fields="fieldNames"
+                title="">
+                <apex:chartLabel rotate="270"/>
+        </apex:axis>
+        <apex:barSeries orientation="vertical" axis="left"
+                xField="fieldNames" yField="amount"/>       
+    </apex:chart>
+    <apex:chart height="480" width="640" data="{!MktData}">
+        <apex:scatterSeries xField="ZBProcedures" yField="MarketProcedure" markerType="circle" markerSize="3" showInLegend="true">
+            <apex:chartTips height="60" width="200" rendererFn="renderChartTip"  />
+        </apex:scatterSeries>
+        <apex:axis type="Numeric" position="bottom" fields="ZBProcedures" title="Zimmer Biomet Procedures" grid="true" maximum="{!SegMax}" steps="20"/>
+        <apex:axis type="Numeric" position="left" fields="MarketProcedure" title="Market Procedures" grid="true" minimum="10" steps="10"/>
+    </apex:chart>
+    </apex:panelGrid>
+    <script>
+    function renderChartTip(klass, item) {
+        var m = item.storeItem;
+        this.setTitle(m.get('Name'));
+        this.update(''
+                + '<table>'
+                + '<tr><td><b>Zimmer Biomet Procedures : </b>&nbsp;' + m.get('ZBProcedures') + '</td></tr>'
+                + '<tr><td><b>Market Procedures : </b>&nbsp;' + m.get('MarketProcedure') + '</td></tr>'
+                + '<tr><td><b>Segment : </b>&nbsp;' + m.get('SegmentName') + '</td></tr>'
+                + '</table>'
+                );
+    }
+    </script>    
+
+</apex:page>

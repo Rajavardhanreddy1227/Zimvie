@@ -1,0 +1,82 @@
+<apex:page sidebar="false" showheader="false" standardStylesheets="false" controller="Surgeon_360_RemoteController" docType="html-5.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+    <title></title>
+    
+    <apex:stylesheet value="{!URLFOR($Resource.surgeon_360_lib, '/lib/ionic/css/ionic.app.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.surgeon_360_lib, '/lib/css/font-awesome.min.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.surgeon_360_styling, '/css/zimmer.css')}" />
+
+    <script src="{!URLFOR($Resource.surgeon_360_lib, '/lib/ionic/js/ionic.bundle.js')}"></script>
+
+    <script src="{!URLFOR($Resource.surgeon_360_core, '/core/core.module.js')}"></script>
+   
+    <script src="{!URLFOR($Resource.surgeon_360_core, '/core/search.module.js')}"></script>
+    <script src="{!URLFOR($Resource.surgeon_360_core, '/core/controller/search.controller.js')}"></script>
+
+    <script src="{!URLFOR($Resource.surgeon_360_core, '/core/profile.module.js')}"></script>
+
+    <script src="{!URLFOR($Resource.surgeon_360_core, '/core/controller/profile.detail.controller.js')}"></script>
+
+    <script>
+      // Create angular factory that defines service to call apex.
+      myModule
+        .factory('profileDetailRemote', ['$q', '$rootScope', function($q, $rootScope) {
+
+          return function(profileId) {
+            var deferred = $q.defer();
+
+            Visualforce.remoting.Manager.invokeAction(
+              '{!$RemoteAction.Surgeon_360_RemoteController.getProfileSummary}',
+              profileId,
+              function(result, event) {
+                $rootScope.$apply(function() {
+                  if (event.status) {
+                    deferred.resolve(result);
+                  } else {
+                    deferred.reject(event);
+                  }
+                })
+              },
+              { buffer: true, escape: true, timeout: 30000 }
+            );
+
+            return deferred.promise;
+          }
+
+        }])
+        .factory('profileSearchRemote', ['$q', '$rootScope', function($q, $rootScope) {
+
+          return function(phrase, page) {
+            var deferred = $q.defer();
+
+            Visualforce.remoting.Manager.invokeAction(
+              '{!$RemoteAction.Surgeon_360_RemoteController.getSearchResult}',
+              phrase, page,
+              function(result, event) {
+                $rootScope.$apply(function() {
+                  if (event.status) {
+                    deferred.resolve(result);
+                  } else {
+                    deferred.reject(event);
+                  }
+                })
+              },
+              { buffer: true, escape: true, timeout: 30000 }
+            );
+
+            return deferred.promise;
+          }
+
+        }]);
+   </script>
+
+    <script src="{!URLFOR($Resource.surgeon_360_core, '/core/services/search.service.js')}"></script>
+    <script src="{!URLFOR($Resource.surgeon_360_core, '/core/services/profile.service.js')}"></script>
+  </head>
+
+  <body ng-app="app">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</apex:page>

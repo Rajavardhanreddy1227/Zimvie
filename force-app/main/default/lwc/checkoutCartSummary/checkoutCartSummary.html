@@ -1,0 +1,224 @@
+<template lwc:render-mode="light">
+    <!-- spinner -->
+    <template if:true={spinnerValue}>
+        <c-custom_spinner></c-custom_spinner>
+    </template>
+
+    <div class="checkout-cart-summary">
+        <div class="parent-div-block">
+
+            <!-- 1st block- header info -->
+                <header class="header-lg">
+                    <!-- <slot name="headerText"></slot> -->
+                    <p>{label.checkoutCartSummary_OrderSummary}</p>
+                </header>
+            <div class="">
+                <div class="slds-p-bottom_small slds-border_bottom"> 
+
+                    <!-- order Subtotal Price Info -->
+                    <div class="ccontent">
+                        <lightning-layout class="slds-p-top_small slds-m-vertical_xx-small">
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_left">
+                                    <!-- <slot name="subtotalLabel"></slot> -->
+                                    <p>{label.checkoutCartSummary_OrderSubtotal}</p>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_right">
+                                    <div class="item-price cvalue">
+                                        <lightning-formatted-number
+                                            value={cartSubTotal}
+                                            format-style="currency" 
+                                            currency-code={currencyCode}
+                                            display-currency-as="symbol"
+                                            maximum-fraction-digits="2"
+                                        ></lightning-formatted-number>
+                                    </div>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+
+                    <!-- discount adjustments info -->
+                    <div class="ccontent">
+                        <lightning-layout class="slds-p-top_small slds-m-vertical_xx-small">
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_left">
+                                    <!-- <slot name="promotionsLabel"></slot> -->
+                                    <p>{label.checkoutCartSummary_DiscountAdjustments}</p>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_right">
+                                    <div class="item-price cvalue">
+                                        <lightning-formatted-number
+                                            maximum-fraction-digits="2"
+                                            value={cartPromotion}
+                                            format-style="currency" 
+                                            currency-code={currencyCode}
+                                            display-currency-as="symbol"
+                                        ></lightning-formatted-number>
+                                    </div>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+                    <template if:true={showSummaryDetails}>
+                        <!-- tax info -->
+                        <div class="ccontent">
+                            <lightning-layout class="slds-p-top_small slds-m-vertical_xx-small">
+                                <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                    <div class="slds-float_left">
+                                        <!-- <slot name="taxLabel"></slot> -->
+                                        <p>{label.checkoutCartSummary_Tax}</p>
+                                    </div>
+                                </lightning-layout-item>
+                                <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                    <div class="slds-float_right">
+                                        <div class="item-price cvalue">
+                                            <lightning-formatted-number
+                                                maximum-fraction-digits="2"
+                                                value={cartProdTax}
+                                                format-style="currency" 
+                                                currency-code={currencyCode}
+                                                display-currency-as="symbol"
+                                            ></lightning-formatted-number>
+                                        </div>
+                                    </div>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                        </div>
+                        <!-- shipping info -->
+                        <div class="ccontent">
+                            <lightning-layout class="slds-p-top_small slds-m-vertical_xx-small">
+                                <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                    <div class="slds-float_left">
+                                        <!-- <slot name="shippingLabel"></slot> -->
+                                        <p>{label.checkoutCartSummary_Shipping}</p>
+                                    </div>
+                                </lightning-layout-item>
+                                <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                    <div class="slds-float_right">
+                                        <div class="item-price cvalue">
+                                            <lightning-formatted-number
+                                                maximum-fraction-digits="2"
+                                                value={cartShipping}
+                                                format-style="currency" 
+                                                currency-code={currencyCode}
+                                                display-currency-as="symbol"
+                                            ></lightning-formatted-number>
+                                        </div>
+                                    </div>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                        </div>
+                        <!-- shipping discount info -->
+                        <div class="ccontent">
+                            <lightning-layout class="slds-p-top_small slds-m-vertical_xx-small">
+                                <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                    <div class="slds-float_left">
+                                        <!-- <slot name="shipDiscountLabel"></slot> -->
+                                        <p>{label.checkoutCartSummary_ShippingDiscount}</p>
+                                    </div>
+                                </lightning-layout-item>
+                                <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                    <div class="slds-float_right">
+                                        <div class="item-price cvalue">
+                                            <lightning-formatted-number
+                                                maximum-fraction-digits="2"
+                                                value={cartShippingDiscount}
+                                                format-style="currency" 
+                                                currency-code={currencyCode}
+                                                display-currency-as="symbol"
+                                            ></lightning-formatted-number>
+                                        </div>
+                                    </div>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                        </div>
+                        <!-- shipping tax info -->
+                        <div class="ccontent">
+                            <lightning-layout class="slds-p-top_small slds-m-vertical_xx-small">
+                                <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                    <div class="slds-float_left">
+                                        <!-- <slot name="shipTaxLabel"></slot> -->
+                                        <p>{label.checkoutCartSummary_ShippingTax}</p>
+                                    </div>
+                                </lightning-layout-item>
+                                <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                    <div class="slds-float_right">
+                                        <div class="item-price cvalue">
+                                            <lightning-formatted-number
+                                                maximum-fraction-digits="2"
+                                                value={cartShippingTax}
+                                                format-style="currency" 
+                                                currency-code={currencyCode}
+                                                display-currency-as="symbol"
+                                            ></lightning-formatted-number>
+                                        </div>
+                                    </div>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                        </div>
+                    </template>
+                    <!-- tissue Handling fee info -->
+                    <div if:true={cartTissueFee} class="ccontent">
+                        <lightning-layout class="slds-p-top_small slds-m-vertical_xx-small">
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_left">
+                                    <!-- <slot name="tissueHandleLabel"></slot> -->
+                                    <p>{label.checkoutCartSummary_TissueHandlingFee}</p>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_right">
+                                    <div class="item-price cvalue">
+                                        <lightning-formatted-number
+                                            maximum-fraction-digits="2"
+                                            value={cartTissueFee}
+                                            format-style="currency" 
+                                            currency-code={currencyCode}
+                                            display-currency-as="symbol"
+                                        ></lightning-formatted-number>
+                                    </div>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- 4th block- Total Amount -->
+            <div class="Headline3_UntitledSans">
+                <div class="slds-p-bottom_small"> 
+
+                    <!-- Total Amount Info -->
+                    <div class="ccontent">
+                        <lightning-layout class="slds-p-top_small slds-m-vertical_xx-small">
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_left">
+                                    <!-- <slot name="totalLabel"></slot> -->
+                                    <p>{label.checkoutCartSummary_Totals}</p>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_right">
+                                    <div class="item-price">
+                                        <lightning-formatted-number
+                                            maximum-fraction-digits="2"
+                                            value={cartTotal}
+                                            format-style="currency" 
+                                            currency-code={currencyCode}
+                                            display-currency-as="symbol"
+                                        ></lightning-formatted-number>
+                                    </div>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

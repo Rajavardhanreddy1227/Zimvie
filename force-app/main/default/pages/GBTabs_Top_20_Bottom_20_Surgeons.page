@@ -1,0 +1,31 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" title="Top 20 Bottom 20 Surgeons">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Top_20_Bottom_20_Surgeons" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Top 20 Bottom 20 Surgeons",
+	"tabs": [
+		{
+			"name": "Dashboard",
+			"content": "TableauAVPTop20Bottom20Dashboard",
+			"id": 1558635821427
+		},
+		{
+			"name": "Top 20 Bottom 20 Surgeons",
+			"content": "{!gridPage}gname=Knee Opps AVP View&amp;sh=0&amp;sfname=default",
+			"id": 1558635928263
+		}
+	],
+	"id": 1558635821427,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": false,
+	"object": "Opportunity",
+	"height": "750",
+	"showHeader": false,
+	"showSidebar": false
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

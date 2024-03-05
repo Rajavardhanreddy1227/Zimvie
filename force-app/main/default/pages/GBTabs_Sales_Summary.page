@@ -1,0 +1,26 @@
+<apex:page standardController="Business_Plan__c" showHeader="false" sidebar="false" title="Sales Summary">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Sales_Summary" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Sales Summary",
+	"tabs": [
+		{
+			"name": "Summary",
+			"content": "{!gridPage}gname=Sales Summary&amp;sh=0&amp;sfname=default&amp;fpf=Business_Plan__c&amp;fpv={!Business_Plan__c.id}",
+			"id": 1555446627770
+		}
+	],
+	"id": 1555446627770,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": false,
+	"object": "Business_Plan__c",
+	"height": "750",
+	"showHeader": false,
+	"showSidebar": false
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

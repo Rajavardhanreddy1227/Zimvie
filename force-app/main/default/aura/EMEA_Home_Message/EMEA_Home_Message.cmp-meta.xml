@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <description>Add a personalised message that include the name of the user as a rich text component 
+Custom lightning component as per US-0285</description>
+</AuraDefinitionBundle>

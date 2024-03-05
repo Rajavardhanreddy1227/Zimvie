@@ -1,0 +1,20 @@
+<apex:page standardController="HR_Contract__c" sidebar="false" showHeader="false">
+    <apex:includeLightning />
+    <apex:slds />
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+             
+        <div class="slds-scope">
+        
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+            <head>
+              <meta charset="utf-8" />
+              <meta http-equiv="x-ua-compatible" content="ie=edge" />
+              <title>Salesforce Lightning Design System Trailhead Module</title>
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <!-- Import the Design System style sheet -->
+              <apex:slds />
+            </head>
+            <apex:relatedList subject="{!HR_Contract__c}" list="CombinedAttachments" />
+        </div>
+    </html>
+</apex:page>

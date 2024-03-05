@@ -1,0 +1,52 @@
+<apex:page standardController="Territory_Name__c" showHeader="false" sidebar="false" title="Target Refinement">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Target_Refinement" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Target Refinement",
+	"tabs": [
+		{
+			"name": "Alignment Changes",
+			"content": "{!gridPage}gname=Alignment Changes&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1552569913903
+		},
+		{
+			"name": "New Hires",
+			"content": "{!gridPage}gname=New Hires&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1551129560317
+		},
+		{
+			"name": "Terms",
+			"content": "{!gridPage}gname=Terms&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1551130729475
+		},
+		{
+			"name": "Role Changes",
+			"content": "{!gridPage}gname=Role Change&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1551130758569
+		},
+		{
+			"name": "Team Changes",
+			"content": "{!gridPage}gname=Team Changes&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1551130769858
+		},
+		{
+			"name": "Product Changes",
+			"content": "{!gridPage}gname=Product Changes&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1551130778680
+		}
+	],
+	"id": 1551129474015,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": false,
+	"object": "Territory_Name__c",
+	"height": "750",
+	"showHeader": false,
+	"showSidebar": false,
+	"pageAPIName": "GBTabs_Target_Refinement"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

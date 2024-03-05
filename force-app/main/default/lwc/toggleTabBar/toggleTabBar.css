@@ -1,0 +1,37 @@
+.TabHeader {
+    display: flex;
+    padding-top: 10px;
+    align-items: end;
+    border-bottom: 1px solid #d8d8d8;
+    justify-content: space-between;
+}
+
+
+.TabHeader .TabButton {
+    padding: 0;
+    width: 50%;
+    text-align: center;
+}
+
+.TabHeader .activeTab {
+    border-bottom: none;
+    background-color: #0a2043;
+    color: #fff!important;
+}
+
+.TabHeader .passiveTab {
+    border-bottom: 2px solid #403f3f;
+    color: #111941!important;
+}
+
+.TabHeader .TabButton {
+    padding: 0 75px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: var(--cc-font-family-primary);
+    font-weight: 700;
+    letter-spacing: 0;
+    color: #aaa9ad;
+    text-transform: uppercase;
+    opacity: 1;
+}

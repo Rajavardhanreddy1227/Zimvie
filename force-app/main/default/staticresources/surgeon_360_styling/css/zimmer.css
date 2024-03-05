@@ -1,0 +1,923 @@
+/**
+ * Grid
+ * --------------------------------------------------
+ * Using flexbox for the grid, inspired by Philip Walton:
+ * http://philipwalton.github.io/solved-by-flexbox/demos/grids/
+ * By default each .col within a .row will evenly take up
+ * available width, and the height of each .col with take
+ * up the height of the tallest .col in the same .row.
+ */
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  width: 100%; }
+
+.row-wrap {
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.row + .row {
+  margin-top: -5px;
+  padding-top: 0; }
+
+.col {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: block;
+  padding: 5px;
+  width: 100%; }
+
+/* Vertically Align Columns */
+/* .row-* vertically aligns every .col in the .row */
+.row-top {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  align-items: flex-start; }
+
+.row-bottom {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  align-items: flex-end; }
+
+.row-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center; }
+
+.row-stretch {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  align-items: stretch; }
+
+.row-baseline {
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  align-items: baseline; }
+
+/* .col-* vertically aligns an individual .col */
+.col-top {
+  -webkit-align-self: flex-start;
+  -moz-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start; }
+
+.col-bottom {
+  -webkit-align-self: flex-end;
+  -moz-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end; }
+
+.col-center {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center; }
+
+/* Column Offsets */
+.col-offset-10 {
+  margin-left: 10%; }
+
+.col-offset-20 {
+  margin-left: 20%; }
+
+.col-offset-25 {
+  margin-left: 25%; }
+
+.col-offset-33, .col-offset-34 {
+  margin-left: 33.3333%; }
+
+.col-offset-50 {
+  margin-left: 50%; }
+
+.col-offset-66, .col-offset-67 {
+  margin-left: 66.6666%; }
+
+.col-offset-75 {
+  margin-left: 75%; }
+
+.col-offset-80 {
+  margin-left: 80%; }
+
+.col-offset-90 {
+  margin-left: 90%; }
+
+/* Explicit Column Percent Sizes */
+/* By default each grid column will evenly distribute */
+/* across the grid. However, you can specify individual */
+/* columns to take up a certain size of the available area */
+.col-10 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 10%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 10%;
+  -ms-flex: 0 0 10%;
+  flex: 0 0 10%;
+  max-width: 10%; }
+
+.col-20 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 20%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 20%;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%; }
+
+.col-25 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 25%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%; }
+
+.col-33, .col-34 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33.3333%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 33.3333%;
+  -ms-flex: 0 0 33.3333%;
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%; }
+
+.col-50 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 50%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%; }
+
+.col-66, .col-67 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 66.6666%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 66.6666%;
+  -ms-flex: 0 0 66.6666%;
+  flex: 0 0 66.6666%;
+  max-width: 66.6666%; }
+
+.col-75 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 75%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 75%;
+  -ms-flex: 0 0 75%;
+  flex: 0 0 75%;
+  max-width: 75%; }
+
+.col-80 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 80%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 80%;
+  -ms-flex: 0 0 80%;
+  flex: 0 0 80%;
+  max-width: 80%; }
+
+.col-90 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 90%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 90%;
+  -ms-flex: 0 0 90%;
+  flex: 0 0 90%;
+  max-width: 90%; }
+
+/* Responsive Grid Classes */
+/* Adding a class of responsive-X to a row */
+/* will trigger the flex-direction to */
+/* change to column and add some margin */
+/* to any columns in the row for clearity */
+@media (max-width: 567px) {
+  .responsive-sm {
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .responsive-sm .col, .responsive-sm .col-10, .responsive-sm .col-20, .responsive-sm .col-25, .responsive-sm .col-33, .responsive-sm .col-34, .responsive-sm .col-50, .responsive-sm .col-66, .responsive-sm .col-67, .responsive-sm .col-75, .responsive-sm .col-80, .responsive-sm .col-90 {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -moz-box-flex: 1;
+      -moz-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      margin-bottom: 15px;
+      margin-left: 0;
+      max-width: 100%;
+      width: 100%; } }
+
+@media (max-width: 767px) {
+  .responsive-md {
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .responsive-md .col, .responsive-md .col-10, .responsive-md .col-20, .responsive-md .col-25, .responsive-md .col-33, .responsive-md .col-34, .responsive-md .col-50, .responsive-md .col-66, .responsive-md .col-67, .responsive-md .col-75, .responsive-md .col-80, .responsive-md .col-90 {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -moz-box-flex: 1;
+      -moz-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      margin-bottom: 15px;
+      margin-left: 0;
+      max-width: 100%;
+      width: 100%; } }
+
+@media (max-width: 1023px) {
+  .responsive-lg {
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .responsive-lg .col, .responsive-lg .col-10, .responsive-lg .col-20, .responsive-lg .col-25, .responsive-lg .col-33, .responsive-lg .col-34, .responsive-lg .col-50, .responsive-lg .col-66, .responsive-lg .col-67, .responsive-lg .col-75, .responsive-lg .col-80, .responsive-lg .col-90 {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -moz-box-flex: 1;
+      -moz-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      margin-bottom: 15px;
+      margin-left: 0;
+      max-width: 100%;
+      width: 100%; } }
+
+/* Backgrounds */
+/* Text */
+/* Trim */
+.col-5 {
+  max-width: 5%; }
+
+.col-70 {
+  width: 70%; }
+
+.col-offset-2 {
+  margin-left: 2%; }
+
+.col-offset-5 {
+  margin-left: 5%; }
+
+.col-offset-7 {
+  margin-left: 7%; }
+
+.col-offset-10 {
+  margin-left: 10%; }
+
+.row .col.topBox {
+  margin-bottom: 4px; }
+
+.center {
+  text-align: center; }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+#spinner-box {
+  background-color: #bbb;
+  left: 50%;
+  opacity: 0.7;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 20; }
+
+#spinner {
+  padding: 16px; }
+
+/*
+*   Variables for breakpoints come from ionic core repeated for ease of editing
+*   sm = iphone non-plus
+*   md = ipad portrait
+*/
+@media (max-width: 767px) {
+  .hidden-sm {
+    display: none !important; }
+  .col.stack {
+    padding-bottom: 0; } }
+
+@media (min-width: 768px) {
+  .hidden-md {
+    display: none !important; } }
+
+.visible-sm, .visible-md, .visible-lg {
+  display: none; }
+
+@media (max-width: 767px) {
+  .col-sm-10 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 10%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 10%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%; }
+  .col-sm-16 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 16%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 16%;
+    -ms-flex: 0 0 16%;
+    flex: 0 0 16%;
+    max-width: 16%; }
+  .col-sm-33 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.3333%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 33.3333%;
+    -ms-flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%; }
+  .col-sm-40 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 40%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 40%;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 40%; }
+  .col-sm-50 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%; }
+  .col-sm-60 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 60%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 60%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%; }
+  .col-sm-75 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 60%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 60%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%; }
+  .col-sm-90 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 60%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 60%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%; }
+  .col-sm-100 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; }
+  .sm-no-padding {
+    padding-top: 0;
+    padding-bottom: 0; }
+  .sm-no-padding-top {
+    padding-top: 0; }
+  .sm-no-padding-bottom {
+    padding-bottom: 0; } }
+
+@media (max-width: 1023px) {
+  .col-md-10 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 10%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 10%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%; }
+  .col-md-16 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 16%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 16%;
+    -ms-flex: 0 0 16%;
+    flex: 0 0 16%;
+    max-width: 16%; }
+  .col-md-33 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.3333%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 33.3333%;
+    -ms-flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%; }
+  .col-md-40 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 40%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 40%;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 40%; }
+  .col-md-50 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%; }
+  .col-md-60 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 60%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 60%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%; }
+  .col-md-75 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 60%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 60%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%; }
+  .col-md-90 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 60%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 60%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%; }
+  .col-md-100 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; }
+  .md-no-padding {
+    padding-top: 0;
+    padding-bottom: 0; }
+  .md-no-padding-top {
+    padding-top: 0; }
+  .md-no-padding-bottom {
+    padding-bottom: 0; } }
+
+body {
+  color: #000000;
+  font-family: 'Slate W02', Helvetica, Arial, 'Sans-Serif';
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px; }
+
+select {
+  font-family: 'Slate W02', Helvetica, Arial, 'Sans-Serif';
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px; }
+
+h1, .header1 {
+  color: #000000;
+  font-family: 'Slate W02', Helvetica, Arial, 'Sans-Serif';
+  font-weight: normal;
+  font-size: 41px;
+  line-height: 44px; }
+
+h2, .header2 {
+  color: #000000;
+  font-family: 'Slate W02', Helvetica, Arial, 'Sans-Serif';
+  font-weight: normal;
+  font-size: 55px;
+  line-height: 60px; }
+
+h3, .header3 {
+  color: #000000;
+  font-family: 'Slate W02', Helvetica, Arial, 'Sans-Serif';
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px; }
+
+h4, h5 {
+  display: inline-block;
+  vertical-align: baseline; }
+
+h4 {
+  color: #000000;
+  font-family: 'Slate W02', Helvetica, Arial, 'Sans-Serif';
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px; }
+
+span {
+  color: #000000;
+  font-family: 'Slate W02', Helvetica, Arial, 'Sans-Serif';
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 1.2; }
+
+.smallText {
+  color: #666666;
+  font-size: 10px;
+  line-height: 1; }
+
+.blurb {
+  font-size: 11px;
+  margin-top: 16px;
+  line-height: 1.2; }
+
+.search .row.photo {
+  max-height: 200px;
+  max-width: 100%;
+  padding: 0; }
+.search .titleContainer {
+  background-color: #096499;
+  padding: 10px 0 0 0; }
+  .search .titleContainer .blueSquare {
+    background-color: #0F7AC9;
+    height: 40px;
+    width: 30px; }
+  .search .titleContainer .triangleRight {
+    border-bottom: 40px solid #0F7AC9;
+    border-right: 32px solid transparent;
+    height: 0;
+    width: 0; }
+  .search .titleContainer .logo, .search .titleContainer .title {
+    color: #FFFFFF;
+    display: inline-block;
+    margin: 4px 0 0 0;
+    vertical-align: top; }
+  .search .titleContainer .logo {
+    margin: 4px 0 0 -54px;
+    width: 20px; }
+  .search .titleContainer .title {
+    margin-left: 16px; }
+.search .searchContainer {
+  background-color: #0F7AC9;
+  overflow: hidden;
+  padding-top: 4px; }
+  .search .searchContainer .col.inputContainer {
+    margin-bottom: 0;
+    padding: 0 16px; }
+    .search .searchContainer .col.inputContainer .icon {
+      color: #107BCA;
+      display: inline-block;
+      font-size: 14px;
+      left: 7px;
+      position: relative;
+      top: 26px; }
+    .search .searchContainer .col.inputContainer .searchInput {
+      border-radius: 0;
+      height: 30px;
+      padding: 0 0 0 24px; }
+  .search .searchContainer .miniSort .sort-wrapper {
+    position: relative;
+    top: 22px; }
+  .search .searchContainer .miniSort .icon {
+    display: none; }
+.search .searchContainer.sec {
+  padding-bottom: 16px; }
+.search .intro .icon {
+  color: #107BCA;
+  font-size: 18px;
+  margin: 16px 0 0 10px; }
+.search .searchResult.item {
+  height: 136px;
+  padding: 0; }
+  .search .searchResult.item .row {
+    padding: 16px 10px; }
+  .search .searchResult.item .col, .search .searchResult.item .name {
+    margin: 0;
+    padding: 0; }
+  .search .searchResult.item .thumb-container, .search .searchResult.item .text-container {
+    display: inline-block; }
+  .search .searchResult.item .text-container {
+    margin: 32px 0 0 16px;
+    vertical-align: top; }
+  .search .searchResult.item .thumb {
+    height: 100px;
+    width: 100px; }
+  .search .searchResult.item .name {
+    line-height: 1.2; }
+  .search .searchResult.item .address {
+    color: #63666A;
+    display: inline-block;
+    margin: 12px 0 0 0;
+    vertical-align: top; }
+.search .get-more-container {
+  margin: 32px 0;
+  text-align: center; }
+
+.search.results .searchContainer .inputContainer .icon {
+  top: 62px; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .search .searchContainer .miniSort {
+    height: 24px; }
+    .search .searchContainer .miniSort .icon {
+      color: #0A5289;
+      display: inline-block;
+      font-size: 22px; }
+  .search .searchContainer select, .search .searchContainer select:active {
+    -webkit-appearance: none;
+    border: 0;
+    color: transparent;
+    position: relative;
+    top: -16px; } }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .search .searchContainer .miniSort {
+    height: 24px; }
+    .search .searchContainer .miniSort .icon {
+      color: #0A5289;
+      display: inline-block;
+      font-size: 22px;
+      padding: 0 8px; }
+  .search .searchContainer select, .search .searchContainer select:active {
+    -webkit-appearance: none;
+    border: 0;
+    color: transparent;
+    position: relative;
+    top: -16px; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .row.photo {
+    height: 214px;
+    width: 100%; }
+  .photo img {
+    height: 195px;
+    margin: 0 auto;
+    width: 50%; }
+  .miniSort .sort-wrapper {
+    display: none; } }
+
+.surgeonProfile .profileTop .row {
+  padding: 0; }
+.surgeonProfile .profileTop .photo {
+  height: 228px;
+  width: 100%; }
+  .surgeonProfile .profileTop .photo .back {
+    left: 12px;
+    top: 64px;
+    position: absolute;
+    z-index: 20; }
+    .surgeonProfile .profileTop .photo .back .backText {
+      background-color: #107BCA;
+      border-radius: 4px;
+      color: #FFFFFF;
+      font-size: 10px;
+      line-height: 1.1;
+      opacity: 0.6;
+      padding: 2px 6px; }
+  .surgeonProfile .profileTop .photo .photo-container {
+    text-align: center; }
+  .surgeonProfile .profileTop .photo .blurred {
+    -webkit-filter: blur(6px);
+    height: 222px;
+    margin: 0 auto;
+    width: 340px; }
+  .surgeonProfile .profileTop .photo .centered {
+    height: 90px;
+    left: 33%;
+    position: absolute;
+    top: 100px;
+    width: 110px;
+    z-index: 5; }
+.surgeonProfile .profileTop .titleContainer {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 40px;
+  width: 100%; }
+.surgeonProfile .profileTop .iconHolder {
+  background-color: transparent;
+  display: inline-block;
+  margin: 6px 0 0 -2px;
+  text-align: center;
+  width: 50px; }
+  .surgeonProfile .profileTop .iconHolder .logo {
+    margin: 4px 0 0 -14px;
+    width: 20px; }
+.surgeonProfile .profileTop .nameContainer {
+  background-color: transparent;
+  display: inline-block;
+  width: 80%; }
+  .surgeonProfile .profileTop .nameContainer h5.name {
+    color: #FFFFFF;
+    margin: -4px 0 0 0;
+    vertical-align: top; }
+.surgeonProfile .profileMain .row.account .icon, .surgeonProfile .profileMain .row.address .icon {
+  color: #107BCA;
+  font-size: 20px;
+  vertical-align: top; }
+.surgeonProfile .profileMain .row.account .icon {
+  margin-left: 6px; }
+.surgeonProfile .profileMain .row.address .icon.fa-map-marker {
+  margin-left: 15px; }
+.surgeonProfile .profileMain .row.account {
+  padding-bottom: 0; }
+  .surgeonProfile .profileMain .row.account .accountContainer .accountHeader {
+    color: #666666;
+    display: block; }
+  .surgeonProfile .profileMain .row.account .accountContainer .levelContainer {
+    margin-top: 6px; }
+    .surgeonProfile .profileMain .row.account .accountContainer .levelContainer .icon, .surgeonProfile .profileMain .row.account .accountContainer .levelContainer .level {
+      margin-left: 0;
+      vertical-align: top; }
+    .surgeonProfile .profileMain .row.account .accountContainer .levelContainer .icon {
+      font-size: 7px;
+      margin-top: 2px; }
+.surgeonProfile .profileMain .row.address {
+  padding: 0 0 8px 0; }
+  .surgeonProfile .profileMain .row.address .addressPart {
+    display: block; }
+.surgeonProfile .profileMain .relatedObjects {
+  background-color: #F1F1F1;
+  padding: 2px 5px; }
+  .surgeonProfile .profileMain .relatedObjects .relatedContainer {
+    background-color: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    margin: 5px 0;
+    padding: 0; }
+    .surgeonProfile .profileMain .relatedObjects .relatedContainer .col {
+      font-size: 16px;
+      padding: 0 5px; }
+    .surgeonProfile .profileMain .relatedObjects .relatedContainer .icon, .surgeonProfile .profileMain .relatedObjects .relatedContainer .name, .surgeonProfile .profileMain .relatedObjects .relatedContainer .badge, .surgeonProfile .profileMain .relatedObjects .relatedContainer .caret {
+      display: inline-block;
+      vertical-align: top; }
+    .surgeonProfile .profileMain .relatedObjects .relatedContainer .name, .surgeonProfile .profileMain .relatedObjects .relatedContainer .caret {
+      margin-top: 9px; }
+    .surgeonProfile .profileMain .relatedObjects .relatedContainer .icon, .surgeonProfile .profileMain .relatedObjects .relatedContainer .badge {
+      margin-top: 6px; }
+    .surgeonProfile .profileMain .relatedObjects .relatedContainer .icon {
+      background-color: #096499;
+      border-radius: 4px;
+      color: #FFFFFF;
+      font-size: 12px;
+      margin-left: 4px;
+      padding: 3px;
+      min-width: 18px;
+      text-align: center; }
+    .surgeonProfile .profileMain .relatedObjects .relatedContainer .badge-assertive {
+      background-color: #107BCA;
+      border-radius: 14px;
+      color: #FFFFFF;
+      font-size: 9px;
+      margin-left: 10px;
+      min-width: 22px;
+      padding: 1px 4px 1px 3px; }
+    .surgeonProfile .profileMain .relatedObjects .relatedContainer .caret {
+      color: #666666;
+      font-size: 10px; }
+
+.surgeonProfile.gold .profileTop .iconHolder {
+  border-color: #D7BB49; }
+  .surgeonProfile.gold .profileTop .iconHolder .icon {
+    color: #D7BB49; }
+.surgeonProfile.gold .profileTop .slant {
+  border-color: #D7BB49; }
+.surgeonProfile.gold .profileTop .nameContainer {
+  border-color: #D7BB49; }
+.surgeonProfile.gold .profileMain .row.account .levelContainer .icon {
+  color: #D7BB49; }
+
+.surgeonProfile.bronze .profileTop .iconHolder {
+  border-color: #cd7f32; }
+  .surgeonProfile.bronze .profileTop .iconHolder .icon {
+    color: #cd7f32; }
+.surgeonProfile.bronze .profileTop .slant {
+  border-color: #cd7f32; }
+.surgeonProfile.bronze .profileTop .nameContainer {
+  border-color: #cd7f32; }
+.surgeonProfile.bronze .profileMain .row.account .levelContainer .icon {
+  color: #cd7f32; }
+
+.surgeonProfile.silver .profileTop .iconHolder {
+  border-color: #C0C0C0; }
+  .surgeonProfile.silver .profileTop .iconHolder .icon {
+    color: #C0C0C0; }
+.surgeonProfile.silver .profileTop .slant {
+  border-color: #C0C0C0; }
+.surgeonProfile.silver .profileTop .nameContainer {
+  border-color: #C0C0C0; }
+.surgeonProfile.silver .profileMain .row.account .levelContainer .icon {
+  color: #C0C0C0; }
+
+.surgeonProfile.gold .profileTop .titleContainer {
+  background-image: url("profile-header/ipad/GoldHeaderx2x.png"); }
+
+.surgeonProfile.bronze .profileTop .titleContainer {
+  background-image: url("profile-header/ipad/BronzeHeaderx2x.png"); }
+
+.surgeonProfile.silver .profileTop .titleContainer {
+  background-image: url("profile-header/ipad/SilverHeaderx2x.png"); }
+
+.surgeonProfile.platinum .profileTop .titleContainer {
+  background-image: url("profile-header/ipad/PlatinumHeaderx2x.png"); }
+
+.surgeonProfile.default .profileTop .titleContainer {
+  background-image: url("profile-header/ipad/BlueHeaderx2x.png"); }
+
+/* back ground images and width overrides per device */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .surgeonProfile .profileTop .nameContainer h5.name {
+    margin: -2px 0 10px 14px; }
+  .surgeonProfile .logo {
+    margin: 4px 0 0 -8px; }
+  .surgeonProfile .accountContainer {
+    margin-left: 32px; }
+  .surgeonProfile .addressContainer {
+    margin-left: 34px; }
+  .surgeonProfile.gold .profileTop .titleContainer {
+    background-image: url("profile-header/iphone5/GoldHeaderx2x.png"); }
+  .surgeonProfile.bronze .profileTop .titleContainer {
+    background-image: url("profile-header/iphone5/BronzeHeaderx2x.png"); }
+  .surgeonProfile.silver .profileTop .titleContainer {
+    background-image: url("profile-header/iphone5/SilverHeaderx2x.png"); }
+  .surgeonProfile.platinum .profileTop .titleContainer {
+    background-image: url("profile-header/iphone5/PlatinumHeaderx2x.png"); }
+  .surgeonProfile.default .profileTop .titleContainer {
+    background-image: url("profile-header/iphone5/BlueHeaderx2x.png"); } }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .surgeonProfile .profileTop .photo .centered {
+    left: 36%; }
+  .surgeonProfile .profileTop .nameContainer h5.name {
+    margin: -2px 0 10px 14px; }
+  .surgeonProfile .accountContainer {
+    margin-left: 26px; }
+  .surgeonProfile .addressContainer {
+    margin-left: 30px; }
+  .surgeonProfile.gold .profileTop .titleContainer {
+    background-image: url("profile-header/iphone6/GoldHeaderx2x.png"); }
+  .surgeonProfile.bronze .profileTop .titleContainer {
+    background-image: url("profile-header/iphone6/BronzeHeaderx2x.png"); }
+  .surgeonProfile.silver .profileTop .titleContainer {
+    background-image: url("profile-header/iphone6/SilverHeaderx2x.png"); }
+  .surgeonProfile.platinum .profileTop .titleContainer {
+    background-image: url("profile-header/iphone6/PlatinumHeaderx2x.png"); }
+  .surgeonProfile.default .profileTop .titleContainer {
+    background-image: url("profile-header/iphone6/BlueHeaderx2x.png"); } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .surgeonProfile.default .profileTop .photo .blurred {
+    height: 195px;
+    margin: 0 auto;
+    width: 50%; }
+  .surgeonProfile .profileTop .nameContainer h5.name {
+    margin: 2px 0 10px 60px; }
+  .surgeonProfile .profileTop .photo .centered {
+    left: 44%; }
+  .surgeonProfile.gold .profileTop .titleContainer {
+    background-image: url("profile-header/ipad/GoldHeaderx2x.png"); }
+  .surgeonProfile.bronze .profileTop .titleContainer {
+    background-image: url("profile-header/ipad/BronzeHeaderx2x.png"); }
+  .surgeonProfile.silver .profileTop .titleContainer {
+    background-image: url("profile-header/ipad/SilverHeaderx2x.png"); }
+  .surgeonProfile.platinum .profileTop .titleContainer {
+    background-image: url("profile-header/ipad/PlatinumHeaderx2x.png"); }
+  .surgeonProfile.default .profileTop .titleContainer {
+    background-image: url("profile-header/ipad/BlueHeaderx2x.png"); } }
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  .surgeonProfile .profileTop .nameContainer h5.name {
+    margin: 2px 0 10px 20px; }
+  .surgeonProfile .profileTop .photo .centered {
+    left: 37%; } }

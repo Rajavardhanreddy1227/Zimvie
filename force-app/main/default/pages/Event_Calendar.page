@@ -1,0 +1,136 @@
+<apex:page sidebar="false" showheader="false" standardStylesheets="false" controller="Event_Calendar_RemoteController">
+<head>
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="initial-scale=1,
+    maximum-scale=1, user-scalable=no, width=device-width"></meta>
+
+  <!-- compiled css output -->
+  <apex:stylesheet value="{!URLFOR($Resource.event_calendar_lib, '/ionic/css/ionic.app.min.css')}" />
+
+  <!-- font awesome --> 
+  <apex:stylesheet value="{!URLFOR($Resource.event_calendar_lib, '/font-awesome/css/font-awesome.min.css')}" />
+  
+  <!-- ionic/angularjs js -->
+  <script src="{!URLFOR($Resource.event_calendar_lib, '/ionic/js/ionic.bundle.js')}"></script>
+  
+  <!-- Calendar   -->
+  <apex:stylesheet value="{!URLFOR($Resource.event_calendar_lib, '/fullcalendar/dist/fullcalendar.css')}" />
+  <apex:stylesheet value="{!URLFOR($Resource.event_calendar_styling, '/css/style.css')}" />
+  <!-- jquery, moment, and angular have to get included before fullcalendar -->
+  <script src="{!URLFOR($Resource.event_calendar_lib, '/jquery/dist/jquery.min.js')}"></script>
+  <script src="{!URLFOR($Resource.event_calendar_lib, '/moment/min/moment.min.js')}"></script>
+  <script src="{!URLFOR($Resource.event_calendar_lib, '/angular-ui-calendar/src/calendar.js')}"></script>
+  <script src="{!URLFOR($Resource.event_calendar_lib, '/fullcalendar/dist/fullcalendar.js')}"></script>
+  <script src="{!URLFOR($Resource.event_calendar_lib, '/fastclick/fastclick.js')}"></script>
+
+  <!-- your app's js -->
+  <script src="{!URLFOR($Resource.event_calendar, '/js/app.js')}"></script>
+  <script>
+      // Create angular factory that defines service to call apex.
+      myModule
+        .factory('eventListRemote', ['$q', '$rootScope', function($q, $rootScope) {
+
+          return function(month, year) {
+            var deferred = $q.defer();
+
+            Visualforce.remoting.Manager.invokeAction(
+              '{!$RemoteAction.Event_Calendar_RemoteController.getCampaigns}',
+              month, year,
+              function(result, event) {
+                $rootScope.$apply(function() {
+                  if (event.status) {
+                    deferred.resolve(result);
+                  } else {
+                    deferred.reject(event);
+                  }
+                })
+              },
+              { buffer: true, escape: true, timeout: 30000 }
+            );
+
+            return deferred.promise;
+          }
+
+        }])
+        .factory('eventDetailsRemote', ['$q', '$rootScope', function($q, $rootScope) {
+
+          return function(id) {
+            var deferred = $q.defer();
+
+            Visualforce.remoting.Manager.invokeAction(
+              '{!$RemoteAction.Event_Calendar_RemoteController.getCampaignDetail}',
+              id,
+              function(result, event) {
+                $rootScope.$apply(function() {
+                  if (event.status) {
+                    deferred.resolve(result);
+                  } else {
+                    deferred.reject(event);
+                  }
+                })
+              },
+              { buffer: true, escape: true, timeout: 30000 }
+            );
+
+            return deferred.promise;
+          }
+
+        }])
+        .factory('eventAttachmentsRemote', ['$q', '$rootScope', function($q, $rootScope) {
+
+          return function(id) {
+            var deferred = $q.defer();
+
+            Visualforce.remoting.Manager.invokeAction(
+              '{!$RemoteAction.Event_Calendar_RemoteController.getAttachments}',
+              id,
+              function(result, event) {
+                $rootScope.$apply(function() {
+                  if (event.status) {
+                    deferred.resolve(result);
+                  } else {
+                    deferred.reject(event);
+                  }
+                })
+              },
+              { buffer: true, escape: true, timeout: 30000 }
+            );
+
+            return deferred.promise;
+          }
+
+        }])
+        .factory('eventSearchRemote', ['$q', '$rootScope', function($q, $rootScope) {
+
+          return function(phrase) {
+            var deferred = $q.defer();
+
+            Visualforce.remoting.Manager.invokeAction(
+              '{!$RemoteAction.Event_Calendar_RemoteController.getCampaignsSearch}',
+              phrase,
+              function(result, event) {
+                $rootScope.$apply(function() {
+                  if (event.status) {
+                    deferred.resolve(result);
+                  } else {
+                    deferred.reject(event);
+                  }
+                })
+              },
+              { buffer: true, escape: true, timeout: 30000 }
+            );
+
+            return deferred.promise;
+          }
+
+        }]);
+   </script>
+  <script src="{!URLFOR($Resource.event_calendar, '/js/controllers.js')}"></script>
+  <script src="{!URLFOR($Resource.event_calendar, '/js/services.js')}"></script>
+
+</head>
+
+<body ng-app="starter" class="platform-ios platform-cordova platform-webview">
+  <ion-nav-view></ion-nav-view>
+</body>
+</apex:page>

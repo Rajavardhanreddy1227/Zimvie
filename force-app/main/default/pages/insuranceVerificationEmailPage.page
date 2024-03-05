@@ -1,0 +1,29 @@
+<apex:page controller="insuranceVerificationPDFAttacher2" >
+<apex:form >
+
+  <apex:pageMessages />
+
+    <apex:pageblock >
+        <apex:pageBlockButtons >
+        <apex:commandLink styleClass="btn" style="display:inline-block;height:16px;text-decoration:none;" value="Send Email" action="{!sendEmail}" >
+        <!--<apex:param name="returnURL" value="{!URLFor('https://cs14.salesforce.com/'+Insurance_Verification__c.id)}"/>
+        --></apex:commandLink>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection columns="2">
+            <apex:pageBlockSectionItem >
+            <apex:outputLabel Value="To Email Address" for="toEmail"></apex:outputLabel>
+            <apex:inputText value="{!toEmail}" id="toEmail"></apex:inputText>
+            
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+            <apex:outputLabel Value="CC Email Address" for="ccEmail"></apex:outputLabel>
+            <apex:inputText value="{!ccEmail}" id="ccEmail"></apex:inputText>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+            </apex:pageBlockSectionItem>    
+        </apex:pageBlockSection>
+        
+     </apex:pageblock>
+</apex:form> 
+</apex:page>

@@ -1,0 +1,31 @@
+<aura:component implements="lightning:homeTemplate" 
+                description="Custom Home Page" >
+    <aura:attribute name="header" type="Aura.Component[]" />
+    <aura:attribute name="column1" type="Aura.Component[]" />
+    <aura:attribute name="column2" type="Aura.Component[]" />
+    <aura:attribute name="column3" type="Aura.Component[]" />
+    
+    <div>
+        <lightning:layout horizontalAlign="spread" pullToBoundary="small">
+            <lightning:layoutItem size="12" flexibility="grow" 
+                                  padding="around-small">
+                {!v.header}
+            </lightning:layoutItem>
+        </lightning:layout>
+        
+        <lightning:layout horizontalAlign="spread" pullToBoundary="small">
+            <lightning:layoutItem size="4" flexibility="grow" 
+                                  padding="around-small">
+                {!v.column1}
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4" flexibility="grow" 
+                                  padding="around-small">         
+                {!v.column2}
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4" flexibility="grow" 
+                                  padding="around-small">
+                {!v.column3}
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div> 
+</aura:component>

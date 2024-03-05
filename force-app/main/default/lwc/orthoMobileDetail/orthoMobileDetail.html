@@ -1,0 +1,82 @@
+<template>
+  
+  <lightning-record-edit-form
+    record-id={recordId}
+    record-type-id={recordTypeId}
+    object-api-name={objectApiName}
+    onsuccess={handleSuccess}
+    onload={handleLoad}
+  >
+    <!-- Wrapping Grid -->
+    <div class="slds-box slds-grid slds-wrap slds-theme_default">
+      <!-- Spinner -->
+      <template if:false={loaded}>
+        <lightning-spinner
+          alternative-text="Loading"
+          size="large"
+          variant="brand"
+        ></lightning-spinner>
+      </template>
+
+      <template if:true={loaded}>
+        <!-- Save Button Grid -->
+        <div class="slds-col slds-size_1-of-1">
+          <div class="slds-grid slds-grid_align-center slds-wrap">
+            <div class="slds-col">
+              <lightning-button
+                class="slds-m-top_small" 
+                variant="brand"
+                type="submit"
+                name="save"
+                label={labels.Ortho_Mobile_Detail_Save_Button}
+              >
+              </lightning-button>
+            </div>
+
+            <!-- Messages for error handling -->
+            <div class="slds-col slds-size_1-of-1">
+              <lightning-messages> </lightning-messages>
+            </div>
+          </div>
+        </div>
+
+        <!-- Field Iterator -->
+        <template for:each={fields} for:item="field">
+          <div class="slds-col slds-size_1-of-1" key={field.fieldPath}>
+            <!-- Output Field (Lookups unsupported) -->
+            <template if:true={field.readOnly}>
+              <lightning-output-field 
+                variant="standard"
+                field-name={field.fieldPath}
+              ></lightning-output-field>
+            </template>
+
+            <!-- Input Field -->
+            <template if:false={field.readOnly}>
+              <lightning-input-field
+                field-name={field.fieldPath}
+                variant="standard"
+              ></lightning-input-field>
+            </template>
+          </div>
+        </template>
+
+        <!-- Save Button Grid -->
+        <div class="slds-col slds-size_1-of-1">
+          <div class="slds-grid slds-grid_align-center">
+            <div class="slds-col">
+              <lightning-button
+                class="slds-m-top_small"
+                variant="brand"
+                type="submit"
+                name="save"
+                label={labels.Ortho_Mobile_Detail_Save_Button}
+              >
+              </lightning-button>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </lightning-record-edit-form>
+</template>

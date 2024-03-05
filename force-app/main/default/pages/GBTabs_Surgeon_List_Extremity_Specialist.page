@@ -1,0 +1,32 @@
+<apex:page standardController="Surgeon_Focus_List__c" showHeader="false" sidebar="false" title="Surgeon_List_Extremity_Specialist">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Surgeon_List_Extremity_Specialist" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"pageAPIName": "GBTabs_Surgeon_List_Extremity_Specialist",
+	"showSidebar": false,
+	"showHeader": false,
+	"height": "",
+	"object": "Surgeon_Focus_List__c",
+	"globalButtons": true,
+	"description": "",
+	"selectedCustomJSIds": [],
+	"selectedCustomCSSIds": [],
+	"id": 1607937364335,
+	"tabs": [
+		{
+			"name": "Alligned Team(s)",
+			"content": "{!gridPage}gname=Surgeon List Extremity Spec Team&amp;sh=0&amp;sfname=default",
+			"id": 1607937777066
+		},
+		{
+			"id": 1612206360195,
+			"content": "{!gridPage}gname=Surgeon List Extremity Specialist&amp;sh=0&amp;sfname=default",
+			"name": "Market Segmentation"
+		}
+	],
+	"name": "Surgeon_List_Extremity_Specialist"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cloudburst - Responsive - Order Review Phone View</title>
+
+<!-- NEW FILES ADDED TO THE HEADER -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<!-- END FILES ADDED TO THE HEADER -->
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="css/fonts.css" rel="stylesheet" type="text/css" />
+
+<!-- NEW CSS TO OVERRIDE BOOTSTRAP.CSS -->
+<link href="css/bootstrap_overwrite.css" rel="stylesheet" media="screen">
+<!-- END NEW CSS TO OVERRIDE BOOTSTRAP.CSS -->
+
+<!-- NEW CODE ADDED TO THE HEADER -->
+<script>
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+</script>
+
+<script>
+$(document).ready(function () {
+  var modal_window = $('#modal-window');
+  $('a[rel=modal]').on('click', function (e) {
+    var scroll_position = $(window).scrollTop(), // Where did we start in the window.
+         return_position = false; // Should we return to the start position?
+
+    e.preventDefault();
+
+    // Build and show the modal.
+    modal_window.modal({
+      'remote': $(this).attr('href') + ' #modal-target' // Get remote content from the link.
+    }).on('show', function () {
+      if (modal_window.css('position') === 'absolute') {
+        // We will need to return to where we were.
+        return_position = true;
+        // Jump to the top of the modal.
+        $(window).scrollTop(modal_window.offset().top);
+      }
+    }).on('hidden', function () {
+      if (return_position) {
+        // Return to where we were.
+        $(window).scrollTop(scroll_position);
+      }
+    }).modal('show');
+  });
+});
+</script>
+
+<!-- NEW CODE ADDED TO THE HEADER -->
+
+</head>
+
+<body>
+
+<div class="container visible-phone">
+
+<!-- START MAIN NAVIGATION -->
+    <div class="navbar main_navigation_container">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">          
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="brand_phone" href="#"><img src="images/phone_logo.png" width="200" height="39" /></a>
+        <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="./url.html">Home</a>
+              </li>
+              <li class="hidden-desktop">
+                <a href="./url.html">Store</a>
+              </li>
+              <li>
+                <a href="./url.html">Order Products</a>
+              </li>
+              <li>
+                <a href="./url.html">Promotions</a>
+              </li>
+              <li>
+                <a href="./url.html">Outlet Engagement</a>
+              </li>
+              <li>
+                <a href="./url.html">Service Requests</a>
+              </li>
+              <li>
+                <a href="./url.html">Contact Us</a>
+              </li>
+             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- END MAIN NAVIGATION -->
+
+
+<!-- START MINI TOP NAVIGATION CODE -->
+
+<div class="phone_header">
+    <div class="products_phone"><p><a href="#products" data-toggle="modal">Products</a></p></div>
+    
+    <div id="products" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Products Navigation</h3>
+		</div>
+		<div class="modal-body">
+			<ul class="modal-navigation">
+            	<li><a href="#" class="featured">Back to Products</a></li>
+                <li><p class="landing">Managed Servers</p></li>
+                <li><a href="#">Microsoft</a></li>
+                <li><a href="#">Ubuntu</a></li>
+                <li><a href="#">Apple</a></li>               
+            </ul> 
+		</div>
+	</div>
+    
+    <div class="account_sign_in_products"><p><a href="#account" data-toggle="modal">My Account</a></p></div>
+    
+    <div id="account" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Welcome Bill</h3>
+		</div>
+		<div class="modal-body">
+			<ul class="modal-navigation">
+            	<li><a href="#">My Account</a></li>
+                <li><a href="#">My Favorites</a></li>
+                <li><a href="#">Logout</a></li>               
+            </ul>
+		</div>		
+	</div>
+    
+    <div class="cart_products"><p><a href="#cart" data-toggle="modal">12/$2,400.00</a></p></div>
+    
+    <div id="cart" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">My Cart</h3>
+		</div>
+		<div class="modal-body">
+			
+            <div class="dropdown_cart_item">
+	            <div class="qty_remove">
+		            <input type="text" name="qty" value="1" class="qty" />
+	                <input type="button" name="remove" value="remove" class="remove" />
+                </div>
+            	<p><a href="#">WD My Passport | TB Portable External Hard Drive</a></p>
+                <p class="price">$2000.00</p>
+            </div>
+            
+            <div class="dropdown_cart_item">
+	            <div class="qty_remove">
+		            <input type="text" name="qty" value="1" class="qty" />
+	                <input type="button" name="remove" value="remove" class="remove" />
+                </div>
+            	<p><a href="#">WD My Passport | TB Portable External Hard Drive</a></p>
+                <p class="price">$2000.00</p>
+            </div>
+            
+            <div class="dropdown_cart_item">
+	            <div class="qty_remove">
+		            <input type="text" name="qty" value="1" class="qty" />
+	                <input type="button" name="remove" value="remove" class="remove" />
+                </div>
+            	<p><a href="#">WD My Passport | TB Portable External Hard Drive</a></p>
+                <p class="price">$2000.00</p>
+            </div>
+            
+            <div class="dropdown_cart_item">
+	            <div class="qty_remove">
+		            <input type="text" name="qty" value="1" class="qty" />
+	                <input type="button" name="remove" value="remove" class="remove" />
+                </div>
+            	<p><a href="#">WD My Passport | TB Portable External Hard Drive</a></p>
+                <p class="price">$2000.00</p>
+            </div>              
+            
+            <div class="dropdown_cart_total">
+	            <p>Total</p>
+                <p class="price">$10,000.00</p>
+            </div>         
+            
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-primary">Check Out</button>
+		</div>
+	</div>
+    
+</div>
+
+<!-- END MINI TOP NAVIGATION CODE -->
+
+
+<div class="container-fluid">
+	<div class="row-fluid">
+
+
+	    <div class="span3">
+        	<div class="left_column">
+            
+            <ul class="checkout_steps">
+	            <li>Shipping & <br>Billing</li>
+    	        <li>Shipping<br>Method</li>
+        	    <li class="current">Order<br>Review</li>
+            	<li>Order<br>Placement</li>
+            </ul>
+            
+            </div>
+         </div>
+
+<!-- START CHECKOUT CART CODE -->
+<div class="span6">	         
+  <div class="center_column">
+    <div class="checkout_container">
+		<h2 class="title">Order Review</h2>
+		<div class="checkout_detail">
+			<div class="checkout_detail_item">
+					            
+            <div id="accordion" class="accordion clear">
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a href="#collapseOne" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle">
+                      User Information</a>
+                  </div>
+                  <div class="accordion-body in collapse" id="collapseOne" style="height: auto;">
+                    <div class="accordion-inner">                      
+                      <p class="basic"><strong>Buyer Information</strong><br>Mr. John Doe<br>312-323-2569<br>johnd@aol.com</p>
+                      <p class="basic_half"><strong>Billing Address</strong><br>Mr. John Doe<br>2568 Drake St.<br>Lincolnwood, IL<br>60642</p>
+                      <p class="basic_half"><strong>Shipping Address</strong><br>Mr. John Doe<br>2568 Drake St.<br>Lincolnwood, IL<br>60642</p>
+                    </div>
+                  </div>
+                </div>                             
+                
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a href="#collapseTwo" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle">
+                      Shipping Information
+                    </a>
+                  </div>
+                  <div class="accordion-body in collapse" id="collapseTwo" style="height: auto;">
+                    <div class="accordion-inner">                      
+                      <p class="basic"><strong>Shipping Information</strong><br>Standard Delivery (4-6 days)</p>
+                     
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a href="#collapseThree" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle">
+                      Cart Details
+                    </a>
+                  </div>
+                  <div class="accordion-body in collapse" id="collapseThree" style="height: auto;">
+                    <div class="accordion-inner">                      
+                    
+                    	<div class="cart_review_1_row">
+                        	<div class="cart_review_1_row_item">                            	
+	                            <p><a href="#">Product Name</a></p>
+                                <p>SKU: 1254879658</p>
+                                <p>Unit: Imperial Gallons</p>
+                                <p class="included_items"><a href="#included_items" data-toggle="modal">Included Items</a></p>
+                                <div class="cart_figures">
+                                	<div class="section1">Unit Price:</div>
+                                    <div class="section2">Qty:</div>
+                                    <div class="section3">Total:</div>
+                                    
+                                    <div class="section1">$200.00</div>
+                                   	<div class="section2">3</div>                					
+                                    <div class="section3"><strong class="price">$600.00</strong></div>
+                                    
+                                    <div class="clear"></div>
+                                 </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="cart_review_1_row">
+                        	<div class="cart_review_1_row_item">                            	
+	                            <p><a href="#">Product Name</a></p>
+                                <p>SKU: 1254879658</p>
+                                <p>Unit: Imperial Gallons</p>
+                                <p class="included_items"><a href="#included_items" data-toggle="modal">Included Items</a></p>
+                                <div class="cart_figures">
+                                	<div class="section1">Unit Price:</div>
+                                    <div class="section2">Qty:</div>
+                                    <div class="section3">Total:</div>
+                                    
+                                    <div class="section1">$200.00</div>
+                                   	<div class="section2">3</div>                					
+                                    <div class="section3"><strong class="price">$600.00</strong></div>
+                                    
+                                    <div class="clear"></div>
+                                 </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="cart_review_1_row">
+                        	<div class="cart_review_1_row_item">                            	
+	                            <p><a href="#">Product Name</a></p>
+                                <p>SKU: 1254879658</p>
+                                <p>Unit: Imperial Gallons</p>
+                                <p class="included_items"><a href="#included_items" data-toggle="modal">Included Items</a></p>
+                                <div class="cart_figures">
+                                	<div class="section1">Unit Price:</div>
+                                    <div class="section2">Qty:</div>
+                                    <div class="section3">Total:</div>
+                                    
+                                    <div class="section1">$200.00</div>
+                                   	<div class="section2">3</div>                					
+                                    <div class="section3"><strong class="price">$600.00</strong></div>
+                                    
+                                    <div class="clear"></div>
+                                 </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="cart_review_1_row">
+                        	<div class="cart_review_1_row_item">                            	
+	                            <p><a href="#">Product Name</a></p>
+                                <p>SKU: 1254879658</p>
+                                <p>Unit: Imperial Gallons</p>
+                                <p class="included_items"><a href="#included_items" data-toggle="modal">Included Items</a></p>
+                                <div class="cart_figures">
+                                	<div class="section1">Unit Price:</div>
+                                    <div class="section2">Qty:</div>
+                                    <div class="section3">Total:</div>
+                                    
+                                    <div class="section1">$200.00</div>
+                                   	<div class="section2">3</div>                					
+                                    <div class="section3"><strong class="price">$600.00</strong></div>
+                                    
+                                    <div class="clear"></div>
+                                 </div>
+                            </div>
+                        </div>
+                        
+                        <div class="total">
+                        	<p>Subtotal: $2400.00</p>
+                            <p>Tax: $250.00</p>
+                            <p>Shipping: $50.00</p>
+                            <p><strong>Total: $2700.00</strong></p>
+                        </div>                        
+                        
+                        <div id="included_items" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-header">
+                        	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel">Product Name: Included Items</h3>
+                        </div>
+                        
+                        <div class="modal-body">
+                        	<div class="cart_figures">
+                            	<div class="section1"><strong>Unit Price:</strong></div>
+                                <div class="section2"><strong>Qty:</strong></div>
+                                <div class="section3"><strong>Cost:</strong></div>
+                                <div class="section123">Product Title</div>
+                                
+                                <div class="section1"><strong>$200.00</strong></div>
+                                <div class="section2"><strong>3</strong></div>
+                                <div class="section3"><strong class="price">$23,600.00</strong></div>
+                                
+                                <div class="section123">Product Title</div>
+                                <div class="section1"><strong>$200.00</strong></div>
+                                <div class="section2"><strong>3</strong></div>
+                                <div class="section3"><strong class="price">$600.00</strong></div>
+                                
+                                <div class="section123">Product Title</div>
+                                <div class="section1"><strong>$200.00</strong></div>
+                                <div class="section2"><strong>3</strong></div>
+                                <div class="section3"><strong class="price">$600.00</strong></div>
+                            </div>
+                        </div>
+                        </div>                                         
+                                                              
+                    </div>
+                  </div>
+                </div>
+                
+            </div>  
+            
+            <div class="button_large_container">
+            	<a href="payment_information_phone.htm"><input name="" type="button" value="Proceed To Payment Information" class="large_grey_button"/></a>
+            </div>
+                      
+	      </div>
+	    </div>
+      </div>
+         
+  </div>
+ </div>    
+</div>
+
+<!-- END CHECKOUT CART CODE -->
+
+</div>
+
+
+<!-- START BOTTOM FOOTER COLUMN CODE -->
+
+<div class="row-fluid clear">
+	<div class="span12">
+    	<div class="footer">
+        <p><a href="#">Home</a></p>
+        <p><a href="#">Products</a></p>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Services</a></p>
+        <p><a href="#">Contact Us</a></p>
+        </div>
+	</div>
+</div>
+
+<!-- END BOTTOM FOOTER COLUMN CODE -->
+
+</div>
+    
+<!-- NEW JS CODE AT BOTTOM OF THE PAGE CODE -->
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="js/js-image-slider.js"></script>
+<script type="text/javascript" src="js/controllers_new_slider.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery.hoverIntent.minified.js"></script>
+<script type="text/javascript" src="js/jquery.accordion.2.7.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- END JS CODE AT BOTTOM OF THE PAGE CODE -->
+</body>
+</html>

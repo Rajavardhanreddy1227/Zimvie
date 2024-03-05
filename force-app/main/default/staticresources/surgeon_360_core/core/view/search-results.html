@@ -1,0 +1,47 @@
+<ion-view title="Results">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header search results">
+        <div class="row titleContainer">
+            <div class="blueSquare"></div>
+            <div class="triangleRight"></div>
+            <div>
+                <img class="logo" src="css/ZimmerLogoWhite.png" /> 
+                <h5 class="title">Surgeon 360</h5>
+            </div>
+        </div>
+        <div class="row searchContainer">
+            <div class="col col-90 inputContainer">
+                <span class="icon fa fa-search"></span>
+                <input class="searchInput" type="text" placeholder="Search by surgeon name or location" />
+            </div>
+            <div class="col miniSort">
+                <label class="">
+                    <span class="icon fa fa-sort-amount-desc"></span>
+                    <select class="searchSort" name="searchSort" ng-model="resultsSort" ng-options="o.label for o in sortOptions | orderBy: o.label track by o.value">
+                        <option value="">Sort By:</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+
+        <ion-list>
+            <ion-item ng-repeat="result in results | orderBy: resultsSort.value" class="item searchResult">
+                <div class="row">
+                    <div class="col">
+                        <div style="height: 40px; width: 44px; background-color: rgb(245, 230, 163);"> </div>
+                        <img src="{{ result.imageSrcUrl }}" />
+                    </div>
+                    <div class="col col-80">
+                        <h3 class="name">{{ result.First_Name }} {{ result.Last_Name }}</h3>
+                        <span class="address">{{ result.City }}, {{ result.State }} {{ result.Country }}</span>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>
+

@@ -1,0 +1,122 @@
+.bl{background: lightblue;color:#fff}
+.re{background: lightcoral;}
+.pi{background: pink;}
+.h200{ height: 20px;}
+
+.c-container {
+    padding: 3rem;
+    font-size: 1rem;
+    background:#0b2143;    
+}
+.socialLink{
+    font-style: normal;
+    font-weight: 700;   
+    font-size: 18px;
+    line-height: 125%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color:#fff !important;
+    margin:0 40px 0 0;
+}
+.socialLink2{
+    /*font-family: 'Soleil';*/
+    font-style: normal;
+    font-weight: 100;   
+    font-size: 12px;
+    line-height: 125%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color:#fff !important;
+    margin:0 20px 0 0;
+}
+.copyright{
+    color:#fff;
+    text-align: right;
+    padding:10px;
+    font-size: 14px;
+}
+.Border-Line{
+    border-bottom: 1px solid white !important;
+    padding: 10px;
+}
+h6 {
+
+    color: #d01f25;
+
+}
+
+
+a {
+    color: #fff;
+}
+
+.text-justify {
+
+    padding: 0.8rem 1.2rem 0px 0px;
+
+}
+
+.text-justify:first-letter {
+
+    text-transform: capitalize;
+
+    font-weight: bold;
+
+    font-size: 1.2rem;
+
+}
+
+.img-con {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.validateBtn {
+
+    margin-top: 0.8rem;
+
+    --sds-c-button-brand-color-background: #d01f25;
+
+    --slds-c-button-brand-color-background-hover: #3c1416;
+    ;
+
+    --slds-c-button-brand-color-border: #d01f25;
+
+    --slds-c-button-brand-color-border-hover: #d01f25;
+
+    --slds-c-button-radius-border: 2px;
+
+}
+
+.copyright-text {
+
+    text-align: center;
+
+    font-size: 18px;
+
+    color: #fff;
+
+    opacity: .25;
+
+}
+
+.slds-modal__header {
+
+    display: flex;
+
+    justify-content: space-evenly;
+
+}
+.slds-container_x-large {
+    max-width: 112.5rem;
+}
+
+.pl-90{
+    padding-left: 90px;
+}
+.pr-90{
+    padding-right: 90px;
+}

@@ -1,0 +1,22 @@
+@font-face {
+    font-family:'Soleil';
+    src: url('Soleil-Regular.eot') format('eot');
+}
+@font-face {
+    font-family:'Soleil-thin';
+    src: url('Soleil-Light.eot') format('eot');
+}
+@font-face {
+    font-family:'Soleil-bold';
+    src: url('Soleil-Bold.eot') format('eot');
+}
+@font-face {
+    font-family:'Soleil-italic';
+    src: url('Soleil-BlackItalic.eot') format('eot');
+}
+/*
+.customClass {
+    font-family:'Soleil', Tahoma, Geneva, sans-serif;
+    font-size: 16px;
+}
+*/

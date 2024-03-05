@@ -1,0 +1,84 @@
+<template>
+    <c-b2b-spinner 
+        if:true={isLoading}
+        message-state={messageState}>
+    </c-b2b-spinner>
+     <div if:true={orderSummary} class="slds-p-around--xx-large">
+       <c-b2b-order-confirmation-message if:true={contactEmail} order-summary-number={orderSummaryNumber} contact-email={contactEmail} order-summary-id={orderSummaryId} order-number={orderNumber} ></c-b2b-order-confirmation-message>
+        <c-b2b-order-confirmation-items if:true={orderLineItems} order-summary-id={orderSummaryId} order-line-items={orderLineItems}></c-b2b-order-confirmation-items>
+        <c-b2b-order-address-information order-summary-number={orderSummaryNumber}></c-b2b-order-address-information>
+        <div >
+            <div class="slds-grid slds-p-top--large slds-p-horizontal--medium">
+                <div class="slds-size_2-of-12 fontStyle">
+                    {labels.Subtotal}:
+                </div>
+                <div class="slds-size_10-of-12">
+                    <lightning-formatted-number value={orderSummary.TotalProductAmount} format-style="currency"
+                        class="slds-float_right" minimum-fraction-digits="2" currency-code={orderSummary.CurrencyIsoCode}>
+                    </lightning-formatted-number>
+                </div>
+            </div>
+            <div class="slds-grid slds-p-top--large slds-p-horizontal--medium">
+                <div class="slds-size_2-of-12 fontStyle">
+                    {labels.checkoutCartSummary_DiscountAdjustments}:
+                </div>
+                <div class="slds-size_10-of-12">
+                    <lightning-formatted-number value={orderSummary.TotalAdjDistAmount} format-style="currency"
+                        class="slds-float_right" minimum-fraction-digits="2" currency-code={orderSummary.CurrencyIsoCode}>
+                    </lightning-formatted-number>
+                </div>
+            </div>
+            <div class="slds-grid slds-p-top--large slds-p-horizontal--medium">
+                <div class="slds-size_2-of-12 fontStyle">
+                    {labels.Taxes}:
+                </div>
+                <div class="slds-size_10-of-12">
+                    <lightning-formatted-number value={orderSummary.TotalProductTaxAmount} format-style="currency"
+                        class="slds-float_right" minimum-fraction-digits="2" currency-code={orderSummary.CurrencyIsoCode}>
+                    </lightning-formatted-number>
+                </div>
+            </div>
+            
+            <div class="slds-grid slds-p-top--medium slds-p-horizontal--medium">
+                <div class="slds-size_2-of-12 fontStyle">
+                    {labels.ShippingCosts}:
+                </div>
+                <div class="slds-size_10-of-12">
+                    <lightning-formatted-number value={orderSummary.TotalDeliveryAmount} format-style="currency"
+                        class="slds-float_right" minimum-fraction-digits="2" currency-code={orderSummary.CurrencyIsoCode}>
+                    </lightning-formatted-number>
+                </div>
+            </div>
+            <div class="slds-grid slds-p-top--medium slds-p-horizontal--medium">
+                <div class="slds-size_2-of-12 fontStyle">
+                    {labels.checkoutCartSummary_ShippingDiscount}:
+                </div>
+                <div class="slds-size_10-of-12">
+                    <lightning-formatted-number value={orderSummary.TotalDeliveryAdjDistAmountCustom} format-style="currency"
+                        class="slds-float_right" minimum-fraction-digits="2" currency-code={orderSummary.CurrencyIsoCode}>
+                    </lightning-formatted-number>
+                </div>
+            </div>
+            <div class="slds-grid slds-p-top--medium slds-p-horizontal--medium">
+                <div class="slds-size_2-of-12 fontStyle">
+                    {labels.checkoutCartSummary_ShippingTax}:
+                </div>
+                <div class="slds-size_10-of-12">
+                    <lightning-formatted-number value={orderSummary.TotalAdjustedDeliveryTaxAmount} format-style="currency"
+                        class="slds-float_right" minimum-fraction-digits="2" currency-code={orderSummary.CurrencyIsoCode}>
+                    </lightning-formatted-number>
+                </div>
+            </div>
+            <div class="slds-grid slds-p-around_medium slds-m-top--x-large totalCss">
+                <div class="slds-size_2-of-12 fontStyle">
+                    {labels.Total}:
+                </div>
+                <div class="slds-size_10-of-12">
+                    <lightning-formatted-number value={orderSummary.GrandTotalAmount} format-style="currency"
+                        class="slds-float_right" minimum-fraction-digits="2" currency-code={orderSummary.CurrencyIsoCode}>
+                    </lightning-formatted-number>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

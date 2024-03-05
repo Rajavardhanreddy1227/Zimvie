@@ -1,0 +1,61 @@
+function initLoadingScreen(loadingScreen, loadingContent){
+        // Add the HTML to the body
+        theBody = document.getElementsByTagName('BODY')[0];
+        theScreen = document.getElementById(loadingScreen);
+        theContent = document.getElementById(loadingContent);
+        theScreen.style.width = theBody.offsetWidth + 'px';
+        theScreen.style.height = theBody.offsetHeight + 'px'; 
+
+        // set width and height of this loading screen
+        // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+        if (typeof window.innerWidth != 'undefined'){
+            viewportwidth = window.innerWidth;
+            viewportheight = window.innerHeight;
+        }   
+        // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+        else if (typeof document.documentElement != 'undefined'
+            && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0){
+            viewportwidth = document.documentElement.clientWidth;
+            viewportheight = document.documentElement.clientHeight;
+        }  
+        // older versions of IE
+        else{
+            viewportwidth = document.getElementsByTagName('body')[0].clientWidth;
+            viewportheight = document.getElementsByTagName('body')[0].clientHeight;
+        }
+
+        // set position from the real scroll top and left
+        // all except Explorer
+        if (self.pageYOffset){ 
+            scTop = self.pageYOffset;
+            scLeft = self.pageXOffset;
+        }
+        // Explorer 6 Strict
+        else if (document.documentElement && document.documentElement.scrollTop){ 
+            scTop = document.documentElement.scrollTop;
+            scLeft = document.documentElement.scrollLeft;
+        }
+        // all other Explorers
+        else if (document.body){ 
+            scTop = document.body.scrollTop;
+            scLeft = document.body.scrollLeft;
+        }
+        theContent.style.top = (scTop + ((viewportheight - 100) / 2)) + "px";
+        theContent.style.left = (scLeft + ((viewportwidth - 100) / 2)) + "px";
+        
+        theBody.appendChild(theContent);
+        theBody.appendChild(theScreen);
+    }
+    
+    // show loading screen
+    function showLoading(loadingScreen,loadingContent){
+        initLoadingScreen(loadingScreen, loadingContent);
+        document.getElementById(loadingScreen).style.display = 'block';
+        document.getElementById(loadingContent).style.display = 'block';
+    }
+    
+    // hide loading screen
+    function hideLoading(loadingScreen,loadingContent){
+        document.getElementById(loadingScreen).style.display = 'none';
+        document.getElementById(loadingContent).style.display = 'none';
+    }

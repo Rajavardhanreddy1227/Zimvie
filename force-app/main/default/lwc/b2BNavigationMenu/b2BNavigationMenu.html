@@ -1,0 +1,145 @@
+<template>
+    <template if:false={hideComponent}>
+        <!--div class="navbar slds-p-horizontal_large desktopshow bgColour pl-80">
+            
+            <ul style="flex-wrap:wrap;" class="nested-dropdowns">            
+                <template for:each={menuItems} for:item="item">
+                    <template if:true={item.isMulti}>                    
+                        <li key={item.id} class="menu-item">
+                            <div class="topMenuItemPadding" style={item.style}>
+                            {item.label}&nbsp;
+                            <img src={item.dropDownIconUrl}>
+                            </div>
+                            <ul style="z-index:1;min-width:200px;" class="child-nested-dropdowns">
+                                <template for:each={item.subMenu} for:item="childItem">
+                                    <template if:true={childItem.isMulti}>
+                                        <li key={childItem.id} class="sub-item">
+                                            <div class="menuItemPadding">
+                                                {childItem.label}&nbsp;
+                                                <img style="margin-right: 15px;" src={dropRightIconUrl}>
+                                            </div>
+                                            <ul style="z-index:1;min-width:200px;">
+                                                <template for:each={childItem.subMenu} for:item="grandChild">
+                                                    
+                                                    <template if:true={grandChild.isMulti}>
+                                                        <li key={grandChild.id} >
+                                                            <div class="menuItemPadding">
+                                                                {grandChild.label}&nbsp;
+                                                                <img style="margin-right: 15px;" src={dropRightIconUrl}>
+                                                            </div>
+                                                            <ul style="z-index:1;min-width:200px;max-height: 200px;overflow-y: auto;" class="sub-item-2" >
+                                                                <template for:each={grandChild.subMenu} for:item="greatgrandChild">
+                                                                    <li key={greatgrandChild.id}>
+                                                                        <a class="anchorPadding" target="_self" href={greatgrandChild.target}>{greatgrandChild.label}
+                                                                        </a>
+                                                                    </li>
+                                                                </template>
+                                                            </ul>
+                                                        </li>
+                                                    </template>
+                                                    <template if:false={grandChild.isMulti}>
+                                                        <li key={grandChild.id}>
+                                                            <a class="anchorPadding" target="_self" href={grandChild.target}>{grandChild.label}
+                                                            </a>
+                                                        </li>
+                                                    </template>
+                                                    
+                                                </template>
+                                            </ul>
+                                        </li>
+                                    </template>
+                                    <template if:false={childItem.isMulti}>
+                                        <li key={childItem.id}>
+                                            <a class="anchorPadding" target="_self" href={childItem.target}>{childItem.label}
+                                            </a>
+                                        </li>
+                                    </template>
+                                </template>
+                            </ul>
+                        </li>
+                    </template>
+                    <template if:false={item.isMulti}>
+                        <li key={item.id}>
+                            <a class="topAnchorPadding" target="_self"  href={item.target}>{item.label}</a>
+                        </li>
+                    </template>
+                </template>
+            </ul>
+            <div class="clr"></div>
+        </div-->
+        <!--new nav menu-->
+        <div class="navbar slds-p-horizontal_large desktopshow bgColour pl-80">
+            <!--img src={imgurl} style="cursor: pointer;float: left;margin-top: 1.5rem;" width="170" height="40" onclick={handleBrandClick}></img>&nbsp;&nbsp;-->
+            <ul style="flex-wrap:wrap;" class="nested-dropdowns">            
+                <template for:each={newNavigationMenu} for:item="item">
+                    <template if:true={item.subMenu}>                    
+                        <li key={item.id} class="menu-item">
+                            <div class="topMenuItemPadding" style={item.style}>
+                            {item.label}&nbsp;
+                            <img src={item.dropDownIconUrl}>
+                            </div>
+                            <ul style="z-index:1;min-width:200px;" class="child-nested-dropdowns">
+                                <template for:each={item.subMenu} for:item="childItem">
+                                    <template if:true={childItem.subMenu}>
+                                        <li key={childItem.id} class="sub-item">
+                                            <div class="menuItemPadding">
+                                                {childItem.label}&nbsp;
+                                                <img style="margin-right: 15px;" src={dropRightIconUrl}>
+                                            </div>
+                                            <ul style="z-index:1;min-width:200px;">
+                                                <template for:each={childItem.subMenu} for:item="grandChild">
+                                                    <!--li key={grandChild.id}><a  target="_self" href={grandChild.target}>{grandChild.label}</a></li-->
+                                                    <!--new start-->
+                                                    <template if:true={grandChild.subMenu}>
+                                                        <li key={grandChild.id} >
+                                                            <div class="menuItemPadding">
+                                                                {grandChild.label}&nbsp;
+                                                                <img style="margin-right: 15px;" src={dropRightIconUrl}>
+                                                            </div>
+                                                            <ul style="z-index:1;min-width:200px;max-height: 200px;overflow-y: auto;" class="sub-item-2" >
+                                                                <template for:each={grandChild.subMenu} for:item="greatgrandChild">
+                                                                    <li key={greatgrandChild.id}>
+                                                                        <a class="anchorPadding" target="_self" href={greatgrandChild.actionValue}>{greatgrandChild.label}
+                                                                        </a>
+                                                                    </li>
+                                                                </template>
+                                                            </ul>
+                                                        </li>
+                                                    </template>
+                                                    <template if:false={grandChild.subMenu}>
+                                                        <li key={grandChild.id}>
+                                                            <a class="anchorPadding" target="_self" href={grandChild.actionValue}>{grandChild.label}
+                                                            </a>
+                                                        </li>
+                                                    </template>
+                                                    <!--new end-->
+                                                </template>
+                                            </ul>
+                                        </li>
+                                    </template>
+                                    <template if:false={childItem.subMenu}>
+                                        <li key={childItem.id}>
+                                            <a class="anchorPadding" target="_self" href={childItem.actionValue}>{childItem.label}
+                                            </a>
+                                        </li>
+                                    </template>
+                                </template>
+                            </ul>
+                        </li>
+                    </template>
+                    <template if:false={item.subMenu}>
+                        <li key={item.id}>
+                            <a class="topAnchorPadding" target="_self"  href={item.actionValue}>{item.label}</a>
+                        </li>
+                    </template>
+                </template>
+            </ul>
+            <div class="clr"></div>
+        </div>
+        <!--new nav menu end-->
+        <div class="mobileshow">
+            <c-b2-b_-mobile-menu menu-items={newNavigationMenu}> </c-b2-b_-mobile-menu>
+            <!--c-b2b_mobilenavlinks></c-b2b_mobilenavlinks-->
+        </div>
+    </template>
+</template>

@@ -1,0 +1,67 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" title="Small Company Targets">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Small_Company_Targets" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Small Company Targets",
+	"tabs": [
+		{
+			"name": "Summary",
+			"content": "{!gridPage}gname=Small Company Targets Pipeline&amp;sh=0&amp;sfname=default",
+			"id": 1588613500090
+		},
+		{
+			"name": "Knees",
+			"content": "{!gridPage}gname=Small Company  Pipeline for Knees&amp;sh=0&amp;sfname=default",
+			"id": 1588614637996
+		},
+		{
+			"id": 1588635235189,
+			"content": "{!gridPage}gname=Small Company  Pipeline for Hips&amp;sh=0&amp;sfname=default",
+			"name": "Hips"
+		},
+		{
+			"name": "Extremities",
+			"content": "{!gridPage}gname=Small Company Pipe for Extremities&amp;sh=0&amp;sfname=default",
+			"id": 1588636518656
+		},
+		{
+			"name": "Foot and Ankle",
+			"content": "{!gridPage}gname=Small Company Pipe for FootAnkle&amp;sh=0&amp;sfname=default",
+			"id": 1588636538386
+		},
+		{
+			"name": "Cement",
+			"content": "{!gridPage}gname=Small Company Pipe for Cement&amp;sh=0&amp;sfname=default",
+			"id": 1588636554183
+		},
+		{
+			"name": "Sports Medecine",
+			"content": "{!gridPage}gname=Small Company Pipe for Sports Med&amp;sh=0&amp;sfname=default",
+			"id": 1588636571724
+		},
+		{
+			"name": "Trauma",
+			"content": "{!gridPage}gname=Small Company Pipe for Trauma&amp;sh=0&amp;sfname=default",
+			"id": 1588636584310
+		},
+		{
+			"name": "Early Intervention",
+			"content": "{!gridPage}gname=Small Company Pipe for Early Inter&amp;sh=0&amp;sfname=default",
+			"id": 1588636600530
+		}
+	],
+	"id": 1588613500090,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": true,
+	"object": "Opportunity",
+	"height": "",
+	"showHeader": false,
+	"showSidebar": false,
+	"pageAPIName": "GBTabs_Small_Company_Targets"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

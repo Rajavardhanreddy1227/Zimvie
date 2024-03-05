@@ -1,0 +1,12 @@
+<apex:page standardController="Contact" extensions="GplCreateProfileFromContactController" action="{!init}"> 
+    <apex:form >
+       <apex:sectionHeader title="Global Dentist Profile: {!Contact.Name}"/>
+        <apex:pageBlock >
+        	<apex:pageMessages escape="false"></apex:pageMessages>
+            <apex:outputLabel value="A profile for the global dentist does not yet exist for this object. Click the Create button below to create one or Cancel to go back." style="font-weight:bold;font-size:10pt"></apex:outputLabel>
+<br/><br/>
+                <apex:commandButton action="{!create}" value="Create"/>
+                <apex:commandButton value="Cancel" action="{!back}"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

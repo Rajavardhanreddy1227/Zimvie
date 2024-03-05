@@ -1,0 +1,2 @@
+<apex:page standardController="GPL_Profile__c"  extensions="SurgeonPortalExtension" action="{!doAction}" id="SurgeonPortalFirstPage" sidebar="false" showHeader="false">
+</apex:page>

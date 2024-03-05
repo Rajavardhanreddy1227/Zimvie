@@ -1,0 +1,42 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" title="Knee Opportunity Grids AVP">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Knee_Opportunity_Grids_AVP" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Knee Opportunity Grids AVP",
+	"tabs": [
+		{
+			"name": "Top 20 Bottom 20",
+			"content": "GBTabs_Top_20_Bottom_20_Surgeons",
+			"id": 1546441679361
+		},
+		{
+			"name": "Knee Opportunities",
+			"content": "{!gridPage}gname=Knee Opportunities&sh=0&sfname=default",
+			"id": 1546441827731
+		},
+		{
+			"name": "Most Wanted Surgeons",
+			"content": "{!gridPage}gname=Most Wanted Knee Opportunities&sh=0&sfname=default",
+			"id": 1554227700541
+		},
+		{
+			"name": "At Risk Surgeons",
+			"content": "GBTabs_At_Risk_Surgeon",
+			"id": 1558636333222
+		}
+	],
+	"id": 1546441679361,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "Knee Opportunity Grids AVP",
+	"globalButtons": false,
+	"object": "Opportunity",
+	"height": "1200",
+	"showHeader": false,
+	"showSidebar": false,
+	"pageAPIName": "GBTabs_Knee_Opportunity_Grids_AVP"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

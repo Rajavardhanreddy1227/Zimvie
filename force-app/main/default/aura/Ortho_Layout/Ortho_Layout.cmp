@@ -1,0 +1,22 @@
+<aura:component
+  implements="lightning:appHomeTemplate"
+  description="Mobile app page one column"
+>
+
+  <aura:attribute name="headerLeft" type="Aura.Component[]" />
+  <aura:attribute name="headerRight" type="Aura.Component[]" />
+  <aura:attribute name="main" type="Aura.Component[]" />
+  <div>
+    <lightning:layout multipleRows="true">
+      <lightning:layoutItem class="main" size="6">
+       {!v.headerLeft}
+      </lightning:layoutItem>
+      <lightning:layoutItem class="main" size="6">
+       {!v.headerRight}
+      </lightning:layoutItem>
+      <lightning:layoutItem class="main" size="12">
+       {!v.main}
+      </lightning:layoutItem>
+    </lightning:layout>
+  </div>
+</aura:component>

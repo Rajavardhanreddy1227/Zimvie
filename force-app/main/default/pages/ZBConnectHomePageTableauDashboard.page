@@ -1,0 +1,15 @@
+<!----------------------------------------------------------------------------
+    Page Name:    ZBConnectHomePageTableauDashboard
+    Purpose:      to display the tableau dashboard in the salesforce
+                  Home page
+    Developed By: Prosenjit Saha
+
+----------------------------------------------------------------------------->
+<apex:page >
+  <!-- Custom Settings (hierarchy type): ZBConnectTableauUrls created to get the URL of the ORG  -->
+  <apex:iframe src="{!$Setup.ZBConnectTableauUrls__c.ZBConnectHomePage__c}?:embed=y&:showShareOptions=false&:toolbar=false&:display_count=no&:showVizHome=no" 
+               height="500px" 
+               width="100%"
+               id="theIframe" />
+  
+</apex:page>

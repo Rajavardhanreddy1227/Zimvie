@@ -1,0 +1,35 @@
+<template>
+    <template if:true={availableTerms}>
+
+      <!-- <div if:true={isShowSpinner} class="slds-is-relative">
+        <lightning-spinner class="spins" alternative-text="Loading" size="large"></lightning-spinner>
+      </div> -->
+
+        <div class="slds-box slds-m-top_large">
+            <input type="radio" id="creditCard" name="payment-type-option" value="term"
+              onchange={handleCardRadio} />
+            <label for="creditCard" class="slds-radio__label slds-p-horizontal_x-small"><span
+            class="slds-form-element__label slds-text-title_bold">{labels.Terms}</span></label>
+        <!--<template if:true={showTerm}>-->
+        <!-- Above line commented as per Venkat suggestion -->
+          <b></b>
+          <p class="slds-text-title_bold">{availableTerms.Available_Terms__c}</p>
+
+          <p class="slds-m-bottom_medium">{labels.TermsMessage}</p>
+
+          <p><span class="slds-m-bottom_medium slds-text-title_bold">{labels.Phone}: </span>{labels.CheckoutTermsPhoneNumber}</p>
+          <p><span class="slds-m-bottom_medium slds-text-title_bold">{labels.Fax}: </span>{labels.CheckoutTermsFaxNumber}</p>
+          <p><span class="slds-m-bottom_medium slds-text-title_bold">{labels.Email}: </span>{labels.CheckoutTermsEmail}</p>
+
+          <p><span class="slds-m-bottom_medium slds-text-title_bold">{labels.BillingAddress}: </span>
+          4555 Riverside Drive Attention Customer Service Palm Beach Gardens, Palm Beach Gardens, Palm Beach Gardens FL 33410 US</p>
+
+        <!--</template>-->
+        
+        </div>
+     </template>
+
+     
+ 
+
+</template>

@@ -1,0 +1,45 @@
+<template>
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text={labels.loading} variant="brand">
+        </lightning-spinner>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+    <template  for:each={cartItemMap} for:item="item">
+       <div class="slds-box slds-grid slds-m-bottom--medium bgColor" key={item.cartItem.Id}>
+        <div class="slds-size--2-of-12" style="padding-right:15px">
+            <!-- <img src={item.cartItem.productDetails.thumbnailImage.url} 
+            alt={item.cartItem.productDetails.thumbnailImage.url} class="imgHeight"> -->
+            <img src={item.resolvedImageUrl} 
+            alt={item.resolvedImageUrl} class="imgHeight">
+        </div>
+        <div class="slds-size--4-of-12">
+            <div class="soleil-bold">
+                <a data-productid={item.cartItem.productDetails.productId} onclick={handleProductDetailNavigation}>
+                    {item.cartItem.productDetails.name}
+                </a>
+            </div>
+           <div>{labels.SKUNO} {item.cartItem.productDetails.sku}</div>
+           <div if:true={item.varaiationArray} class="header-sm" style="font-weight:100">{item.varaiationArray}</div>
+           
+        </div> 
+      
+        <div  class="slds-size--2-of-12 slds-m-top--x-large">
+            <lightning-formatted-number maximum-fraction-digits="0"
+                value={item.cartItem.quantity}>
+            </lightning-formatted-number> {labels.qtyLabel}
+        </div>
+        <div class="slds-size--2-of-12 slds-m-top--x-large alignPrice">
+            <lightning-formatted-number value={item.cartItem.listPrice} currency-code={item.cartItem.currencyIsoCode}
+                format-style="currency">
+            </lightning-formatted-number>/{labels.item}
+        </div>
+        <div class="slds-size--2-of-12 slds-m-top--x-large alignPrice">
+            <lightning-formatted-number value={item.cartItem.totalPrice} currency-code={item.cartItem.currencyIsoCode}
+                format-style="currency">
+            </lightning-formatted-number>
+        </div>
+    </div>
+    </template>
+   
+   
+</template>

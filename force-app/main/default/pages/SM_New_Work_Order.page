@@ -1,0 +1,6 @@
+<apex:page standardController="WorkOrder"  sidebar="true" showHeader="true"  tabStyle="WorkOrder" > 
+  
+  
+   <font size="5" color="black"> <b> Attention: This record must be created by using the SPM Wizards. </b> </font>
+
+</apex:page>

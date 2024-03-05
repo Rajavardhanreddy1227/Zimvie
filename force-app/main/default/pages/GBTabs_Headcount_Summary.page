@@ -1,0 +1,36 @@
+<apex:page standardController="Business_Plan__c" showHeader="false" sidebar="false" title="Headcount Summary">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Headcount_Summary" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Headcount Summary",
+	"tabs": [
+		{
+			"name": "Headcount Summary",
+			"content": "{!gridPage}gname=Headcount Summary&amp;sh=0&amp;sfname=default&amp;fpf=Business_Plan__c&amp;fpv={!Business_Plan__c.id}",
+			"id": 1555427119383
+		},
+		{
+			"name": "Underperforming Reps",
+			"content": "{!gridPage}gname=At Risk or Underperforming Reps&amp;sh=0&amp;sfname=default&amp;fpf=Business_Plan__c&amp;fpv={!Business_Plan__c.id}",
+			"id": 1555427201101
+		},
+		{
+			"name": "Competitive Sales Rep Conversions",
+			"content": "{!gridPage}gname=Competitive Sales Rep Conversion Op&amp;sh=0&amp;sfname=default&amp;fpf=Business_Plan__c&amp;fpv={!Business_Plan__c.id}",
+			"id": 1555427229994
+		}
+	],
+	"id": 1555427119383,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": false,
+	"object": "Business_Plan__c",
+	"height": "745",
+	"showHeader": false,
+	"showSidebar": false
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

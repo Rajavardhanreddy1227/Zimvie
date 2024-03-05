@@ -1,0 +1,47 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" title="Top 150 Grids">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Top_150_Grids" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"pageAPIName": "GBTabs_Top_150_Grids",
+	"showSidebar": false,
+	"showHeader": false,
+	"height": "",
+	"object": "Opportunity",
+	"globalButtons": true,
+	"description": "",
+	"selectedCustomJSIds": [],
+	"selectedCustomCSSIds": [],
+	"id": 1582811193337,
+	"tabs": [
+		{
+			"id": 1582811193337,
+			"content": "{!gridPage}gname=Top 150 Summary&amp;sh=0&amp;sfname=default",
+			"name": "Summary"
+		},
+		{
+			"id": 1582811249792,
+			"content": "{!gridPage}gname=Top 150 Knee&amp;sh=0&amp;sfname=default",
+			"name": "Knee"
+		},
+		{
+			"id": 1582811250754,
+			"content": "{!gridPage}gname=Top 150 Hips&amp;sh=0&amp;sfname=default",
+			"name": "Hips"
+		},
+		{
+			"id": 1582811251551,
+			"content": "{!gridPage}gname=Top 150 Extremities&amp;sh=0&amp;sfname=default",
+			"name": "Extremities"
+		},
+		{
+			"name": "Closed Won/Closed Lost",
+			"content": "{!gridPage}gname=Top 150 Closed Won_Lost&amp;sh=0&amp;sfname=default",
+			"id": 1586202774281
+		}
+	],
+	"name": "Top 150 Grids"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

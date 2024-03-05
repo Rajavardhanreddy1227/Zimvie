@@ -1,0 +1,72 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" title="Top Targets">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Top_Targets" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"pageAPIName": "GBTabs_Top_Targets",
+	"showSidebar": false,
+	"showHeader": false,
+	"height": "",
+	"object": "Opportunity",
+	"globalButtons": true,
+	"description": "",
+	"selectedCustomJSIds": [],
+	"selectedCustomCSSIds": [],
+	"id": 1580320184794,
+	"tabs": [
+		{
+			"id": 1580320184794,
+			"content": "{!gridPage}gname=Drive And Defend&amp;sh=0&amp;sfname=default",
+			"name": "Summary"
+		},
+		{
+			"id": 1580320239411,
+			"content": "{!gridPage}gname=Top Targets for Knee&amp;sh=0&amp;sfname=default",
+			"name": "Knees"
+		},
+		{
+			"id": 1580320251113,
+			"content": "{!gridPage}gname=Top Targets for Hips&amp;sh=0&amp;sfname=default",
+			"name": "Hips"
+		},
+		{
+			"id": 1580320266220,
+			"content": "{!gridPage}gname=Top Targets for Extremities&amp;sh=0&amp;sfname=default",
+			"name": "Extremities"
+		},
+		{
+			"id": 1580320288604,
+			"content": "{!gridPage}gname=Top Targets for Foot and Ankle&amp;sh=0&amp;sfname=default",
+			"name": "Foot &amp; Ankle"
+		},
+		{
+			"id": 1580320306147,
+			"content": "{!gridPage}gname=Top Targets for Cement&amp;sh=0&amp;sfname=default",
+			"name": "Cement"
+		},
+		{
+			"id": 1580320323710,
+			"content": "{!gridPage}gname=Top Targets for Sports Med&amp;sh=0&amp;sfname=default",
+			"name": "Sports Medicine"
+		},
+		{
+			"id": 1580320338317,
+			"content": "{!gridPage}gname=Top Targets for Trauma&amp;sh=0&amp;sfname=default",
+			"name": "Trauma"
+		},
+		{
+			"id": 1580320356419,
+			"content": "{!gridPage}gname=Top Targets for Early Intervention&amp;sh=0&amp;sfname=default",
+			"name": "Early Intervention"
+		},
+		{
+			"id": 1586202823878,
+			"content": "{!gridPage}gname=Top Targets Closed Won_Lost&amp;sh=0&amp;sfname=default",
+			"name": "Closed Won/Closed Lost"
+		}
+	],
+	"name": "Top Targets"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

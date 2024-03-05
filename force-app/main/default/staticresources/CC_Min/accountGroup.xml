@@ -1,0 +1,14 @@
+<document>
+ <row>
+  <NAME>PortalAccount</NAME >
+  <DESC__C></DESC__C >
+  <PRICELISTSELECTIONMETHOD__C>Best Price</PRICELISTSELECTIONMETHOD__C >
+  <ACCOUNTGROUPID__C>1</ACCOUNTGROUPID__C >
+ </row>
+ <row>
+  <NAME>Anonymous</NAME >
+  <DESC__C></DESC__C >
+  <PRICELISTSELECTIONMETHOD__C>Best Price</PRICELISTSELECTIONMETHOD__C >
+  <ACCOUNTGROUPID__C>2</ACCOUNTGROUPID__C >
+ </row>
+</document>

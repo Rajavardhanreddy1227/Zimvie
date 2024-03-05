@@ -1,0 +1,31 @@
+<apex:page standardController="Business_Plan__c" showHeader="false" sidebar="false" title="Early Intervention Sales Sum RO">
+    <GBLite:TabbedPageComponent pageAPIName="GBTabs_Early_Intervention_Sales_Sum_RO" customJsIds="" customCssIds="">
+    <GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+        <script>
+            var pageDefinition = {
+    "name": "Early Intervention Sales Sum RO",
+    "tabs": [
+        {
+            "name": "Early Intervention Sales Summary",
+            "content": "{!gridPage}gname=Early Intervention Sales Summary RO&amp;sh=0&amp;sfname=default&amp;fpf=Business_Plan__c&amp;fpv={!Business_Plan__c.id}",
+            "id": 1563938833711
+        },
+        {
+            "name": "Chart",
+            "content": "/apex/BP_ProductSalesSummaryChart?bpid={!Business_Plan__c.id}&amp;productgroup=Early%20Intervention",
+            "id": 1563938861607
+        }
+    ],
+    "id": 1563938833711,
+    "selectedCustomCSSIds": [],
+    "selectedCustomJSIds": [],
+    "description": "",
+    "globalButtons": false,
+    "object": "Business_Plan__c",
+    "height": "750",
+    "showHeader": false,
+    "showSidebar": false
+};
+        </script>
+    </GBLite:TabbedPageComponent>
+</apex:page>

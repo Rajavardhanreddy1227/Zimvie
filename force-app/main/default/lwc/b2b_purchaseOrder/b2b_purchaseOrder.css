@@ -1,0 +1,8 @@
+.p-order{
+    width:400px;
+}
+.p-order .slds-input{
+    border-radius: 8px;
+    border: 1px solid var(--zim-vie-neutrals-chrome, #DBE0E2);
+    background: var(--zim-vie-neutrals-white, #FFF);
+}

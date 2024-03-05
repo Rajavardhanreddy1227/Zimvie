@@ -1,0 +1,34 @@
+<!----------------------------------------------------------------------------
+    Page Name:      TableauKneePipelineDashboard
+    Purpose:        to display the tableau Knee Dashboard - Sales vs pipeline dashboards
+    Developed By:   Prosenjit Saha
+    Created Date:   11/7/2019
+
+----------------------------------------------------------------------------->
+<apex:page standardController="account">
+  
+  <!-- Custom Settings (hierarchy type): TableauDashboardAssignment created to get the URL of the AVP specific urls 
+   src="{!$Setup.TableauDashboardAssignment__c.KneeRecoveryDashboard__c}?:embed=y&:showShareOptions=false&:toolbar=false&:display_count=no&:showVizHome=no" 
+   -->
+  <apex:iframe src="{!$Label.Tableau_Knee_dashboard_AVP}" 
+              height="700px" 
+              width="100%"
+              id="theIframeavp" 
+              rendered="{!IF(CONTAINS($UserRole.Name,'AVP'), true, false)}"/>
+  <apex:iframe src="{!$Label.Tableau_Knee_dashboard_CSD}" 
+              height="700px" 
+              width="100%"
+              id="theIframecsd" 
+              rendered="{!IF(CONTAINS($Profile.Name,'AM-US-KN Sales'), true, false)}"/>
+  <apex:iframe src="{!$Label.Tableau_Knee_dashboard_Corporate}" 
+              height="700px" 
+              width="100%"
+              id="theIframecorporate" 
+              rendered="{!IF(OR(CONTAINS($UserRole.Name,'AM-Executive Sales Management'),CONTAINS($UserRole.Name,'Administrator')), true, false)}"/>
+  <apex:iframe src="{!$Label.Tableau_Knee_dashboard_TL}" 
+              height="700px" 
+              width="100%"
+              id="theIframeTL" 
+              rendered="{!IF(NOT(OR(CONTAINS($UserRole.Name,'AM-Executive Sales Management'),CONTAINS($UserRole.Name,'AVP'),CONTAINS($Profile.Name,'AM-US-KN Sales'),CONTAINS($UserRole.Name,'Administrator'))), true, false)}"/>
+  
+</apex:page>

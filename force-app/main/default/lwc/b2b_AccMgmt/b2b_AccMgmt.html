@@ -1,0 +1,123 @@
+<template>
+    <div class="header-lg">{labels.My_Account}</div>
+    <div class="mobileTabs" style="zoom:80%;">
+        <lightning-accordion class="mobile-accordion"
+                         active-section-name={selectedPageId}
+                         onsectiontoggle={handleNavigatemobile}>
+            <lightning-accordion-section name="profile" label="My Profile">
+                <c-b2-b-loyalty></c-b2-b-loyalty>
+            </lightning-accordion-section>
+            <template if:true={IsBuyerUser}>
+                <lightning-accordion-section name="member" label="Members">
+                    <c-b2b-manage-members accid = {accId}></c-b2b-manage-members>
+                </lightning-accordion-section>
+            </template>
+            <lightning-accordion-section name="list" label="My Lists">
+                <c-b2b_wishlist community-id={commId} effective-account-id={accId}></c-b2b_wishlist>
+            </lightning-accordion-section>
+            <lightning-accordion-section name="address" label="Addresses">
+                <c-b2-b_-custom-address-component></c-b2-b_-custom-address-component>
+            </lightning-accordion-section>
+            <lightning-accordion-section name="order" label="Orders">
+                <c-b2b_ordersummary></c-b2b_ordersummary>
+            </lightning-accordion-section>
+            <lightning-accordion-section name="invoice" label="Invoices">
+                <c-b2b-account-management_-zimvie></c-b2b-account-management_-zimvie>
+            </lightning-accordion-section>
+            <lightning-accordion-section name="wallet" label="Wallet">
+                <c-b2-b-loyalty></c-b2-b-loyalty>
+            </lightning-accordion-section>
+            <lightning-accordion-section if:false={isConsignmentsCustomer} name="rma" label="eReturns">
+                <c-b2b-order-mangement></c-b2b-order-mangement>
+            </lightning-accordion-section>
+            <lightning-accordion-section name="rmastatus" label="rmastatus">
+                <c-b2b-rma-status></c-b2b-rma-status>
+            </lightning-accordion-section>
+            <lightning-accordion-section name="warranty" label="Warranty">
+                <c-b2bwarranty></c-b2bwarranty>
+            </lightning-accordion-section>
+            
+            
+        </lightning-accordion>
+    </div>
+    <div class="desktopTabs">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-6">
+                <div class="season_tabs">
+    
+                    <div class="season_tab">
+                        <input type="radio" data-id="profile" id="profile" name="tab-group-1" onchange={handleNavigatedesktop}>
+                        <label style="cursor: pointer;" for="profile">{labels.My_Profile}</label>
+                        
+ 
+                    </div>
+                    <template if:true={IsBuyerUser}>
+                        <div class="season_tab">
+                            <input type="radio" data-id="member" id="member" name="tab-group-1" onchange={handleNavigatedesktop}>
+                            <label style="cursor: pointer;" for="member">{labels.Members}</label> 
+                        </div>
+                    </template>
+                    <div class="season_tab">
+                        <input type="radio" data-id="list" id="list" name="tab-group-1" onchange={handleNavigatedesktop}>
+                        <label style="cursor: pointer;" for="list">{labels.My_Lists}</label>
+                        
+ 
+                    </div>
+                        
+                    <div class="season_tab">
+                        <input type="radio" data-id="address" id="address" name="tab-group-1" onchange={handleNavigatedesktop}>
+                        <label style="cursor: pointer;" for="address">{labels.Addresses}</label>
+                        
+
+                    </div>
+                    <div class="season_tab">
+                        <input type="radio" data-id="order" id="order" name="tab-group-1" onchange={handleNavigatedesktop}>
+                        <label style="cursor: pointer;" for="order">{labels.Orders}</label>
+                        
+
+                    </div>
+                    <div class="season_tab">
+                        <input type="radio" data-id="invoice" id="invoice" name="tab-group-1" onchange={handleNavigatedesktop}>
+                        <label style="cursor: pointer;" for="invoice">{labels.Invoices}</label>
+                        
+
+                    </div>
+                    <div class="season_tab">
+                        <input type="radio" data-id="wallet" id="wallet" name="tab-group-1" onchange={handleNavigatedesktop}>
+                        <label style="cursor: pointer;" for="wallet">{labels.Wallet}</label>
+                        
+ 
+                    </div>
+                    <div if:false={isConsignmentsCustomer} class="season_tab">
+                        <input type="radio" data-id="rma" id="rma" name="tab-group-1" onchange={handleNavigatedesktop}>
+                        <label style="cursor: pointer;" for="rma" >{labels.eReturns}</label>
+                    </div>
+                    <div class="season_tab">
+                        <input type="radio" data-id="rmastatus" id="rmastatus" name="tab-group-1" onchange={handleNavigatedesktop}>
+                        <label style="cursor: pointer;" for="rmastatus" >{labels.rmaStatus}</label>
+                        
+ 
+                    </div>
+                    <div class="season_tab">
+                        <input type="radio" data-id="warrantystatus" id="warrantystatus" name="tab-group-1" onchange={handleNavigatedesktop}>
+                        <label style="cursor: pointer;" for="warrantystatus" >{labels.Warranty_Complaints}</label>
+                    </div>
+                        
+                </div>
+            </div>
+            <div class="slds-col slds-size_5-of-6" >
+                
+                    <div data-id="profilediv"><c-b2-b-loyalty></c-b2-b-loyalty></div>
+                    <div data-id="memberdiv"><c-b2b-manage-members accid={accId}></c-b2b-manage-members></div>
+                    <div data-id="listdiv"><c-b2b_wishlist community-id={commId} effective-account-id={accId}></c-b2b_wishlist></div>
+                    <div data-id="addressdiv"><c-b2-b_-custom-address-component></c-b2-b_-custom-address-component></div>
+                    <div data-id="orderdiv"><c-b2b_ordersummary></c-b2b_ordersummary></div>
+                    <div data-id="invoicediv"><c-b2b-account-management_-zimvie></c-b2b-account-management_-zimvie></div>
+                    <div data-id="walletdiv"><c-b2-b-wallet></c-b2-b-wallet></div>
+                    <div data-id="rmadiv"><c-b2b-order-mangement></c-b2b-order-mangement></div>
+                    <div data-id="rmastatusdiv"><c-b2b-rma-status></c-b2b-rma-status></div>
+                    <div data-id="warrantystatusdiv"><c-b2bwarranty></c-b2bwarranty></div>
+            </div>
+            </div>
+        </div>
+</template>

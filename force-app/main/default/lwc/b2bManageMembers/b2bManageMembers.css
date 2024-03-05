@@ -1,0 +1,31 @@
+.header-lg{
+	color: var(--zim-vie-primary-navy, #0A2043);
+	font-family: Soleil;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.slds-button_icon-inverse .slds-icong{
+	fill:#fff !important;
+}
+.slds-icon{
+	fill:#fff !important;
+}
+.slds-table_resizable-cols td{
+	padding-right:20px;
+}
+.c-table{
+	border: 1px solid #DFE3E5;
+    border-radius: 10px;
+}
+.c-table th{
+	padding-top: 16px;
+	padding-bottom:16px;
+}
+.th-left-raidus{
+	border-top-left-radius: 6px;
+}
+.th-right-raidus{
+	border-top-right-radius: 6px;
+}

@@ -1,0 +1,43 @@
+.borderClass{
+    background-color: #0A2043;
+    border-radius: 10px;
+}
+.horizontalBar {
+    border: 2px solid #8c1f2f;
+    width: 70px;
+    margin: auto;
+    margin-top: 10px;
+}
+.whiteText{
+    color: white;
+}
+.fontBold{
+    font-weight: 500;
+}
+.slds-button_brand{
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 16px 24px;
+    background: #005DA6;
+    color:white;
+}
+.slds-button_brand:hover{
+    background: #0A2043;
+}
+.custmbtn{
+    background-color:#005DA6;
+    color: white;
+    padding: 10px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid #005DA6;
+    border-radius: 25px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+}

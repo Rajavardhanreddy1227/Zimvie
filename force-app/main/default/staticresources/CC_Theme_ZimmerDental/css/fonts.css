@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url('../fonts/ProximaNova-Reg-webfont.eot');
+    src: url('../fonts/ProximaNova-Reg-webfont.eot?iefix') format('eot'),
+         url('../fonts/ProximaNova-Reg-webfont.woff') format('woff'),
+         url('../fonts/ProximaNova-Reg-webfont.ttf') format('truetype'),
+         url('../fonts/ProximaNova-Reg-webfont.svg#webfonttLdMzI8n') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url('../fonts/ProximaNova-Bold-webfont.eot');
+    src: url('../fonts/ProximaNova-Bold-webfont.eot?iefix') format('eot'),
+         url('../fonts/ProximaNova-Bold-webfont.woff') format('woff'),
+         url('../fonts/ProximaNova-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/ProximaNova-Bold-webfont.svg#webfontgrewrCss') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VagRoundedBold';
+    src: url('../fonts/adobevagroundedstdbold.eot');
+    src: url('../fonts/adobevagroundedstdbold.eot?iefix') format('eot'),
+         url('../fonts/adobevagroundedstdbold.woff') format('woff'),
+         url('../fonts/adobevagroundedstdbold.ttf') format('truetype'),
+         url('../fonts/adobevagroundedstdbold.svg#webfontgrewrCss') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VagRoundedLight';
+    src: url('../fonts/adobevagroundedstdlight.eot');
+    src: url('../fonts/adobevagroundedstdlight.eot?iefix') format('eot'),
+         url('../fonts/adobevagroundedstdlight.woff') format('woff'),
+         url('../fonts/adobevagroundedstdlight.ttf') format('truetype'),
+         url('../fonts/adobevagroundedstdlight.svg#webfontgrewrCss') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('../fonts/bebasneue-webfont.eot');
+    src: url('../fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue-webfont.woff') format('woff'),
+         url('../fonts/bebasneue-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

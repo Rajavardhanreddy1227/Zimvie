@@ -1,0 +1,39 @@
+<apex:page sidebar="false" showheader="false" standardStylesheets="false">
+<ion-view view-title="Calendar">
+  <ion-content>
+    <div class="row page-header">
+      <div class="col col-50">
+           <!--
+       <div class="row title-container">
+            <div class="blue-square"></div>
+            <div class="triangle-right"></div>
+            <div class="fc-toolbar-holder"></div>
+        </div>
+         -->
+      </div>
+      <div class="col">
+        <div class="search-holder"></div>
+      </div> 
+    </div>
+    <div class="row responsive-sm">
+      <div class="col col-50 calendar-container">
+        <div class="row">
+            <div class="col">
+              <div data-tap-disabled="false" ui-calendar="uiConfig.calendar" id="calendar" class="calendar" ng-model="eventSources" calendar="myCalendar"></div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col filter-container">
+            <ng-include src="'{!URLFOR($Resource.event_calendar, '/partials/button_ctl.html')}'"></ng-include>
+          </div>
+        </div>
+      </div>  <!-- col-50 -->
+      <div class="col event-list-wrapper">
+          <div class="event-list-container">
+            <ng-include src="'{!URLFOR($Resource.event_calendar, '/partials/event_list.html')}'"></ng-include>
+          </div>
+      </div><!-- col --> <!-- event-list-wrapper -->
+    </div><!-- row -->
+  </ion-content>
+</ion-view>
+</apex:page>

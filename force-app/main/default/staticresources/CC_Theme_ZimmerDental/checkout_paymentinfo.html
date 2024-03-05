@@ -1,0 +1,2358 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths ext-strict"><head>
+<script src="/luxbev/jslibrary/1383366200000/sfdc/JiffyStubs.js"></script><style type="text/css"></style><script src="/luxbev/jslibrary/1383366200000/sfdc/VFRemote.js" type="text/javascript"></script><script src="/luxbev/jslibrary/1383366200000/sfdc/SfdcCore.js" type="text/javascript"></script><script src="/luxbev/static/101812/js/picklist.js" type="text/javascript"></script><script src="/luxbev/jslibrary/1383366200000/sfdc/VFState.js" type="text/javascript"></script><script type="text/javascript">
+Visualforce.remoting.Manager.add(new $VFRM.RemotingProviderImpl({"service":"luxbev/apexremote","vf":{"tm":1383922048826,"ovrprm":false,"dev":false,"dbg":false,"vid":"066i0000002Ht14","tst":false},"actions":{"ccrz.cc_ctrl_CheckoutRD":{"ms":[{"name":"fetchAddressBooks","len":2,"ns":"ccrz","ver":27.0,"csrf":"qrtVutpCpVwktI.c8y99BQb3l0.eI3WGwIovIbuhVGgzZ20SBd2U9XOWMZE6K7MTOzwjg2_xy_2bVcGbZOSj8MXR29Fh5wXC7RcAtFNxEnJR78s3dyMvDo55MFlOrv5e6ALpQ1j6IbGnuUimQwXvU1xAaS1YmtUvNQL1afsJS.DYS2DW"},{"name":"fetchAvailableDeliveryDates","len":4,"ns":"ccrz","ver":27.0,"csrf":"ar.rH_.ro_M_5aXcqWd8ghLN6nwxFUFS0HeQUrIFsVmXGtKcAXTfEGhYqyizBZcd3k1IJLj0BbLWdlT9eK2UulDChkt_T2GFkXRkFMxhaLnw9g_JU3Ew2wxgaHt98ImA2R5rjRXM4KgwbhA96GhmWkHaZP1snt1cgGJJOrfjKh7Ml81EqLVDuRyD8_X7IvFiuCk4Ag=="},{"name":"fetchCart","len":3,"ns":"ccrz","ver":27.0,"csrf":"TBb2kPg2vNmYOY2V3hvdsNZxTcX0OUieEh0ayAmjrFf4IShA7xQSrzsxMcDJpy65dXk1etwnk7d97B.8TaxfZ9H2WiUlkoxT82sL534H.xgJx3pxs2uf8Dqlvlzdubu8AHQ5v9alcY2E1mvShUjQxyHDV8PcwPpHqip.egoBRXP_Z5XR"},{"name":"fetchPaymentSettings","len":2,"ns":"ccrz","ver":27.0,"csrf":"babIGQnZ1EwVJ0mN9tjqoHSjnF0BlXsuiy5lGROBv9_upGDqH2LkgDhCHUA8ukY6AeSIctQSN1JAGgwPDdoqY4vgF3F0Xd4rQWYVob6nHQiXBTmot862ctuN8r82f69fVZjHZU.4B6o3nflcP8cZsoEsijgPEJpW5kvX1cJfE_9oujWwPwBJSbW0WRSp6arC0Y25Vw=="},{"name":"fetchShippingMethods","len":4,"ns":"ccrz","ver":27.0,"csrf":"HKrBO1AzCat0vsJv_fQnliCUDGXdNQp5UWpBNCHHW39dLqyHne.BTJRdlrxWm7B_vOgPrDn_rb62TMFuK6hLw9yekWyGmjKTOGlE_SkZYY5aq51mxP4_tlS4p.m9ZxjuuZlRhd4kx9v7Og7bMrRwPk0ySD0BrFP8TIrSaxtsJGJoujWwPwBJSbW0WRSp6arCmxiZ8A=="},{"name":"fetchTax","len":4,"ns":"ccrz","ver":27.0,"csrf":"UcnaMQV29yaljXvqi4TuemXrDTiYo.D3aDneXrpIeFaqGW8kd3.xAZriTpCRNhvtw.4aU_hWI8VFGvL4.fS9B2mKeqEJnJkut8Ds3TLgRmFi_KYwcMpChW.vSRRzxwwX0.YQelLj9L7Hmd3N3zHsUbL_XuJsrVlde0orwRoBMkYXfn4M"},{"name":"placeOrder","len":4,"ns":"ccrz","ver":27.0,"csrf":"Md1W_Q5nsYF6luIH3I1Ef.zi9n.V3lY1yH9bskQaTMShWc3882zHnu0I4RXvfoHtdQcjFzzjpx45LNw8F0NnxBh5m5YQID2CR2bGFAVh.mnwulpEUBNMSwH4jduKkrRYqPmewN8FyiTVQ266twJDtB.tR7VrKSDsyuElLkPWCGtzG3TY"},{"name":"refreshPricing","len":4,"ns":"ccrz","ver":27.0,"csrf":"9IcTq51Rb0QcY4qmHwJVQkVTZpseZdN94Nn0_GF44VGRNTDGLWsGbqBbof7ZhfGVHsnvlI520xu2JDqjnWFyUp0nifr49WA8P_GYmyYnlqS1FeNhDgSYhw3ycK13ucr0T0vVZasXnwt7trS3fHlzVCsspty3opv44E5y5PndTJsuZKMo"},{"name":"save","len":4,"ns":"ccrz","ver":27.0,"csrf":"UnRniH9msfpVWN.Vmw_z7MNV_mBPzlUQ3P2Avpx5wv3PWKuKgql.ohkhMl580Nn0dsJt4ClatI3a.Lv2IzbZE9ubczUjI6vzeVlewdED5buT0.4dQ4Ix6Uf2wua7ICH98ylin386K4.B8I.hNwQJTWi6NbA.AElJtbRZFKnpqsI7TJIZ"}],"prm":1},"ccrz.cc_ctrl_Header":{"ms":[{"name":"forgotPassword","len":1,"ns":"ccrz","ver":27.0,"csrf":"Qo.gNRRR.amdfXz9_TKGzs41OwAgrEuuepmAhxolT.CqScMiSv2jvWUXxzBeRM10BFvk7AV.kfhUzjybhz8ZB8sZRvTHGUaroYTNYetKwMFHF1J3LI5Pcb_AHrSPaO7j2lRNVvxlVK4_aTNLMqk.Dt8eCJqRxYLYwtlFKutDsnfNyGMz"},{"name":"quickSearch","len":4,"ns":"ccrz","ver":27.0,"csrf":"XmHY9bp09EY4_UvnIsxIjV4LDnT3kyVEQUiAAQ.8Pmjgnsb4rtph8gpent_QA5Zeyw6_Tqa2WKziELeW4WZF97rPa_Xdgz6XzlkAbmCzxS23E62Tm5AypFWs8tRzdQ4XCP6PQYlSy1o.cZFc1nxh2lZ5N6AQevA.VL_SohZWWa5LcTFn"}],"prm":1},"ccrz.cc_ctrl_MenuBar":{"ms":[{"name":"getMenuJson","len":2,"ns":"ccrz","ver":27.0,"csrf":"hvCvGwE4kfMpzpJOqwMqN8dMcHZLubhEMTT84aci1e05a.R8xREyr_yDl2SS2UABy7SkjBBtp6_HM_eku3KDcfmWNhRSsCwNixnIDLjTnxQCb9rH7.vDc61qZ_uqc8noCaqegf6jZSkuDdAJxDoOklTYu0MdryyXY3AVs0DpUCU.Cf7F"}],"prm":1},"ccrz.cc_RemoteActionController":{"ms":[{"name":"addBulkToCart","len":3,"ns":"ccrz","ver":27.0,"csrf":"QC2DYgslV7q1rU4DYfQLczfj7JeyIDBN8ZOm4OXIrRJSeiUp4yym.IE_8gZBtRODzyBwe8iLXC9Kik75ozceuwsgfSnRXoOAcsBcF.J6gcLU02AWbvx6NfDfHgJFAAhHFFEi2yQvfNHnwEIh0EQztLzwyk_J6xhNUVXExxz4kWZoujWwPwBJSbW0WRSp6arCPg6V7w=="},{"name":"addItemToCart","len":4,"ns":"ccrz","ver":27.0,"csrf":"uA5woOGPo4GGa_fxnvAMszhn3VkC.StCcCuDPwP1oop8ROWXMwk0t2D5I0PtzWcoN4o2gmiaQk9.M0Ksi3cMiMbLxmRciC8YsW1bXfWSql0vV3SfZRCDBQ_89ba4FF8fKikGRGGA43dc2OcdkGscCpTLkt0Gfd1lYACQiq83bS1oujWwPwBJSbW0WRSp6arCJxmKqA=="},{"name":"fetchCart","len":3,"ns":"ccrz","ver":27.0,"csrf":"WAccCEOOPBYgNAWhtr2t_mby57fTuftuzT_2hkhiNn.QAZJOBGikSuQVgQ0PZtKdB2rcRvxxacRUTIQB2blGW34SbjbVmAPJHeeRq7AfDc3M6wN5m0HtrlNFF4DjDS8Hc6sPQTGnizFisNFm5KN_DfP8hi1brlx8LflDVqO6iaf_a7l."},{"name":"fetchCartExtension","len":3,"ns":"ccrz","ver":27.0,"csrf":"R1e5SLD9wryMtHXyL0drMjPN6mOZYX.kVaexQM8tCj3KNxQzKDieH937uhw32ueOKHswGLwv3D1yscGrsDgzbXSutwe5wmC_FEulD1bbfSBn4.VEb5AQTlP7VhrKvAVNB20AkV6IfJkMsBlI615ZFdW38.fF7ZGkAPk4LqnRoZ9T3BPDVa2yZP_w2dsEZkcG8OCDmg=="},{"name":"fetchExtPricing","len":4,"ns":"ccrz","ver":27.0,"csrf":"ZZZiNmzXbuJv3ffnk7o7SO7UriVAuWxp6e8EjvyNF6XX5kJZ2h8R5747MyevBPgIB7rGLi0CfRgoSXJZy1HEhHbMTY52y1cg33d4NhySti_a86fbO6wH0ag0znZS396rzV9RuayDrSI83.qpXPGftYc11z7j8Ai7zl3HpsAHv1bBFxKF4bwhpHDCn7oNnkKrDNUG8g=="},{"name":"getCartTotal","len":3,"ns":"ccrz","ver":27.0,"csrf":"hkPmj8mY.uDrkKPYOVz46uqyBsc49YfHVfP2P5aItmZcs1ob4o40xh1wbfQm6EiLc.nPukyDLDgXHkin90ZYk6QPrndPqpv.Hty8xNi8Yzt4wki84ULuWheiPlYezz7CU36rNw.kCPEVLCkSuhHtk99YfBeF5p.sUjKEL3J591J2NwNm"},{"name":"getCategoryTreeJson","len":1,"ns":"ccrz","ver":27.0,"csrf":"uyjvoOnwiV3FC4.IqgH5._zTitQLhC94D6WWmAI7A2RnuK1QeqevSXljzGaU4zqGUZefGM5VNJYVQ.Or8VMg2X5J9QNixcNbJ3SFKFjK5zfGDTGXieIGpuH5caXXZVh70DG0X3_UZtP8pOC2Qv7X2zIU3UacUE6RaeWMVbKrJ3nQLue1kWYrREfFNNjUsutNWEfTPA=="},{"name":"getCountries","len":1,"ns":"ccrz","ver":27.0,"csrf":"SmKfmcr6MGk7jZwC5_rH51Nk7FzQY94tveJ3.453hJhAWg4rl45zwnO3QPFB8saB5EZcoByJrHIC0.hblpPbME2IfA655sEbNN.qx3QuA6jnXkbgAY1vKn6QNbpkDuX_0GUiMHl2bj4iEtp3jx4QrCdZN8uh3KTuRLlDomQ639f._1Y5"},{"name":"getCurrentUser","len":1,"ns":"ccrz","ver":27.0,"csrf":"nAZwZ6KabJPQl1Y0jwhmjPztS..r_RYnxrq4bxnQ3PMWQf.GX9Lq2hMb15kPhCtLOB..mSLjyqDECz__WZtz5atEjcFRzNqo5bXqxBgLC8Sfm69149HMWpXL2A9zGiG0mmmYo8qmG.VojWaq9EiMwkzxWvbc5BlycA2LNMhnxkF9hY8y0ThNnE0G9JYcibSB7eqCsg=="},{"name":"getHeaderInfo","len":3,"ns":"ccrz","ver":27.0,"csrf":"SDNUDpqZbh_TuWLMSDOtJ84h2pRRdlCjypqjLuVDR4SxrKd6xXVydQ6ozJ30GAmV6M1UgKdHl1bIzomeAqa1k6DiTx2PssVxOttk4ZVcyqnAKFla1XkLPbjhE1J.pZsOFiKFZWX2.nI22F1uSTfmO3QjJ9mFS9YrIeBsMWQGAdhoujWwPwBJSbW0WRSp6arCOX1qHA=="},{"name":"getStates","len":0,"ns":"ccrz","ver":27.0,"csrf":"1w_nncDov55Q7WihZ6i2ccvOpwvNrVB5jDNBeWKRJknp.w49HUymradx5YEE.IEltzXeLePOPCnOQvtLUOGEBpluMV6bNkp6nSyhlhBbJH7Pjnvz8Cd_AJTI_.PfJyNU.NYarbTl0jC7vTBI51049rl4BvdXsyFyoPbfHZ0Fynw7YLqv"},{"name":"removeCartItem","len":4,"ns":"ccrz","ver":27.0,"csrf":"ef0Fuhxn82a5iMPO9ekq6MHK1cB8mehneKgVsWERspj_ItVK45prFH0F_rXR8rpCapjUq5Lp5W82N_FWmzXkwBOaQOXyjmZei8wmbWvjpLZiVIsqhAroFdjddSAD6TM6E_e718hthDgizn5far7di7chrymccs6IozewXODZ4SnF3PBErxGLwU6ZZ5pyY5bQHYWAzQ=="},{"name":"saveCart","len":3,"ns":"ccrz","ver":27.0,"csrf":"bt.E9Vj_LZAuBVjfDXrp.yYCvELn5t7CGpL6hor1SJj4DSOC_dzBl8hugXFA.pPZ6SKyJVMPUkik60apl9B4zAGaD7BkEa9.0jS7f2TC8if4Iie.aJLiot8tV9cvE72a7puunuyI6CDGxytPTcoyx2dnjnAL54_5JJJQlYogag5PgPWP"}],"prm":1}}}));
+</script><meta http-equiv="PRAGMA" content="NO-CACHE">
+<meta http-equiv="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT">
+
+			<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport"><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><meta name="chromesniffer" id="chromesniffer_meta" content="{&quot;jQuery&quot;:&quot;1.8.1&quot;,&quot;jQuery UI&quot;:&quot;1.8.23&quot;,&quot;Modernizr&quot;:&quot;2.6.2&quot;,&quot;Backbone.js&quot;:&quot;0.9.10&quot;,&quot;Underscore.js&quot;:&quot;1.4.4&quot;}"><script type="text/javascript" src="chrome-extension://homgcnaoacgigpkkljjjekpignblkeae/detector.js"></script></head><body class="  ext-webkit ext-chrome ext-mac" style=""><span id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:j_id1">
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/jquery.min.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/jquery.currency.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/jquery-ui-custom.min.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/jquery.cookie.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/jquery.accordion.2.7.min.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/underscore.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/backbone.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/modernizr.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/accounting.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/handlebars.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/cloudcraze.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/js-image-slider.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/controllers_new_slider.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/zebra_datepicker.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/js2form.js" type="text/javascript"></script>
+	<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/form2js.js" type="text/javascript"></script>
+
+
+	<link href="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/css/zebra_datepicker.css" rel="stylesheet" type="text/css"></span>
+				<link href="css/jquery-ui-theme/jquery-ui-custom.css" rel="stylesheet" type="text/css">
+				<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+				<link href="css/styles.css" rel="stylesheet" type="text/css">
+				<link href="css/bootstrap_overwrite.css" rel="stylesheet" type="text/css">
+				<link href="css/fonts.css" rel="stylesheet" type="text/css">
+			<script src="/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework/js/respond.src.js" type="text/javascript"></script>
+				<script src="js/checkout.js" type="text/javascript"></script>
+    	    <title>Fine Wine &amp; Spirits  |  LuxBev Distributors</title>
+            <meta content="SEO Description" name="description">
+            <meta content="SEO Keywords" name="keywords">
+
+
+
+			<script>
+    //CC event aggregator to channel events from multiple objects into a single object to
+    //simplify registration for clients.
+    CCRZ.pubSub = _.extend({}, Backbone.Events);
+    CCRZ.pagevars.storefrontName = "LuxBev";
+    CCRZ.pagevars.themeBaseURL = "";
+    CCRZ.pagevars.currentCartID = '7c1155a8-a1e0-44f7-84c8-989c5d7880f1';
+    CCRZ.userIsoCode = "USD";
+    CCRZ.pagevars.checkOutPage = "/luxbev/ccrz__CheckOutNew";
+    CCRZ.pagevars.homePage = "/luxbev/ccrz__HomePage";
+    CCRZ.pagevars.productImageBaseURL = "/luxbev/resource/1381446832000/ccrz__CC_OOTBImages";
+    CCRZ.pagevars.pageLabels = {"CheckOut_PurchaseOrderNumber":"Purchase Order Number","BreadCrumbInc_SearchResults":"Search Results","OrderSummaryNew_EstTax":"Estimated Tax","ForgotPassword_PleaseEnterEmail":"Please enter your E-Mail below and we'll send you a new password.","ProductDetails_DocumentTab_Assembly_Guides":"Assembly Guides","QuickOrder_QuickOrderBoxCaption":"Have the product numbers from our catalog? Enter them below for a quicker shopping experience.","Component_MiniwishList_MyWishlist":"My Wishlist","CheckOut_YourInformationLabel":"Use Billing Address","Component_MiniwishList_RecentlyAdded":"Recently Added Items","OrderConfirmation_StatusInfo":"We may contact you for special instructions about shipping, payment method and/or other order related issues, if necessary. You can view all your order history at any time by checking","CheckOut_City":"City","Header_items":"item(s)","OrderShipment_Title":"Order Shipments","Component_MiniCart_ThereIs":"There is","Component_SiteFooter_EDLConsulting":"EDL Consulting","CheckOut_CreditCard":"Credit Card","CheckOut_ShippingInformation":"Shipping Information","Edit":"Edit","ProductsInc_Next":"Next>","Both":"Both","Component_OrderShippedSummary_ShippingStatus1":"Your Order has shipped!","Component_SiteHeader_Password":"Password","Component_OrderShippedSummary_ShippingStatus2":"Your order is being processed!","OrderSummaryNew_Qty":"Qty","Checkout_SKU":"SKU","Err_Pricing_Timeout":"There was an issue pricing your cart.  If this issue persists, please contact customer support.","Component_MiniCart_InYourCart":"in your cart.","CheckOut_CreditCardInfo":"Credit Card Info","CheckOut_BillingShippingAddress":"Billing and Shipping Address","ProductReview_GuidingText":"Select your reating, with 1 being the lowest, and 5 being the highest.","CheckOut_RequiredFields":"Required Fields","Component_SiteHeader_EmailAddress":"Email Address","Component_SiteHeader_ForgotPassword":"Forgot Password","Prod_QtyDecrFF":"&lt;&lt;","QuickOrder_SKU":"SKU","Prod_QtyIncrFF":">>","CheckOut_CartDetails":"Cart Details","OrderSummaryNew_EstShip":"Estimated Shipping","Yes":"Yes","OrderSummaryNew_PlaceHolder_Footer":"Thank You!","Component_MiniwishList_AddToCart":"Add to Cart","Footer_TermsAndConditions":"Terms and Conditions","QuickOrder_AddToCart":"Add To Cart","Component_MiniCart_Action":"View Cart","UserInformation":"User Information","Action_Delete":"delete","Checkout_YouSave":"You Save","CartInc_ProductName":"Product","Component_SiteHeader_Products":"Products","CheckOut_FirstName":"First Name","CheckOut_State":"State","ProductReview_Review":"people found the following review helpful","Attachment_Title":"Add Attachments","Component_MiniCart_ThereAre":"There are","CheckOut_AddressBook":"Address Book","CheckOut_NextShippingInformation":"Next - Shipping Information","ProductDetails_DocumentTab_FileName":"Filename","CheckOut_Placement":"Placement","CheckOut_ShippingOptions":"Shipping Options","CartInc_Discount":"Discount","CheckOut_NextShippingMethod":"Next - Shipping Method","Component_SiteHeader_Login":"Login","Component_SiteFooter_Search":"Search","CheckOut_EstimatedTax":"Estimated Tax","CheckOut_CompanyName":"Company Name","UserInfo_selectAddress":"Select Address","Component_SiteHeader_MyLocale":"My Locale","CheckOut_ContractGuidingText":"An invoice will be sent to the billing address referenced in the Contract Id you provide.","CheckOut_GeneralInformation":"General Information","Component_Social_Follow_Twitter":"Follow @CloudBurstStore","OrderSummaryNew_OnHold":"Your order requires verification of tax exemption. If order is not tax exempt, taxes will be charged.","MyAccount_AccountInformation":"Account Information","CheckOut_AdditionalInfo":"Additional Info","catalogSearchInc_QuickSearch":"Go","CheckOut_AddNew":"Add New","ProductReview_by":"by","CheckOut_CCCardNumber":"Card #","OrderConfirmation_PlacedOrder":"Thank you for placing your order! Your order number is {0}. \n<br/>Order Date: {1}","CheckOut_UserInformation":"User Information","Address":"Address","Required_Fields":"<p>* Required field. <br/> \n**Shipping Instructions: You can choose a shipping address from the Address Book. To ship your order to a temporary address, enter the detailed ship to address in the next step. \n</p>","Component_SiteFooter_ProductInformation":"Product Information","CheckOut_PaymentInformationLeg":"Payment Information","No":"No","CheckOut_ReviewStep":"Order Review","OrderSummaryNew_Price":"Price","CartInc_IncludedItems":"Included Items","QuickOrder_QTY":"QTY:","CheckOut_OrderReviewLabel":"<span/>","AddToCartStatus":"adding to cart...","CheckOut_Address":"Address","Checkout_Shipping_Conditions":"We cannot ship to PO boxes or APO/FPO addresses. In the event of inclement weather, 2nd Day and Next Day deliveries can not be guaranteed and refunds will not be issued for the delay. The UPS guarantee does not apply when transportation networks are affected by weather.","CheckOut_ContactInformation":"Contact Information","Site_Confirm_Password":"Confirm Password","Header_MyWishlist":"My Wishlist","Component_MiniwishList_confirmMessage":"Are you sure you would like to remove this item from your wishlist?","Component_MiniCart_NoItems":"You have no items in your shopping cart.","CheckOut_PlaceOrder":"Place Order","OrderSummaryNew_OrderBeingProcessed":"Your order is being processed!","Component_SiteHeader_CheckOut":"Check Out","CheckOut_PrimaryPhone":"Primary Phone","CheckOut_PaymentStep":"Payment","Price":"Price","CheckOut_PostalCode":"Postal Code","CheckOut_CompleteOrder":"Complete Order","OrderSummaryNew_Subtotal":"Subtotal","ProductDetails_DocumentTab_Owners_Manuals":"Owners Manuals","CheckOut_IAgree":"I agree with the terms and conditions","Component_SiteHeader_ProductsNavigation":"Products Navigation","CheckOut_ShippingStep":"Shipping","CartInc_GrandTotal":"Grand Total","Default":"Default","ProductReview_Heading":"Customer Reviews","Site_Logout":"Logout","MonthsOfYear":"January,February,March,April,May,June,July,August,September,October,November,December","Shipping":"Shipping","CheckOut_AllFieldsRequired":"All fields required","OrderShipment_TrackingNumber":"Tracking Number","OrderView_OrderNumber":"Order Number","CheckOut_POPayment":"P.O. Payment","CheckOut_ShipComplete":"Ship Complete","ProductSearch":"Search Products","Qty":"Qty","ProductDetails_DocumentTab_Type":"Type","Checkout_UseBillingAddress":"Use Billing Address","CheckOut_CCCardType":"Card Type","CartInc_Checkout":"Checkout","QuickOrder":"Quick Order","Header_MyAccount":"My Account","Component_Social_Title":"Connect with CloudBurst","CheckOut_ProceedToPayment":"Proceed To Payment Information","Component_SiteHeader_MyCarts":"My Carts","Save":"Save","Action_CreateWishlist":"Create Wishlist","Component_MiniwishList_NoItems":"You have no items in your wishlist.","Component_SiteHeader_Total":"Total","CheckOut_ShipperRelease":"Shipper Release","Component_MiniCart_Items":"Items","CheckOut_PaymentMethod":"Payment Method","Component_SiteFooter_CloudCrazeHome":"CloudCraze Home","CartInc_Total":"Total","OrderShipment_Carrier":"Carrier","AddtoWishlist":"Add To Wishlist","OrderShipment_DeliveryDate":"Delivery Date","CheckOut_MobileGotoShipping":"Next - Shipping Information","Header_MyLocale":"My Locale:","Attachment_Size_Limit":"Attachment file size limit: 5MB","CheckOut_ShippingMethod":"Shipping Method","AdditionalInfo":"Additional Info","PriceList_Price":"Price","Billing":"Billing","Component_MiniwishList_GotoWishlist":"Go to wishlist","CheckOut_OrderReviewShippingAddress":"Shipping Address","OrderSummaryNew_ShipTo":"Ship to","CheckOut_MobileGotoBilling":"Next - Billing Information","ProductReview_Outof":"out of","Cancel":"Cancel","CheckOut_POGuidingText":"Please ensure that your PO includes the Name and address of suggested vendor, Ship to Address Bill to Address, Date of Order, and the department is responsible for paying the vendor.","Checkout_Billing":"Billing","CartInc_Subtotal":"Subtotal","Site_Powered_By":"Powered By","CheckOut_OrderReview":"Order Review","OrderConfirmation_GuidingText":"We recommend you print this page for your records.<p/>","OrderSummaryNew_Totals":"Totals","Continue":"Continue","BillTo":"Bill to","CartInc_Shipping":"Est Shipping*","Prod_QtyDecrSingle":"-","Component_OrderShippedSummary_Carrier":"Carrier:","UserInfo_AddressBook":"+ Address Book","ProductReview_Ques2":"2. Please enter a title for your review?","ProductReview_Ques3":"3. Please enter your review","OrderConfirmation_GuidingText2":"Please email <a href=\"\"mailto:defaultstore@cloucraze.com\"\">defaultstore@cloucraze.com</a> or call us at 800 800 8000 if you need any further assistance. \n<p/> <p/> \nThank you for your business!\"","OrderConfirmation_GuidingText3":"<p> </p>","CheckOut_AddNewBilling":"Add New Billing Address","ProductReview_Ques1":"1. How do you rate this item?","CheckOut_Review":"Review","CheckOut_ZipCode":"Zip Code","IncludedItems":"Included Items","CheckOut_Country":"Country","Component_SiteHeader_Submit":"Submit","CheckOut_BuyerInformation":"Buyer Information","Attachment_Action":"Attach","CheckOut_OrderReviewGuidingText":"<p> </p>","CheckOut_ShippingGuidingText":"All orders placed on Monday through Friday before noon will be shipped out the following business day\r\nAll orders placed on Saturday or Sunday will be shipped out the following Monday","MyAccount_AccountGroup":"Account Group","CategoryTree_Categories":"Categories","CheckOut_MobileGotoShipDetails":"Next - Shipping Details","CheckOut_ShipmentInformation":"Shipment Information","CartInc_Qty":"Qty","CheckOut_ShipmentPaymentInfo":"Payment Info","CheckOut_UnitPrice":"Unit Price","ProductDetails_DocumentTab_Datasheets":"Datasheets","CartInc_SKU":"SKU:","OrderView_ShippingDetails":"Shipping Details","CheckOut_InfoStep":"User Information","Component_SiteHeader_MyOrders":"My Orders","MyOrdersInc_Status":"Status","CheckOut_Pallet Details":"Pallet Details","CheckOut_MobileGotoReview":"Next - Order Review","CheckOut_OrderCompleteLabel":"Order Complete","Cancel_Prompt":"Are you sure you want to perform a Cancel?","CheckOut_PurchaseOrderGuideText":"An invoice will be sent to your billing address reference in the Purchase Order number you provide.","Component_SiteHeader_SignIn":"Sign In","CheckOut_TermsAndConditionsAccept":"I accept the below terms and conditions.","Header_MyCart":"My Cart","CheckOut_Continue":"Continue","ProductReview_HelpfulQuestion":"Was this review helpful to you?","ProductsInc_Previous":"&lt;Prev","ProductDetails_DocumentTab_Sales_Brochures":"Sales Brochures","OrderSummaryNew_OrderCompleted":"Your order is completed!","OrderShipment_Track":"Track","CartInc_Price":"Price","CheckOut_Email":"Email","CheckOut_ContractId":"Contract Id","CheckOut_EstimatedShipping":"Estimated Shipping Cost","CheckOut_ShippingAddress":"Shipping Address **","Component_SiteHeader_AddressBook":"Address Book","Header_Login":"Login","CheckOut_Shipping":"Shipping","Component_SiteHeader_Account":"Account","CheckOut_PaymentGuidingText":"ChangeMe","SKU":"SKU","TwoColumnTemplate_CategoryNavigation":"Categories","Component_SiteHeader_MyCart":"My Cart","CheckOut_RequireSignature":"Require Signature","Component_SiteHeader_Logout":"Logout","CheckOut_NextOrderReview":"Next - Order Review","CheckOut_CCExpDate":"Exp Date","Component_MiniCart_Item":"item","OrderSummaryNew_Total":"Total","MyAccount_Phone":"Phone","Component_SiteFooter_AboutUS":"About US","CheckOut_ShipCompleted":"Yes","CheckOut_Order":"Order","Checkout_OrderReview_GuidingText":"Click submit","CheckOut_Selected":"Selected","CheckOut_BillingAddress":"Billing Address","CheckOut_ShippingAndBilling":"Shipping and Billing Information","OrderConfirmation_Title":"Order Complete","CheckOut_Select":"Select","Title_Promotion":"Promotions","CheckOut_MobileGotoPayment":"Proceed To Payment Information","CheckOut_LastName":"Last Name","CheckOut_BusinessAddress":"Business Address","CheckOut_CreditCardPayment":"Credit Card Payment","DaysOfWeek":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","CheckOut_RequestedDate":"Requested Date","Component_SiteFooter_ContactUS":"Contact Us","Prod_QtyIncrSingle":"+","Label.OrderSummaryNew_PlaceHolder_Header":"Placeholder Header","Title_ProductSearch":"Product Search","CheckOut_edit":"Edit","OrderShipment_ShipmentMethod":"Shipment Method","OrderSummaryNew_OrderItems":"Order Items","CartInc_Coupon":"Coupon","Component_SiteHeader_BackLogin":"Back to Login","OrderSummaryNew_OrderNumber":"Order Number","YouSave":"You Save","BreadCrumbInc_Home":"Home","Date_Format":"n/j/Y","CheckOut_PaymentType":"Payment Type","QuickOrder_AddMore":"Add More","ProductDetails_UnitOfMeasure":"Unit Of Measure","ProductDetails_DocumentTab_Safety_Documents":"Safety Documents","CartInc_Surcharge":"Surcharge","Component_OrderShippedSummary_TrackingNumber":"Tracking Number:","Component_MiniCart_Subtotal":"Cart subtotal","ProductsInc_MiscDetails":"Details","CartDetails":"Cart Details","OrderShipment_ShipmentDate":"Shipment Date","Main_Navigation":"Main Navigation","CheckOut_TermsAndConditions":"Terms and Conditions","ShippingPaymentInformation":"Shipping and Payment Information","CheckOut_AcceptAndProceed":"Accept Terms and Proceed","CheckOut_ShippingNotes":"Shipping Notes","CheckOut_Notes":"Notes","Header_MyWishlists":"My Wishlists","OrderSummaryNew_PlacedOrder":"{0} placed an order. Current order status is: {1}.","Component_SiteHeader_MyAccount":"My Account","Checkout_RequestedDeliveryDt":"Requested Delivery Date","Component_SiteFooter_ViewDemo":"View Cloud-Craze Demo","OrderLineCommentLabel":"Comments:"};
+    CCRZ.pagevars.pageConfig = _.extend({"js.100":"js/checkout.js","pl.type":"Basic","cwl.piname":"cc_EmptyPage","payship.useremotetax":"TRUE","cwl.enabled":"FALSE","pd.dspllistprc":"TRUE","mc.prdname":"Test","plp.dsplavlbmsg":"TRUE","so.showreqdate":"TRUE","csw.enabled":"FALSE","pd.dsplimage":"TRUE","wl.dspluom":"TRUE","pl.dspllistprc":"TRUE","pl.dsplshortdesc":"TRUE","pm.usepi":"FALSE","pd.dsplqty":"TRUE","c.dsplcomments":"TRUE","c.dspladdtlsku":"TRUE","pl.dspladdtinfo":"TRUE","plp.dspluom":"TRUE","wl.dspladdtlsku":"TRUE","pd.dsplsdesc":"TRUE","pd.dsplsvprc":"TRUE","pl.dsplpgno":"TRUE","pm.enabled":"TRUE","qo.piname":"cc_store_QuickOrderWidgetIncl","pd.dspladdcart":"TRUE","or.shwordnum":"TRUE","h.phonelogo":"images/phone_logo.png","wl.dspladdtlshortdesc":"TRUE","mc.nodspl":null,"pd.dsplavlb":"FALSE","pm.piname":null,"pl.dsplpgn":"TRUE","qo.dsplinst":"TRUE","pl.dsplsvprc":"TRUE","c.dsplavlbmsg":"TRUE","pl.enabled":"TRUE","pd.dsplrdimg":"TRUE","qo.noline":"TRUE","pd.dspladdwish":"TRUE","pm.dspllink":"TRUE","h.usepi":"FALSE","so.dsplshipcomplete":"TRUE","h.enabled":"TRUE","c.dsplavlb":"TRUE","c.dspladdtlshortdesc":"TRUE","pl.dspladdtlshortdesc":"TRUE","mc.dsplmsg":null,"bib.piname":"cc_EmptyPage","c.enablelinecomments":"TRUE","pl.pgoptions":"20","pm.dsplimg":"TRUE","bie.enabled":"TRUE","pl.dsplspec":"TRUE","pl.dspladdcart":"TRUE","h.piname":"cc_store_HeaderIncl","c.dsplavlbnumber":"TRUE","plp.dsplavlbnumber":"TRUE","pd.dsplcd1":"TRUE","pd.dsplcd2":"FALSE","pd.dsplcd3":"TRUE","pd.dsplcd4":"TRUE","pd.dsplcd5":"TRUE","pm.dsplmsg":"TRUE","mc.enabled":"TRUE","so.dsplshipguidingtext":"TRUE","mc.title":"Test","or.showattach":"TRUE","pl.dsplpgitm":"TRUE","pd.dsplrdprice":"TRUE","pd.dsplavlbnumber":"TRUE","mc.usepi":"FALSE","pd.dsplrdaddcart":"FALSE","wl.dsplsvprc":"TRUE","pd.dsplavlbmsg":"TRUE","h.displlocale":"FALSE","pl.dsplsubcat":"TRUE","pl.dsplsku":"TRUE","ct.piname":"cc_store_LeftNavIncl","pd.dsplrddesc":"TRUE","so.dspladdrcompany":"TRUE","plp.dsplavail":"TRUE","wl.dspladdcart":"TRUE","plp.shwadd":"TRUE","qo.dspladdcart":"TRUE","pd.dspluom":"FALSE","c.dspladdtinfo":"TRUE","or.showtotalsurcharge":"FALSE","bie.piname":"cc_EmptyPage","or.showreviewtext":"TRUE","mc.dsplimg":"ppp","css.090":"css/bootstrap.css","pd.dsplprc":"TRUE","so.gatedderr":"TRUE","pl.dspladdtlsku":"TRUE","pd.dsplrdtitle":"TRUE","wl.dsplprc":"TRUE","qo.enabled":"TRUE","pd.dsplviewdtl":"TRUE","fp.dsplprc":"TRUE","or.shschrg":"FALSE","css.105":"css/fonts.css","mc.dsplitemamt":null,"css.102":"css/bootstrap_overwrite.css","ga.enabled":"TRUE","pl.dsplprc":"TRUE","pl.dsplavlb":"TRUE","ct.usepi":"FALSE","css.100":"css/styles.css","c.dsplavail":"TRUE","qo.usepi":"FALSE","dspl.sdesc":"TRUE","mc.piname":null,"so.dsplshipnotes":"TRUE","bc.piname":null,"pd.dsplld":"TRUE","pl.dspluom":"TRUE","pd.dsplsku":"TRUE","bib.enabled":"FALSE","css.010":"css/jquery-ui-theme/jquery-ui-custom.css","pl.title":"Title","so.dspladdrname":"TRUE","bc.enabled":"TRUE","wl.dspladdtinfo":"TRUE","pd.dspltype":"TRUE","so.dsplshipoptions":"TRUE","h.logo":"images/homepage_header_graphic.png"},{
+     get: function(srchVar){
+      return (this[(srchVar||'').toLowerCase()]||'');
+     },
+     isTrue: function(srchVar){
+      var val = this.get(srchVar);
+      return (true===val)||('true'===val.toLowerCase());
+     }
+    });
+    CCRZ.pagevars.storeSettings = {"attributes":{"type":"ccrz__E_StorefrontSettings__c","url":"/services/data/v29.0/sobjects/ccrz__E_StorefrontSettings__c/a1Yi0000000YDnfEAG"},"ccrz__SearchRank_inProdNum__c":100.0,"ccrz__FeaturedProductsEnabled__c":true,"ccrz__AutoCalcPriceAdjust__c":false,"ccrz__MyWishlistEnabled__c":false,"ccrz__RedirectToCartPage__c":true,"LastModifiedDate":"2013-10-15T19:41:59.000+0000","ccrz__Twitter_Handle__c":"CloudBurstStore","ccrz__Display_Cart_Coupon__c":true,"ccrz__BlockCartOnConfigError__c":true,"ccrz__Display_Cart_Comments__c":false,"ccrz__Allow_Anonymous_Browsing__c":true,"ccrz__OrderConfirmationCCAddress__c":"luxbev@iburton.com","ccrz__Allow_Sort_By_Price__c":true,"ccrz__ShowBreadcrumbOnLoginReg__c":true,"ccrz__Display_Quantity_No_Invoice__c":false,"ccrz__Customer_Portal_Account_Name__c":"PortalAccount","ccrz__Facebook_ID__c":"CloudBurstDirect","CreatedById":"005i0000001iyq7AAA","IsDeleted":false,"ccrz__DisplayCurrencyOption__c":false,"ccrz__DisplayAmountColumnOnMyAccountDashboard__c":true,"ccrz__UseUPSShipping__c":true,"ccrz__MaxShippingWeightPerProduct__c":100.0,"ccrz__Display_Cart_OrderName__c":false,"ccrz__FollowUsEnabled__c":true,"ccrz__SearchRank_ShortDesc__c":50.0,"ccrz__DefaultLocale__c":"en_US","ccrz__DisplayCompanyType__c":false,"ccrz__ContactUsEnabled__c":false,"ccrz__DevMode__c":true,"ccrz__ShowTaglineImage__c":false,"ccrz__ProductSpotlightEnabled__c":true,"SystemModstamp":"2013-10-15T19:41:59.000+0000","ccrz__SearchRank_inDisplayName__c":200.0,"ccrz__Root_Category_ID__c":"111000","ccrz__ShowTaglineImage2__c":false,"ccrz__Display_ProductSpecs__c":false,"ccrz__Paypal_API_Version__c":"1","ccrz__OrderConfirmationEmailTemplate__c":"CC_Order_Confirm","ccrz__Paypal_API_Password__c":"paypal_password","ccrz__MyOrdersEnabled__c":true,"ccrz__eCommerceType__c":"B2B","ccrz__Root_Category_Name__c":"DreamforceDemo","ccrz__ShippingMultiplier__c":1.0,"ccrz__Show_All_Countries__c":true,"ccrz__no_image_product_main__c":"/images/interior/cloudburst_no_image_200.jpg","ccrz__Bitly_ApiKey__c":"R_5c62b1c1143b4a5eb6eb30c14b74c429","CreatedDate":"2013-10-11T19:33:01.000+0000","ccrz__SEO_Title_Site__c":"Fine Wine & Spirits","ccrz__Support_URL__c":"http://www.edlconsulting.com","ccrz__Display_Address_in_My_Account__c":false,"ccrz__SF_Server_URL__c":"http://sfserverurl","ccrz__SEO_Title_Detail__c":"LuxBev Distributors","SetupOwnerId":"00Dc0000003rRmGEAU","ccrz__Display_StudentEnrollment__c":false,"ccrz__Google_Analytics_Account__c":"UA-25372648-1","ccrz__no_image_thumb__c":"/images/interior/cloudburst_no_image_200.jpg","ccrz__PDP_RedirectToCartPage__c":true,"ccrz__Bitly_Login__c":"cloudburstdirect","ccrz__Display_Login_Secondary__c":false,"ccrz__SendConfirmationEmail__c":true,"ccrz__Skip_Tax_Calculation__c":false,"ccrz__Display_MyOrders_on_MyAccounts_Dashboard__c":true,"ccrz__InventoryCheckFlag__c":false,"ccrz__Site_Unsecure_Domain__c":"site.force.com","ccrz__MaxPromotionsPerWidget__c":4.0,"ccrz__Display_BOM__c":false,"ccrz__DefaultLanguage__c":"en_US","CurrencyIsoCode":"USD","ccrz__SEO_Description__c":"SEO Description","ccrz__PromotionsEnabled__c":true,"ccrz__QuickOrderEnabled__c":true,"ccrz__CustomerPortalAcctGroupName__c":"PortalAccount","ccrz__HideMyAccoutProfileEdit__c":true,"ccrz__Quoting_Enabled__c":true,"ccrz__Paypal_API_URL__c":"http://paypaltesturl","Id":"a1Yi0000000YDnfEAG","ccrz__Pricing_Sync_Batch_Size__c":10.0,"ccrz__Display_Cart_Checkout__c":true,"ccrz__SearchRank_ManuName__c":70.0,"ccrz__Paypal_API_Username__c":"paypal_username","ccrz__ReviewSortingCriteria__c":"CreatedTime","ccrz__Display_Pricing__c":true,"ccrz__SearchRank_ExactProductNum__c":700.0,"ccrz__Paypal_Signature__c":"paypal_signature","ccrz__CheckTest__c":true,"ccrz__Edit_Names_in_My_Account__c":false,"ccrz__Currencies__c":"USD","ccrz__Languages__c":"en_US","ccrz__BasePriceList__c":"Enterprise","LastModifiedById":"005i0000001iyq7AAA","ccrz__UseGatingCart__c":true,"ccrz__Site_Secure_Domain__c":"site.secure.force.com","ccrz__DefaultCurrencyCode__c":"USD","Name":"LuxBev","ccrz__Skip_Shipping_Calculation__c":false,"ccrz__SEO_Keywords__c":"SEO Keywords","ccrz__Require_PO_Attachment__c":false,"ccrz__SyncProductsToCloudCraze__c":false,"ccrz__UseFexExShipping__c":false};
+    CCRZ.pagevars.staticResourceMap = {"cloudswarm__jQuery_CSS":"/luxbev/resource/1381422050000/cloudswarm__jQuery_CSS","Banner":"/luxbev/resource/1381422050000/Banner","ccrz__CC_Data2":"/luxbev/resource/1383010279000/ccrz__CC_Data2","ccrz__CC_Theme_CloudBurst":"/luxbev/resource/1381446832000/ccrz__CC_Theme_CloudBurst","Site_CustomerBanner":"/luxbev/resource/1381422050000/Site_CustomerBanner","SiteSamples":"/luxbev/resource/1381434864000/SiteSamples","ccrz__JQuery_Raty":"/luxbev/resource/1381446832000/ccrz__JQuery_Raty","FN__tableDnD":"/luxbev/resource/1381422050000/FN__tableDnD","ccrz__CC_CustomSettings":"/luxbev/resource/1381446832000/ccrz__CC_CustomSettings","BevImages":"/luxbev/resource/1383781126000/BevImages","ccrz__TestLocaleMap":"/luxbev/resource/1381446832000/ccrz__TestLocaleMap","CC_Metal_CustomSettings":"/luxbev/resource/1381463392000/CC_Metal_CustomSettings","ccrz__CC":"/luxbev/resource/1381446832000/ccrz__CC","ccrz__CC_SiteSamples":"/luxbev/resource/1381446832000/ccrz__CC_SiteSamples","ccrz__CC_Backbone":"/luxbev/resource/1381851839000/ccrz__CC_Backbone","ccrz__CC_Theme_Wireframe":"/luxbev/resource/1381446832000/ccrz__CC_Theme_Wireframe","FN__ContactIcon":"/luxbev/resource/1381422050000/FN__ContactIcon","Site_PartnerBanner":"/luxbev/resource/1381422050000/Site_PartnerBanner","GoogleMapsInternational":"/luxbev/resource/1381422050000/GoogleMapsInternational","FN__Distance":"/luxbev/resource/1381422050000/FN__Distance","ccrz__CC_Theme_CloudBurstRD":"/luxbev/resource/1383010280000/ccrz__CC_Theme_CloudBurstRD","OrgCustHomeImage":"/luxbev/resource/1381422050000/OrgCustHomeImage","ccrz__CC_Promos_Wireframe":"/luxbev/resource/1381446832000/ccrz__CC_Promos_Wireframe","ccrz__CC_Flash":"/luxbev/resource/1381446832000/ccrz__CC_Flash","CC_Theme_LuxBev":"/luxbev/resource/1383864572000/CC_Theme_LuxBev","ccrz__RateIt":"/luxbev/resource/1381446832000/ccrz__RateIt","ccrz__CC_CategoryImages":"/luxbev/resource/1381526517000/ccrz__CC_CategoryImages","cloudswarm__jQuery_JS":"/luxbev/resource/1381422050000/cloudswarm__jQuery_JS","ccrz__CC_Flex_ProductMgr":"/luxbev/resource/1381446832000/ccrz__CC_Flex_ProductMgr","FN__fixedTHeader":"/luxbev/resource/1381422050000/FN__fixedTHeader","JQueryDemo":"/luxbev/resource/1382380553000/JQueryDemo","FN__Plus":"/luxbev/resource/1381422050000/FN__Plus","ccrz__CC_Static2_Original":"/luxbev/resource/1381446832000/ccrz__CC_Static2_Original","ccrz__CC_JS":"/luxbev/resource/1381446832000/ccrz__CC_JS","FN__GPins":"/luxbev/resource/1381422050000/FN__GPins","CustomerPortalHomeImage":"/luxbev/resource/1381422050000/CustomerPortalHomeImage","FN__AccountIcon":"/luxbev/resource/1381422050000/FN__AccountIcon","FN__jqTable":"/luxbev/resource/1381422050000/FN__jqTable","ccrz__CC_PageLabels":"/luxbev/resource/1381446832000/ccrz__CC_PageLabels","FN__MyRecords":"/luxbev/resource/1381422050000/FN__MyRecords","FN__DrivingDirections":"/luxbev/resource/1381422050000/FN__DrivingDirections","ccrz__CC_CloudBurst":"/luxbev/resource/1381446832000/ccrz__CC_CloudBurst","ccrz__CC_Static2":"/luxbev/resource/1381446832000/ccrz__CC_Static2","ccrz__CC_Promos_CloudBurst":"/luxbev/resource/1381446832000/ccrz__CC_Promos_CloudBurst","FN__JQ":"/luxbev/resource/1381422050000/FN__JQ","ccrz__CC_Javascript_Framework":"/luxbev/resource/1383010280000/ccrz__CC_Javascript_Framework","cloudswarm__jQuery_UI_JS":"/luxbev/resource/1381422050000/cloudswarm__jQuery_UI_JS","ccrz__CC_Bootstrap":"/luxbev/resource/1381446832000/ccrz__CC_Bootstrap","ccrz__CC_Data":"/luxbev/resource/1381446832000/ccrz__CC_Data","cloudswarm__jQuery_Multiselect_JS":"/luxbev/resource/1381422050000/cloudswarm__jQuery_Multiselect_JS","FN__LeadIcon":"/luxbev/resource/1381422050000/FN__LeadIcon","cloudswarm__jQuery_scrollTo_JS":"/luxbev/resource/1381422050000/cloudswarm__jQuery_scrollTo_JS","ccrz__backbone_models":"/luxbev/resource/1381526518000/ccrz__backbone_models","ccrz__CC_OOTBImages":"/luxbev/resource/1381446832000/ccrz__CC_OOTBImages","cloudswarm__jQuery_Multiselect_CSS":"/luxbev/resource/1381422050000/cloudswarm__jQuery_Multiselect_CSS"};
+    CCRZ.pagevars.namespace = "ccrz.";
+    CCRZ.pagevars.storeName = "LuxBev";
+    CCRZ.pagevars.portalUserId = "";
+    var getCSRQueryString = function() {
+     var csrQueryString = '';
+     if(CCRZ.pagevars.portalUserId != null) {
+      csrQueryString = '&isCSRFlow=true&portalUser=' + CCRZ.pagevars.portalUserId;
+     }
+     if(CCRZ.pagevars.storeName != null) {
+      csrQueryString += '&store=' + CCRZ.pagevars.storeName;
+     }
+     return csrQueryString;
+    }
+
+    CCRZ.pagevars.currencyData = _.extend({"storefront":"DefaultStore","displayFormat":"{0}{1}","decimalPoints":2.0,"currencySymbol":"$","currencyName":"USD","currencyFullName":"US Dollars","charThousandsPoint":"comma","charDecimalPoint":"dot"}, {
+     symbol: {comma:',', dot:'.', ws:' ', sq:"'"},
+     initialize : function(){
+      this.charDecimalPoint = this.symbol[this.charDecimalPoint];
+      this.charThousandsPoint = this.symbol[this.charThousandsPoint];
+      var idx1 = this.displayFormat.indexOf('{0}');
+      var idx2 = this.displayFormat.indexOf('{1}');
+      this.prefix = true;
+      if(idx1 != -1 && idx2 != -1 && idx2 < idx1) {
+       this.prefix = false;
+      }
+      return this;
+     }
+    }).initialize();
+    //CCRZ.pagevars.currencyData = CCRZ.CurrencyData.initialize();
+    console.debug(CCRZ.pagevars.currencyData);
+    /*
+    CCRZ.pagevars.currencyData = {"storefront":"DefaultStore","displayFormat":"{0}{1}","decimalPoints":2.0,"currencySymbol":"$","currencyName":"USD","currencyFullName":"US Dollars","charThousandsPoint":"comma","charDecimalPoint":"dot"};
+    var symbol={comma:',', dot:'.', ws:' ', sq:"'"};
+    CCRZ.pagevars.currencyData.charDecimalPoint = symbol[CCRZ.pagevars.currencyData.charDecimalPoint];
+    CCRZ.pagevars.currencyData.charThousandsPoint = symbol[CCRZ.pagevars.currencyData.charThousandsPoint];
+    var idx1 = CCRZ.pagevars.currencyData.displayFormat.indexOf('{0}');
+    var idx2 = CCRZ.pagevars.currencyData.displayFormat.indexOf('{1}');
+    CCRZ.pagevars.currencyData.prefix = true;
+    if(idx1 != -1 && idx2 != -1 && idx2 < idx1) {
+     CCRZ.pagevars.currencyData.prefix = false;
+    }
+    */
+    //CCRZ.console.log('currency data=' + CCRZ.pagevars.currencyData);
+    CCRZ.pagevars.userLocale = "en_US";
+   </script>
+<form id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:phoneLoginForm" name="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:phoneLoginForm" method="post" action="https://luxbev-luxbev.cs14.force.com/luxbev/ccrz__CheckOutNew?refURL=https%3A%2F%2Fluxbev-luxbev.cs14.force.com%2Fluxbev%2Fccrz__Cart%3FcartId%3D7c1155a8-a1e0-44f7-84c8-989c5d7880f1%26viewState%3DviewAccount%26isCSRFlow%3Dtrue%26portalUser%3D%26store%3DLuxBev" class="phoneLoginForm" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:phoneLoginForm" value="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:phoneLoginForm">
+
+<script type="text/javascript" language="Javascript">function dpf(f) {var adp = f.adp;if (adp != null) {for (var i = 0;i < adp.length;i++) {adp[i].parentNode.removeChild(adp[i]);}}};function apf(f, pvp) {var adp = new Array();f.adp = adp;var ps = pvp.split(',');for (var i = 0,ii = 0;i < ps.length;i++,ii++) {var p = document.createElement("input");p.type = "hidden";p.name = ps[i];p.value = ps[i + 1];f.appendChild(p);adp[ii] = p;i += 1;}};function jsfcljs(f, pvp, t) {apf(f, pvp);var ft = f.target;if (t) {f.target = t;}f.submit();f.target = ft;dpf(f);};</script>
+<script>function login(){ SfdcApp.Visualforce.VSManager.vfPrepareForms(["CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:phoneLoginForm"]); if(typeof jsfcljs == 'function'){jsfcljs(document.forms['CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:phoneLoginForm'],'CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:phoneLoginForm:j_id14,CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:phoneLoginForm:j_id14','');}return false }</script><input id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:phoneLoginForm:hdnUsername" type="hidden" name="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:phoneLoginForm:hdnUsername"><input id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:phoneLoginForm:hdnPassword" type="hidden" name="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:phoneLoginForm:hdnPassword"><div id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:phoneLoginForm:j_id72"></div>
+</form><span id="ajax-view-state-page-container" style="display: none"><span id="ajax-view-state" style="display: none"><input type="hidden" id="com.salesforce.visualforce.ViewState" name="com.salesforce.visualforce.ViewState" value="a_L95NeUKCBQde2FYfVL8Ze6Vx1P8="><input type="hidden" id="com.salesforce.visualforce.ViewStateVersion" name="com.salesforce.visualforce.ViewStateVersion" value="201311072103360284"><input type="hidden" id="com.salesforce.visualforce.ViewStateMAC" name="com.salesforce.visualforce.ViewStateMAC" value="AKiG25S2iM7vp/EEs/MaQlLh3ylO"><input type="hidden" id="com.salesforce.visualforce.ViewStateCSRF" name="com.salesforce.visualforce.ViewStateCSRF" value="ZolZBlkOH7rc3OrWAMh2UMqgyo0Takc8eNpvGyBV7.p6QFiNAGX5Bgb.CK04fO8r3maufcVrunJd5p6Wl.oq_ofpO_IY7JTnBUOQ5OMoILltcI61YEXl4NX3CeaFWrsQSMTWfG15ROSW93vytJH_CPKSmsM="></span></span><span id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:j_id15">
+	<script src="/luxbev/resource/1381851839000/ccrz__CC_Backbone"></script>
+	<script src="/luxbev/resource/1381526518000/ccrz__backbone_models"></script>
+	<script>
+  CCRZ.remoteAction.fetchCart = 'ccrz.cc_RemoteActionController.fetchCart';
+  CCRZ.remoteAction.fetchCartExtension = 'ccrz.cc_RemoteActionController.fetchCartExtension';
+  CCRZ.remoteAction.saveCart = 'ccrz.cc_RemoteActionController.saveCart';
+  CCRZ.remoteAction.fetchExtPricing = 'ccrz.cc_RemoteActionController.fetchExtPricing';
+  CCRZ.remoteAction.removeCartItem = 'ccrz.cc_RemoteActionController.removeCartItem';
+  CCRZ.remoteAction.getCartTotal = 'ccrz.cc_RemoteActionController.getCartTotal';
+  CCRZ.remoteAction.addItemToCart = 'ccrz.cc_RemoteActionController.addItemToCart';
+  CCRZ.remoteAction.addBulkToCart = 'ccrz.cc_RemoteActionController.addBulkToCart';
+  CCRZ.remoteAction.getCurrentUser = 'ccrz.cc_RemoteActionController.getCurrentUser';
+  CCRZ.remoteAction.getHeaderInfo = 'ccrz.cc_RemoteActionController.getHeaderInfo';
+  CCRZ.remoteAction.getCountries = 'ccrz.cc_RemoteActionController.getCountries';
+  CCRZ.remoteAction.getStates = 'ccrz.cc_RemoteActionController.getStates';
+ </script></span>
+			<div class="container visible-phone phoneLayout">
+
+				<div class="loadingContainer ">
+					<div class="loadingOverlay overlay"></div>
+					<div class="circleContainer overlay" style="top: 115.4px; left: 150.6px;">
+						<div class="circle"></div>
+						<div class="circle1"></div>
+					</div>
+				</div>
+
+				<div class="header_menu" id="menuHeader"></div>
+				<div class="phone_header" id="accountHeader"></div>
+				<div class="container-fluid">
+					<div class="row-fluid">
+						<div class="span3">
+							<div class="left_column" id="productSearch"></div>
+							<div id="breadcrumb"></div>
+						</div>
+					</div>
+				</div>
+				<div class="span6">
+					<div class="center_column phone_center_column">
+						<div class="phone_center_top"></div>
+						<div class="phone_center_mid"></div>
+						<div class="phone_center_bot"></div>
+					</div>
+				</div>
+				<div class="row-fluid clear">
+					<div class="span12">
+						<div class="footer footerPhone"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="container hidden-phone deskLayout">
+
+				<div class="row-fluid">
+					<div class="span12 header">
+ <div class="top_navigation">
+  <div class="search_form">
+  <div class="search_form">
+   &nbsp;&nbsp;<input name="" id="searchText" type="text" value="Search Products" onfocus="myFocus(this);" onblur="myBlur(this);">
+   <input id="doSearch" class="search_button" type="Submit" value="&gt;&gt;" style="margin-left:0px;height:22px;margin-top:-.5px;">
+  </div>
+</div>
+  <p>
+   <span>
+    <span>
+     <a class="acct" id="goToAccount" href="#">My Account</a> |
+    </span>
+
+
+    <span>
+     <a id="cartHeader" class="chead cartHeaderLink" href="#">
+  My Cart: 1 item,&nbsp;
+  <span class="cartHeadInfo">
+   <span class="cartHeadTot">
+    $731.88
+   </span>
+  </span>
+</a> |
+    </span>
+    <span class="loginoutsec">
+
+
+   <a href="#logout" class="doLogout">Logout John RegTester</a>
+
+
+</span>
+   </span>
+  </p>
+ </div>
+
+ <div class="logo_tagline hidden-phone">
+  <div class="logo">
+   <a href="#" id="logoUrl">
+    <img src="images/homepage_header_graphic.png">
+   </a>
+  </div>
+ </div>
+</div>
+				</div>
+				<div class="menu_container">
+ <div class="navbar main_navigation_container">
+  <div class="navbar-inner">
+   <div class="container">
+    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+    </button>
+    <a class="brand_phone visible-phone" id="phoneLogo" href="#"><img src="images/phone_logo.png" width="200" height="39"></a>
+    <a class="brand visible-tablet">Main Navigation</a>
+    <div class="nav-collapse collapse">
+     <ul class="nav">
+
+
+
+
+
+         <li><a href="/luxbev/ccrz__HomePage">Home</a></li>
+
+
+
+
+
+
+
+
+
+         <li><a href="javascript:void(0);">About</a></li>
+
+
+
+
+        <li class="dropdown">
+         <a data-toggle="dropdown" class="dropdown-toggle" href="">Our Products <b class="caret"></b></a>
+         <ul class="dropdown-menu">
+
+
+
+             <li><a class="category" href="javascript:void(0);" data-id="a0Ti0000003gASyEAM">Wine</a></li>
+
+
+
+
+
+
+
+
+             <li><a class="category" href="javascript:void(0);" data-id="a0Ti0000003gAR8EAM">Spirits</a></li>
+
+
+
+
+
+
+         </ul>
+        </li>
+
+
+
+
+
+
+
+         <li><a href="javascript:void(0);">Locations</a></li>
+
+
+
+
+        <li class="dropdown">
+         <a data-toggle="dropdown" class="dropdown-toggle" href="">Communities <b class="caret"></b></a>
+         <ul class="dropdown-menu">
+
+
+
+
+
+             <li><a href="/luxbev/ccrz__HomePage?follow=yep">Browse and Join Communities</a></li>
+
+
+
+
+
+
+
+
+             <li><a href="/luxbev/ccrz__HomePage?chatterId=0F9i00000000Kc1">Craft Beers</a></li>
+
+
+
+
+
+
+
+
+             <li><a href="/luxbev/ccrz__HomePage?chatterId=0F9i00000000KoF">Event Planners</a></li>
+
+
+
+
+
+
+
+
+             <li><a href="/luxbev/ccrz__HomePage?chatterId=0F9i00000000Kbw">Vintage Wine Collectors</a></li>
+
+
+
+
+
+
+
+
+             <li><a href="/luxbev/ccrz__HomePage?chatterId=0F9c00000000DPY">PartyBevCo Collaboration</a></li>
+
+
+
+
+
+
+
+
+             <li><a href="/luxbev/ccrz__HomePage?chatterId=me">My Collaboration</a></li>
+
+
+
+
+         </ul>
+        </li>
+
+
+
+
+
+
+
+         <li><a href="javascript:void(0);">Contact Us</a></li>
+
+
+
+     </ul>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+				<div class="home_slider">
+
+
+
+
+   <img src="en_US/images/order_review_header.png">
+
+
+ </div>
+				<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="content_container">
+						<div class="span12">
+							<div class="main_content_single_column_container">
+
+           <div class="checkoutContent">
+  <div class="margin_form">
+   <fieldset>
+    <legend>Payment Information</legend>
+    <div class="alert alert-error messagingSection-Error" style="display: none"></div>
+    <div class="alert alert-info messagingSection-Info" style="display: none"></div>
+    <div class="alert alert-warning messagingSection-Warning" style="display: none"></div>
+    <div class="shipping_payment">
+     <div id="accordion" class="accordion clear">
+
+       <div class="accordion-group payment-info-po">
+        <div class="accordion-heading">
+         <a href="#collapsepo" data-parent="#accordion" data-toggle="collapse" class="large accordion-toggle">PO Number</a>
+        </div>
+        <div class="accordion-body   collapse" id="collapsepo" style="height: 0px;">
+         <div class="accordion-inner">
+
+
+  <form id="poPaymentForm">
+   <p>Purchase Order Number:<br>
+    <input type="text" class="po" name="accountNumber">
+    <input type="hidden" name="paymentMethod" value="PO Number">
+   </p>
+
+    <p class="" style="display: none;">
+     <input type="button" value="Add Attachments" onclick="javascript:CCRZ.showAttachmentSection();">
+    </p>
+
+   <p>Please ensure that your PO includes the Name and address of suggested vendor, Ship to Address Bill to Address, Date of Order, and the department is responsible for paying the vendor.</p>
+   <p class="link_button">
+    <input class="large_fixed_button right proceed processPayment" data-id="poPaymentForm" type="button" value="Complete Order" alt="Complete Order">
+    <br>
+   </p>
+  </form>
+
+
+
+
+         </div>
+        </div>
+       </div>
+
+       <div class="accordion-group payment-info-Contract">
+        <div class="accordion-heading">
+         <a href="#collapseContract" data-parent="#accordion" data-toggle="collapse" class="large accordion-toggle">Contract</a>
+        </div>
+        <div class="accordion-body   in collapse" id="collapseContract" style="height: auto;">
+         <div class="accordion-inner">
+
+
+
+  <form id="contractPaymentForm">
+   <p>Contract Id:<br>
+    <input type="text" class="po" name="accountNumber">
+    <input type="hidden" name="paymentMethod" value="Contract">
+   </p>
+   <p>An invoice will be sent to the billing address referenced in the Contract Id you provide.</p>
+   <p class="link_button">
+    <input class="large_fixed_button right proceed processPayment" data-id="contractPaymentForm" type="button" value="Complete Order" alt="Complete Order">
+    <br>
+   </p>
+  </form>
+
+
+
+         </div>
+        </div>
+       </div>
+
+     </div>
+     <p><label></label></p><p> </p><p></p>
+    </div>
+   </fieldset>
+  </div>
+ </div><span id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:j_id40"></span><span id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:j_id41">
+
+
+<script id="productSearchTemplatePhone" type="text/template">
+   <div class="left_column">
+    <div class="product_search_container">
+     <h2 class="title">{{pageLabelMap 'Title_ProductSearch'}}</h2>
+     <div class="product_search">
+      <input name="" id="searchText" type="text" value="{{pageLabelMap 'ProductSearch'}}" onfocus="myFocus(this);" onblur="myBlur(this);"/>
+      <input name="" id="doSearch" class="search_button" type="Submit" value="&#62;&#62;" id="doSearch" />
+     </div>
+    </div>
+   </div>
+</script>
+<script id="productSearchTemplateDesktop" type="text/template">
+  <div class="search_form">
+   &#160;&#160;<input name="" id="searchText" type="text" value="{{pageLabelMap 'ProductSearch'}}" onfocus="myFocus(this);" onblur="myBlur(this);"/>
+   <input id="doSearch" class="search_button" type="Submit" value="&#62;&#62;" style="margin-left:0px;height:22px;margin-top:-.5px;"/>
+  </div>
+</script>
+<script>
+ jQuery(function($) {
+
+  /**
+   * Models
+   */
+  CCRZ.models.productSearchModel = Backbone.Model.extend();
+
+  /**
+   * Views
+   */
+
+  CCRZ.views.productSearchView = CCRZ.CloudCrazeView.extend({
+   templateDesktop : CCRZ.util.template('productSearchTemplateDesktop'),
+   templatePhone : CCRZ.util.template('productSearchTemplatePhone'),
+   events:{
+    "click #doSearch" : "doSearch",
+    "keyup #searchText" : "enterPress"
+   },
+   init : function(){
+    this.render();
+   },
+   renderDesktop : function(){
+    this.$el.html('');
+    this.setElement($(".search_form"));
+    this.$el.html(this.templateDesktop(this.model.toJSON()));
+   },
+   renderPhone : function(){
+    this.$el.html('');
+    this.setElement($("#productSearch"));
+    this.$el.html(this.templatePhone(this.model.toJSON()));
+   },
+   enterPress : function(e){
+    var code = e.which; // recommended to use e.which, it's normalized across browsers
+       if(code==13)e.preventDefault();
+       if(code==13||code==186){
+           this.doSearch(e);
+       }
+   },
+   doSearch : function(event){
+    var searchText = $("#searchText").val();
+
+    var URL = this.model.get("defaults").page + '?cartID='+ this.model.get("defaults").currentCartId + '&operation=quickSearch&searchText='+searchText;
+    window.location.href = URL;
+   }
+  });
+
+  CCRZ.productSearchModel = new CCRZ.models.productSearchModel({
+   defaults : {
+    page : "/luxbev/ccrz__Products",
+    currentCartId: CCRZ.pagevars.currentCartID
+   }
+  });
+
+  CCRZ.productSearchView = new CCRZ.views.productSearchView({
+   model : CCRZ.productSearchModel
+  });
+ });
+
+</script></span>
+							</div>
+						</div>
+					</div>
+				</div>
+					<div class="row-fluid clear">
+						<div class="span12 footerBrowser">
+  <div class="footer">
+   <p>
+
+     <a href="http://www.edlconsulting.com/" target="_blank">EDL Consulting</a>
+
+     <a href="http://www.cloud-craze.com/" target="_blank">CloudCraze Home</a>
+
+     <a href="http://www.cloud-craze.com/product_info.php" target="_blank">Product Information</a>
+
+     <a href="http://www.cloud-craze.com/request_demo.php" target="_blank">View Cloud-Craze Demo</a>
+
+     <a href="http://www.edlconsulting.com/about.php" target="_blank">About US</a>
+
+     <a href="http://www.edlconsulting.com/search.php" target="_blank">Search</a>
+
+   </p>
+  </div>
+ </div>
+					</div>
+				</div>
+			</div>
+            <script>
+                CCRZ.remoteAction.COfetchCart = 'ccrz.cc_ctrl_CheckoutRD.fetchCart';
+                CCRZ.remoteAction.COsave = 'ccrz.cc_ctrl_CheckoutRD.save';
+                CCRZ.remoteAction.COrefreshPricing = 'ccrz.cc_ctrl_CheckoutRD.refreshPricing';
+                CCRZ.remoteAction.COfetchPaymentSettings = 'ccrz.cc_ctrl_CheckoutRD.fetchPaymentSettings';
+                CCRZ.remoteAction.COplaceOrder = 'ccrz.cc_ctrl_CheckoutRD.placeOrder';
+                CCRZ.remoteAction.COfetchShippingMethods = 'ccrz.cc_ctrl_CheckoutRD.fetchShippingMethods';
+                CCRZ.remoteAction.COfetchAvailableDeliveryDates = 'ccrz.cc_ctrl_CheckoutRD.fetchAvailableDeliveryDates';
+                CCRZ.remoteAction.COfetchTax = 'ccrz.cc_ctrl_CheckoutRD.fetchTax';
+                CCRZ.remoteAction.COfetchAddressBooks = 'ccrz.cc_ctrl_CheckoutRD.fetchAddressBooks';
+
+                CCRZ.remoting.remoteBind('cc_ctrl_CheckoutRD',[
+                    {m:'fetchCart',r:'ccrz.cc_ctrl_CheckoutRD.fetchCart'},
+                    {m:'save',r:'ccrz.cc_ctrl_CheckoutRD.save'},
+                    {m:'fetchPaymentSettings',r:'ccrz.cc_ctrl_CheckoutRD.fetchPaymentSettings'},
+                    {m:'placeOrder',r:'ccrz.cc_ctrl_CheckoutRD.placeOrder'},
+                    {m:'fetchCart',r:'ccrz.cc_ctrl_CheckoutRD.fetchCart'},
+                    {m:'fetchShippingMethods',r:'ccrz.cc_ctrl_CheckoutRD.fetchShippingMethods'},
+                    {m:'fetchAvailableDeliveryDates',r:'ccrz.cc_ctrl_CheckoutRD.fetchAvailableDeliveryDates'},
+                    {m:'fetchTax',r:'ccrz.cc_ctrl_CheckoutRD.fetchTax'},
+                    {m:'fetchAddressBooks',r:'ccrz.cc_ctrl_CheckoutRD.fetchAddressBooks'}
+                ]);
+
+            </script>
+            <script>
+                var orderDetails = function(orderId) {
+                    document.location = "/luxbev/ccrz__OrderConfirmation?o=" + orderId + getCSRQueryString();
+                }
+                var productDetails = function(productId) {
+                    document.location = "/luxbev/ccrz__ProductDetails?viewState=DetailView&cartID=" + CCRZ.pagevars.currentCartID + "&sku=" + productId+"&&store=LuxBev";
+                }
+                var homePage = function() {
+                    document.location = "/luxbev/ccrz__HomePage?cartID=" + CCRZ.pagevars.currentCartID + "&&store=LuxBev";
+                }
+            </script><span id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:j_id55">
+
+	<script id="StateField" type="text/template">
+  {{{selectGeo this.name this.stateList this.value this.styles this.classPrefix}}}
+ </script>
+
+	<script id="AddressDisplay" type="text/template">
+  <span class="address_selection_display">
+   {{#ifDisplay 'SO.DsplAddrName'}}
+    {{#if this.firstName}}<span class="addr_name">{{this.firstName}} {{this.lastName}}</span><br/>{{/if}}
+   {{/ifDisplay}}
+   {{#ifDisplay 'SO.DsplAddrCompany'}}
+    {{#if this.companyName}}<span class="addr_company">{{this.companyName}}</span><br/>{{/if}}
+   {{/ifDisplay}}
+   <span class="addr_line1 addr_line">{{this.address1}}</span><br/>
+   {{#if this.address2}}<span class="addr_line2 addr_line">{{this.address2}}</span><br/>{{/if}}
+   {{#if this.address3}}<span class="addr_line3 addr_line">{{this.address3}}</span><br/>{{/if}}
+   <span class="addr_city">{{this.city}}</span>{{#if this.stateCode}}<span class="addr_state">, {{this.stateCode}}</span>{{/if}}{{#if this.state}}<span class="addr_state">, {{this.state}}</span>{{/if}}<span class="addr_postal">&#160;{{this.postalCode}}</span><br/>
+   <span class="addr_country">{{this.country}}</span><br/>
+   <span class="addr_extId">{{this.partnerId}}</span>
+  </span>
+ </script>
+
+	<script id="TotalSection" type="text/template">
+  <div class="total">
+   <p>{{pageLabelMap 'CartInc_Subtotal'}}: {{price this.subTotal}}</p>
+   {{#ifStoreSetting 'Skip_Tax_Calculation__c'}}
+    &#160;
+   {{else}}
+    <p>{{pageLabelMap 'CheckOut_EstimatedTax'}}: {{price this.tax}}</p>
+   {{/ifStoreSetting}}
+   {{#ifStoreSetting 'Skip_Shipping_Calculation__c'}}
+    &#160;
+   {{else}}
+    <p>{{pageLabelMap 'CartInc_Shipping'}}: {{price this.shippingCharge}}</p>
+   {{/ifStoreSetting}}
+   {{#ifDisplay 'OR.ShowTotalSurcharge' }}
+    <p>{{pageLabelMap 'CartInc_Surcharge'}}: {{price this.surchargeAmount}}</p>
+   {{/ifDisplay}}
+   <p><strong>{{pageLabelMap 'CartInc_GrandTotal'}}: {{sum this.subTotal this.tax this.shippingCharge this.surchargeAmount}}</strong></p>
+  </div>
+ </script>
+
+	<script id="Cart-IncludedItems" type="text/template">
+  <div id="included_items{{this.itemID}}" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">{{this.mockProduct.name}}: {{pageLabelMap 'CheckOut_IncludedItems'}}</h3>
+   </div>
+   <div class="modal-body">
+    <div class="cart_figures">
+     <div class="section1"><strong>{{pageLabelMap 'Qty'}}:</strong></div>
+     {{#ifEquals this.mockProduct.ProductType 'Dynamic Kit'}}
+         <div class="section2"><strong>{{pageLabelMap 'Checkout_YouSave'}}:</strong></div>
+            <div class="section3"><strong>{{pageLabelMap 'CartInc_Total'}}:</strong></div>
+           {{/ifEquals}}
+           {{#ifEquals this.mockProduct.ProductType 'Kit'}}
+            <div class="section3"><strong>{{pageLabelMap 'CartInc_Total'}}:</strong></div>
+           {{/ifEquals}}
+       {{#each this.minorLines}}
+      <div class="section123">{{this.mockProduct.name}}<br/>{{this.mockProduct.sku}}</div>
+      <div class="section1">{{this.quantity}}</div>
+      {{#ifEquals ../mockProduct.ProductType 'Dynamic Kit'}}
+       <div class="section2">{{price this.absoluteDiscount}}</div>
+       <div class="section3"><strong class="price">{{price this.SubAmount}}</strong></div>
+      {{/ifEquals}}
+            {{#ifEquals ../mockProduct.ProductType 'Kit'}}
+             <div class="section3"><strong class="price">{{price this.SubAmount}}</strong></div>
+      {{/ifEquals}}
+     {{/each}}
+    </div>
+   </div>
+  </div>
+ </script></span><span id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:j_id58">
+	<script type="text/javascript">
+  jQuery(function($) {
+   "use strict";
+
+   CCRZ.views.PageMessagesView = Backbone.View.extend({
+    initialize : function() {
+     CCRZ.pubSub.on('pageMessage', function(response) {
+      this.trigger(response);
+     }, this);
+    },
+    render : function(messages) {
+     var v = this;
+     if (CCRZ.display.isPhone()) {
+      this.renderPhone(messages);
+     } else {
+      this.renderDesktop(messages);
+     }
+    },
+    renderPhone : function(messages) {
+     this.renderDesktop(messages); //temporary
+    },
+    renderDesktop : function(messages) {
+     for (var i in messages) {
+      var msg = messages[i];
+      if(msg.labelId){
+       msg.message = CCRZ.pagevars.pageLabels[msg.labelId];
+      }
+      if (msg.message) {
+       if (msg.type == 'CUSTOM') {
+        $('.' + msg.classToAppend).append('<div class=\'dynamic_page_message ' + this.getMessageSeverityStyle(msg) + '\'>' + msg.message + '</div>');
+        $('.' + msg.classToAppend).show();
+       } else if (msg.type == 'ALERT') {
+        alert(msg.message);
+       } else { // all other message types will appear in pre-configured HTML tag for page messages
+        $('.default_page_message:first').append('<div ' + this.getMessageSeverityStyle(msg) + '\'>' + msg.message + '</div>');
+       }
+      }
+     }
+    },
+    getMessageSeverityStyle : function(msg) {
+     if (msg.severity == 'SUCCESS') { return 'dynamic_page_message_success'; }
+     else if (msg.severity == 'INFO') { return 'dynamic_page_message_info'; }
+     else if (msg.severity == 'WARN') { return 'dynamic_page_message_warn'; }
+     else if (msg.severity == 'ERROR') { return 'dynamic_page_message_error'; }
+     else if (msg.severity == 'CRITICAL') { return 'dynamic_page_message_critical'; }
+     else { return 'dynamic_page_message_error'; }
+    },
+    trigger : function(response) {
+     $('.default_page_message').empty();
+     $('.dynamic_page_message').remove();
+     if (!jQuery.isEmptyObject(response)) {
+      if (!jQuery.isEmptyObject(response.messages)) {
+       this.render(response.messages);
+      }
+     }
+    }
+   });
+   CCRZ.pageMessagesView = new CCRZ.views.PageMessagesView();
+   CCRZ.dynamicViews.push(CCRZ.pageMessagesView);
+  });
+ </script></span><span id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:j_id61">
+
+
+	<script id="UserInfo-Mobile" type="text/template">
+  <div class="checkout_container">
+   <h2 class="title">{{pageLabelMap 'CheckOut_InfoStep'}}</h2>
+   <div class="checkout_detail">
+    <div class="checkout_detail_item">
+     <div id="accordion" class="accordion clear">
+
+      <div class="accordion-group">
+       <div class="accordion-heading">
+        <a href="#collapseOne" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle">{{pageLabelMap 'CheckOut_ContactInformation'}}</a>
+       </div>
+       <div class="accordion-body in collapse" id="collapseOne">
+        <div class="accordion-inner">
+         <div class="alert alert-error main-messagingSection-Error" style="display: none"></div>
+         <form id="mainform">
+          <input type="text" placeholder="{{pageLabelMap 'CheckOut_FirstName'}}" class="checkout_wide contactInput" name="buyerFirstName" value="{{this.buyerFirstName}}">
+          <input type="text" placeholder="{{pageLabelMap 'CheckOut_LastName'}}" class="checkout_wide contactInput" name="buyerLastName" value="{{this.buyerLastName}}">
+          <input type="email" placeholder="{{pageLabelMap 'CheckOut_Email'}}" class="checkout_wide contactInput" name="buyerEmail" value="{{this.buyerEmail}}">
+          <input type="text" placeholder="{{pageLabelMap 'CheckOut_PrimaryPhone'}}" class="checkout_wide contactInput" name="buyerPhone" value="{{this.buyerPhone}}">
+          <div class="button_large_container_steps">
+           <a href="#billingSection" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle">
+            <input name="" type="button" value="{{pageLabelMap 'CheckOut_MobileGotoBilling'}}" class="large_grey_button"/>
+           </a>
+          </div>
+         </form>
+        </div>
+       </div>
+      </div>
+
+      <div class="accordion-group">
+       <div class="accordion-heading">
+        <a href="#billingSection" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle">{{pageLabelMap 'CheckOut_BillingAddress'}}</a>
+       </div>
+       <div class="accordion-body collapse billingSection" id="billingSection">
+        <div class="accordion-inner">
+         {{> addressSelection this.billingAddress}}
+         <div class="button_large_container_steps">
+          <a href="#shippingSection" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle">
+           <input name="" type="button" value="{{pageLabelMap 'CheckOut_MobileGotoShipping'}}" class="large_grey_button"/>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+
+      <div class="accordion-group">
+       <div class="accordion-heading">
+        <a href="#shippingSection" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle">{{pageLabelMap 'CheckOut_ShippingAddress'}}</a>
+       </div>
+       <div class="accordion-body collapse shippingSection" id="shippingSection">
+        <div class="accordion-inner">
+         {{> addressSelection this.shippingAddress}}
+         <div class="button_large_container_steps">
+          <a href="#shipDetailsSection" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle">
+           <input name="" type="button" value="{{pageLabelMap 'CheckOut_MobileGotoShipDetails'}}" class="processUserInfo large_grey_button"/>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+
+     </div>
+    </div>
+   </div>
+  </div>
+ </script>
+
+	<script id="UserInfo-AddressList-Mobile" type="text/template">
+  {{#each this.addressList}}
+   <div class="billing_shipping_info">
+    <div class="personal_info">
+     {{> addressDisplay}}
+    </div>
+    {{#ifEquals this.partnerId ../partnerId}}
+     <div class="select"><input name="" type="button" value="{{pageLabelMap 'CheckOut_Selected'}}" class="large_blue_button addrSelected selectAddressPhone" data-id="{{this.sfid}}"/></div>
+    {{else}}
+     <div class="select"><input name="" type="button" value="{{pageLabelMap 'CheckOut_Select'}}" class="large_grey_button selectAddressPhone" data-id="{{this.sfid}}"/></div>
+    {{/ifEquals}}
+   </div>
+  {{/each}}
+ </script>
+
+
+	<script id="UserInfo-Desktop" type="text/template">
+  <form id="mainform" class="horizontal_form cc_userInfo_new">
+   <div class="alert alert-error main-messagingSection-Error" style="display: none"></div>
+   <fieldset>
+    <legend>{{pageLabelMap 'CheckOut_ContactInformation'}}</legend>
+    <label>{{pageLabelMap 'CheckOut_FirstName'}}
+     <input id="firstNameField" class="contactInput wide" name="buyerFirstName" value="{{this.buyerFirstName}}" />
+    </label>
+    <label>{{pageLabelMap 'CheckOut_LastName'}}
+     <input id="lastNameField" class="contactInput wide" name="buyerLastName" value="{{this.buyerLastName}}" />
+    </label>
+    <div class="clear"></div>
+    <label>{{pageLabelMap 'CheckOut_PrimaryPhone'}}
+     <input id="homePhoneField" class="contactInput wide" name="buyerPhone" value="{{this.buyerPhone}}" />
+    </label>
+    <label>{{pageLabelMap 'CheckOut_Email'}}
+     <input id="emailField" class="contactInput wide" name="buyerEmail" value="{{this.buyerEmail}}" />
+    </label>
+    <div class="clear"></div>
+   </fieldset>
+  </form>
+  {{> addressEntry this.billingAddress}}
+  {{> addressEntry this.shippingAddress}}
+  <form class="margin_form buttonForm">
+   <p>{{{pageLabelMap 'Required_Fields'}}}</p>
+   <p class="link_button">
+    <input class="button processUserInfo" type="button" value="{{pageLabelMap 'CheckOut_Continue'}}" alt="{{pageLabelMap 'CheckOut_Continue'}}" />
+   </p>
+  </form>
+ </script>
+
+	<script id="UserInfo-AddressEdit-Desktop" type="text/template">
+  <form id="{{classPrefix}}AddressForm" class="horizontal_form addressForm">
+   <div class="alert alert-error {{classPrefix}}-messagingSection-Error" style="display: none"></div>
+   <fieldset>
+    <legend>{{pageLabelMap sectionLabel}}</legend>
+    {{#ifEquals classPrefix 'shipping'}}
+     <a class="copyAddress">{{pageLabelMap 'Checkout_UseBillingAddress'}}</a>
+    {{/ifEquals}}
+    <div class="change_address"><a href="#modal_{{classPrefix}}" data-toggle="modal">{{pageLabelMap 'UserInfo_AddressBook'}}</a></div>
+    <div class="clear"></div>
+    {{#ifDisplay 'SO.DsplAddrName'}}
+     <label>{{pageLabelMap 'CheckOut_FirstName'}}
+      <input class="{{classPrefix}}firstNameField {{classPrefix}}Field wide" name="{{classPrefix}}Address.firstName" value="{{this.firstName}}" />
+     </label>
+     <label>{{pageLabelMap 'CheckOut_LastName'}}
+      <input class="{{classPrefix}}lastNameField {{classPrefix}}Field wide" name="{{classPrefix}}Address.lastName" value="{{this.lastName}}" />
+     </label>
+     <div class="clear"></div>
+    {{/ifDisplay}}
+    {{#ifDisplay 'SO.DsplAddrCompany'}}
+     <label>{{pageLabelMap 'CheckOut_CompanyName'}}
+      <input class="{{classPrefix}}companyField {{classPrefix}}Field wide" name="{{classPrefix}}Address.companyName" value="{{this.companyName}}" />
+     </label>
+     <div class="clear"></div>
+    {{/ifDisplay}}
+    <input type="hidden" class="{{classPrefix}}acctIdField {{classPrefix}}Field" name="{{classPrefix}}Address.partnerId" value="{{this.partnerId}}" />
+    <label class="address1">{{pageLabelMap 'CheckOut_Address'}}
+     <input name="{{classPrefix}}Address.address1" class="addresswide {{classPrefix}}Address1 {{classPrefix}}Field" value="{{this.address1}}" maxlength="40" /></label>
+    <label class="address2"><input name="{{classPrefix}}Address.address2" class="addresswide {{classPrefix}}Address2 {{classPrefix}}Field" value="{{this.address2}}" maxlength="40" /></label>
+    <label class="address2"><input name="{{classPrefix}}Address.address3" class="addresswide {{classPrefix}}Address3 {{classPrefix}}Field" value="{{this.address3}}" maxlength="40" /></label>
+
+    <div class="clear"></div>
+    <label>{{pageLabelMap 'CheckOut_Country'}}
+     {{{selectGeo 'country' this.countryList this.countryCode 'countryListing wide' this.classPrefix}}}
+    </label>
+    <label>{{pageLabelMap 'CheckOut_State'}}
+     <div class="stateSection"></div>
+    </label>
+    <div class="clear"></div>
+    <label>{{pageLabelMap 'CheckOut_City'}}
+     <input name="{{classPrefix}}Address.city" class="{{classPrefix}}City {{classPrefix}}Field wide" value="{{this.city}}" />
+    </label>
+    <label>{{pageLabelMap 'CheckOut_PostalCode'}}
+     <input name="{{classPrefix}}Address.postalCode" class="{{classPrefix}}PostalCode {{classPrefix}}Field wide" value="{{this.postalCode}}" />
+    </label>
+   </fieldset>
+  </form>
+  <div id="modal_{{classPrefix}}" class="modal hide fade in">
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+    <h3>{{pageLabelMap 'UserInfo_AddressBook'}}</h3>
+   </div>
+   <div class="modal-body">
+    {{#each this.addressList}}
+     <div class="billing_shipping_info">
+      <div class="personal_info">
+       {{> addressDisplay}}
+      </div>
+      <div class="select">
+       <input name="" type="button" value="{{pageLabelMap 'UserInfo_selectAddress'}}" class="large_red_button {{../classPrefix}}Field selectAddress" data-id="{{this.sfid}}"/>
+      </div>
+     </div>
+    {{/each}}
+   </div>
+  </div>
+ </script>
+
+	<script>
+  jQuery(function($) {
+   'use strict';
+   CCRZ.models.AddressModel = CCRZ.CloudCrazeModel.extend({
+    idAttribute: "sfid"
+   });
+   CCRZ.collections.AddressList = CCRZ.CloudCrazeCollection.extend({
+    model : CCRZ.models.AddressModel
+   });
+   CCRZ.models.AddressBookModel = CCRZ.CloudCrazeModel.extend({
+    className: 'cc_ctrl_CheckoutRD',
+    fetch : function(callback){
+     var model = this;
+     this.invokeContainerLoading($('.deskLayout'), 'fetchAddressBooks', CCRZ.pagevars.storefrontName, CCRZ.pagevars.portalUserId, function(response) {
+      model.set(model.parse(response));
+      model.billingAddresses = new CCRZ.collections.AddressList();
+      model.shippingAddresses = new CCRZ.collections.AddressList();
+      model.billingAddresses.reset(model.attributes.billingAddresses);
+      model.shippingAddresses.reset(model.attributes.shippingAddresses);
+      callback();
+     });
+    }
+   });
+
+   CCRZ.views.AddressEntry = CCRZ.CloudCrazeView.extend({
+    templatePhone : CCRZ.util.template('UserInfo-AddressEntry-Mobile'),
+    templateDesktop : CCRZ.util.template('UserInfo-AddressEntry-Desktop'),
+   });
+
+   CCRZ.views.AddressListing = CCRZ.CloudCrazeView.extend({
+    templatePhone : CCRZ.util.template('UserInfo-AddressList-Mobile'),
+    templateDesktop : CCRZ.util.template('UserInfo-AddressList-Desktop'),
+   });
+
+   CCRZ.views.UserInfoView = CCRZ.CloudCrazeView.extend({
+    templatePhone : CCRZ.util.template('UserInfo-Mobile'),
+    templateDesktop : CCRZ.util.template('UserInfo-Desktop'),
+    navIndex : 0,
+    events: {
+     "change .countryListing" : "changeStates",
+     "click .processUserInfo" : "processUserInfo",
+     "click .selectAddress" : "processAddressSelection",
+     "click .selectAddressPhone" : "processAddressSelectionPhone",
+     "click .copyAddress" : "copyAddress"
+    },
+    init: function() {
+     Handlebars.registerPartial("addressEntry", $("#UserInfo-AddressEdit-Desktop").html());
+     Handlebars.registerPartial("addressSelection", $("#UserInfo-AddressList-Mobile").html());
+     Handlebars.registerPartial("addressDisplay", $("#AddressDisplay").html());
+     var v = this;
+     v.addressBook = new CCRZ.models.AddressBookModel();
+     v.billStateView = new CCRZ.views.StateView();
+     v.shipStateView = new CCRZ.views.StateView();
+
+    },
+    initSetup: function(callback) {
+     var v = this;
+     v.addressBook.fetch(function() {
+      if (! CCRZ.cartCheckoutModel.get('shippingAddress'))
+       CCRZ.cartCheckoutModel.set('shippingAddress', v.addressBook.get('defaultShippingAddress'));
+      if (! CCRZ.cartCheckoutModel.get('billingAddress'))
+       CCRZ.cartCheckoutModel.set('billingAddress', v.addressBook.get('defaultBillingAddress'));
+      v.initAddresses();
+      callback();
+     });
+    },
+    initAddresses: function() {
+     if (CCRZ.cartCheckoutModel.attributes.billingAddress) {
+      CCRZ.cartCheckoutModel.attributes.billingAddress.sectionLabel = 'CheckOut_BillingAddress';
+      CCRZ.cartCheckoutModel.attributes.billingAddress.classPrefix = 'billing';
+      CCRZ.cartCheckoutModel.attributes.billingAddress.addressList = this.addressBook.get('billingAddresses');
+      CCRZ.cartCheckoutModel.attributes.billingAddress.countryList = CCRZ.geoCodes.countryList.toJSON();
+     }
+     if (CCRZ.cartCheckoutModel.attributes.shippingAddress) {
+      CCRZ.cartCheckoutModel.attributes.shippingAddress.sectionLabel = 'CheckOut_ShippingAddress';
+      CCRZ.cartCheckoutModel.attributes.shippingAddress.classPrefix = 'shipping';
+      CCRZ.cartCheckoutModel.attributes.shippingAddress.addressList = this.addressBook.get('shippingAddresses');
+      CCRZ.cartCheckoutModel.attributes.shippingAddress.countryList = CCRZ.geoCodes.countryList.toJSON();
+     }
+    },
+    renderPhone : function() {
+     var v = this;
+     v.$el.html(v.templatePhone(CCRZ.cartCheckoutModel.toJSON()));
+     v.setupValidation();
+    },
+    renderDesktop : function() {
+     var v = this;
+     var billBean = CCRZ.cartCheckoutModel.get('billingAddress');
+     var shipBean = CCRZ.cartCheckoutModel.get('shippingAddress');
+     CCRZ.cartCheckoutModel.attributes.billingAddress.countryList = CCRZ.geoCodes.countryList.toJSON();
+     CCRZ.cartCheckoutModel.attributes.shippingAddress.countryList = CCRZ.geoCodes.countryList.toJSON();
+     v.$el.html(v.templateDesktop(CCRZ.cartCheckoutModel.toJSON()));
+     if (billBean.stateCode)
+      v.renderBillStates(billBean.stateCode, billBean.countryCode);
+     else if (billBean.state)
+      v.renderBillStates(billBean.state, billBean.countryCode);
+     else
+      v.renderBillStates('', billBean.countryCode);
+     if (shipBean.stateCode)
+      v.renderShipStates(shipBean.stateCode, shipBean.countryCode);
+     else if (shipBean.state)
+      v.renderShipStates(shipBean.state, shipBean.countryCode);
+     else
+      v.renderShipStates('', shipBean.countryCode);
+     v.processReadOnly();
+     v.setupValidation();
+    },
+    processReadOnly: function() {
+     jQuery("input.shippingField").attr("readonly", CCRZ.cartCheckoutModel.get('preventShippingEdit'));
+     jQuery("input.billingField").attr("readonly", CCRZ.cartCheckoutModel.get('preventBillingEdit'));
+     $('select.shippingField option:not(:selected)').attr('disabled', CCRZ.cartCheckoutModel.get('preventShippingEdit'));
+     $('select.billingField option:not(:selected)').attr('disabled', CCRZ.cartCheckoutModel.get('preventBillingEdit'));
+     jQuery("input.contactInput").attr("readonly", CCRZ.cartCheckoutModel.get('preventContactEdit'));
+    },
+    changeStates: function(event) {
+     var v = this;
+     var selectedCountry = $(event.target).val();
+     if ($(event.target).hasClass('billingField'))
+      v.renderBillStates('', selectedCountry);
+     else
+      v.renderShipStates('', selectedCountry);
+    },
+    renderBillStates: function(stateVal, countryVal) {
+     CCRZ.console.log(CCRZ.cartCheckoutModel.toJSON());
+     var v = this;
+     v.billStateView.render('state', stateVal, 'wide', CCRZ.geoCodes.filterStates(countryVal).toJSON(), 'billing', '#billingAddressForm .stateSection');
+    },
+    renderShipStates: function(stateVal, countryVal) {
+     var v = this;
+     v.shipStateView.render('state', stateVal, 'wide', CCRZ.geoCodes.filterStates(countryVal).toJSON(), 'shipping', '#shippingAddressForm .stateSection');
+    },
+    processAddressSelection: function(event) {
+     var obj = $(event.target);
+     var id = obj.data("id");
+     if (obj.hasClass('billingField')) {
+      var selectedEntry = this.addressBook.billingAddresses.get(id);
+      CCRZ.cartCheckoutModel.attributes.billingAddress = selectedEntry.toJSON();
+      this.applyAddressData('billing', selectedEntry.attributes);
+      if (!selectedEntry.attributes.stateCode)
+       this.renderBillStates(selectedEntry.attributes.state, selectedEntry.attributes.countryCode);
+      else
+       this.renderBillStates(selectedEntry.attributes.stateCode, selectedEntry.attributes.countryCode);
+     }
+     else {
+      var selectedEntry = this.addressBook.shippingAddresses.get(id);
+      CCRZ.cartCheckoutModel.attributes.shippingAddress = selectedEntry.toJSON();
+      this.applyAddressData('shipping', selectedEntry.attributes);
+      if (!selectedEntry.attributes.stateCode)
+       this.renderShipStates(selectedEntry.attributes.state, selectedEntry.attributes.countryCode);
+      else
+       this.renderShipStates(selectedEntry.attributes.stateCode, selectedEntry.attributes.countryCode);
+     }
+    },
+    applyAddressData: function(prefix, addressBean) {
+     $('.' + prefix + 'firstNameField').val(addressBean.firstName);
+     $('.' + prefix + 'lastNameField').val(addressBean.lastName);
+     $('.' + prefix + 'companyField').val(addressBean.companyName);
+     $('.' + prefix + 'acctIdField').val(addressBean.partnerId);
+     $('.' + prefix + 'Address1').val(addressBean.address1);
+     $('.' + prefix + 'Address2').val(addressBean.address2);
+     $('.' + prefix + 'Address3').val(addressBean.address3);
+     $('.' + prefix + 'City').val(addressBean.city);
+     $('.' + prefix + 'PostalCode').val(addressBean.postalCode);
+     $('.' + prefix + 'country').val(addressBean.countryCode);
+     $('.' + prefix + 'partnerId').val(addressBean.partnerId);
+     $("#modal_" + prefix).modal("hide");
+    },
+    copyAddress: function() {
+     var billData = form2js('billingAddressForm', '.', false, function(node) {}, false);
+     this.applyAddressData('shipping', billData.billingAddress);
+     if (!billData.billingAddress.stateCode)
+      this.renderShipStates(billData.billingAddress.state, billData.billingAddress.countryCode);
+     else
+      this.renderShipStates(billData.billingAddress.stateCode, billData.billingAddress.countryCode);
+     return false;
+    },
+    processAddressSelectionPhone: function(event) {
+     var obj = $(event.target);
+     var section = obj.closest("div.collapse");
+     var id = obj.data("id");
+     this.toggleSelectedAddress(section.find('input.addrSelected'), 'CheckOut_Select');
+     this.toggleSelectedAddress(obj, 'CheckOut_Selected');
+     if (section.hasClass('billingSection')) {
+      var selectedEntry = this.addressBook.billingAddresses.get(id);
+      CCRZ.cartCheckoutModel.attributes.billingAddress = selectedEntry.toJSON();
+     }
+     else {
+      var selectedEntry = this.addressBook.shippingAddresses.get(id);
+      CCRZ.cartCheckoutModel.attributes.shippingAddress = selectedEntry.toJSON();
+     }
+    },
+    toggleSelectedAddress: function(ele, displayText) {
+     ele.toggleClass('large_grey_button');
+     ele.toggleClass('large_blue_button');
+     ele.toggleClass('addrSelected');
+     ele.val(CCRZ.pagevars.pageLabels[displayText]);
+    },
+    setupValidation: function() {
+     $("#mainform").validate({
+      invalidHandler: function(event, validator) {
+       CCRZ.handleValidationErrors(event, validator, 'main-messagingSection-Error', false);
+      },
+      rules: {
+       buyerFirstName: {
+        required: CCRZ.getPageConfig('Info.ReqFirstName', true)
+       },
+       buyerLastName: {
+        required: CCRZ.getPageConfig('Info.ReqLastName', true)
+       },
+       buyerEmail: {
+        required: CCRZ.getPageConfig('Info.ReqEmail', true),
+        email: true
+       },
+       buyerPhone: {
+        required: CCRZ.getPageConfig('Info.ReqPhone', false)
+       }
+      },
+      messages: {
+       buyerFirstName: {
+        required: "MISSING_FIRST_NAME"
+       },
+       buyerLastName: {
+        required: "MISSING_LAST_NAME"
+       },
+       buyerEmail: {
+        required: "MISSING_EMAIL_ADDRESS",
+        email: "FORMATTING_EMAIL"
+       },
+       buyerPhone: {
+        required: "MISSING_PHONE"
+       }
+      },
+      errorPlacement: function(error, element) { }
+     });
+
+     if (CCRZ.display.isPhone()) {
+     }
+     else {
+      $("#billingAddressForm").validate({
+       invalidHandler: function(event1, validator1) {
+        CCRZ.handleValidationErrors(event1, validator1, 'billing-messagingSection-Error', false);
+       },
+       rules: {
+        "billingAddress.address1": {
+         required: CCRZ.getPageConfig('Info.ReqAddr1', true)
+        },
+        "billingAddress.city": {
+         required: CCRZ.getPageConfig('Info.ReqCity', true)
+        }
+       },
+       messages: {
+        "billingAddress.address1": {
+         required: "MISSING_BILL_ADDR_1"
+        },
+        "billingAddress.city": {
+         required: "MISSING_BILL_CITY"
+        }
+       },
+       errorPlacement: function(error, element) { }
+      });
+      $("#shippingAddressForm").validate({
+       invalidHandler: function(event1, validator1) {
+        CCRZ.handleValidationErrors(event1, validator1, 'shipping-messagingSection-Error', false);
+       },
+       rules: {
+        "shippingAddress.address1": {
+         required: CCRZ.getPageConfig('Info.ReqAddr1', true)
+        },
+        "shippingAddress.city": {
+         required: CCRZ.getPageConfig('Info.ReqCity', true)
+        }
+       },
+       messages: {
+        "shippingAddress.address1": {
+         required: "MISSING_SHIP_ADDR_1"
+        },
+        "shippingAddress.city": {
+         required: "MISSING_SHIP_CITY"
+        }
+       },
+       errorPlacement: function(error, element) { }
+      });
+     }
+    },
+    validateInfo: function() {
+     var isValid = false;
+     $('.alert-error').hide();
+     isValid = $("#mainform").valid();
+     if (!CCRZ.display.isPhone()){
+      if (isValid)
+       isValid = isValid && $("#billingAddressForm").valid();
+      if (isValid)
+       isValid = isValid && $("#shippingAddressForm").valid();
+     }
+     return isValid;
+    },
+    processUserInfo: function() {
+     if (this.validateInfo()) {
+      var formData = form2js('mainform', '.', false, function(node) {}, false);
+      CCRZ.cartCheckoutModel.set(formData);
+      if (!CCRZ.display.isPhone()){
+       var billData = form2js('billingAddressForm', '.', false, function(node) {}, false);
+       billData.billingAddress.country = $( ".billingcountry option:selected" ).text();
+       CCRZ.cartCheckoutModel.set(billData);
+       var shipData = form2js('shippingAddressForm', '.', false, function(node) {}, false);
+       shipData.shippingAddress.country = $( ".shippingcountry option:selected" ).text();
+       CCRZ.cartCheckoutModel.set(shipData);
+       this.initAddresses();
+      }
+      CCRZ.cartCheckoutView.slideRight();
+     }
+    }
+   });
+  });
+ </script></span><span id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:j_id63">
+
+	<script id="Shipping-Desktop" type="text/template">
+  <form id="shipForm" class="margin_form shipForm">
+   <div class="alert alert-error messagingSection-Error" style="display: none"></div>
+   <div class="alert alert-info messagingSection-Info" style="display: none"></div>
+   <div class="alert alert-warning messagingSection-Warning" style="display: none"></div>
+   <fieldset>
+    <legend>{{pageLabelMap 'CheckOut_ShipmentInformation'}}</legend>
+    <div class="shipping_payment">
+     <div class="row coso_ship_guide_text">{{pageLabelMap 'CheckOut_ShippingGuidingText'}}</div>
+     {{#ifDisplay 'SO.DsplShipOptions'}}
+      {{#if this.shippingMethods}}
+       <div class="row coso_ship_method">
+        <label>{{pageLabelMap 'CheckOut_ShippingMethod'}}</label>
+        <select class="shippingOptions" name="shippingMethod">
+         {{#each this.shippingMethods}}
+          <option value="{{this.uniqueId}}" {{#ifEquals ../shippingMethod this.uniqueId}} selected {{/ifEquals}}>
+           {{this.provider}} - {{pageLabelMap this.serviceName}}
+          </option>
+         {{/each}}
+        </select>
+       </div>
+       <div class="row coso_est_shipping">
+        <label>{{pageLabelMap 'CheckOut_EstimatedShipping'}}</label><span class="shippingCost"></span>
+       </div>
+      {{/if}}
+     {{/ifDisplay}}
+     {{#ifDisplay 'SO.DsplShipComplete'}}
+      <div class="row coso_ship_complete">
+       <label>{{pageLabelMap 'CheckOut_ShipComplete'}}</label>
+       <input type="checkbox" name="shipComplete" class="boxes" value="true" {{#if this.shipComplete}} checked {{/if}} />
+      </div>
+     {{/ifDisplay}}
+     {{#ifDisplay 'SO.DsplShipNotes'}}
+      <div class="row coso_ship_notes">
+       <label>{{pageLabelMap 'CheckOut_ShippingNotes'}}</label>
+       <textarea name="shippingInst" rows="6" class="shipnotes">{{this.shippingInst}}</textarea>
+      </div>
+     {{/ifDisplay}}
+     {{#ifDisplay 'SO.ShowReqDate'}}
+      <div class="row deliveryDateMessages" id="deliveryDateMessages"></div>
+      {{#unless this.requestedDateData.ApiError}}
+      <div class="row coso_ship_delivery_date">
+       <label>{{pageLabelMap 'Checkout_RequestedDeliveryDt'}}</label>
+       <input name="requestedDateStr" value="{{this.requestedDateStr}}" class="requestedDate">
+      </div>
+      {{/unless}}
+     {{/ifDisplay}}
+     <div class="row">{{pageLabelMap 'Checkout_Shipping_Conditions' }}</div>
+    </div>
+   </fieldset>
+   {{#if this.terms}}
+    <fieldset>
+     <legend class="coso_footer_tc">{{pageLabelMap 'Footer_TermsAndConditions'}}</legend>
+     <div class="shipping_payment">
+      {{#each this.terms}}
+       <div class="row shiping_payment_term">
+        <input type="checkbox" name="#" class="boxes terms"/>
+        <span>
+         <strong>{{this.title}}:</strong>
+         <p>{{unescape this.description}}</p>
+        </span>
+       </div>
+      {{/each}}
+     </div>
+    </fieldset>
+   {{/if}}
+   <p class="link_button coso_proceed">
+    <input class="button right proceed processShippingInfo disabled" type="button" disabled value="{{pageLabelMap 'CheckOut_AcceptAndProceed'}}" alt="{{pageLabelMap 'CheckOut_AcceptAndProceed'}}" />
+    <br/>
+   </p>
+  </form>
+ </script>
+
+	<script id="Shipping-Mobile" type="text/template">
+  <div class="checkout_container">
+   <div class="alert alert-error messagingSection-Error" style="display: none"></div>
+   <div class="alert alert-info messagingSection-Info" style="display: none"></div>
+   <div class="alert alert-warning messagingSection-Warning" style="display: none"></div>
+   <h2 class="title">{{pageLabelMap 'CheckOut_ShippingStep'}}</h2>
+   <div class="checkout_detail">
+    <div class="checkout_detail_item">
+     <div class="accordion clear" id="accordion">
+      <div class="accordion-group">
+       <div class="accordion-heading">
+        <a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#collapseOne">{{pageLabelMap 'CheckOut_ShipmentInformation'}}</a>
+       </div>
+       <div class="accordion-body in collapse" id="collapseOne">
+        <div class="accordion-inner">
+         <form id="shipForm" class="shipform">
+          {{#ifDisplay 'SO.DsplShipOptions'}}
+           {{#if this.shippingMethods}}
+            <label class="basic">{{pageLabelMap 'CheckOut_ShippingMethod'}}</label>
+            <select class="shippingOptions checkout_wide" name="shippingMethod">
+             {{#each this.shippingMethods}}
+              <option value="{{this.uniqueId}}" {{#ifEquals ../shippingMethod this.uniqueId}} selected {{/ifEquals}}>
+               {{this.provider}} - {{pageLabelMap this.serviceName}}
+              </option>
+             {{/each}}
+            </select>
+            <label class="basic">{{pageLabelMap 'CheckOut_EstimatedShipping'}}</label><span class="shippingCost displayData"></span>
+           {{/if}}
+          {{/ifDisplay}}
+          {{#ifDisplay 'SO.DsplShipComplete'}}
+           <p>
+            <label class="basic">{{pageLabelMap 'CheckOut_ShipComplete'}}</label>
+            <input type="checkbox" name="shipComplete" class="shipping_options displayData" value="true" {{#if this.shipComplete}} checked {{/if}} />
+           </p>
+          {{/ifDisplay}}
+          {{#ifDisplay 'SO.ShowReqDate'}}
+           <p class="deliveryDateMessages" id="deliveryDateMessages"></p>
+           {{#unless this.requestedDateData.ApiError}}
+           <p>
+            <label class="basic">{{pageLabelMap 'Checkout_RequestedDeliveryDt'}}</label>
+            <input name="requestedDateStr" value="{{this.requestedDateStr}}" class="requestedDate checkout_wide">
+           </p>
+           {{/unless}}
+          {{/ifDisplay}}
+          {{#ifDisplay 'SO.DsplShipNotes'}}
+           <p>
+            <label class="basic">{{pageLabelMap 'CheckOut_ShippingNotes'}}</label>
+            <textarea name="shippingInst" class="notes shipnotes">{{this.shippingInst}}</textarea>
+           </p>
+          {{/ifDisplay}}
+          <p>
+           <label class="shipping_options"><input class="shipping_options boxes terms" name="acceptTerms" type="checkbox" value="checkbox">{{pageLabelMap 'CheckOut_TermsAndConditionsAccept'}}</label>
+          </p>
+          <div class="button_large_container_steps">
+           <input class="large_grey_button processShippingInfo proceed disabled" name="" type="button" disabled value="{{pageLabelMap 'CheckOut_MobileGotoReview'}}">
+          </div>
+         </form>
+        </div>
+       </div>
+      </div>
+     </div>
+     <p class="basic"><strong>{{pageLabelMap 'Footer_TermsAndConditions'}}</strong></p>
+     {{#each this.terms}}
+      <p class="basic term{{id}}">
+       <strong>{{this.title}}:</strong><br/>
+       {{unescape this.description}}
+      </p>
+     {{/each}}
+    </div>
+   </div>
+  </div>
+ </script>
+
+	<script>
+  jQuery(function($) {
+   'use strict';
+
+   CCRZ.models.ShippingOption = CCRZ.CloudCrazeModel.extend({
+       idAttribute: "uniqueId"
+   });
+   CCRZ.collections.ShippingOptionList = CCRZ.CloudCrazeCollection.extend({
+    className: 'cc_ctrl_CheckoutRD',
+    model : CCRZ.models.ShippingOption,
+    fetch: function(callback) {
+     var dataList = this;
+     var cartjson = JSON.stringify(CCRZ.cartCheckoutModel.get('shippingAddress'));
+     this.invokeContainerLoading($('.deskLayout'), 'fetchShippingMethods', CCRZ.pagevars.storefrontName, CCRZ.pagevars.portalUserId, cartjson, CCRZ.cartCheckoutModel.get('sfid'), function(response){
+      dataList.reset(response);
+      callback();
+     });
+    }
+   });
+   CCRZ.models.RequestedDate = CCRZ.CloudCrazeModel.extend({
+    className: 'cc_ctrl_CheckoutRD',
+    fetch: function(callback) {
+     var model = this;
+     var cartjson = JSON.stringify(CCRZ.cartCheckoutModel.get('shippingAddress'));
+     this.invokeContainerLoading($('.deskLayout'), 'fetchAvailableDeliveryDates', CCRZ.pagevars.storefrontName, CCRZ.pagevars.portalUserId, cartjson,CCRZ.cartCheckoutModel.get('sfid'),
+      function(response){
+       model.set(model.parse(response));
+       jQuery.each(model.attributes.messages||[],function(){
+        this.classToAppend = this.classToAppend||'deliveryDateMessages';
+        this.type = this.type||'CUSTOM';
+        this.severity = this.severity||'INFO';
+       });
+       CCRZ.cartCheckoutModel.set('requestedDateData',model.attributes);
+       callback();
+     });
+    }
+   });
+
+   CCRZ.views.ShippingView = CCRZ.CloudCrazeView.extend({
+    templatePhone : CCRZ.util.template('Shipping-Mobile'),
+    templateDesktop : CCRZ.util.template('Shipping-Desktop'),
+    className: 'cc_ctrl_CheckoutRD',
+    navIndex : 1,
+    events : {
+     "click .processShippingInfo" : "processShippingInfo",
+     "change .shippingOptions" : "updateShippingPrice",
+     "click .terms" : "handleTerms",
+     "keypress #shipForm": "determineEvent"
+    },
+    init: function() {
+     this.shippingData = new CCRZ.collections.ShippingOptionList();
+     this.requestDateData = new CCRZ.models.RequestedDate();
+    },
+    initSetup: function(callback) {
+     var v = this;
+     this.requestDateData.fetch(function () {
+      v.shippingData.fetch(function() {
+       CCRZ.cartCheckoutModel.set('shippingMethods', v.shippingData.toJSON());
+       if (!CCRZ.cartCheckoutModel.attributes.shippingMethod && v.shippingData.length > 0) {
+        var selShip = v.shippingData.at(0);
+        CCRZ.cartCheckoutModel.set('shippingMethod',selShip.attributes.uniqueId);
+        CCRZ.cartCheckoutModel.set('shippingCharge',selShip.attributes.price);
+       }
+       else
+        CCRZ.cartCheckoutModel.set('shippingCharge',0.00);
+       callback();
+      });
+     });
+    },
+    renderPhone : function() {
+     this.renderView(this.templatePhone);
+    },
+    renderDesktop : function() {
+     this.renderView(this.templateDesktop);
+    },
+    renderView: function(currTemplate) {
+     var v = this;
+     CCRZ.console.log(CCRZ.cartCheckoutModel.toJSON());
+     v.$el.html(currTemplate(CCRZ.cartCheckoutModel.toJSON()));
+     v.$el.find(".shippingCost").html(formatPrice(CCRZ.cartCheckoutModel.attributes.shippingCharge));
+     v.updateRequestedDate();
+     v.handleTerms();
+    },
+    handleTerms: function() {
+     var proceedButton = $('[type=button].proceed');
+     if (proceedButton && !proceedButton.hasClass('blocked')) {
+      var terms = $('.terms').length;
+      var checkedTerms = $('.terms:checked').length;
+      if (terms == 0 || terms == checkedTerms)
+       proceedButton.removeAttr('disabled').removeClass('disabled');
+      else
+       proceedButton.attr('disabled','disabled').addClass('disabled');
+     }
+    },
+    updateRequestedDate: function() {
+     var daysArray = CCRZ.pagevars.pageLabels['DaysOfWeek'].split(",");
+     var monthsArray = CCRZ.pagevars.pageLabels['MonthsOfYear'].split(",");
+     var dateFormat = CCRZ.pagevars.pageLabels['Date_Format'];
+     $(".requestedDate").Zebra_DatePicker({
+      show_other_months: false,
+      readonly_element: true,
+      show_select_today: false,
+      days: daysArray,
+      months: monthsArray,
+      format: dateFormat
+     });
+
+     if(this.requestDateData.attributes.messages){
+      CCRZ.pubSub.trigger("pageMessage",this.requestDateData.attributes);
+     }
+
+     if( (this.requestDateData.attributes.ApiError) && CCRZ.pagevars.pageConfig.isTrue('SO.gateDDErr')){
+      var proceedButton = $('[type=button].proceed');
+      if (proceedButton) {
+       proceedButton.addClass('blocked');
+       proceedButton.attr('disabled','disabled').addClass('disabled');
+      }
+     }
+
+     if(!this.requestDateData.attributes.ApiError){
+      var datepicker = $('.requestedDate').data('Zebra_DatePicker');
+      if (this.requestDateData.attributes.Offset) {
+       if (this.requestDateData.attributes.Duration) {
+        datepicker.update({
+         direction: [this.requestDateData.attributes.Offset,this.requestDateData.attributes.Duration]
+        });
+       }
+       else {
+        datepicker.update({
+         direction: this.requestDateData.attributes.Offset
+        });
+       }
+      }
+      else if (this.requestDateData.attributes.Duration) {
+       datepicker.update({
+        direction: [true,this.requestDateData.attributes.Duration]
+       });
+      }
+      if (this.requestDateData.attributes.Exclusions && this.requestDateData.attributes.Exclusions.length > 0) {
+       datepicker.update({
+        disabled_dates: this.requestDateData.attributes.Exclusions
+       });
+      }
+      else if (this.requestDateData.attributes.Inclusions && this.requestDateData.attributes.Inclusions.length > 0) {
+       datepicker.update({
+        disabled_dates: ['* * * *'],
+        enabled_dates: this.requestDateData.attributes.Inclusions
+       });
+      }
+     }
+    },
+    updateShippingPrice: function(event) {
+     var idVal = $(event.target).val();
+     var selMethod = this.shippingData.get(idVal);
+     CCRZ.cartCheckoutModel.set('shippingMethod',selMethod.attributes.uniqueId);
+     CCRZ.cartCheckoutModel.set('shippingCharge',selMethod.attributes.price);
+     this.$el.find(".shippingCost").html(formatPrice(selMethod.attributes.price));
+    },
+    determineEvent: function(event) {
+     if (event.keyCode != 13)
+      return;
+     else {
+      if ($(event.target).is("textarea"))
+       return;
+      else {
+       if (event.preventDefault) event.preventDefault();
+       if (event.stopPropagation) event.stopPropagation();
+       event.cancelBubble = true;
+       var proceedButton = $('[type=button].proceed');
+       if (proceedButton && !proceedButton.hasClass('disabled'))
+        this.processShippingInfo();
+      }
+     }
+    },
+    validateInfo: function(fieldData) {
+     $("#shipForm").validate({
+      invalidHandler: function(event, validator) {
+       CCRZ.handleValidationErrors(event, validator, 'messagingSection-Error', false);
+      },
+      rules: {
+       requestedDateStr: {
+        required: CCRZ.getPageConfig('payship.reqdelivdate', false)
+       }
+      },
+      messages: {
+       requestedDateStr: {
+        required: "MISSING_DELIVERY_DATE"
+       }
+      },
+      errorPlacement: function(error, element) {
+      }
+     });
+     CCRZ.console.log($("#shipForm").valid());
+     return $("#shipForm").valid();
+    },
+    processShippingInfo: function() {
+     var formData = form2js('shipForm', '.', false, function(node) {}, false);
+     if (this.validateInfo(formData)) {
+      CCRZ.cartCheckoutModel.set(formData);
+      CCRZ.cartCheckoutView.slideRight();
+     }
+    }
+   });
+
+  });
+ </script></span><span id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:j_id65">
+
+	<script id="Review-Desktop" type="text/template">
+  <form enctype="multipart/form-data" class="margin_form cc_OrderReview_new">
+   <div class="alert alert-error messagingSection-Error" style="display: none"></div>
+   <div class="alert alert-info messagingSection-Info" style="display: none"></div>
+   <div class="alert alert-warning messagingSection-Warning" style="display: none"></div>
+   <fieldset class="grey">
+    <legend class="grey">{{pageLabelMap 'CheckOut_GeneralInformation'}}</legend>
+    <ul class="order_review">
+     <li>
+      <p>
+       <strong>{{pageLabelMap 'CheckOut_BuyerInformation'}}</strong>
+       <a id="edit_UserInfo" href="#edit_UserInfo" class="editAddressInfo">{{pageLabelMap 'CheckOut_edit'}}</a><br/>
+       {{this.buyerFirstName}} {{this.buyerLastName}}<br/>
+       {{this.buyerPhone}}<br/>
+       {{this.buyerEmail}}
+      </p>
+      <p>
+       <strong>{{pageLabelMap 'CheckOut_ShipmentInformation'}}</strong>
+       <a id="edit_Shipping" href="#edit_Shipping" class="editShippingInfo">{{pageLabelMap 'CheckOut_edit'}}</a><br/>
+       {{#if this.shippingMethod}}
+        {{pageLabelMap 'CheckOut_ShippingMethod'}}: {{this.shippingMethod}}<br/>
+       {{/if}}
+       {{#if this.shippingInst}}
+        {{pageLabelMap 'CheckOut_ShippingNotes'}}: {{this.shippingInst}}<br/>
+       {{/if}}
+       {{#if this.requestedDateStr}}
+        {{pageLabelMap 'Checkout_RequestedDeliveryDt'}}: {{this.requestedDateStr}}<br/>
+       {{/if}}
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>{{pageLabelMap 'CheckOut_BillingAddress'}}</strong>
+       <a id="edit_UserInfo" href="#edit_UserInfo" class="editAddressInfo">{{pageLabelMap 'CheckOut_edit'}}</a><br/>
+       {{> addressDisplay this.billingAddress}}
+      </p>
+     </li>
+     <li>
+      <p>
+       <strong>{{pageLabelMap 'CheckOut_OrderReviewShippingAddress'}}</strong>
+       <a id="edit_UserInfo" href="#edit_UserInfo" class="editAddressInfo">{{pageLabelMap 'CheckOut_edit'}}</a><br/>
+       {{> addressDisplay this.shippingAddress}}
+      </p>
+     </li>
+    </ul>
+   </fieldset>
+   <div class="reviewCartSection"></div>
+   <div class="clear"></div>
+   <div class="reviewPaymentSection"></div>
+   <p class="link_button">
+    <input class="button right proceed processReview" type="button" value="{{pageLabelMap 'CheckOut_MobileGotoPayment'}}" alt="{{pageLabelMap 'CheckOut_AcceptAndProceed'}}" />
+    <br/>
+   </p>
+  </form>
+ </script>
+
+	<script id="Review-Mobile" type="text/template">
+  <div class="checkout_container">
+   <div class="alert alert-error messagingSection-Error" style="display: none"></div>
+   <div class="alert alert-info messagingSection-Info" style="display: none"></div>
+   <div class="alert alert-warning messagingSection-Warning" style="display: none"></div>
+   <h2 class="title">{{pageLabelMap 'CheckOut_ReviewStep'}}</h2>
+   <div class="checkout_detail">
+    <div class="checkout_detail_item">
+     <div class="accordion clear" id="accordion">
+
+      <div class="accordion-group">
+       <div class="accordion-heading">
+        <a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#collapseOne">{{pageLabelMap 'CheckOut_BuyerInformation'}}</a>
+       </div>
+       <div class="accordion-body in collapse" id="collapseOne">
+        <div class="accordion-inner">
+         <p class="basic">
+          <strong>{{pageLabelMap 'CheckOut_BuyerInformation'}}</strong>
+          <a id="edit_UserInfo" href="#edit_UserInfo" class="editAddressInfo">{{pageLabelMap 'CheckOut_edit'}}</a><br/>
+          {{this.buyerFirstName}} {{this.buyerLastName}}<br/>
+          {{this.buyerPhone}}<br/>
+          {{this.buyerEmail}}
+         </p>
+         <p class="basic_half">
+          <strong>{{pageLabelMap 'CheckOut_BillingAddress'}}</strong>
+          <a id="edit_UserInfo" href="#edit_UserInfo" class="editAddressInfo">{{pageLabelMap 'CheckOut_edit'}}</a><br/>
+          {{> addressDisplay this.billingAddress}}
+         </p>
+         <p class="basic_half">
+          <strong>{{pageLabelMap 'CheckOut_OrderReviewShippingAddress'}}</strong>
+          <a id="edit_UserInfo" href="#edit_UserInfo" class="editAddressInfo">{{pageLabelMap 'CheckOut_edit'}}</a><br/>
+          {{> addressDisplay this.shippingAddress}}
+         </p>
+        </div>
+       </div>
+      </div>
+
+      <div class="accordion-group">
+       <div class="accordion-heading">
+          <a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo">{{pageLabelMap 'CheckOut_ShipmentInformation'}}</a>
+       </div>
+       <div class="accordion-body in collapse" id="collapseTwo">
+        <div class="accordion-inner">
+         <p class="basic">
+          {{#if this.shippingMethod}}
+           <strong>{{pageLabelMap 'CheckOut_ShippingMethod'}}</strong>
+           <a id="edit_Shipping" href="#edit_Shipping" class="editShippingInfo">{{pageLabelMap 'CheckOut_edit'}}</a><br/>
+           {{this.shippingMethod}}<br/>
+          {{/if}}
+          {{#if this.shippingInst}}
+           <strong>{{pageLabelMap 'CheckOut_ShippingNotes'}}</strong><br/>
+           {{this.shippingInst}}<br/>
+          {{/if}}
+          {{#if this.this.requestedDate}}
+           <strong>{{pageLabelMap 'Checkout_RequestedDeliveryDt'}}</strong><br/>
+           {{this.requestedDateStr}}<br/>
+          {{/if}}
+         </p>
+        </div>
+       </div>
+      </div>
+
+      <div class="accordion-group">
+       <div class="accordion-heading">
+        <a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#collapseThree">Cart Details</a>
+       </div>
+       <div class="accordion-body in collapse" id="collapseThree" style="height: auto;">
+        <div class="accordion-inner">
+         <div class="reviewCartSection"></div>
+        </div>
+       </div>
+      </div>
+
+     </div>
+     <div class="button_large_container">
+      <input class="large_grey_button processReview" name="" type="button" value="{{pageLabelMap 'CheckOut_MobileGotoPayment'}}">
+     </div>
+    </div>
+   </div>
+  </div>
+ </script>
+
+	<script id="Review-Cart-Desktop" type="text/template">
+
+  <div id="cart_items_container reviewSection" class="">
+   <div class="cart_item_list">
+    {{#each this.cartItems}}
+     <div class="cart_item">
+      <div class="price">
+       <p>{{pageLabelMap 'CartInc_Qty'}}: {{this.quantity}}</p>
+       <p class="price">
+        {{#if this.price}}
+         {{pageLabelMap 'CartInc_Price'}}: {{{price this.price}}}<br/>
+        {{/if}}
+        {{#if this.absoluteDiscount}}
+         {{#ifGreater this.absoluteDiscount 0}}
+          <span>{{pageLabelMap 'Checkout_YouSave'}}: {{{price this.absoluteDiscount}}}</span><br/>
+         {{/ifGreater}}
+         {{#ifLessThan this.absoluteDiscount 0}}
+          <span>{{pageLabelMap 'CartInc_Surcharge'}}: {{{priceAbs this.absoluteDiscount}}}</span><br/>
+         {{/ifLessThan}}
+        {{/if}}
+        <strong>{{pageLabelMap 'CartInc_Total'}}: {{{price this.SubAmount}}}</strong>
+       </p>
+      </div>
+      <div class="cart_item_viewport">
+       <a href="#">{{{displayImage this.mediaWrapper 'orderReview'}}}</a>
+      </div>
+      <p class="item_title">
+       <a href="#" class="prodLink" data-id="{{this.mockProduct.sku}}">{{this.mockProduct.name}}</a>
+      </p>
+      <p><span><strong>{{pageLabelMap 'Checkout_SKU'}}:</strong> {{this.mockProduct.sku}}</span></p>
+      {{#if this.minorLines }}
+       <p><a href="#included_items{{this.itemID}}" id="includedItemsLink" data-toggle="modal" data-id="{{this.itemID}}">{{pageLabelMap 'IncludedItems'}}</a></p>
+       {{> includedDisplay}}
+      {{/if}}
+     </div>
+    {{/each}}
+   </div>
+  </div>
+  <div class="clear"></div>
+  {{> totalsSection}}
+ </script>
+
+	<script id="Review-Cart-Mobile" type="text/template">
+  {{#each this.cartItems}}
+   <div class="cart_review_1_row">
+    <div class="cart_review_1_row_item">
+     <p><a href="#">{{this.mockProduct.name}}</a></p>
+     <p>{{pageLabelMap 'CartInc_SKU'}} {{this.mockProduct.sku}}</p>
+     <p class="included_items">
+      {{#if this.minorLines }}
+       <a href="#included_items{{this.itemID}}" id="includedItemsLink" data-toggle="modal" data-id="{{this.itemID}}">{{pageLabelMap 'CheckOut_IncludedItems'}}</a>
+       {{> includedDisplay}}
+      {{/if}}
+      {{#if this.miscMessage }}
+       <a href="#additional_info{{this.itemID}}" id="additionalInfoLink" data-toggle="modal" data-id="{{this.itemID}}">{{pageLabelMap 'CheckOut_AdditionalInfo'}}</a>
+       <div id="additional_info{{this.itemID}}" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+         <h3 id="myModalLabel">{{this.mockProduct.name}} {{pageLabelMap 'CheckOut_AdditionalInfo'}}</h3>
+        </div>
+        <div class="modal-body">
+         {{this.miscMessage}}
+        </div>
+       </div>
+      {{/if}}
+     </p>
+     <div class="cart_figures">
+      <div class="section1">{{pageLabelMap 'CartInc_Price'}}:</div>
+      <div class="section2">{{pageLabelMap 'Qty'}}:</div>
+      <div class="section3">{{pageLabelMap 'CartInc_Total'}}:</div>
+      <div class="section1">
+       {{price this.price}}
+      </div>
+      <div class="section2">
+       {{this.quantity}}
+      </div>
+      <div class="section3 totalAmount">
+       <strong class="price">{{price this.SubAmount}}</strong>
+      </div>
+      <div class="clear"></div>
+     </div>
+    </div>
+   </div>
+  {{/each}}
+  {{> totalsSection}}
+ </script>
+
+	<script>
+  jQuery(function($) {
+   CCRZ.views.CartOrderReviewView = Backbone.View.extend({
+    templateCartPhone : CCRZ.util.template('Review-Cart-Mobile'),
+    templateCartDesktop : CCRZ.util.template('Review-Cart-Desktop'),
+    initialize: function() {
+    },
+    renderPhone : function(ele) {
+     var v = this;
+     v.$el.html('');
+     v.setElement(ele);
+     v.$el.html(v.templateCartPhone(CCRZ.cartCheckoutModel.toJSON()));
+    },
+    renderDesktop : function(ele) {
+     var v = this;
+     v.$el.html('');
+     v.setElement(ele);
+     v.$el.html(v.templateCartDesktop(CCRZ.cartCheckoutModel.toJSON()));
+    }
+   });
+
+   CCRZ.views.OrderReviewView = CCRZ.CloudCrazeView.extend({
+    templatePhone : CCRZ.util.template('Review-Mobile'),
+    templateDesktop : CCRZ.util.template('Review-Desktop'),
+    className: 'cc_ctrl_CheckoutRD',
+    navIndex : 2,
+    events : {
+     "click .editUserInfo" : "editUserInfo",
+     "click .editAddressInfo" : "editAddressInfo",
+     "click .editShippingInfo" : "editShippingInfo",
+     "click .placeOrder" : "placeOrder",
+     "click .processReview" : "processReview"
+    },
+    init: function() {
+     Handlebars.registerPartial("addressDisplay", $("#AddressDisplay").html());
+     Handlebars.registerPartial("includedDisplay", $("#Cart-IncludedItems").html());
+     Handlebars.registerPartial("totalsSection", $("#TotalSection").html());
+     this.cartView = new CCRZ.views.CartOrderReviewView();
+    },
+    initSetup: function(callback) {
+     var tmpModel = CCRZ.cartCheckoutModel.clone();
+     tmpModel.unset('countryList');
+     tmpModel.unset('terms');
+     tmpModel.unset('shippingMethods');
+     tmpModel.unset('requestedDate');
+     tmpModel.attributes.billingAddress.countryList = undefined;
+     tmpModel.attributes.shippingAddress.countryList = undefined;
+     var view = this;
+     tmpModel.save(function(results) {
+      if (results) {
+       CCRZ.cartCheckoutModel.set('subTotal', results.subTotal);
+       CCRZ.cartCheckoutModel.set('cartItems', results.cartItems);
+       var cartjson = JSON.stringify(CCRZ.cartCheckoutModel.get('shippingAddress'));
+       view.invokeContainerLoading($('.deskLayout'), 'fetchTax', CCRZ.pagevars.storefrontName, CCRZ.pagevars.portalUserId, cartjson, CCRZ.cartCheckoutModel.get('sfid'), function(response){
+        CCRZ.cartCheckoutModel.set('tax', response);
+        callback();
+       }, {buffer: false});
+      }
+      else
+       callback();
+     });
+    },
+    renderPhone : function() {
+     this.renderView(this.templatePhone);
+     this.cartView.renderPhone(this.$el.find(".reviewCartSection"));
+    },
+    renderDesktop : function() {
+     this.renderView(this.templateDesktop);
+     this.cartView.renderDesktop(this.$el.find(".reviewCartSection"));
+    },
+    renderView: function(currTemplate) {
+     var v = this;
+     v.$el.html(currTemplate(CCRZ.cartCheckoutModel.toJSON()));
+    },
+    editUserInfo: function() {
+     CCRZ.cartCheckoutView.goToPosition(0);
+    },
+    editAddressInfo: function() {
+     CCRZ.cartCheckoutView.goToPosition(0);
+    },
+    editShippingInfo: function() {
+     CCRZ.cartCheckoutView.goToPosition(1);
+    },
+    processReview: function() {
+     CCRZ.cartCheckoutView.slideRight();
+    },
+    placeOrder: function() {
+
+    }
+   });
+
+  });
+ </script></span><span id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:j_id67">
+
+	<script id="Payment-PO" type="text/template">
+  <form id="poPaymentForm">
+   <p>{{pageLabelMap 'CheckOut_PurchaseOrderNumber'}}:<br/>
+    <input type="text" class="po" name="accountNumber"/>
+    <input type="hidden" name="paymentMethod" value="PO Number"/>
+   </p>
+   {{#ifDisplay 'OR.ShowAttach'}}
+    <p class="" style="display: none;">
+     <input type="button" value="{{pageLabelMap 'Attachment_Title'}}" onclick="javascript:CCRZ.showAttachmentSection();" />
+    </p>
+   {{/ifDisplay}}
+   <p>{{{pageLabelMap 'CheckOut_POGuidingText'}}}</p>
+   <p class="link_button">
+    <input class="large_fixed_button right proceed processPayment" data-id="poPaymentForm" type="button" value="{{pageLabelMap 'CheckOut_CompleteOrder'}}" alt="{{pageLabelMap 'CheckOut_CompleteOrder'}}" />
+    <br/>
+   </p>
+  </form>
+ </script>
+
+	<script id="Payment-Contract" type="text/template">
+  <form id="contractPaymentForm">
+   <p>{{pageLabelMap 'CheckOut_ContractId'}}:<br/>
+    <input type="text" class="po" name="accountNumber"/>
+    <input type="hidden" name="paymentMethod" value="Contract"/>
+   </p>
+   <p>{{{pageLabelMap 'CheckOut_ContractGuidingText'}}}</p>
+   <p class="link_button">
+    <input class="large_fixed_button right proceed processPayment" data-id="contractPaymentForm" type="button" value="{{pageLabelMap 'CheckOut_CompleteOrder'}}" alt="{{pageLabelMap 'CheckOut_CompleteOrder'}}" />
+    <br/>
+   </p>
+  </form>
+ </script>
+
+	<script id="Payment-CC" type="text/template">
+
+ </script>
+
+	<script id="Payment-Mobile" type="text/template">
+  <div class="checkout_container">
+   <h2 class="title">{{pageLabelMap 'CheckOut_PaymentInformationLeg'}}</h2>
+   <div class="checkout_detail">
+    <div class="checkout_detail_item">
+     <div class="alert alert-error messagingSection-Error" style="display: none"></div>
+     <div class="alert alert-info messagingSection-Info" style="display: none"></div>
+     <div class="alert alert-warning messagingSection-Warning" style="display: none"></div>
+     <div id="accordion" class="accordion clear">
+      <p class="basic">{{pageLabelMap 'CheckOut_PaymentType'}}:</p>
+      {{#each this.types}}
+       <div class="accordion-group payment-info-{{value}}">
+        <div class="accordion-heading">
+         <a href="#collapse{{value}}" data-parent="#accordion" data-toggle="collapse" class="large accordion-toggle">{{pageLabelMap name}}</a>
+        </div>
+        <div class="accordion-body collapse" id="collapse{{value}}">
+         <div class="accordion-inner">
+          {{#ifEquals this.value 'po'}}
+           {{> poDisplay}}
+          {{/ifEquals}}
+          {{#ifEquals this.value 'Contract'}}
+           {{> contractDisplay}}
+          {{/ifEquals}}
+          {{#ifEquals this.value 'cc'}}
+           {{#with ../../settings}}
+            <iframe src="{{HOPPage__c}}" class="ccSection" width="{{HOPWidth__c}}" height="{{HOPHeight__c}}" scrolling="no" frameBorder="0"></iframe>
+           {{/with}}
+          {{/ifEquals}}
+         </div>
+        </div>
+       </div>
+      {{/each}}
+     </div>
+     <p>{{{pageLabelMap 'CheckOut_OrderReviewGuidingText'}}}</p>
+    </div>
+   </div>
+  </div>
+
+ </script>
+
+	<script id="Payment-Desktop" type="text/template">
+  <div class="margin_form">
+   <fieldset>
+    <legend>{{pageLabelMap 'CheckOut_PaymentInformationLeg'}}</legend>
+    <div class="alert alert-error messagingSection-Error" style="display: none"></div>
+    <div class="alert alert-info messagingSection-Info" style="display: none"></div>
+    <div class="alert alert-warning messagingSection-Warning" style="display: none"></div>
+    <div class="shipping_payment">
+     <div id="accordion" class="accordion clear">
+      {{#each this.types}}
+       <div class="accordion-group payment-info-{{value}}">
+        <div class="accordion-heading">
+         <a href="#collapse{{value}}" data-parent="#accordion" data-toggle="collapse" class="large accordion-toggle">{{pageLabelMap name}}</a>
+        </div>
+        <div class="accordion-body {{#ifGreater ../types.length 1 }} collapse {{/ifGreater}}" id="collapse{{value}}">
+         <div class="accordion-inner">
+          {{#ifEquals this.value 'po'}}
+           {{> poDisplay}}
+          {{/ifEquals}}
+          {{#ifEquals this.value 'Contract'}}
+           {{> contractDisplay}}
+          {{/ifEquals}}
+          {{#ifEquals this.value 'cc'}}
+           {{#with ../../settings}}
+            <iframe src="{{HOPPage__c}}" class="ccSection" width="{{HOPWidth__c}}" height="{{HOPHeight__c}}" scrolling="no" frameBorder="0"></iframe>
+           {{/with}}
+          {{/ifEquals}}
+         </div>
+        </div>
+       </div>
+      {{/each}}
+     </div>
+     <p><label>{{{pageLabelMap 'CheckOut_OrderReviewGuidingText'}}}</label></p>
+    </div>
+   </fieldset>
+  </div>
+ </script>
+
+	<script>
+  jQuery(function($) {
+   'use strict';
+   CCRZ.models.PaymentModel = CCRZ.CloudCrazeModel.extend({
+    className: 'cc_ctrl_CheckoutRD',
+    fetch: function(callback) {
+     var model = this;
+     this.invokeContainerLoading($('.checkoutContent'), 'fetchPaymentSettings', CCRZ.pagevars.storefrontName, CCRZ.pagevars.portalUserId, function(response){
+      model.set(model.parse(response));
+      callback();
+     });
+    }
+   });
+
+   CCRZ.views.PaymentView = CCRZ.CloudCrazeView.extend({
+    templatePhone : CCRZ.util.template('Payment-Mobile'),
+    templateDesktop : CCRZ.util.template('Payment-Desktop'),
+    className: 'cc_ctrl_CheckoutRD',
+    navIndex : 3,
+    events : {
+     "click .processPayment" : "processPlaceAction",
+     "keypress #poPaymentForm": "determineEvent",
+     "keypress #contractPaymentForm": "determineEvent"
+    },
+    init: function() {
+     Handlebars.registerPartial("poDisplay", $("#Payment-PO").html());
+     Handlebars.registerPartial("contractDisplay", $("#Payment-Contract").html());
+     Handlebars.registerPartial("ccDisplay", $("#Payment-CC").html());
+     this.model = new CCRZ.models.PaymentModel();
+    },
+    initSetup: function(callback) {
+     this.model.fetch(callback);
+    },
+    renderPhone : function() {
+     this.renderView(this.templatePhone);
+    },
+    renderDesktop : function() {
+     this.renderView(this.templateDesktop);
+    },
+    renderView: function(currTemplate) {
+     var v = this;
+     v.$el.html(currTemplate(v.model.toJSON()));
+    },
+    determineEvent: function(event) {
+     if (event.keyCode != 13)
+      return;
+     else {
+      if (event.preventDefault) event.preventDefault();
+      if (event.stopPropagation) event.stopPropagation();
+      event.cancelBubble = true;
+      this.placeOrder($(event.currentTarget).attr('id'));
+     }
+    },
+    processPlaceAction: function(event) {
+     this.placeOrder($(event.target).data("id"));
+    },
+    validateInfo: function(formName, fieldData) {
+     CCRZ.console.log(fieldData);
+     $("#"+formName).validate({
+      invalidHandler: function(event, validator) {
+       CCRZ.handleValidationErrors(event, validator, 'messagingSection-Error', false);
+      },
+      rules: {
+       accountNumber: "required"
+      },
+      messages: {
+       accountNumber: "MISSING_PAYMENT_INFO"
+      },
+      errorPlacement: function(error, element) {
+      }
+     });
+     return $("#"+formName).valid();
+    },
+    placeOrder: function(formName) {
+     var formData = form2js(formName, '.', false, function(node) {}, false);
+     if (this.validateInfo(formName, formData)) {
+      var jsonData = JSON.stringify(formData);
+      this.invokeContainerLoading($('.checkoutContent'), 'placeOrder', CCRZ.pagevars.storefrontName, CCRZ.pagevars.portalUserId, jsonData, CCRZ.cartCheckoutModel.attributes.sfid, function(response){
+       orderDetails(response);
+      });
+     }
+    }
+   });
+  });
+ </script></span><span id="CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:j_id69">
+
+	<script id="CheckoutHeader-Desktop" type="text/template">
+  {{#ifEquals this.index 0}}
+   <img src="{{image 'Static Resource' 'images/your_information_header.png' locale=locale }}" />
+  {{/ifEquals}}
+  {{#ifEquals this.index 1}}
+   <img src="{{image 'Static Resource' 'images/shipping_payment_header.png' locale=locale }}" />
+  {{/ifEquals}}
+  {{#ifEquals this.index 2}}
+   <img src="{{image 'Static Resource' 'images/order_review_header.png' locale=locale }}" />
+  {{/ifEquals}}
+  {{#ifEquals this.index 3}}
+   <img src="{{image 'Static Resource' 'images/order_review_header.png' locale=locale }}" />
+  {{/ifEquals}}
+  {{#ifEquals this.index 4}}
+   <img src="{{image 'Static Resource' 'images/order_confirmation_header.png' locale=locale }}" />
+  {{/ifEquals}}
+ </script>
+	<script id="CheckoutHeader-Mobile" type="text/template">
+  <ul class="checkout_steps">
+   {{#ifEquals this.index 0}}
+    <li class="current step">{{pageLabelMap 'CheckOut_InfoStep'}}</li>
+   {{else}}
+    <li class="step"><a href="#" class="goToTab" data-index="0">{{pageLabelMap 'CheckOut_InfoStep'}}</a></li>
+   {{/ifEquals}}
+   {{#ifEquals this.index 1}}
+    <li class="current step">{{pageLabelMap 'CheckOut_ShippingStep'}}</li>
+   {{else}}
+    <li class="step"><a href="#" class="goToTab" data-index="1">{{pageLabelMap 'CheckOut_ShippingStep'}}</a></li>
+   {{/ifEquals}}
+   {{#ifEquals this.index 2}}
+    <li class="current step">{{pageLabelMap 'CheckOut_ReviewStep'}}</li>
+   {{else}}
+    <li class="step"><a href="#" class="goToTab" data-index="2">{{pageLabelMap 'CheckOut_ReviewStep'}}</a></li>
+   {{/ifEquals}}
+   {{#ifEquals this.index 3}}
+    <li class="current step">{{pageLabelMap 'CheckOut_PaymentStep'}}</li>
+   {{else}}
+    <li class="step"><a href="#" class="goToTab" data-index="3">{{pageLabelMap 'CheckOut_PaymentStep'}}</a></li>
+   {{/ifEquals}}
+  </ul>
+ </script>
+	<script id="Checkout-ErrorView" type="text/template">
+  <div class="margin_form">
+   <div class="alert alert-error messagingSection-Error" style="display: none"></div>
+  </div>
+ </script>
+
+	<script>
+  jQuery(function($) {
+
+   CCRZ.models.NavModel = CCRZ.CloudCrazeModel.extend();
+
+   CCRZ.models.CartCheckout = CCRZ.CloudCrazeModel.extend({
+    className: 'cc_ctrl_CheckoutRD',
+    fetch: function(cartId, callback) {
+     var model = this;
+     this.invokeContainerLoading($('.deskLayout'), 'fetchCart', CCRZ.pagevars.storefrontName, CCRZ.pagevars.portalUserId, cartId, function(response){
+      model.set(model.parse(response));
+      callback();
+     }, { escape: false });
+    },
+    getShippingMethod : function(uid){
+     var p = null;
+     $.each(this.get("shippingMethods"), function(index, value){
+      if(uid == (value.provider + ' - ' + value.serviceName)){
+       p = value;
+      }
+     });
+     return p;
+    },
+    getShippingPrice : function(){
+     var obj = (this.get("shippingMethods") && this.get("shippingMethods").length > 0) ? this.get("shippingMethods")[0] : null;
+     $.each(this.get("shippingMethods"), function(index, value){
+      obj = (value.selected) ? value : obj;
+     });
+     return (obj != null) ? obj.price : null;
+    },
+    save: function(callback) {
+     var cartjson = JSON.stringify(this.toJSON());
+     var model = this;
+     this.invokeContainerLoading($('.deskLayout'), 'save', CCRZ.pagevars.storefrontName, CCRZ.pagevars.portalUserId, cartjson, CCRZ.userIsoCode, function(saveresult, event){
+      if (event.status) {
+       model.invokeContainerLoading($('.deskLayout'), 'refreshPricing', CCRZ.pagevars.storefrontName, CCRZ.pagevars.portalUserId, model.attributes.encryptedId, CCRZ.userIsoCode, function(result, event){
+        if (event.status) {
+         if (result.messages) {
+          callback(false);
+          CCRZ.pubSub.trigger("pageMessage", result);
+         }
+         else {
+          model.trigger('refreshedFromServer');
+          callback(result);
+         }
+        }
+        else {
+         if (event.type == "exception") {
+          if (event.xhr && event.xhr.isTimeout) {
+           var errContext = CCRZ.createPageMessage('WARN', "messagingSection-Warning", 'Err_Pricing_Timeout');
+           callback(false);
+           CCRZ.pubSub.trigger("pageMessage", errContext);
+          }
+          else {
+           var errContext = CCRZ.createPageMessage('ERROR', "messagingSection-Error", event.message);
+           callback(false);
+           CCRZ.pubSub.trigger("pageMessage", errContext);
+          }
+         }
+        }
+       }, {buffer: false, timeout: 120000});
+      }
+     });
+    }
+   });
+
+   CCRZ.views.ErrorView = CCRZ.CloudCrazeView.extend({
+    templatePhone : CCRZ.util.template('Checkout-ErrorView'),
+    templateDesktop : CCRZ.util.template('Checkout-ErrorView'),
+    init: function() {
+    },
+    initSetup: function(callback) {
+     callback();
+    },
+    renderPhone: function() {
+     var v = this;
+     v.$el.html(this.templatePhone());
+     CCRZ.pubSub.trigger("pageMessage", CCRZ.cartCheckoutModel.attributes);
+    },
+    renderDesktop: function() {
+     var v = this;
+     v.$el.html(this.templateDesktop());
+     CCRZ.pubSub.trigger("pageMessage", CCRZ.cartCheckoutModel.attributes);
+    }
+   });
+
+   CCRZ.views.Nav = CCRZ.CloudCrazeView.extend({
+    templatePhone : CCRZ.util.template('CheckoutHeader-Mobile'),
+    templateDesktop : CCRZ.util.template('CheckoutHeader-Desktop'),
+    events : {
+     "click .goToTab" : "goToTab"
+    },
+    render : function(){
+     if (CCRZ.display.isPhone()){
+      this.setElement($("#productSearch"));
+      this.$el.html(this.templatePhone(this.model.toJSON()));
+     }
+     else{
+      this.setElement($(".home_slider"));
+      this.$el.html(this.templateDesktop(this.model.toJSON()));
+     }
+    },
+    goToTab : function(event){
+     var objLink = $(event.currentTarget);
+     var index = objLink.data("index");
+     CCRZ.cartCheckoutView.goToPosition(index);
+    }
+   });
+
+   CCRZ.views.cartCheckoutView = CCRZ.CloudCrazeView.extend({
+    init: function() {
+     var v = this;
+     this.subViewArray = new Array();
+     this.subViewArray.push(new CCRZ.views.UserInfoView());
+     this.subViewArray.push(new CCRZ.views.ShippingView());
+     this.subViewArray.push(new CCRZ.views.OrderReviewView());
+     this.subViewArray.push(new CCRZ.views.PaymentView());
+     this.subViewArray.push(new CCRZ.views.ErrorView());
+     this.navModel = new CCRZ.models.NavModel({
+      locale: CCRZ.pagevars.userLocale
+     });
+     this.navView = new CCRZ.views.Nav({
+      model : this.navModel
+     });
+     this.model.fetch(CCRZ.pagevars.currentCartID, function(){
+      if (v.model.attributes.messages && v.model.attributes.messages.length > 0) {
+       v.subView = v.subViewArray[4];
+       v.subView.initSetup(function() {
+        v.render();
+       });
+      }
+      else {
+       CCRZ.geoCodes.fetch(function() {
+        v.model.set({
+         countryList: CCRZ.geoCodes.countryList.toJSON()
+        });
+        v.subView = v.subViewArray[0];
+        v.subView.initSetup(function() {
+         v.render();
+        });
+       });
+      }
+     });
+    },
+    render: function() {
+     if (CCRZ.display.isPhone()){
+      this.$el.html('');
+      this.setElement($(".phone_center_column"));
+      this.loadPhoneView();
+     }
+     else{
+      this.$el.html('');
+      this.setElement($(".checkoutContent"));
+      this.loadDesktopView();
+     }
+    },
+    loadPhoneView : function(){
+     this.subView.setElement(this.$el);
+     this.$el.html(this.subView.renderPhone());
+     this.updateNav();
+    },
+    loadDesktopView : function(){
+     if (this.subView)
+      this.subView.setElement(this.$el);
+     else {
+      this.subView = this.subViewArray[0];
+      this.subView.setElement(this.$el);
+     }
+     this.$el.html(this.subView.renderDesktop());
+     this.updateNav();
+    },
+    slideRight : function(){
+     nextIndex = this.subView.navIndex + 1;
+     if(nextIndex < this.subViewArray.length){
+      this.goToPosition(nextIndex);
+     }
+    },
+    slideLeft : function(){
+     nextIndex = this.subView.navIndex - 1;
+     if(nextIndex >= 0){
+      this.goToPosition(nextIndex);
+     }
+    },
+    updateNav : function(){
+     this.navModel.set({
+      index : this.subView.navIndex
+     });
+     this.navView.render();
+    },
+    goToPosition : function(index){
+     nextIndex = index;
+     var v = this;
+     v.subView = v.subViewArray[index];
+     v.subView.initSetup(function() {
+      v.render();
+     });
+    }
+   });
+
+   CCRZ.geoCodes = new CCRZ.models.GeoModel();
+
+   CCRZ.cartCheckoutModel = new CCRZ.models.CartCheckout();
+   CCRZ.cartCheckoutView = new CCRZ.views.cartCheckoutView({
+    model : CCRZ.cartCheckoutModel
+   });
+   CCRZ.dynamicViews.push(CCRZ.cartCheckoutView);
+  });
+ </script></span>
+
+	<script type="text/javascript">Sfdc.onReady(function(){
+	SfdcApp && SfdcApp.Visualforce && SfdcApp.Visualforce.VSManager && SfdcApp.Visualforce.VSManager.vfPrepareForms(["CheckOutNew:cc_tmpl_OneColRD:cc_tmpl_Storefront:phoneLoginForm"]);
+
+});</script><div id="window-resizer-tooltip"><a href="#" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth"></span> x <span class="tooltipHeight" id="winHeight"></span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth"></span> x <span class="tooltipHeight" id="vpHeight"></span></div><div class="Zebra_DatePicker" style="left: -1000px; display: none;"><table class="dp_header" style="width: 218px;"><tbody><tr><td class="dp_previous">«</td><td class="dp_caption">undefined, undefined</td><td class="dp_next">»</td></tr></tbody></table><table class="dp_daypicker"><tbody><tr><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th><th>Su</th></tr><tr><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td class="dp_weekend">NaN</td><td class="dp_weekend">NaN</td></tr><tr><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td class="dp_weekend">NaN</td><td class="dp_weekend">NaN</td></tr><tr><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td class="dp_weekend">NaN</td><td class="dp_weekend">NaN</td></tr><tr><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td class="dp_weekend">NaN</td><td class="dp_weekend">NaN</td></tr><tr><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td class="dp_weekend">NaN</td><td class="dp_weekend">NaN</td></tr><tr><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td>NaN</td><td class="dp_weekend">NaN</td><td class="dp_weekend">NaN</td></tr></tbody></table><table class="dp_monthpicker" style="width: 218px; height: 206px; display: none;"></table><table class="dp_yearpicker" style="width: 218px; height: 206px; display: none;"></table><table class="dp_footer" style="width: 218px; display: none;"><tbody><tr><td class="dp_clear" style="display: none;">Clear date</td></tr></tbody></table></div></body></html>

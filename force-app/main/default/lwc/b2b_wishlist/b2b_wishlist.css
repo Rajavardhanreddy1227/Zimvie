@@ -1,0 +1,169 @@
+.header-lg{
+	color: var(--zim-vie-primary-navy, #0A2043);
+	font-family: Soleil;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.table-container {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #0A2043;;
+    color: white;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .table tr:hover {
+    background-color: #ddd;
+  }
+  .vertical-center {
+    margin: 0;
+    position: relative;
+    -ms-transform: translateY(-50%);
+    transform: translateY(27%);
+  }
+
+
+
+
+
+  .section-head{
+    color: #0A2043;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.section-sub-head{
+    color: #0A2043;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.section-sub-head2{
+    color: #0A2043;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.img-ctr{
+    width:150px;
+    height:150px;
+    border-radius: 10px;
+    background: #F8F9F9;
+    background-blend-mode: normal, multiply;
+}
+.product-name{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    cursor: pointer;
+}
+.product-sku{
+    color: var(--zim-vie-neutrals-pewter, #758591);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top:8px;
+}
+.product-diementions{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-top:8px;
+}
+.product-qty{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top:8px;
+}
+.product-price{
+  color:#0A2043;
+  font-weight: 400;
+  font-size:18px;
+
+}
+.slds-button{
+    color:#2C9DD8;
+}
+.slds-button_brand{
+    color:#fff;
+}
+.slds-button_white{
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 5px 25px;
+  border-radius: 30px ;
+  background: white;
+  color:#0A2043;
+  width:100%;
+}
+.slds-button_blue{
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 5px 25px;
+  border-radius: 30px ;
+  background: #0A2043;
+  color:white;
+  width:100%;
+}
+.custmBtn { 
+  background-color: rgb(10, 32, 67);
+  color: white;
+  padding: 10px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid rgb(10, 32, 67);
+  border-radius: 25px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+}
+.textbar{
+  color: #DBE0E2;
+  padding-left: 6px;
+  font-size: 14px;
+}
+.btn{
+text-decoration: underline;
+}
+.example-accordion{
+  --slds-c-accordion-heading-text-color:#0A2043;
+
+}

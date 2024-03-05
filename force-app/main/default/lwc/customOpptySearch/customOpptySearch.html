@@ -1,0 +1,99 @@
+<template>
+    <form>
+    <lightning-card title="Search Opportunities" variant="Narrow" iconname="standard:opportunity" align="center">
+        
+        <div class="slds-m-around_medium">  
+        <c-lwc-lookup lookup-label="Healthcare Facility" object-api-name="account" icon-name="standard:account"  
+            onrecordselection={onAccountSelection}></c-lwc-lookup>  
+        
+        <c-lwc-lookup lookup-label="Surgeon Name" object-api-name="Surgeon" icon-name="standard:account"  record-type="012800000002C4gAAE"
+        onrecordselection={onSurgeonSelection}></c-lwc-lookup>  
+        
+        <!--<lightning-combobox name="Product Group" label="Product Group" value={value}
+            options={productGroupList} onchange={onProdGrpSelection} class="slds-m-bottom_x-small">
+        </lightning-combobox>-->
+
+        <c-lwc-multi-select-picklist
+        if:true={productGroupList}
+        options={productGroupList}
+        onvaluechange={onMultiProdGrpSelection}
+        label="Product Group"></c-lwc-multi-select-picklist>
+            
+        <c-lwc-lookup lookup-label="Assigned Team" object-api-name="Territory2ForOpportunity" icon-name="standard:territory2"  
+            onrecordselection={onTeamSelection}></c-lwc-lookup>  
+        
+        <lightning-input type="checkbox" label="BP Target" onchange={handleBPTargetCB} class="slds-m-bottom_x-small"></lightning-input>
+        
+        <!--<lightning-combobox name="Primary Competitor" label="Primary Competitor" value={value}
+            options={competitorList} onchange={onCompetitorSelection} class="slds-m-bottom_x-small">
+        </lightning-combobox>-->
+
+        <c-lwc-multi-select-picklist
+        if:true={competitorList}
+        options={competitorList}
+        onvaluechange={onMultiCompetitorSelection}
+        label="Primary Competitor"></c-lwc-multi-select-picklist>
+ 
+        <c-lwc-lookup lookup-label="Owner" object-api-name="User" icon-name="standard:user"  
+        onrecordselection={onOwnerSelection}></c-lwc-lookup>  
+        
+        <lightning-input type="checkbox" label="Drive and Defend" onchange={handleDriveAndDefendCB} class="slds-m-bottom_x-small"></lightning-input>
+        </div>
+        
+</lightning-card>
+     
+     
+    <lightning-layout-item size="12" small-device-size="2" medium-device-size="2" large-device-size="2" padding="around-small">
+        <lightning-button label="Search" 
+                          variant="brand" 
+                          onclick={handleSearch}></lightning-button>&nbsp;
+        <!--<lightning-button label="Cancel" 
+                          variant="brand" 
+                          onclick={handleCancel}></lightning-button>&nbsp;-->
+        <lightning-button label="Clear All" 
+                          variant="brand" 
+                          onclick={handleClearAll}></lightning-button>
+    </lightning-layout-item>
+    <!--<div class="slds-box">  
+        Selected Account Name : {accountName}  
+        Selected Account Id  : {accountRecordId} 
+        
+    </div> -->
+   
+    <ul class="slds-m-around_small">
+        <template for:each={searchData} for:item="o">
+            <!--<div key={o.Id}>
+                <div if:true={o.Name} ><b>{o.Name}</b></div>
+                <div if:true={o.OwnerName} >{o.OwnerName}</div>
+                <div class="slds-text-title">{o.Desciption}</div>
+            </div>-->
+            <lightning-card title={o.Name} key={o.Id} data-id={o.Id} class="slds-box slds-box_small">
+                <lightning-button label="View" slot="actions" name={o.Id} onclick={handleViewOppty}></lightning-button>
+                <p class="slds-p-horizontal_small">Healthcare Facility: {o.AccountName}</p>
+                <p class="slds-p-horizontal_small">Surgeon: {o.SurgeonName}</p>
+                <p class="slds-p-horizontal_small">Record Type: {o.RecordTypeName}</p>
+                <p class="slds-p-horizontal_small">Stage: {o.StageName}</p>
+                <p class="slds-p-horizontal_small">Close Date: {o.CloseDate}</p>
+                <p class="slds-p-horizontal_small">Assigned Team: {o.AssignedTeam}</p>
+                <p class="slds-p-horizontal_small">Owner: {o.OwnerName}</p>
+                <!--<p slot="footer">Card Footer</p>-->
+            </lightning-card>
+            <template if:true= {noRecordsFound}>
+                --No Opportunity Records Found--
+            </template>
+        </template>
+    </ul>
+
+    <!--<div style="height: 300px;" if:true={searchData} class="slds-box slds-box_small">
+        
+        <lightning-datatable data={searchData} 
+                             columns={cols} 
+                             key-field="Id"                             
+                             onrowaction={handleRowAction}
+                             onrowselection={getSelectedName}>
+                             >
+        </lightning-datatable>
+        
+    </div>-->
+    </form>
+    </template>

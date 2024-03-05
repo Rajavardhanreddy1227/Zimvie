@@ -1,0 +1,235 @@
+.cstmbtn{
+  background-color: white;
+  color: rgb(10, 32, 67);
+  padding: 10px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border: 0px solid rgb(10, 32, 67);
+  border-radius: 25px;
+  
+}
+.icon{
+    --slds-c-icon-color-foreground-default: rgb(10, 32, 67);
+    --slds-c-icon-color-background: white;
+}
+.pageNumber{
+    color: white;
+    border: -3px;
+    border-radius: 30px;
+    width: 43px;
+    height: 39px;
+    padding: 7px;
+    text-align: center;
+    background: #2C9DD8;
+    font-size: 16px;
+    display: inline-block;
+}
+.recdata{
+    font-weight:400;
+    font-size:16px;
+    color:#272E33;
+    float:right;
+}
+.recinfo{
+    font-weight:600;
+    font-size:16px;
+    color:#000000;
+    
+}
+.recphone{
+    font-weight:400;
+    font-size:16px;
+    color:#000000;
+    
+}
+.paybtncls{
+    background-color: #0A2043;
+    color: white;
+    /* padding: 6px 18px; */
+    /* text-align: center; */
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 30px;
+    width: 133px;
+    height: 39px;
+}
+.payicon{
+    --slds-c-icon-color-foreground-default: white;
+}
+.exportbtn{
+    background-color: white;
+    color: rgb(10, 32, 67);
+    padding: 6px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid rgb(10, 32, 67);
+    border-radius: 30px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    height: 39px;
+    width: 108px;
+}
+.navsec{
+    float:right;
+}
+.heading{
+    font-size:16px;
+    font-weight:700;
+    color:#0A2043;
+}
+.tabledata{
+    font-size:16px;
+    font-weight:400;
+    color:#0A2043;
+}
+.tableicon{
+    --slds-c-icon-color-foreground-default: rgb(10, 32, 67);
+}
+.paybtnclsdisabled{
+    background-color: #AAA9AD;
+    color: white;
+    /* padding: 6px 18px; */
+    /* text-align: center; */
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 30px;
+    width: 133px;
+    height: 39px;
+    border-color: #AAA9AD;
+    border-style: initial;
+}
+.srchbtncls{
+    border-radius: 50px;
+    border-width: revert;
+    width: 150px;
+    height: 0px;
+    color: #758591;
+    border-color: #DBE0E2;
+    padding: 15px;
+    border-style: ridge;
+}
+.applybtn{
+    background-color: #0A2043;
+    color: white;
+    /* padding: 6px 18px; */
+    /* text-align: center; */
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 30px;
+    width: 83px;
+    height: 33px;
+}
+.resetbtn{
+    background-color: white;
+    color: rgb(10, 32, 67);
+    padding: 6px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid rgb(10, 32, 67);
+    border-radius: 30px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    height: 33px;
+    width: 83px;
+}
+.pageheading{
+    font-size:24px;
+    font-weight:700;
+    color:#0A2043;
+    margin-bottom: 25px;
+}
+.recnotfoundcls{
+    color: #0A2043;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 100px;
+    text-align: center;
+    display: block;
+
+}
+.togglebtncls{
+    --slds-c-checkbox-toggle-switch-color-background: grey;
+    --slds-c-checkbox-toggle-color-background-checked: #0A2043;
+    --slds-c-checkbox-toggle-switch-color-background-checked: #ffffff;
+    --slds-c-checkbox-toggle-color-background-checked-focus: #0A2043;
+}
+.scrollbar
+{
+    width: 50%;
+    margin-left: 30px;
+    margin-top: 30px;
+    height: 300px;
+    background: #F5F5F5;
+    overflow-x: scroll;
+}
+
+.force-overflow
+{
+    min-height: 450px;
+    padding: 1em;
+}
+
+.style-3::-webkit-scrollbar-track
+{
+    background-color: #F5F5F5;
+}
+
+.style-3::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.style-3::-webkit-scrollbar-thumb
+{
+    background-color: #49a1e4;
+    border-radius: 5px;
+}
+.createAdjustmentBtn{
+    background-color: white;
+    color: rgb(10, 32, 67);
+    padding: 6px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid rgb(10, 32, 67);
+    border-radius: 30px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    height: 33px;
+    width: 100%;
+}

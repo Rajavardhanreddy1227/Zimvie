@@ -1,0 +1,21 @@
+.app-favorite{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.app-favorite .slds-button{
+  box-shadow: none;
+}
+
+.app-favorite .favorited svg{
+  color: #F9A602;
+}
+
+.ortho-app-figure {
+  height: 11rem;
+  width: 11rem;
+}
+.ortho-app-label{
+  width: 11rem;
+}

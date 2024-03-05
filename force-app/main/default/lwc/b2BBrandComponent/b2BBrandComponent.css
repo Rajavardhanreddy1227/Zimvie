@@ -1,0 +1,185 @@
+/*body {
+  font: 12px/1.4 "Gotham SSm A","Helvetica Neue",Helvetica,Arial;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.tile {
+  color: #FFF;
+  display: inline-block;
+  margin: 3px;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-position 0.1s ease 0s;
+  vertical-align: top;
+}
+
+.tile:hover {
+  background-position: 100% 0;
+  cursor: pointer;
+  -webkit-transform: scale(0.97) perspective(400px);
+  -moz-transform: scale(0.97) perspective(400px));
+  -ms-transform: scale(0.97) perspective(400px);
+  transform: scale(0.97) perspective(400px);
+}
+
+.tile:active,  
+.tile.active {  
+}
+
+.tile > span {
+  bottom: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  left: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 4px;
+  position: absolute;
+  right: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tile-small {
+  height: 64px;
+  width: 64px;
+}
+
+.tile-medium {
+  height: 50px;
+  width: 200px;
+}
+
+.tile-large {
+  height: 256px;
+  width: 256px;
+}*/
+
+
+
+/*
+ CSS for the main interaction
+*/
+.pl-90{
+  padding-left: 90px;
+}
+.pr-90{
+  padding-right: 90px;
+}
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+/*
+ Styling
+*/
+body {
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #333;
+  font-weight: 300;
+}
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 5px 15px 5px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+/*
+.tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 22px;
+  height: 4px;
+  background: #8d8d8d;
+}*/
+
+input:focus-visible + label {
+  outline: 2px solid rgba(0,102,204,1);
+  border-radius: 3px;
+  
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label,
+.tabset > input:checked + label {
+  color: #06c;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: #06c;
+  color:white;
+}
+
+.tabset > input:checked + label {
+  border-color: #ccc;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+  background:white;
+  color:black;
+}
+
+.tab-panel {
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+
+/*
+ Demo purposes only
+*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 30px;
+}
+
+.tabset {
+  background: var(--tabColour, #005DA6);
+  min-width: 100%;
+  color:white;
+}
+.checkoutBrand{
+  margin: 0 0 10px 90px !important;
+  border: none !important;
+  background: none !important;
+}
+
+@media only screen and (max-width:480px) {
+  .pl-90{
+  padding-left: 10px;
+  }
+  .pr-90{
+  padding-right: 10px;
+  }
+}

@@ -1,0 +1,68 @@
+<template lwc:render-mode="light">
+
+    <c-b2b-spinner 
+        if:true={loader}
+        message-state={messageState}>
+    </c-b2b-spinner>
+
+    <!-- <template if:true={loader}>
+        <c-custom_spinner></c-custom_spinner>
+    </template> -->
+    <div class="slds-m-left_medium">
+    <div if:true={_isShowEmptyMessage} class="slds-p-around_small empty-message">
+        {_emptyMessage}
+    </div>
+
+    <div
+        if:false={_isShowEmptyMessage}
+        class="slds-form-element"
+        data-shipping-method-edit>
+        <div class="slds-form-element__control">
+            <template for:each={transformedOptions} for:item="option">
+                <span class="slds-radio" key={option.id}>
+                    <input
+                        type="radio"
+                        name={name}
+                        id={option.id}
+                        checked={option.selected}
+                        value={option.id}
+                        required={_required}
+                        disabled={isDisabled}
+                        onchange={handleChange}
+                    />
+                    <label style="display:block;width:100%;"
+                        class="
+                            slds-radio__label
+                            flex-container
+                        "
+                        for={option.id}
+                    >
+                        <span><span class="slds-radio_faux"></span>&nbsp;</span>
+                        <span
+                            id={option.id}
+                            data-id={option.id}
+                            class="slds-form-element__label flex-grow"
+                        >{option.name}</span
+                        >
+                        <lightning-formatted-number
+                            
+                            id={option.id}
+                            value={option.shippingFee}
+                            currency-code={option.currencyIsoCode}
+                            display-currency-as="symbol"
+                            format-style="currency" 
+                            style="float:right;"
+                        >
+                        </lightning-formatted-number>
+                    </label>
+                </span>
+            </template>
+            <template if:false={transformedOptions}>
+                <div class="slds-p-around_small slds-border_left slds-border_right slds-border_top slds-border_bottom" style="font-size: 14px;background: #fff0f0;"><b>{labels.ShippingMethodMessage}</b></div>
+            </template>
+        </div>
+    </div>
+    </div>
+    <c-b2b-show-toast-message>
+    </c-b2b-show-toast-message>
+</template>

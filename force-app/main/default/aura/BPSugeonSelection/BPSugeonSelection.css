@@ -1,0 +1,31 @@
+.THIS.slds-spinner_container {  
+  z-index: 10000;
+  position: fixed;   
+}
+.THIS .gold {
+  background-color: rgb(226, 214, 142);
+  text-align: center;
+}
+.THIS .bptrue{
+  background-color: rgb(220, 235, 225);
+}
+.THIS .platinum {
+  background-color: skyblue;
+  text-align: center;
+}
+.THIS .silver {
+  background-color: silver;
+  text-align: center;
+}
+.THIS .bronze {
+  background-color: rgb(223, 169, 144);
+  text-align: center;
+}
+.THIS .green {
+  background-color: rgb(192, 241, 192);
+  text-align: center;
+}
+
+.THIS .slds-truncate {
+  text-align: center;
+}

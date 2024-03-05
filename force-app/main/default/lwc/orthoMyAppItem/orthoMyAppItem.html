@@ -1,0 +1,43 @@
+<template>
+  <template if:true={appitem}>
+    <div
+      class="slds-visual-picker slds-p-around_xx-small slds-visual-picker_medium"
+    >
+      <input
+        onclick={handleClick}
+        type="button"
+        id="app-name"
+        value="app-name"
+        name="options"
+      />
+      <label for="app-name">
+        <span
+          class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center ortho-app-figure"
+        >
+          <span>
+            <span class="slds-icon_container">
+              <img src={appitem.LogoUrl} />
+            </span>
+          </span>
+        </span>
+        <span class="app-favorite">
+          <button
+            class="slds-button slds-button_icon slds-m-around_xxx-small"
+            onclick={handleFavoriteClick}
+            title="Favorite"
+          >
+            <lightning-icon
+              size="small"
+              icon-name="utility:favorite"
+              variant={iconVariant}
+              alternative-text="favorite"
+            ></lightning-icon>
+          </button>
+        </span>
+        <span class="slds-visual-picker__body ortho-app-label">
+          <span class="slds-text-title">{appitem.Label}</span>
+        </span>
+      </label>
+    </div>
+  </template>
+</template>

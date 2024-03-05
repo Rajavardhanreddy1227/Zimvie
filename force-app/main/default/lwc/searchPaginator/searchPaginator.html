@@ -1,0 +1,40 @@
+<!-- <template>
+    <lightning-button-icon
+        disabled={isFirstPage}
+        variant="brand"
+        class="slds-p-around_medium"
+        icon-name="utility:chevronleft"
+        onclick={handlePrevious}
+    ></lightning-button-icon>
+    <p>{totalItemCount} items • page {currentPageNumber} of {totalPages}</p>
+    <lightning-button-icon
+        disabled={isLastPage}
+        variant="brand"
+        class="slds-p-around_medium"
+        icon-name="utility:chevronright"
+        onclick={handleNext}
+    ></lightning-button-icon>
+</template> -->
+
+<template>
+    <button class="slds-p-vertical_small slds-button slds-button_neutral nav-direction" disabled={isFirstPage} aria-disabled="true" onclick={handlePrevious}>
+        <lightning-icon size="xx-small" icon-name="utility:chevronleft" class="slds-icon-utility-chevronleft slds-icon_container"></lightning-icon>
+    </button>
+    
+    <template for:each={pageToShow} for:item="page">
+        <template if:true={page.isDotSpace}>
+            <div class="slds-p-vertical_small range-symbol-container" key={page.pageNum}>...</div>
+        </template>
+        <template if:false={page.isDotSpace}>
+            <template if:true={page.isActive}>
+                <span class="slds-p-vertical_small slds-button slds-button_brand nav-button-current" aria-current="page" key={page.pageNum}>{page.pageNum}</span>
+            </template>
+            <template if:false={page.isActive}>
+                <button class="slds-p-vertical_small slds-button slds-button_neutral nav-button" value={page.pageNum} data-num={page.pageNum} key={page.pageNum} onclick={selectPageHandler}>{page.pageNum}</button>
+            </template>
+        </template>        
+    </template>
+    <button class="slds-p-vertical_small slds-button slds-button_neutral nav-direction" disabled={isLastPage} aria-disabled="true" onclick={handleNext}>
+        <lightning-icon size="xx-small" icon-name="utility:chevronright" class="slds-icon-utility-chevronright slds-icon_container"></lightning-icon>
+    </button>
+</template>

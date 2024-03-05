@@ -1,0 +1,173 @@
+<template>
+
+    <c-b2b-spinner 
+        if:true={showLoader}
+        message-state={messageState}>
+    </c-b2b-spinner>
+    <!-- <template if:true={showLoader}>
+        <c-custom_spinner></c-custom_spinner>
+    </template> -->
+    <article class={cardContainerClass} style={articleClass}>
+        <template if:true={isFeatured}>
+            <div style="height:400px; overflow:hidden; background:#f8f9fb;border:1px solid #f8f9fb; border-radius:10px">
+            <img src={image.url} alt={image.alternateText} style="width:450px;"/>
+            </div>
+            <template for:each={fields} for:item="field">
+                    <a
+                        key={field.id}
+                        title={field.value}
+                        tabindex={field.tabIndex}
+                        class="field-item slds-text-link_reset slds-p-top_xx-small slds-p-bottom_xx-small"
+                        onclick={notifyShowDetail}
+                    >
+                    <div class='item-head soleil-bold'>{field.value}</div>
+                    </a>
+            </template>
+        </template>
+        <template if:false={isFeatured}>
+            <section class="image-area newproduct">
+                <figure if:true={showImage} onclick={notifyShowDetail}>
+                    <img src={image.url} alt={image.alternateText} />
+                </figure>
+            </section>
+
+            <section class="fields-area slds-m-left_large">
+                <div class="ml-auto">
+                <template for:each={fields} for:item="field">
+                    <a
+                        key={field.id}
+                        title={field.value}
+                        tabindex={field.tabIndex}
+                        class="product-name slds-p-top_xx-small slds-p-bottom_xx-small"
+                        onclick={notifyShowDetail}
+                    > {field.value}
+                    <!--
+                        <lightning-formatted-rich-text
+                            class={field.class}
+                            value={field.value}
+                        ></lightning-formatted-rich-text>
+                        -->
+                    </a> 
+                    <template if:true={isFeatured}>
+                        <br key={field.id}/>
+                    </template>
+                </template>
+                <template if:false={isFeatured}>
+            <section class="price-area2 test" ><!--if:true={isSimple}-->
+                <span
+                    if:false={hasPrice}
+                    class="slds-p-top_xx-small slds-p-bottom_xx-small"
+                    >{labels.PriceUnavailable}</span>
+                <span class="slds-p-top_xx-small slds-p-bottom_xx-small">
+                    <template if:true={isSimple}>
+                         
+                        <lightning-formatted-number
+                            if:true={hasPrice}
+                            class="selling-price"
+                            currency-code={currency}
+                            format-style="currency"
+                            value={price}
+                        >
+                        </lightning-formatted-number>
+                    </template>
+                    <template if:false={isSimple}>
+                        ${minPrice} - ${maxPrice}
+                    </template>
+                    <span if:true={canShowListingPrice} class="slds-align-bottom">
+                        <span class="slds-assistive-text">Original Price</span>
+                        <lightning-formatted-number
+                            class="slds-p-left_xx-small listing-price"
+                            value={listingPrice}
+                            currency-code={currency}
+                            format-style="currency"
+                        >
+                        </lightning-formatted-number>
+                    </span>
+                </span>
+            </section>
+        </template>
+                </div>
+            </section>
+        </template>
+        <!--section class="price-area" if:false={isSimple}>
+            <span if:false={parentPrices} class="slds-text-heading_small slds-p-top_xx-small slds-p-bottom_xx-small"> 
+                Price Unavailable
+            </span>
+            <lightning-formatted-number
+                    if:true={parentPrices}
+                    class="slds-text-heading_medium selling-price"
+                    currency-code={currency}
+                    format-style="currency"
+                    value={parentPrices}
+                >
+            </lightning-formatted-number>
+
+        </section-->
+        <template if:false={isguest}>
+            <template if:true={isFeatured}>
+                <section class="action-area">
+                    <button class="slds-button item-link" onclick={notifyShowDetail} >LEARN MORE..
+                    </button>
+                    <!--lightning-button variant="brand" onclick={notifyShowDetail} label="Learn More" title="Learn More" icon-name="utility:download" icon-position="right" class="slds-m-left_x-small"></lightning-button-->
+                </section>
+            </template>
+            <template if:false={isFeatured}>
+                <section class="action-area mr-auto no-mobile">
+                    <button
+                        class="slds-button slds-button_brand"
+                        onclick={notifyAction} if:true={isSimple}
+                    >
+                        {labels.AddtoCartLabel}
+                    </button>
+                    <button
+                        class="slds-button slds-button_brand"
+                        onclick={notifyShowDetail} if:false={isSimple}
+                    >
+                        {labels.ViewOptions}
+                    </button>
+                </section>
+            </template>
+        </template>
+        <!--if:true={isSimple}-->
+        <!--
+        <template if:false={isFeatured}>
+            <section class="price-area" >
+                <span
+                    if:false={hasPrice}
+                    class="slds-text-heading_small slds-p-top_xx-small slds-p-bottom_xx-small"
+                    >{labels.PriceUnavailable}</span>
+                <span class="slds-p-top_xx-small slds-p-bottom_xx-small">
+                    <template if:true={isSimple}>
+                        <lightning-formatted-number
+                            if:true={hasPrice}
+                            class="slds-text-heading_medium selling-price"
+                            currency-code={currency}
+                            format-style="currency"
+                            value={price}
+                        >
+                        </lightning-formatted-number>
+                    </template>
+                    <template if:false={isSimple}>
+                        ${minPrice} - ${maxPrice}
+                    </template>
+                    <span if:true={canShowListingPrice} class="slds-align-bottom">
+                        <span class="slds-assistive-text">Original Price</span>
+                        <lightning-formatted-number
+                            class="slds-p-left_xx-small listing-price"
+                            value={listingPrice}
+                            currency-code={currency}
+                            format-style="currency"
+                        >
+                        </lightning-formatted-number>
+                    </span>
+                </span>
+            </section>
+        </template> -->
+        
+        <template if:true={isguest}>
+            <section class="action-area slds-align_absolute-center">
+                <lightning-button variant="brand-outline" label={labels.SignToBuy} title={labels.SignToBuy} onclick={goToLogin} ></lightning-button>
+            </section>
+        </template>
+    </article>
+</template>

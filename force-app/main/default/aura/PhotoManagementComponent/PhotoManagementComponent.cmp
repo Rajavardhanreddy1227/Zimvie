@@ -1,0 +1,37 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,force:hasRecordId"
+  access="global"
+  controller="PhotoManagementController"
+>
+  <aura:attribute
+    name="filetype"
+    type="List"
+    default="['.png', '.jpg', '.jpeg']"
+  />
+  <aura:attribute name="recordId" type="String" />
+  <aura:attribute name="attachmentId" type="Id" />
+  <aura:attribute
+    name="prefixURL"
+    type="String"
+    default="/servlet/servlet.FileDownload?file="
+  />
+  <aura:attribute name="isLoading" type="Boolean" default="false" />
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+  <aura:if isTrue="{! v.isLoading }">
+    <lightning:spinner alternativeText="Loading" />
+  </aura:if>
+
+  <div class="slds-box" style="text-align: center">
+    <aura:if isTrue="{!v.attachmentId}"
+      ><img src="{!v.prefixURL + v.attachmentId}" width="100" height="100" />
+    </aura:if>
+    <lightning:fileUpload
+      name="fileUploader"
+      accept="{!v.filetype}"
+      recordId="{!v.recordId}"
+      onuploadfinished="{!c.handleUploadFinished}"
+    />
+  </div>
+</aura:component>

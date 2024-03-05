@@ -1,0 +1,49 @@
+<!--
+  @description       : 
+  @author            : Akash Arora
+  @group             : 
+  @last modified on  : 25-05-2023
+  @last modified by  : Akash Arora
+-->
+
+<template>
+    <lightning-spinner 
+        if:true={_isLoading} 
+        class="slds-is-absolute slds-align_absolute-center"
+        alternative-text="Loading related products..." 
+        size="medium" 
+        variant="brand">
+    </lightning-spinner>
+
+    <section if:true={showRecommendedProducts}>
+        <h1 class="headerText slds-m-bottom_medium">{label.recommendedReportLabel}</h1>
+        
+        <ul role="listbox" class="layout-grid slds-align--absolute-center">
+            <div class="slds-align-middle">
+                <button class="slds-m-around_large slds-button slds-button_neutral nav-direction" disabled={isFirstPage} aria-disabled="true" onclick={handlePrevious}>
+                    <lightning-icon size="xx-small" icon-name="utility:chevronleft" class="slds-icon-utility-chevronleft slds-icon_container"></lightning-icon>
+                </button>
+            </div>
+
+            <template for:each={recommendedProductList} for:item="currProd">
+                <li key={currProd.productId} class="slds-border_bottom" role="option">
+                    <c-b2b-recommended-product-list-card 
+                        display-data={currProd} 
+                        cart-locked={isCartLocked} 
+                        currency={}
+                        view-only-storefront={viewOnlyStorefront}
+                        onshowdetail={handleShowDetail} 
+                        class="layout-card">
+                    </c-b2b-recommended-product-list-card>
+                </li>
+            </template>
+
+            <div class="slds-align-middle">
+                <button class="slds-m-horizontal_small slds-button slds-button_neutral nav-direction" disabled={isLastPage} aria-disabled="true" onclick={handleNext}>
+                    <lightning-icon size="xx-small" icon-name="utility:chevronright" class="slds-icon-utility-chevronright slds-icon_container"></lightning-icon>
+                </button>
+            </div>
+        </ul>
+        
+    </section> 
+</template>

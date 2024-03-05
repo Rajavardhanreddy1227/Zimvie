@@ -1,0 +1,31 @@
+<apex:page standardController="Business_Plan__c" showHeader="false" sidebar="false" title="Lower Trauma Sales Summary RO">
+    <GBLite:TabbedPageComponent pageAPIName="GBTabs_Lower_Trauma_Sales_Summary_RO" customJsIds="" customCssIds="">
+    <GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+        <script>
+            var pageDefinition = {
+    "name": "Lower Trauma Sales Summary RO",
+    "tabs": [
+        {
+            "name": "Lower Trauma Sales Summary",
+            "content": "{!gridPage}gname=Lower Trauma Sales Summary Read&amp;sh=0&amp;sfname=default&amp;fpf=Business_Plan__c&amp;fpv={!Business_Plan__c.id}",
+            "id": 1563938768360
+        },
+        {
+            "name": "Chart",
+            "content": "/apex/BP_ProductSalesSummaryChart?bpid={!Business_Plan__c.id}&amp;productgroup=Lower%20Trauma",
+            "id": 1563938801228
+        }
+    ],
+    "id": 1563938768360,
+    "selectedCustomCSSIds": [],
+    "selectedCustomJSIds": [],
+    "description": "",
+    "globalButtons": false,
+    "object": "Business_Plan__c",
+    "height": "750",
+    "showHeader": false,
+    "showSidebar": false
+};
+        </script>
+    </GBLite:TabbedPageComponent>
+</apex:page>

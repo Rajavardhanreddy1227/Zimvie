@@ -1,0 +1,12 @@
+<apex:page >
+<script>
+var strWindowFeatures = "location=yes,height=570,width=520,scrollbars=yes,status=yes";
+
+//
+var URL = "https://na8.salesforce.com/sfc/p/80000000KvI9/a/C0000000D8Td/mOYLly0vSce92wNIubm.oPj3dJle9SdC_CYeh1J8Mqo";
+
+//Call Function
+var win = window.open(URL, "_parent", strWindowFeatures);
+
+</script>
+</apex:page>

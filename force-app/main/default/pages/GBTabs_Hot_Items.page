@@ -1,0 +1,31 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" title="Hot Items">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Hot_Items" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Hot Items",
+	"tabs": [
+		{
+			"name": "Knee Pipeline",
+			"content": "{!gridPage}gname=Knee Pipeline&amp;sh=0&amp;sfname=default",
+			"id": 1565983375288
+		},
+		{
+			"name": "Upper Extremities Pipeline",
+			"content": "{!gridPage}gname=Upper Extremities Pipeline&amp;sh=0&amp;sfname=default",
+			"id": 1565983433039
+		}
+	],
+	"id": 1565983375288,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": false,
+	"object": "Opportunity",
+	"height": "750",
+	"showHeader": false,
+	"showSidebar": false
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

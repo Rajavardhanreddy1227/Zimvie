@@ -1,0 +1,41 @@
+<template>
+
+    <c-b2b-spinner 
+        if:true={loaderEnabled}
+        message-state={messageState}>
+    </c-b2b-spinner>
+
+    <!-- <template if:true={loaderEnabled}>
+        <c-custom_spinner></c-custom_spinner>
+    </template> -->
+    <template if:true={showModal}>
+        <c-b2b_wishlistmodal 
+            onclose={handleModalClose} 
+            product-id={wishlistproductId} 
+            community-id={communityId}
+            effective-account-id={resolvedEffectiveAccountId}>
+        </c-b2b_wishlistmodal>
+    </template>
+    <c-product-details-display
+        if:true={hasProduct}
+        cart-locked={_isCartLocked}
+        category-path={displayableProduct.categoryPath}
+        custom-fields={displayableProduct.customFields}
+        description={displayableProduct.description}
+        image={displayableProduct.image}
+        in-stock={displayableProduct.inStock}
+        name={displayableProduct.name}
+        price={displayableProduct.price}
+        sku={displayableProduct.sku}
+        onaddtocart={addToCart}
+        is-variation-parent={displayableProduct.isVarParent}
+        variations={displayableProduct.variantions}
+        onaddtolist={addToList}
+        show-filter-options={showFilterOptions}
+        media={displayableProduct.mediaItems}
+        hide-quantity={hideQuantity}
+        hide-add-to-cart={hideAddToCart}
+        hide-save-for-later={hideSaveForLater}
+    >
+    </c-product-details-display>
+</template>

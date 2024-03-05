@@ -1,0 +1,39 @@
+/*
+.language-picker-picklist option {
+    padding: 5px;
+}*/
+
+.language-picker-block{
+    border:0;
+}
+.language-picker-img-block img {
+    width: 16px;
+}
+.language-picker-picklist{
+  padding:5px 10px;
+  margin-left:5px;
+  border-radius: 0px;
+  border: 0px;
+}
+.language-picker-picklist option {
+    color: black;
+    background: #fff;
+    font-size: 14px;
+    font-family: soleil; 
+    cursor: pointer !important;;
+}
+
+
+.language-picker-picklist-block {
+    vertical-align: middle;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.language-border {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.bgColour {
+    background: var(--tabColour, #005DA6);
+}

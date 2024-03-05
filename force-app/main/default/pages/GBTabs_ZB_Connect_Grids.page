@@ -1,0 +1,32 @@
+<apex:page showHeader="false" sidebar="false" title="ZB Connect Grids">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_ZB_Connect_Grids" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"pageAPIName": "GBTabs_ZB_Connect_Grids",
+	"showSidebar": false,
+	"showHeader": false,
+	"height": "900",
+	"object": "0",
+	"globalButtons": true,
+	"description": "",
+	"selectedCustomJSIds": [],
+	"selectedCustomCSSIds": [],
+	"id": 1553266723104,
+	"tabs": [
+		{
+			"id": 1553266723104,
+			"content": "{!gridPage}gname=ZB-Surgical Opportunity Grid&sh=0&sfname=default",
+			"name": "ZB Surgical Opportunity Grid"
+		},
+		{
+			"name": "Deal Support Grid",
+			"content": "{!gridPage}gname=Deal Support Surgical Cases&amp;sh=0&amp;sfname=default",
+			"id": 1569960495762
+		}
+	],
+	"name": "ZB Connect Grids"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

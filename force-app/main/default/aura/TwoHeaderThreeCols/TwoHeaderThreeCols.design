@@ -1,0 +1,7 @@
+<design:component label="Header and Collapsible Right Sidebar">
+    <flexipage:template>
+        <flexipage:region name="left" defaultWidth="LARGE" />
+        <flexipage:region name="main" defaultWidth="MEDIUM" />
+        <flexipage:region name="right" defaultWidth="SMALL" />
+    </flexipage:template>
+</design:component>

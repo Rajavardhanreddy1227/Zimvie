@@ -1,0 +1,11 @@
+<apex:page sidebar="false" showheader="false" standardStylesheets="false">
+<ion-view view-title="Search">
+  <ion-content class="padding search">
+    <div class="row padding search-container">
+      <div class="col">
+        <ng-include src="'{!URLFOR($Resource.event_calendar, '/partials/search.html')}'"></ng-include>
+      </div><!-- col -->
+    </div><!-- row -->
+  </ion-content>
+</ion-view>
+</apex:page>

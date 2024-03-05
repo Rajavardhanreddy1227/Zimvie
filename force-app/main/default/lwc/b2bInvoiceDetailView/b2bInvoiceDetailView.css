@@ -1,0 +1,210 @@
+.invnumb{
+    color:#0A2043;
+    font-weight: 700;
+    font-size:24px;
+    
+}
+.invdetails{
+    color:#0A2043;
+    font-weight:700;
+    font-size:18px;
+    
+   
+}
+.invtitle{
+    color:#000000;
+    font-weight:500;
+    font-size:14px;
+    text-align:left;
+}
+.invvalue{
+    color:#000000;
+    font-weight:400;
+    font-size:14px;
+    text-align:right;
+    float: right;
+}
+.infosection{
+    margin-top:20px;
+}
+.headsection{
+    margin-top:30px;
+    margin-left: 20px;
+}
+.addsection{
+    margin-top:30px;
+}
+.addheading{
+    color:#0A2043;
+    font-weight:700;
+    font-size:24px;
+
+}
+.adddata{
+    color:#0A2043;
+    font-weight:600;
+    font-size:16px;
+}
+.adddata2{
+    color:#0A2043;
+    font-weight:500;
+    font-size:16px;
+}
+.adddatavalue{
+    color:#0A2043;
+    font-weight:400;
+    font-size:16px;
+}
+.borderClass{
+    background-color: #DBE0E233;
+    height: 250px !important;
+    border: none;
+    width: 480px;
+    margin-left: 20px;
+    
+}
+.addsectioninside{
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.borderline{
+    border: grey;
+    border-right-color: grey;
+    border-right: solid;
+    height: 100px;
+    border-color: lightgrey;
+    margin-left: 20px;
+    
+}
+.insideblock{
+    padding-left: 10px;
+    /*padding-top: 15px;*/
+    padding-bottom: 10px;
+    padding-right: 10px;
+
+}
+.noborderline{
+    border: none;
+    height: 100px;
+    
+}
+.backbtn{
+    color: #2C9DD8;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.04rem;
+    cursor: pointer;
+    border: none;
+    background: white;
+    margin-bottom:20px;
+    margin-left: 20px;
+}
+.iconcls{
+    --slds-c-icon-color-foreground-default: #2C9DD8;
+    --slds-c-icon-color-background: white;
+}
+.pagedata{
+    color:#0A2043;
+    font-weight: 400;
+    font-size:16px;
+}
+.lastsection{
+    margin-top:90px;
+    margin-left: 20px;
+}
+.summaryBorderClass{
+    background-color: #DBE0E233;
+    height: max-content;
+    border: none;
+    width: 98%;
+    margin-left: 20px;
+
+}
+.summarysection{
+    margin-top:40px;
+    
+}
+.summarylabel{
+    margin-left: 30px;
+    font-weight:700;
+    font-size:18px;
+    color:#0A2043;
+}
+.prodname{
+    font-weight:700;
+    font-size:16px;
+    color:#0A2043;
+}
+.prodsku{
+    font-weight:400;
+    font-size:16px;
+    color:#758591;
+}
+.prodattribute{
+    font-weight:400;
+    font-size:16px;
+    color:#0A2043;
+}
+.sumtitle{
+    font-weight:600;
+    font-size:16px;
+    color:#0A2043;
+}
+.sumvalue{
+    font-weight:400;
+    font-size:16px;
+    color:#0A2043;
+}
+.distitle{
+    font-weight:600;
+    font-size:16px;
+    color:#0A2043;
+    
+}
+.disvalue{
+    font-weight:400;
+    font-size:16px;
+    color:#0A2043;
+    
+}
+.printbtn{
+    border-width: 2px;
+    text-transform: uppercase;
+    border-style: solid;
+    color: #0A2043;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.04rem;
+    cursor: pointer;
+    background: white;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 30px;
+    border-color: #0A2043;
+    float:right;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+
+}
+.line{
+    background-color:#eeeeee81;
+    /*border-top:solid;*/
+    margin:0px;
+}
+.prodimg{
+    height:100px;
+    width:100px;
+    display: block;
+    margin-block: 10px;
+    margin-left: 75px;
+}
+.brandimg{
+    width:80px;
+    display: block;
+    padding-bottom: 10px;
+
+}

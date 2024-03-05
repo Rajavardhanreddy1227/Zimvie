@@ -1,0 +1,56 @@
+<!--
+  @description       : 
+  @author            : asood@rafter.one
+  @group             : 
+  @last modified on  : 09-01-2023
+  @last modified by  : asood@rafter.one
+-->
+<template>
+    <template if:true={loader}>
+        <c-custom_spinner></c-custom_spinner>
+    </template>
+    <lightning-layout multiple-rows="true">
+        <lightning-layout-item size="12" padding="">
+            <lightning-layout >
+                <lightning-layout-item size="8" padding="around-small">
+                    <lightning-input type="search" variant="label-hidden" class="search_box" placeholder={labels.SearchAddress} onchange={handleInputChange}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="4" padding="around-small">
+                    <!--lightning-button label={labels.AddAddress} onclick={showPopup}></lightning-button-->
+                    <button class="btncls" onclick={showPopup}>{labels.Add_New_Address}</button>
+                </lightning-layout-item>
+            </lightning-layout>
+    </lightning-layout-item>
+    
+        <lightning-layout-item size="12"> 
+            <div class="radius-block2 address" if:true={selectedAddress}><b>{labels.Selected_Address} :</b> {selectedAddress.Street}, {selectedAddress.City}, {selectedAddress.State},{selectedAddress.CountryCode}, {selectedAddress.PostalCode} &nbsp;&nbsp; <a href="#" class={selectedAddress.cssClass} name={selectedAddress.Id} onclick={handleEditRecord}>{labels.Edit}</a>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+    <div class="radius-block">
+    <div class="slds-form-element__control slds-p-around_small" style="height:150px;overflow:auto;">
+        <template for:each={addressData} for:item="rec" > 
+            <span key={rec.Id} class="slds-radio slds-p-around_xx-small">
+                <template if:true={rec.isSelected}>
+                    <input type="radio" id={rec.Id} name="radioButtonforAddress"  data-id={rec.Id} value={rec.Id} onclick={handleAddressSelection} checked/>
+                </template>
+                <template if:false={rec.isSelected}>
+                    <input type="radio" id={rec.Id} name="radioButtonforAddress"  data-id={rec.Id} value={rec.Id} onclick={handleAddressSelection} />
+                </template>
+            <label class="slds-radio__label" for={rec.Id}>
+                <span class="slds-radio_faux"></span>
+                <span class="slds-form-element__label addressCase">{rec.Street}, {rec.City}, {rec.State},{rec.CountryCode}, {rec.PostalCode}
+                    <template if:true={rec.IsDefault}>&nbsp;&nbsp;&nbsp;
+                        <lightning-badge label={labels.Default}></lightning-badge>
+                    </template>
+                    <template if:true={rec.IsFavourite__c}>&nbsp;
+                        <lightning-icon icon-name="utility:favorite" size="x-small" class={rec.cssClass}></lightning-icon>
+                    </template>&nbsp;
+                    <!--lightning-button-icon icon-name="utility:edit" size="xx-small" name={rec.Id} onclick={handleEditRecord} class={rec.cssClass}></lightning-button-icon--></span>
+            </label>
+            </span>
+            
+        </template>
+    </div>
+    </div>
+</template>

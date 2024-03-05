@@ -1,0 +1,18 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.slds-accordion__section {
+    padding-bottom: 1.5rem;
+}
+
+.filter-list-item{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 10px;
+    }

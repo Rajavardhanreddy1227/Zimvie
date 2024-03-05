@@ -1,0 +1,224 @@
+<template lwc:render-mode="light">
+    <!-- spinner -->
+    <template if:true={spinnerValue}>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation">
+            <lightning-spinner
+            if:true={spinnerValue}
+            alternative-text="Loading"
+            variant="brand"
+            >
+            </lightning-spinner>
+        </div>
+    </template>
+
+    <div class="cart-summary">
+        <div class="parent-div-block">
+
+            <!-- 1st block- header info -->
+                <header class="header-lg">
+                    <slot name="headerText"></slot>
+                </header>
+            <!-- 2nd block- Cart Items Info-->
+            <!-- <template if:true={hasCartitems}>
+                <div class="Headline3_UntitledSans">
+                    <div class="slds-p-horizontal_medium slds-p-bottom_small slds-border_bottom"> 
+                        <template for:each={_cartOriginlItems} for:item="lineItem">
+                            <div key={lineItem.Id} title={lineItem.ProductDetails.name}>
+                                <lightning-layout class="slds-p-top_small slds-m-vertical_xx-small">
+                                    <lightning-layout-item size="6" small-device-size="6" large-device-size="6"
+                                    medium-device-size="6">
+                                        <div class="slds-float_left">
+                                            <div class="item-name" title={lineItem.ProductDetails.name}>
+                                                <a href=""
+                                                    data-productid={lineItem.ProductDetails.productId}
+                                                    onclick={handleProductDetailNavigation} tabindex="0">
+                                                    {lineItem.ProductDetails.name}
+                                                </a>
+                                            </div>
+                                            <div class="price">
+                                                <template if:true={lineItem.data.model}>
+                                                    <div class="negotiated-price" title={lineItem.data.model}>{lineItem.data.model}</div>
+                                                </template>
+                                                <div class="negotiated-price-inline">
+                                                    <span>
+                                                        <lightning-formatted-number format-style="currency"
+                                                        currency-code={lineItem.ProductDetails.fields.CurrencyIsoCode}
+                                                        class="negotiated-price"
+                                                        currency-display-as="symbol" maximum-fraction-digits="0"
+                                                        value={lineItem.salesPrice}>
+                                                        </lightning-formatted-number>
+                                                    </span>
+                                                    <template if:true={lineItem.data.paymentTerm}>
+                                                        <div class="negotiated-price" title={lineItem.data.paymentTerm}>&nbsp;{lineItem.data.paymentTerm}</div>
+                                                    </template>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item size="6" small-device-size="6" large-device-size="6"
+                                    medium-device-size="6">
+                                    <div class="slds-float_right">
+                                        <div class="item-price" title={lineItem.data.totalLineAmount}>
+                                            <lightning-formatted-number value={lineItem.data.totalLineAmount}  maximum-fraction-digits="2" format-style="currency"
+                                            currency-code={lineItem.ProductDetails.fields.CurrencyIsoCode} currency-display-as="symbol"></lightning-formatted-number>
+                                        </div>
+                                    </div>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </template> -->
+            
+            <!-- 3rd block- pricing info -->
+            <div class="">
+                <div class="slds-p-bottom_small slds-border_bottom"> 
+
+                    <!-- Subtotal Price Info -->
+                    <div class="ccontent">
+                        <lightning-layout class="slds-p-top_small slds-m-vertical_xx-small">
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_left">
+                                    <slot name="subtotalLabel"></slot>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_right">
+                                    <div class="item-price cvalue">
+                                        <lightning-formatted-number
+                                            value={cartSubTotal}
+                                            format-style="currency" 
+                                            currency-code={currencyCode}
+                                            display-currency-as="symbol"
+                                            maximum-fraction-digits="2"
+                                        ></lightning-formatted-number>
+                                    </div>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+
+                    <!-- promotion or discount info -->
+                    <div class="ccontent">
+                        <lightning-layout class="slds-p-top_small slds-m-vertical_xx-small">
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_left">
+                                    <slot name="promotionsLabel"></slot>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_right">
+                                    <div class="item-price cvalue">
+                                        <lightning-formatted-number
+                                            maximum-fraction-digits="2"
+                                            value={cartPromotion}
+                                            format-style="currency" 
+                                            currency-code={currencyCode}
+                                            display-currency-as="symbol"
+                                        ></lightning-formatted-number>
+                                    </div>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+<!-- 
+                    <div class="ccontent">
+                        <lightning-layout class="slds-p-top_small slds-m-vertical_xx-small">
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_left">
+                                    <slot name="shippingChargeLabel"></slot>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_right">
+                                    <div class="item-price cvalue">
+                                        <lightning-formatted-number
+                                            maximum-fraction-digits="2"
+                                            value={cartShipping}
+                                            format-style="currency" 
+                                            currency-code={currencyCode}
+                                            display-currency-as="symbol"
+                                        ></lightning-formatted-number>
+                                    </div>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+
+                    <div class="ccontent">
+                        <lightning-layout class="slds-p-top_small slds-m-vertical_xx-small">
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_left">
+                                    <slot name="taxLabel"></slot>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_right">
+                                    <div class="item-price cvalue">
+                                        <lightning-formatted-number
+                                            maximum-fraction-digits="2"
+                                            value={cartTax}
+                                            format-style="currency" 
+                                            currency-code={currencyCode}
+                                            display-currency-as="symbol"
+                                        ></lightning-formatted-number>
+                                    </div>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>-->
+                </div>
+            </div>
+    
+            <!-- 4th block- Total Amount -->
+            <div class="Headline3_UntitledSans">
+                <div class="slds-p-bottom_small"> 
+
+                    <!-- Total Amount Info -->
+                    <div class="ccontent">
+                        <lightning-layout class="slds-p-top_small slds-m-vertical_xx-small">
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_left">
+                                    <slot name="totalLabel"></slot>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" small-device-size="6" large-device-size="6" medium-device-size="6">
+                                <div class="slds-float_right">
+                                    <div class="item-price">
+                                        <lightning-formatted-number
+                                            maximum-fraction-digits="2"
+                                            value={cartTotal}
+                                            format-style="currency" 
+                                            currency-code={currencyCode}
+                                            display-currency-as="symbol"
+                                        ></lightning-formatted-number>
+                                    </div>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5th block- additional/service terms -->
+        <!-- <div class="service-terms slds-p-around_x-large">
+            <span class="ServiceTerm_Headline4_CiscoSans">
+                <slot name="serviceTermsLabel"></slot>
+            </span>
+        </div> -->
+
+        <!-- 6th block- contact us -->
+        <div class="contact-support slds-p-top_large">
+            <p class="ServiceTerm_Headline4_CiscoSans test">
+                <slot name="ContactUsLabel"></slot>
+                <!-- Not sure what you need?
+                <a href="/s/contactsupport"> Contact sales support </a> -->
+            </p>
+        </div>
+    </div>
+
+    <!-- <c-b2b-show-toast-message>
+    </c-b2b-show-toast-message> -->
+</template>

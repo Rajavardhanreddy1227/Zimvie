@@ -1,0 +1,183 @@
+<!--
+  @description       : 
+  @author            : asood@rafter.one
+  @group             : 
+  @last modified on  : 09-17-2023
+  @last modified by  : Gaurav Setia
+-->
+<template>
+    <div class="slds-m-around_large">
+        <div class="header-lg slds-m-bottom_large">Wallet</div>
+        <div class="slds-grid slds-gutters slds-wrap">
+            <template for:each={StoredWallets} for:item="wallet">
+                <div  key={wallet.Id} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+                    <div class="c-card p">
+                        <div class="slds-grid slds-gutters h100">
+                            <div class="slds-col slds-size_2-of-3 pr">
+                                <!-- <div><img src={visacardurl}></div> -->
+                               <div style="display:none">{wallet.Card_Type__c}</div>
+                               <div class="pa bl-0">
+                                   <b>{wallet.CardHolderName__c}</b>
+                                   <p>{wallet.Card_Type__c} - Ending in {wallet.Display_Card_Number__c}</p>
+                                   <p>Exp: {wallet.ExpiryMonth__c}/{wallet.ExpiryYear__c}</p>
+                               </div>
+                            </div> 
+                            <div class="slds-col slds-size_1-of-3 pr" >
+                                <template if:true={wallet.IsDefault__c}>
+                                    <div class="pa tr-0 slds-text-align_right">
+                                        <div class="dafault-badge" >Default</div>
+                                    </div>
+                                </template>
+                                <template if:false={wallet.IsDefault__c}>
+                                    <div class="pa tr-0 slds-text-align_right">
+                                        <a class="slds-button c-button" data-value={wallet.Id} onclick={handlDefaultChange}>Make Default</a>
+                                    </div>
+                                </template>
+                                <div class="pa br-0 slds-text-align_right">
+                                    <button class="slds-button" data-value={wallet.Id} onclick={handleOpenDeletePopup}>Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div if:true={showDeletePopup}>
+                        <section if:true={showDeletePopup} role="dialog" tabindex="-1" aria-modal="true"
+                            aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+                            <div class="window_width slds-modal__container">
+                                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleClose}>
+                                        <lightning-icon icon-name="utility:close"
+                                            alternative-text="close"
+                                            variant="inverse"
+                                            size="small" ></lightning-icon>
+                                        <span class="slds-assistive-text">Close</span>
+                                </button>
+                                <div class="border_radius slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                    <h1 id="modal-heading-01" class="header_text slds-modal__title slds-hyphenate"><b>Delete card</b></h1>
+                                    <p class="body_text">Are you sure you want to delete the card?</p>
+                                    <button class="slds-button_cancel" aria-label="Continue Shopping" onclick={handleClose} >CANCEL</button>
+                                    <button class="slds-button_delete" onclick={handleDeactiate}>DELETE</button>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+                    </div>
+                </div>
+            </template>
+            <!-- <div  class="slds-col">
+                <div class="c-card p">
+                    <div class="slds-grid slds-gutters h100">
+                        <div class="slds-col slds-size_2-of-3 pr">
+                           <div>Visa</div>
+                           <div class="pa bl-0">
+                               <b>Lauren Bailey</b>
+                               <p>VISA - Ending in 0956</p>
+                               <p>Exp: 10/25</p>
+                           </div>
+                        </div> 
+                        <div class="slds-col slds-size_1-of-3 pr" >
+                            <div class="pa tr-0 slds-text-align_right">
+                                <a class="slds-button c-button">Make Default</a>
+                                </div>
+                            <div class="pa br-0 slds-text-align_right">
+                                <button class="slds-button">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="slds-col">
+                <div class="c-card p">
+                    <div class="slds-grid slds-gutters h100">
+                        <div class="slds-col slds-size_2-of-3 pr">
+                           <div>Visa</div>
+                           <div class="pa bl-0">
+                               <b>Lauren Bailey</b>
+                               <p>VISA - Ending in 0956</p>
+                               <p>Exp: 10/25</p>
+                           </div>
+                        </div> 
+                        <div class="slds-col slds-size_1-of-3 pr" >
+                            <div class="pa tr-0 slds-text-align_right">
+                                <a class="slds-button c-button">Make Default</a>
+                                </div>
+                            <div class="pa br-0 slds-text-align_right">
+                                <button class="slds-button">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="slds-col">
+                <div class="c-card p">
+                    <div class="slds-grid slds-gutters h100">
+                        <div class="slds-col slds-size_2-of-3 pr">
+                           <div>Visa</div>
+                           <div class="pa bl-0">
+                               <b>Lauren Bailey</b>
+                               <p>VISA - Ending in 0956</p>
+                               <p>Exp: 10/25</p>
+                           </div>
+                        </div> 
+                        <div class="slds-col slds-size_1-of-3 pr" >
+                            <div class="pa tr-0 slds-text-align_right">
+                                <a class="slds-button c-button">Make Default</a>
+                                </div>
+                            <div class="pa br-0 slds-text-align_right">
+                                <button class="slds-button">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="slds-col">
+                <div class="c-card p">
+                    <div class="slds-grid slds-gutters h100">
+                        <div class="slds-col slds-size_2-of-3 pr">
+                           <div>Visa</div>
+                           <div class="pa bl-0">
+                               <b>Lauren Bailey</b>
+                               <p>VISA - Ending in 0956</p>
+                               <p>Exp: 10/25</p>
+                           </div>
+                        </div> 
+                        <div class="slds-col slds-size_1-of-3 pr" >
+                            <div class="pa tr-0 slds-text-align_right">
+                                <a class="slds-button c-button">Make Default</a>
+                                </div>
+                            <div class="pa br-0 slds-text-align_right">
+                                <button class="slds-button">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="slds-col">
+                <div class="c-card p">
+                    <div class="slds-grid slds-gutters h100">
+                        <div class="slds-col slds-size_2-of-3 pr">
+                           <div>Visa</div>
+                           <div class="pa bl-0">
+                               <b>Lauren Bailey</b>
+                               <p>VISA - Ending in 0956</p>
+                               <p>Exp: 10/25</p>
+                           </div>
+                        </div> 
+                        <div class="slds-col slds-size_1-of-3 pr" >
+                            <div class="pa tr-0 slds-text-align_right">
+                                <a class="slds-button c-button">Make Default</a>
+                                </div>
+                            <div class="pa br-0 slds-text-align_right">
+                                <button class="slds-button">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="slds-p-around_medium">
+          <c-b2-b_-cyber-source-wallet-form oncardradiochanged={handleCardRadioSelection} render-cyber-source-form={randerForm} payment-id={storePaymentId} save-from-wallets={saveCardFromWallet}></c-b2-b_-cyber-source-wallet-form>
+            <!--<lightning-button label="Save Card" onclick={handlePayClickP} class="slds-m-left_x-small" variant="brand"></lightning-button>-->
+        </div>
+
+    </div>
+</template>

@@ -1,0 +1,32 @@
+<apex:page showHeader="false" sidebar="false" title="ZB ROSA GRID">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_ZB_ROSA_GRID" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"pageAPIName": "GBTabs_ZB_ROSA_GRID",
+	"showSidebar": false,
+	"showHeader": false,
+	"height": "700",
+	"object": "0",
+	"globalButtons": true,
+	"description": "",
+	"selectedCustomJSIds": [],
+	"selectedCustomCSSIds": [],
+	"id": 1569960741599,
+	"tabs": [
+		{
+			"id": 1569960741599,
+			"content": "{!gridPage}gname=ZB Connect ROSA Opportunity Grid&amp;sh=0&amp;sfname=default",
+			"name": "ROSA Opportunity Grid"
+		},
+		{
+			"id": 1569960872711,
+			"content": "{!gridPage}gname=Deal Support ROSA Cases&amp;sh=0&amp;sfname=default",
+			"name": "ROSA Deal Support Grid"
+		}
+	],
+	"name": "ZB ROSA GRID"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

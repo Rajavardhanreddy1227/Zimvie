@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cloudburst - Responsive - Template</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+	<link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
+	<link href="css/styles.css" rel="stylesheet" type="text/css" />
+	<link href="css/fonts.css" rel="stylesheet" type="text/css" />
+	<link href="css/bootstrap_overwrite.css" rel="stylesheet" media="screen">
+
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" type="text/css" href="css/ie8.css">
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<!-- PHONE VIEW -->
+		<div class="container visible-phone phoneLayout">
+
+			<div class="loadingContainer " style="display: none;">
+				<div class="loadingOverlay overlay"></div>
+				<div class="circleContainer overlay">
+					<div class="circle"></div>
+					<div class="circle1"></div>
+				</div>
+			</div>
+
+			<div class="header_menu" id="menuHeader">
+				<div class="navbar main_navigation_container">
+					<div class="navbar-inner">
+						<div class="container">
+							<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">          
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="brand_phone visible-phone" id="phoneLogo" href="#"><img src="images/phone_logo.png" style="height:39px" width="200px" height="39px"></a>
+							<a class="brand visible-tablet">Main Navigation</a>
+							<div class="nav-collapse collapse">
+								<ul class="nav">
+
+
+									<li class="dropdown">
+										<a data-toggle="dropdown" class="dropdown-toggle" href="">Navigation Item #1 <b class="caret"></b></a>
+										<ul class="dropdown-menu sub-menu">
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #1</a></li>
+
+
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #2</a></li>
+
+
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #3</a></li>
+
+
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #4</a></li>
+
+
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #5</a></li>
+
+
+
+										</ul>
+									</li>
+
+
+
+									<li class="dropdown">
+										<a data-toggle="dropdown" class="dropdown-toggle" href="">Navigation Item #2 <b class="caret"></b></a>
+										<ul class="dropdown-menu sub-menu">
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #1</a></li>
+
+
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #2</a></li>
+
+
+
+
+
+
+
+
+											<li><a href="javascript:void(0);">Sub Navigation #3</a></li>
+
+
+
+										</ul>
+									</li>
+
+
+
+
+
+
+
+									<li><a href="javascript:void(0);">Navigation Item #3</a></li>
+
+
+
+
+
+
+
+
+									<li><a href="javascript:void(0);">Navigation Item #4</a></li>
+
+
+
+
+
+
+
+
+									<li><a href="javascript:void(0);">Navigation Item #5</a></li>
+
+
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="phone_header" id="accountHeader">
+				<div class="phone_header">
+					<div class="products_phone">
+						<p><a href="#products" data-toggle="modal" id="productHeaderLink">Products</a></p>
+					</div>
+
+					<div id="products" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h3 id="myModalLabel">Products Navigation</h3>
+						</div>
+						<div class="modal-body" id="productListHeader">
+							<ul class="modal-navigation">
+								
+								<li><a href="#" class="categoryLink" data-id="a0UZ0000001V9ocMAC">Security Appliances</a></li>
+								
+								<li><a href="#" class="categoryLink" data-id="a0UZ0000001V9obMAC">Storage Devices</a></li>
+								
+								<li><a href="#" class="categoryLink" data-id="a0UZ0000001V9oZMAS">Peripherals</a></li>
+								
+								<li><a href="#" class="categoryLink" data-id="a0UZ0000001V9oYMAS">Managed Servers</a></li>
+								
+								<li><a href="#" class="categoryLink" data-id="a0UZ0000001V9oaMAC">Servers</a></li>
+								
+							</ul>
+						</div>
+					</div>
+
+					<div class="account_sign_in_products">
+						<p>
+
+
+							<a href="#login" data-toggle="modal">Login</a>
+
+
+						</p>
+					</div>
+
+					<div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h3 id="myModalLabel">Login</h3>
+						</div>
+						<div class="modal-body">
+							<div class="message_container" style="display:none;">
+								<span class="error-msg">
+
+								</span>
+							</div>
+							<form>
+								<label>Email Address</label>
+								<input name="" type="email" id="modal_email">
+								<label>Password</label>
+								<input name="" type="password" id="modal_password">
+							</form>
+						</div>
+						<div class="modal-footer">
+							<input type="button" class="btn btn-primary" id="signInButton" value="Sign In">
+							<a href="#" id="forgotPasswordButton" style="margin-top:10px;float:right;">Forgot Password</a>
+						</div>
+					</div>
+
+					<div id="forgotPassword" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h3 id="myModalLabel">Forgot Password</h3>
+						</div>
+						<div class="modal-body">
+							<form>
+								<p>Please enter your E-Mail below and we'll send you a new password.</p>
+								<label>Email Address</label>
+								<input name="" type="email" id="fpEmailField">
+							</form>
+						</div>
+						<div class="modal-footer">
+							<input type="button" class="btn btn-primary" id="submitBtn" value="Submit">
+							<a href="#" id="backToLogin" style="margin-top:10px;float:right;">Back to Login</a>
+						</div>
+					</div>
+
+					<div id="account" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h3 id="myModalLabel">Account</h3>
+						</div>
+						<div class="modal-body">
+							<ul class="modal-navigation">
+								<li><a href="#" id="goToAccount">My Account</a></li>
+								<li><a href="#" class="gotoAddressBook">Address Book</a></li>
+								<li><a href="#" class="gotoCarts">My Carts</a></li>
+								<li><a href="#" class="gotoOrders">My Orders</a></li>
+								<li><a href="#" class="gotoWishlists">My Wishlists</a></li>
+								<li><a href="#" class="doLogout">Logout</a></li>  
+							</ul>
+						</div>
+					</div>
+
+					<div class="cart_products" id="cartHeader">
+						<p><a href="#cart" id="cart_btn_phone" data-toggle="modal">13/$4,439.87</a></p>
+					</div>
+
+					<div id="cart" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h3 id="myModalLabel">My Cart</h3>
+						</div>
+						<div class="modal-body">
+							<div id="cartBody">
+
+								<div class="dropdown_cart_item">
+									<div class="qty_remove">
+										<input type="text" name="qty" value="1" class="qty" readonly="">
+										<input type="button" name="remove" value="delete" class="remove" data-id="a0PZ00000026h1iMAA">
+									</div>
+									<p><a href="#" class="productNameLink" data-sku="626474-001">Product Name</a></p>
+									<p class="price">$889.99</p>
+								</div>
+
+								<div class="dropdown_cart_item">
+									<div class="qty_remove">
+										<input type="text" name="qty" value="2" class="qty" readonly="">
+										<input type="button" name="remove" value="delete" class="remove" data-id="a0PZ00000026h1nMAA">
+									</div>
+									<p><a href="#" class="productNameLink" data-sku="35427">Product Name</a></p>
+									<p class="price">$549.98</p>
+								</div>
+
+								<div class="dropdown_cart_item">
+									<div class="qty_remove">
+										<input type="text" name="qty" value="10" class="qty" readonly="">
+										<input type="button" name="remove" value="delete" class="remove" data-id="a0PZ00000026h1xMAA">
+									</div>
+									<p><a href="#" class="productNameLink" data-sku="ST320005LSA10G-RK">Product Name</a></p>
+									<p class="price">$2,999.90</p>
+								</div>
+
+							</div>
+							<div class="dropdown_cart_total">
+								<p>
+									Total
+								</p>
+								<p class="price">
+									$4,439.87
+								</p>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<input type="button" value="Check Out" class="btn btn-primary">
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span3">
+						<div class="left_column" id="productSearch">
+							<div class="left_column">
+								<div class="product_search_container">
+									<h2 class="title">Product Search</h2>
+									<div class="product_search">
+										<input name="" id="searchText" type="text" value="Search Products" onfocus="myFocus(this);" onblur="myBlur(this);">
+										<input name="" id="doSearch" class="search_button" type="Submit" value="&gt;&gt;">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="breadcrumb"></div>
+					</div>
+				</div>
+			</div>
+			<div class="span6">
+				<div class="center_column phone_center_column">
+					<div class="phone_center_top">
+						<div class="cart_1_row_medium_container">
+							<h2 class="title">Shopping Cart</h2>
+
+							<div class="cart_1_row_medium">
+								<div class="alert alert-error messagingSection-Error" style="display: none"></div>
+								<div class="alert alert-info messagingSection-Info" style="display: none"></div>
+								<!--************-->
+								<div class="cart_item_list">
+
+									<div class="cart_item">
+
+										<div class="cart_1_row_medium_viewport">
+											<a href="#"><img class="cart" src="images/product_1.jpg" alt="" data-id=""></a>
+										</div>
+
+										<p><a href="#" class="prodLink" data-id="626474-001">Product Name</a></p>
+
+										<p>SKU: 626474-001</p>
+										<p class="included_items">
+
+
+											<a class="included_items" href="#additional_infoa0PZ00000026h1iMAA" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+											|
+
+
+											<a href="#comments_a0PZ00000026h1iMAA" id="commentsLink" data-toggle="modal">Comments</a>
+										</p><div id="comments_a0PZ00000026h1iMAA" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+											<h3 id="myModalLabel">Product Name</h3>
+										</div>
+										<form id="commentsForma0PZ00000026h1iMAA" class="modal-body">
+											<textarea placeholder="Field_Notes" name="note" class="commentField"></textarea><br>
+										</form>
+										<div class="modal-footer"><input type="button" class="saveComment" data-id="a0PZ00000026h1iMAA" value="Save"></div>
+									</div>
+
+
+									<div id="additional_infoa0PZ00000026h1iMAA" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+											<h3 id="myModalLabel">Product Name Details</h3>
+										</div>
+										<div class="modal-body">
+
+
+											<strong>SKU:</strong>&nbsp;626474-001<br><br>
+
+
+											&lt;div style="background-color: rgb(255, 255, 255); margin-left: 0px; "&gt;
+											&lt;p&gt;Take advantage of the Managed Dedicated Performance Servers, version one, for a premium hosting solution. Perfect for the mid-size business looking to grow and show off a little server strength to boot. This service also includes Managed Backup, a requirement for safeguarding your most valuable assets.&lt;/p&gt;
+											&lt;/div&gt;<br><br>
+
+										</div>
+									</div>
+
+									<p></p>
+
+									<div class="clear"></div>
+
+									<div class="cart_figures">
+
+										<div class="section1">Price:</div>
+										<div class="section2">You Save:</div>
+
+										<div class="section3">Total:</div>
+
+
+										<div class="section1">
+											<strong>$889.99</strong>
+										</div>
+										<div class="section2">
+											<strong>$0.00</strong>
+										</div>
+
+										<div class="section3 totalAmount">
+											<strong class="price">$889.99</strong>
+										</div>
+										<div class="clear"></div>
+									</div>
+
+									<div class="section2 plus_minus" data-id="a0PZ00000026h1iMAA">
+
+										<input type="button" value="-" class="plus_minus minus">
+
+										<input type="text" readonly="true" name="qty" value="1" class="entry plus_minus">
+
+										<input type="button" value="+" class="plus_minus plus">
+
+										<input type="hidden" name="qtyIncrement" value="1" class="item_qtyIncrement">
+										<input type="hidden" name="qtySkipIncrement" value="" class="item_qtySkipIncrement">
+										<button type="button" class="btn remove removeItemButton" data-id="a0PZ00000026h1iMAA">delete</button>
+									</div>
+									<div class=" wishFinder" data-sku="626474-001">
+										<div class="sectionWide wishButtons">
+											<div class="btn-group dropdown full">
+
+												<button type="button" class="btn pickWish full" data-id="-1">Add To Wishlist</button>
+
+												<button id="dropWish" type="button" class="btn  dropdown-toggle full" data-toggle="dropdown"><b class="caret"></b></button>
+												<ul class="dropdown-menu" role="menu" aria-labelledby="dropWish">
+
+													<li class="divider"></li>
+													<li><input class="newListName" placeholder="MyAccount_Name"></li>
+													<li><a href="javascript:void(0);" class="pickWish" data-id="-1">Create Wishlist</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="cart_item">
+
+									<div class="cart_1_row_medium_viewport">
+										<a href="#"><img class="cart" src="images/product_2.jpg" alt="" data-id=""></a>
+									</div>
+
+									<p><a href="#" class="prodLink" data-id="35427">Product Name</a></p>
+
+									<p>SKU: 35427</p>
+									<p class="included_items">
+
+
+										<a class="included_items" href="#additional_infoa0PZ00000026h1nMAA" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+										|
+
+
+										<a href="#comments_a0PZ00000026h1nMAA" id="commentsLink" data-toggle="modal">Comments</a>
+									</p><div id="comments_a0PZ00000026h1nMAA" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										<h3 id="myModalLabel">Product Name</h3>
+									</div>
+									<form id="commentsForma0PZ00000026h1nMAA" class="modal-body">
+										<textarea placeholder="Field_Notes" name="note" class="commentField"></textarea><br>
+									</form>
+									<div class="modal-footer"><input type="button" class="saveComment" data-id="a0PZ00000026h1nMAA" value="Save"></div>
+								</div>
+
+
+								<div id="additional_infoa0PZ00000026h1nMAA" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+										<h3 id="myModalLabel">Product Name Details</h3>
+									</div>
+									<div class="modal-body">
+
+
+										<strong>SKU:</strong>&nbsp;35427<br><br>
+
+
+										&lt;span&gt;200 Network Storage Cloud Edition - NAS - 2 TB - Serial ATA-300 - HD 1 TB x 2 - RAID 1, JBOD - Gigabit Ethernet - iSCSI&lt;/span&gt;<br><br>
+
+									</div>
+								</div>
+
+								<p></p>
+
+								<div class="clear"></div>
+
+								<div class="cart_figures">
+
+									<div class="section1">Price:</div>
+									<div class="section2">You Save:</div>
+
+									<div class="section3">Total:</div>
+
+
+									<div class="section1">
+										<strong>$274.99</strong>
+									</div>
+									<div class="section2">
+										<strong>$0.00</strong>
+									</div>
+
+									<div class="section3 totalAmount">
+										<strong class="price">$549.98</strong>
+									</div>
+									<div class="clear"></div>
+								</div>
+
+								<div class="section2 plus_minus" data-id="a0PZ00000026h1nMAA">
+
+									<input type="button" value="-" class="plus_minus minus">
+
+									<input type="text" readonly="true" name="qty" value="2" class="entry plus_minus">
+
+									<input type="button" value="+" class="plus_minus plus">
+
+									<input type="hidden" name="qtyIncrement" value="1" class="item_qtyIncrement">
+									<input type="hidden" name="qtySkipIncrement" value="" class="item_qtySkipIncrement">
+									<button type="button" class="btn remove removeItemButton" data-id="a0PZ00000026h1nMAA">delete</button>
+								</div>
+								<div class=" wishFinder" data-sku="35427">
+									<div class="sectionWide wishButtons">
+										<div class="btn-group dropdown full">
+
+											<button type="button" class="btn pickWish full" data-id="-1">Add To Wishlist</button>
+
+											<button id="dropWish" type="button" class="btn  dropdown-toggle full" data-toggle="dropdown"><b class="caret"></b></button>
+											<ul class="dropdown-menu" role="menu" aria-labelledby="dropWish">
+
+												<li class="divider"></li>
+												<li><input class="newListName" placeholder="MyAccount_Name"></li>
+												<li><a href="javascript:void(0);" class="pickWish" data-id="-1">Create Wishlist</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="cart_item">
+
+								<div class="cart_1_row_medium_viewport">
+									<a href="#"><img class="cart" src="images/product_3.jpg" alt="" data-id=""></a>
+								</div>
+
+								<p><a href="#" class="prodLink" data-id="ST320005LSA10G-RK">Product Name</a></p>
+
+								<p>SKU: ST320005LSA10G-RK</p>
+								<p class="included_items">
+
+
+									<a class="included_items" href="#additional_infoa0PZ00000026h1xMAA" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+									|
+
+
+									<a href="#comments_a0PZ00000026h1xMAA" id="commentsLink" data-toggle="modal">Comments</a>
+								</p><div id="comments_a0PZ00000026h1xMAA" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									<h3 id="myModalLabel">Product Name</h3>
+								</div>
+								<form id="commentsForma0PZ00000026h1xMAA" class="modal-body">
+									<textarea placeholder="Field_Notes" name="note" class="commentField"></textarea><br>
+								</form>
+								<div class="modal-footer"><input type="button" class="saveComment" data-id="a0PZ00000026h1xMAA" value="Save"></div>
+							</div>
+
+
+							<div id="additional_infoa0PZ00000026h1xMAA" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+									<h3 id="myModalLabel">Product Name Details</h3>
+								</div>
+								<div class="modal-body">
+
+
+									<strong>SKU:</strong>&nbsp;ST320005LSA10G-RK<br><br>
+
+
+									&lt;span&gt;NAS - 2 TB - Serial ATA-300 - HD 1 TB x 2 - RAID 0, 1, JBOD - Gigabit Ethernet&lt;/span&gt;<br><br>
+
+								</div>
+							</div>
+
+							<p></p>
+
+							<div class="clear"></div>
+
+							<div class="cart_figures">
+
+								<div class="section1">Price:</div>
+								<div class="section2">You Save:</div>
+
+								<div class="section3">Total:</div>
+
+
+								<div class="section1">
+									<strong>$299.99</strong>
+								</div>
+								<div class="section2">
+									<strong>$0.00</strong>
+								</div>
+
+								<div class="section3 totalAmount">
+									<strong class="price">$2,999.90</strong>
+								</div>
+								<div class="clear"></div>
+							</div>
+
+							<div class="section2 plus_minus" data-id="a0PZ00000026h1xMAA">
+
+								<input type="button" value="-" class="plus_minus minus">
+
+								<input type="text" readonly="true" name="qty" value="10" class="entry plus_minus">
+
+								<input type="button" value="+" class="plus_minus plus">
+
+								<input type="hidden" name="qtyIncrement" value="1" class="item_qtyIncrement">
+								<input type="hidden" name="qtySkipIncrement" value="" class="item_qtySkipIncrement">
+								<button type="button" class="btn remove removeItemButton" data-id="a0PZ00000026h1xMAA">delete</button>
+							</div>
+							<div class=" wishFinder" data-sku="ST320005LSA10G-RK">
+								<div class="sectionWide wishButtons">
+									<div class="btn-group dropdown full">
+
+										<button type="button" class="btn pickWish full" data-id="-1">Add To Wishlist</button>
+
+										<button id="dropWish" type="button" class="btn  dropdown-toggle full" data-toggle="dropdown"><b class="caret"></b></button>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="dropWish">
+
+											<li class="divider"></li>
+											<li><input class="newListName" placeholder="MyAccount_Name"></li>
+											<li><a href="javascript:void(0);" class="pickWish" data-id="-1">Create Wishlist</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<!--**********************-->
+					<div id="included_items" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+
+					<div id="emailModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h3 id="myModalLabel">Email Cart</h3>
+						</div>
+						<div class="modal-body" id="productListHeader">
+							<form id="emailForm">
+								<label for="email_to">Email:To</label>
+								<br>
+								<input type="text" id="email_to" name="toEmailAddress">
+								<label for="email_cc">Email:Cc</label>
+								<input type="text" id="email_cc" name="ccEmailAddress">
+								<label for="subject">Subject</label><br><input type="text" id="subject" name="subject">
+								<label for="description">Description</label><br><textarea id="description" style="width:98%" rows="10" name="description"></textarea>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-primary" id="sendEmailBtn">Send</button>
+						</div>
+					</div>
+
+					<div class="cartactions">
+						<button class="btn slim remove updateCartButton" type="button">Update</button>
+						<button class="btn slim remove getExtPricingButton" type="button">Apply Discounts</button>
+						<a href="#emailModal" id="emailCartLink" data-toggle="modal"><button class="btn slim remove" type="button">Email Cart</button></a>
+					</div>
+					<div class="total_cart">
+						<span class="cart_total_amount">Total: $4,439.87</span>
+
+					</div>
+
+					<div class="discount_code_container_phone products_1_row_medium_container">
+
+						<form id="couponAddForm">
+							<h2 class="title">Discount Codes</h2>
+							<div class="discount_code_phone">
+								<p id="couponAddError"></p>
+								<p>Enter your coupon code if you have one.</p>
+								<p><input type="text" id="addCouponId" name="couponId"></p>
+								<p><button id="addCouponBtn" type="button">Apply Coupon</button></p>
+							</div>
+						</form>
+
+					</div>
+
+
+
+					<div class="button_large_container">
+						<input type="button" class="btn btn-primary checkOutBtn" value="Checkout">
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="phone_center_mid">
+
+
+		</div>
+		<div class="phone_center_bot">
+			<div class="promo_container promo_phone_container">
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row-fluid clear">
+	<div class="span12">
+		<div class="footer footerPhone">
+
+			<p>
+				<a href="http://www.edlconsulting.com/" target="_blank">EDL Consulting</a>
+			</p>
+
+			<p>
+				<a href="http://www.cloud-craze.com/" target="_blank">CloudCraze Home</a>
+			</p>
+
+			<p>
+				<a href="http://www.cloud-craze.com/product_info.php" target="_blank">Product Information</a>
+			</p>
+
+			<p>
+				<a href="http://www.cloud-craze.com/request_demo.php" target="_blank">View Cloud-Craze Demo</a>
+			</p>
+
+			<p>
+				<a href="http://www.edlconsulting.com/about.php" target="_blank">About US</a>
+			</p>
+
+			<p>
+				<a href="http://www.edlconsulting.com/search.php" target="_blank">Search</a>
+			</p>
+
+		</div>
+	</div>
+</div>
+</div>
+<!-- END PHONE VIEW -->
+
+
+<!-- DESKTOP/TABLET VIEW -->
+<div class="container hidden-phone deskLayout">
+
+	<div class="row-fluid">
+		<div class="span12 header">
+			<div class="top_navigation">
+				<div class="search_form">
+					<div class="search_form">
+						&nbsp;&nbsp;<input name="" id="searchText" type="text" value="Search Products" onfocus="myFocus(this);" onblur="myBlur(this);">
+						<input id="doSearch" class="search_button" type="Submit" value="&gt;&gt;" style="margin-left:0px;height:22px;margin-top:-.5px;">
+					</div>
+				</div>
+				<p>
+					<span>
+						<span>
+							<a class="acct" id="goToAccount" href="#">My Account</a> |
+						</span>
+
+
+						<span>
+							<a id="cartHeader" class="chead cartHeaderLink" href="#">
+								My Cart: 13 item,&nbsp;
+								<span class="cartHeadInfo">
+									<span class="cartHeadTot">
+										$4,439.87
+									</span>
+								</span>
+							</a> |
+						</span>
+						<span class="loginoutsec">
+
+
+							<a href="#login" class="goToLogin">Login</a>
+
+
+						</span>
+					</span>
+				</p>
+			</div>
+
+			<div class="logo_tagline hidden-phone">
+				<div class="logo">
+					<a href="#" id="logoUrl">
+						<img src="images/homepage_header_graphic.png">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="menu_container">
+		<div class="navbar main_navigation_container">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">          
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="brand_phone visible-phone" id="phoneLogo" href="#"><img src="images/phone_logo.png" width="200" height="39"></a>
+					<a class="brand visible-tablet">Main_Navigation</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+
+
+							<li class="dropdown">
+								<a data-toggle="dropdown" class="dropdown-toggle " href="">Navigation Item #1  <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+
+
+
+
+
+
+
+									<li><a href="javascript:void(0);">Sub Navigation #1</a></li>
+
+
+
+
+
+
+
+
+									<li><a href="javascript:void(0);">Sub Navigation #2</a></li>
+
+
+
+
+
+
+
+
+									<li><a href="javascript:void(0);">Sub Navigation #3</a></li>
+
+
+
+
+
+
+
+
+									<li><a href="javascript:void(0);">Sub Navigation #4</a></li>
+
+
+
+
+
+
+
+
+									<li><a href="javascript:void(0);">Sub Navigation #5</a></li>
+
+
+
+
+								</ul>
+							</li>
+
+
+
+							<li class="dropdown">
+								<a data-toggle="dropdown" class="dropdown-toggle " href="">Navigation Item #2  <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+
+
+
+
+
+
+
+									<li><a href="javascript:void(0);">Sub Navigation #1</a></li>
+
+
+
+
+
+
+
+
+									<li><a href="javascript:void(0);">Sub Navigation #2</a></li>
+
+
+
+
+
+
+
+
+									<li><a href="javascript:void(0);">Sub Navigation #3</a></li>
+
+
+
+
+								</ul>
+							</li>
+
+
+
+
+
+
+
+							<li><a href="javascript:void(0);">Navigation Item #3</a></li>
+
+
+
+
+
+
+
+
+							<li><a href="javascript:void(0);">Navigation Item #4</a></li>
+
+
+
+
+
+
+
+
+							<li><a href="javascript:void(0);">Navigation Item #5</a></li>
+
+
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home_slider"><span id="Cart:cc_tmpl_TwoColRD:cc_tmpl_Storefront:j_id32"><div id="Cart:cc_tmpl_TwoColRD:cc_tmpl_Storefront:j_id32:cc_Hero:j_id33" class="main_page_title cart en_US"></div></span>
+	<div id="breadcrumb_desktop_container"><span id="Cart:cc_tmpl_TwoColRD:cc_tmpl_Storefront:j_id37">
+
+		<div class="breadcrumbs"><a href="/ccrzqard__HomePage?cartID=04b6d0f3-104a-48b3-a43d-1795062a0c98&amp;g=&amp;&amp;store=DefaultStore" title="Go to Store Home Page">Home</a><label>
+			&gt;</label>&nbsp;Shopping Cart<span id="Cart:cc_tmpl_TwoColRD:cc_tmpl_Storefront:j_id37:MiniBreadCrumb:j_id46" style="display: none;"></span>
+		</div></span>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span9">
+			<div class="left_column_large">
+				<div class="promotion-box-Banner">
+					<div class="promo_container promo_banner_container">
+
+					</div>
+				</div><span id="Cart:cc_tmpl_TwoColRD:cc_tmpl_Storefront:j_id86">
+
+
+				<div class="cartContainer">
+					<div class="main_content_large_right_container hidden-phone">
+						<h1>Shopping Cart</h1>
+
+						<div id="cart_items_container" class="">
+							<div class="alert alert-error messagingSection-Error" style="display: none"></div>
+							<div class="alert alert-info messagingSection-Info" style="display: none"></div>
+							<div class="cart_item_list">
+
+								<div class="cart_item wishFinder" data-sku="">
+									<div class="quantity" data-id="a0PZ00000026h1iMAA">
+
+										<p class="section2 plus_minus" data-id="a0PZ00000026h1iMAA">
+
+											<input type="button" value="-" class="plus_minus minus">
+
+											<input type="text" readonly="true" name="qty" value="1" class="entry plus_minus">
+
+											<input type="button" value="+" class="plus_minus plus">
+
+											<input type="hidden" name="qtyIncrement" value="1" class="item_qtyIncrement">
+											<input type="hidden" name="qtySkipIncrement" value="" class="item_qtySkipIncrement">
+										</p>
+
+										<div class="price">
+											<p class="price">
+
+												Price: $889.99<br>
+
+
+												<strong>Total: $889.99</strong>
+											</p>
+										</div>
+									</div>
+
+									<div class="cart_item_viewport">
+										<a href="#"><img class="cart" src="images/product_1.jpg" alt="" data-id=""></a>
+									</div>
+									<p class="item_title">
+										<a href="#" class="prodLink" data-id="626474-001">Product Name</a>
+									</p>
+
+
+
+									<p><span><strong>SKU:</strong> 626474-001</span></p>
+
+
+									<a class="included_items" href="#additional_infoa0PZ00000026h1iMAA" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+									&nbsp;|&nbsp;
+									<div id="additional_infoa0PZ00000026h1iMAA" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+											<h3 id="myModalLabel">Product Name Details</h3>
+										</div>
+										<div class="modal-body">
+
+
+											<strong>SKU:</strong>&nbsp;626474-001<br><br>
+
+
+											&lt;div style="background-color: rgb(255, 255, 255); margin-left: 0px; "&gt;
+											&lt;p&gt;Take advantage of the Managed Dedicated Performance Servers, version one, for a premium hosting solution. Perfect for the mid-size business looking to grow and show off a little server strength to boot. This service also includes Managed Backup, a requirement for safeguarding your most valuable assets.&lt;/p&gt;
+											&lt;/div&gt;<br><br>
+
+										</div>
+									</div>
+
+
+									<a href="#comments_a0PZ00000026h1iMAA" id="commentsLink" data-toggle="modal">Comments</a>
+									<div id="comments_a0PZ00000026h1iMAA" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+											<h3 id="myModalLabel">Product Name</h3>
+										</div>
+										<form id="commentsForma0PZ00000026h1iMAA" class="modal-body">
+											<textarea placeholder="Field_Notes" name="note" class="commentField"></textarea><br>
+										</form>
+										<div class="modal-footer"><input type="button" class="saveComment" data-id="a0PZ00000026h1iMAA" value="Save"></div>
+									</div>
+
+									<div class="clear"></div>
+									<div class=" wishFinder" data-sku="626474-001">
+										<button type="button" class="btn slim deleteItem removeItemButton" data-dismiss="modal" aria-hidden="true" data-id="a0PZ00000026h1iMAA">delete</button>
+										<div class="wishButtons"></div>
+									</div>      
+
+								</div>
+
+								<div class="cart_item wishFinder" data-sku="">
+									<div class="quantity" data-id="a0PZ00000026h1nMAA">
+
+										<p class="section2 plus_minus" data-id="a0PZ00000026h1nMAA">
+
+											<input type="button" value="-" class="plus_minus minus">
+
+											<input type="text" readonly="true" name="qty" value="2" class="entry plus_minus">
+
+											<input type="button" value="+" class="plus_minus plus">
+
+											<input type="hidden" name="qtyIncrement" value="1" class="item_qtyIncrement">
+											<input type="hidden" name="qtySkipIncrement" value="" class="item_qtySkipIncrement">
+										</p>
+
+										<div class="price">
+											<p class="price">
+
+												Price: $274.99<br>
+
+
+												<strong>Total: $549.98</strong>
+											</p>
+										</div>
+									</div>
+
+									<div class="cart_item_viewport">
+										<a href="#"><img class="cart" src="images/product_2.jpg" alt="" data-id=""></a>
+									</div>
+									<p class="item_title">
+										<a href="#" class="prodLink" data-id="35427">Product Name</a>
+									</p>
+
+
+
+									<p><span><strong>SKU:</strong> 35427</span></p>
+
+
+									<a class="included_items" href="#additional_infoa0PZ00000026h1nMAA" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+									&nbsp;|&nbsp;
+									<div id="additional_infoa0PZ00000026h1nMAA" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+											<h3 id="myModalLabel">Product Name Details</h3>
+										</div>
+										<div class="modal-body">
+
+
+											<strong>SKU:</strong>&nbsp;35427<br><br>
+
+
+											&lt;span&gt;200 Network Storage Cloud Edition - NAS - 2 TB - Serial ATA-300 - HD 1 TB x 2 - RAID 1, JBOD - Gigabit Ethernet - iSCSI&lt;/span&gt;<br><br>
+
+										</div>
+									</div>
+
+
+									<a href="#comments_a0PZ00000026h1nMAA" id="commentsLink" data-toggle="modal">Comments</a>
+									<div id="comments_a0PZ00000026h1nMAA" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+											<h3 id="myModalLabel">Product Name</h3>
+										</div>
+										<form id="commentsForma0PZ00000026h1nMAA" class="modal-body">
+											<textarea placeholder="Field_Notes" name="note" class="commentField"></textarea><br>
+										</form>
+										<div class="modal-footer"><input type="button" class="saveComment" data-id="a0PZ00000026h1nMAA" value="Save"></div>
+									</div>
+
+									<div class="clear"></div>
+									<div class=" wishFinder" data-sku="35427">
+										<button type="button" class="btn slim deleteItem removeItemButton" data-dismiss="modal" aria-hidden="true" data-id="a0PZ00000026h1nMAA">delete</button>
+										<div class="wishButtons"></div>
+									</div>      
+
+								</div>
+
+								<div class="cart_item wishFinder" data-sku="">
+									<div class="quantity" data-id="a0PZ00000026h1xMAA">
+
+										<p class="section2 plus_minus" data-id="a0PZ00000026h1xMAA">
+
+											<input type="button" value="-" class="plus_minus minus">
+
+											<input type="text" readonly="true" name="qty" value="10" class="entry plus_minus">
+
+											<input type="button" value="+" class="plus_minus plus">
+
+											<input type="hidden" name="qtyIncrement" value="1" class="item_qtyIncrement">
+											<input type="hidden" name="qtySkipIncrement" value="" class="item_qtySkipIncrement">
+										</p>
+
+										<div class="price">
+											<p class="price">
+
+												Price: $299.99<br>
+
+
+												<strong>Total: $2,999.90</strong>
+											</p>
+										</div>
+									</div>
+
+									<div class="cart_item_viewport">
+										<a href="#"><img class="cart" src="images/product_3.jpg" alt="" data-id=""></a>
+									</div>
+									<p class="item_title">
+										<a href="#" class="prodLink" data-id="ST320005LSA10G-RK">Product Name</a>
+									</p>
+
+
+
+									<p><span><strong>SKU:</strong> ST320005LSA10G-RK</span></p>
+
+
+									<a class="included_items" href="#additional_infoa0PZ00000026h1xMAA" id="additionalInfoLink" data-toggle="modal">Additional Info</a>
+									&nbsp;|&nbsp;
+									<div id="additional_infoa0PZ00000026h1xMAA" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+											<h3 id="myModalLabel">Product Name Details</h3>
+										</div>
+										<div class="modal-body">
+
+
+											<strong>SKU:</strong>&nbsp;ST320005LSA10G-RK<br><br>
+
+
+											&lt;span&gt;NAS - 2 TB - Serial ATA-300 - HD 1 TB x 2 - RAID 0, 1, JBOD - Gigabit Ethernet&lt;/span&gt;<br><br>
+
+										</div>
+									</div>
+
+
+									<a href="#comments_a0PZ00000026h1xMAA" id="commentsLink" data-toggle="modal">Comments</a>
+									<div id="comments_a0PZ00000026h1xMAA" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+											<h3 id="myModalLabel">Product Name</h3>
+										</div>
+										<form id="commentsForma0PZ00000026h1xMAA" class="modal-body">
+											<textarea placeholder="Field_Notes" name="note" class="commentField"></textarea><br>
+										</form>
+										<div class="modal-footer"><input type="button" class="saveComment" data-id="a0PZ00000026h1xMAA" value="Save"></div>
+									</div>
+
+									<div class="clear"></div>
+									<div class=" wishFinder" data-sku="ST320005LSA10G-RK">
+										<button type="button" class="btn slim deleteItem removeItemButton" data-dismiss="modal" aria-hidden="true" data-id="a0PZ00000026h1xMAA">delete</button>
+										<div class="wishButtons"></div>
+									</div>      
+
+								</div>
+
+							</div>
+						</div>
+
+						<ul class="shopping_cart">
+							<li><button class="btn slim continueShoppingButton" name="" type="button">Continue Shopping</button></li>
+							<li><button class="btn slim getExtPricingButton" type="button">Apply Discounts</button></li>
+							<li><button class="btn slim updateCartButton" name="" type="button">Update</button></li>
+							<li><a href="#emailModal" id="emailCartLink" data-toggle="modal"><button class="btn slim remove" type="button">Email Cart</button></a></li>
+						</ul>
+
+
+						<div class="discount_code_container">
+
+							<form id="couponAddForm">
+								<h2 class="title">Discount Codes</h2>
+								<div class="discount_code">
+									<p id="couponAddError"></p>
+									<p>Enter your coupon code if you have one.</p>
+									<p><input type="text" id="addCouponId" name="couponId"></p>
+									<p><button id="addCouponBtn" type="button">Apply Coupon</button></p>
+								</div>
+							</form>
+
+						</div>
+
+						<!--**********************-->
+						<div id="included_items_desktop" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+						</div>
+
+						<div id="emailModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+								<h3 id="myModalLabel">Email Cart</h3>
+							</div>
+							<div class="modal-body" id="productListHeader">
+								<form id="emailForm">
+									<label for="email_to">Email:To</label>
+									<br>
+									<input type="text" id="email_to" name="toEmailAddress">
+									<label for="email_cc">Email:Cc</label>
+									<input type="text" id="email_cc" name="ccEmailAddress">
+									<label for="subject">Subject</label><br><input type="text" id="subject" name="subject">
+									<label for="description">Description</label><br><textarea id="description" style="width:98%" rows="10" name="description"></textarea>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-primary" id="sendEmailBtn">Send</button>
+							</div>
+						</div>
+
+						<ul class="checkout clear_right">
+
+							<li class="grand_total">Subtotal: $4,439.87</li>
+
+
+							<li class="totalsmessagingSection"></li>
+							<li>
+								<button type="button" class="btn btn-primary wide checkOutBtn">Checkout</button>
+							</li>
+						</ul>
+
+						<div class="clear"></div>
+					</div>
+				</div>
+
+
+
+
+			</div>
+		</div>
+		<div class="span3 visible-desktop">
+			<div class="right_column"><span id="Cart:cc_tmpl_TwoColRD:cc_tmpl_Storefront:j_id137"></span>
+				<div id="categories-right-nav">
+					<div class="categories_side_container">
+						<h2 class="title">Categories</h2>
+
+						<ul class="side_navigation_dropdown" id="side_nav">
+
+							<li><a href="#">Main Product 1</a>
+								<ul>
+									<li><a href="#">Product 1</a>
+										<ul>
+											<li><a href="#">Part A</a></li>
+											<li><a href="#">Part B</a></li>
+											<li><a href="#">Part C</a></li>
+											<li><a href="#">Part D</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Product 2</a>
+										<ul>
+											<li><a href="#">Part A</a></li>
+											<li><a href="#">Part B</a></li>
+											<li><a href="#">Part C</a></li>
+											<li><a href="#">Part D</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Product 3</a>
+										<ul>
+											<li><a href="#">Part A</a></li>
+											<li><a href="#">Part B</a></li>
+											<li><a href="#">Part C</a></li>
+											<li><a href="#">Part D</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">Main Product 2</a>
+								<ul>
+									<li><a href="#">Product 4</a></li>
+									<li><a href="#">Product 5</a></li>
+									<li><a href="#">Product 6</a></li>
+									<li><a href="#">Product 7</a></li>
+									<li><a href="#">Product 8</a></li>
+									<li><a href="#">Product 9</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Main Product 3</a>
+								<ul>
+									<li><a href="#">Product 10</a></li>
+									<li><a href="#">Product 11</a>
+										<ul>
+											<li><a href="#">Part E</a></li>
+											<li><a href="#">Part F</a></li>
+											<li><a href="#">Part G</a></li>
+											<li><a href="#">Part H</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Product 12</a></li>
+									<li><a href="#">Product 13</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Main Product 4</a>
+								<ul>
+									<li><a href="#">Product 14</a></li>
+									<li><a href="#">Product 15</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Main Product 5</a>
+								<ul>
+									<li><a href="#">Product 16</a></li>
+									<li><a href="#">Product 17</a></li>
+									<li><a href="#">Product 18</a></li>
+									<li><a href="#">Product 19</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Services</a>
+								<ul>
+									<li><a href="#">Service 1</a>
+										<ul>
+											<li><a href="#">Service Detail A</a></li>
+											<li><a href="#">Service Detail B</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Service 2</a>
+										<ul>
+											<li><a href="#">Service Detail C</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Service 3</a>
+										<ul>
+											<li><a href="#">Service Detail D</a></li>
+											<li><a href="#">Service Detail E</a></li>
+											<li><a href="#">Service Detail F</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Service 4</a></li>
+								</ul>
+							</li>
+
+						</ul>
+					</div>
+				</div> 
+				<div class="widgetSection"></div>
+				<div class="promotion-box-RightNav">
+					<div class="promo_container promo_side_container">
+
+						<div class="promotion_side promo_desk a1DZ0000000WIeQMAW">
+
+							<img src="images/promo_1.jpg" alt="" class="promo_desk promo_nolink">
+
+						</div>
+
+						<div class="promotion_side promo_desk a1DZ0000000WIeSMAW">
+
+							<img src="images/promo_2.jpg" alt="" class="promo_desk promo_nolink">
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row-fluid clear">
+		<div class="span12 footerBrowser">
+			<div class="footer">
+				<p>
+
+					<a href="http://www.edlconsulting.com/" target="_blank">EDL Consulting</a>
+
+					<a href="http://www.cloud-craze.com/" target="_blank">CloudCraze Home</a>
+
+					<a href="http://www.cloud-craze.com/product_info.php" target="_blank">Product Information</a>
+
+					<a href="http://www.cloud-craze.com/request_demo.php" target="_blank">View Cloud-Craze Demo</a>
+
+					<a href="http://www.edlconsulting.com/about.php" target="_blank">About US</a>
+
+					<a href="http://www.edlconsulting.com/search.php" target="_blank">Search</a>
+
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- END DESKTOP/TABLET VIEW -->
+
+
+<!-- NEW JS CODE AT BOTTOM OF THE PAGE CODE -->
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="js/js-image-slider.js"></script>
+<script type="text/javascript" src="js/controllers_new_slider.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery.hoverIntent.minified.js"></script>
+<script type="text/javascript" src="js/jquery.accordion.2.7.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- END JS CODE AT BOTTOM OF THE PAGE CODE -->
+
+</body>
+</html>

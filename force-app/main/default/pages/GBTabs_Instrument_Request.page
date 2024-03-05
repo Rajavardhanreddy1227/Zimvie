@@ -1,0 +1,52 @@
+<apex:page standardController="Instrument_Request__c" showHeader="false" sidebar="false" title="Instrument_Request">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Instrument_Request" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Instrument_Request",
+	"tabs": [
+		{
+			"name": "Full List ",
+			"content": "{!gridPage}gname=Active Instrument Requests&amp;sh=0&amp;sfname=default",
+			"id": 1605638845027
+		},
+		{
+			"id": 1606218163908,
+			"content": "{!gridPage}gname=IR Pre Submission&amp;sh=0&amp;sfname=default",
+			"name": "Pre Submission "
+		},
+		{
+			"name": "Pending Review ",
+			"content": "{!gridPage}gname=IR Pending Review&amp;sh=0&amp;sfname=default",
+			"id": 1606219371891
+		},
+		{
+			"name": "Action Required ",
+			"content": "{!gridPage}gname=IR Action Required&amp;sh=0&amp;sfname=default",
+			"id": 1606219409979
+		},
+		{
+			"name": "Approved",
+			"content": "{!gridPage}gname=IR Approved&amp;sh=0&amp;sfname=default",
+			"id": 1606219421699
+		},
+		{
+			"name": "Denied / Canceled ",
+			"content": "{!gridPage}gname=IR Denied Canceled&amp;sh=0&amp;sfname=default",
+			"id": 1606219429532
+		}
+	],
+	"id": 1605638845027,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": true,
+	"object": "Instrument_Request__c",
+	"height": "",
+	"showHeader": false,
+	"showSidebar": false,
+	"pageAPIName": "GBTabs_Instrument_Request"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

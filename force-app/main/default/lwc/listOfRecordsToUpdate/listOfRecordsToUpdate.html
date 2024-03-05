@@ -1,0 +1,368 @@
+<template>
+	<!--Spinner/loader-->
+	<c-b2b-spinner 
+        if:true={customLoader}
+        message-state={messageState}>
+    </c-b2b-spinner>
+
+	<template if:false={totalRecords}>
+		<span class="recnotfoundcls">{labels.No_Invoive}</span>
+	</template>
+	<p class="pageheading">{labels.Invoices}</p>
+	<template if:false={isDetailView}><!--if:true={totalRecords}-->
+	
+	<p class="recinfo">{labels.apply_credits}&nbsp;<span class="recphone">{labels.contact_for_credits}</span></p> 
+	<div class="slds-grid slds-gutters">
+		
+		<div class="slds-col slds-size_12-of-12">
+			<lightning-layout>
+				<lightning-layout-item size="6" flexibility="auto" padding="around-small">
+					<div>
+						<lightning-layout horizontal-align="space">
+							<lightning-layout-item padding="around-small" size="3">
+								<lightning-input type="date" name="startDate" label={labels.StartDate} value={filterStartDate}
+									onchange={handleChangeStartDate} style="overflow: hidden;"></lightning-input>
+							</lightning-layout-item>
+							<lightning-layout-item padding="around-small" size="3">
+								<lightning-input type="date" name="endDate" label={labels.EndDate} value={filterEndDate}
+									onchange={handleChangeEndDate} style="overflow: hidden;"></lightning-input>
+							</lightning-layout-item>
+							<lightning-layout-item padding="around-small" class= "slds-m-top_large" size="2">
+								<!--<lightning-button variant="brand" label="Apply" title="titleName"
+									onclick={handleApplyFilter}></lightning-button>-->
+									<button onclick={handleApplyFilter} class="applybtn">{labels.APPLY}</button>
+							</lightning-layout-item>
+							<lightning-layout-item padding="around-small" class= "slds-m-top_large" size="2">
+								<!--<lightning-button variant="neutral" label="Reset" title="titleName"
+									onclick={handleResetFilter}></lightning-button>-->
+									<button onclick={handleResetFilter} class="resetbtn">{labels.RESET}</button>
+							</lightning-layout-item>
+							<lightning-layout-item padding="around-small" class= "slds-m-top_large" size="2">
+								<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right" style="width:200%;">
+									<lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" icon-name="utility:search"></lightning-icon>
+									<input type="search" placeholder="Search" oninput={handleSearch} class="srchbtncls">
+								</div>
+							</lightning-layout-item>
+
+						</lightning-layout>
+						<template if:true={isDateError}>
+							<p style="color: red;padding:0px 0px 10px 10px">{errorMsg}</p>
+						</template>
+					</div>
+				</lightning-layout-item>
+
+				<lightning-layout-item size="2" flexibility="auto" padding="around-small" class="slds-text-align_right">
+					<!--<lightning-input type="search" label="Search" onchange={handleSearch}></lightning-input>-->
+					<!--<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right" style="width:150%;margin-top: 20px;">
+						<lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" icon-name="utility:search"></lightning-icon>
+						<input type="search" placeholder="Search" oninput={handleSearch} class="srchbtncls">
+					</div>-->
+				</lightning-layout-item>
+				<lightning-layout-item size="4" flexibility="auto" padding="top-small" class="slds-text-align_right">
+					<div class="slds-m-around-small slds-m-top_medium slds-p-top_medium">
+						<!--<lightning-button class="slds-m-left_x-small" variant="brand" label={actionName}
+							onclick={handleClick}></lightning-button>-->
+							<button onclick={handleClick} if:true={isPaymentScreenBtnShow} class="paybtncls">{actionName}&nbsp;&nbsp;&nbsp;
+								<lightning-icon icon-name="utility:forward" class="payicon" alternative-text="Connected" size="x-small"></lightning-icon></button>&nbsp;&nbsp;
+								<button disabled if:false={isPaymentScreenBtnShow} class="paybtnclsdisabled">{actionName}&nbsp;&nbsp;&nbsp;
+								<lightning-icon icon-name="utility:forward" class="payicon" alternative-text="Connected" size="x-small"></lightning-icon></button>&nbsp;&nbsp;
+						<template if:true={showExportButton}>
+							<!--<lightning-button class="slds-m-left_x-small" variant="brand" label={exportButtonName}
+								onclick={handleExport}></lightning-button>-->
+								<!-- Removed for client, venkat asked for this -->
+								<!-- <button onclick={handleExport} class="exportbtn">{exportButtonName}</button>-->
+						</template>
+					</div>
+					<!--<div class="slds-scoped-notification slds-media slds-media_center slds-scoped-notification_light"
+						role="status">
+						<div class="slds-media__figure">
+							<span class="slds-icon_container slds-icon-utility-info" title="information">
+                				<lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" icon-name="utility:info"></lightning-icon>
+							</span>
+						</div>
+						<div class="slds-media__body">
+							<p>Please contact
+								<a href="#"> Customer support </a>
+								if you wish to apply credits to pay the invoices.
+							</p>
+						</div>
+					</div>-->
+					<!--<div style="display:flex;">
+						<lightning-icon size="x-small"
+							class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
+							icon-name="utility:info"></lightning-icon>
+						<p style="font-size: small;text-align: left;padding-left: 4px;">Please contact<a href="#-85"> {labels.Customersupportlabel} </a>if you wish to apply credits to pay the invoices.</p>
+					</div>-->
+				</lightning-layout-item>
+
+			</lightning-layout>
+
+		</div>
+	</div>
+	<div>
+		<div if:true={DataTableColumnResponse}>
+			<div class="slds-text-heading_small"></div>
+			<!--<lightning-datatable key-field="Id"
+			 	data={recordsToDisplay} 
+			 	columns={DataTableColumnResponse}
+			 	onrowselection={handleCheck} 
+			  	sorted-by={sortBy}
+				sorted-direction={sortDirection}
+                onsort={doSorting}
+			 	show-row-number-column 
+			 	selected-rows={selectedRows}></lightning-datatable>-->
+
+				<div>
+					<lightning-input data-id="toggle" type="toggle" label={labels.Show_Open_Invoices}  name="toggle" onchange={handletoggle} class="togglebtncls" checked message-toggle-inactive="" message-toggle-active=""></lightning-input>
+					<!--span class="recdata">{labels.Total_Records} {totalRecords} &nbsp;&nbsp; {labels.Showing} {pageNumber} &nbsp;of&nbsp; {totalPages} &nbsp;{labels.Page_s}</span-->
+					<!--<span class="recinfo">To apply credits contact customer service&nbsp;<span class="recphone">800-345-6789</span></span> -->
+				</div>
+				
+					
+				 <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-scrollable"  style="border:solid;border-width:thin;border-radius:8px;border-color:#d4d4d4;overflow-x: auto;white-space: nowrap;text-align-last: center;display:block;max-width: max-content;">
+					<thead>
+						<tr class="zinToken" style="position:sticky;top:0;">
+							<th style="border-radius: 10px 0px 0 0;"><div class="slds-truncate"></div></th>
+							<th><div class="slds-truncate"></div></th>
+							<!-- <th><div class="slds-truncate heading">{labels.Invoice_number} <lightning-icon icon-name="utility:chevrondown" class="tableicon" alternative-text="Connected" size="x-small"></lightning-icon></div></th>
+							<th><div class="slds-truncate heading">{labels.Transaction_Date}<lightning-icon icon-name="utility:chevrondown" class="tableicon" alternative-text="Connected" size="x-small"></lightning-icon></div></th>
+							<th><div class="slds-truncate heading">{labels.DueDate} <lightning-icon icon-name="utility:chevrondown" class="tableicon" alternative-text="Connected" size="x-small"></lightning-icon></div></th>
+							<th><div class="slds-truncate heading">{labels.Days_Late} <lightning-icon icon-name="utility:chevrondown" class="tableicon" alternative-text="Connected" size="x-small"></lightning-icon></div></th>
+							<th><div class="slds-truncate heading">{labels.Status}  <lightning-icon icon-name="utility:chevrondown" class="tableicon" alternative-text="Connected" size="x-small"></lightning-icon></div></th>
+							<th><div class="slds-truncate heading">{labels.Class}  <lightning-icon icon-name="utility:chevrondown" class="tableicon" alternative-text="Connected" size="x-small"></lightning-icon></div></th>
+							<th><div class="slds-truncate heading">{labels.Original} <lightning-icon icon-name="utility:chevrondown" class="tableicon" alternative-text="Connected" size="x-small"></lightning-icon></div></th>
+							<th><div class="slds-truncate heading">{labels.Balance_Due} <lightning-icon icon-name="utility:chevrondown" class="tableicon" alternative-text="Connected" size="x-small"></lightning-icon></div></th>
+							<th><div class="slds-truncate heading">{labels.PO_Number}<lightning-icon icon-name="utility:chevrondown" class="tableicon" alternative-text="Connected" size="x-small"></lightning-icon></div></th>
+							<th><div class="slds-truncate heading">{labels.Term}<lightning-icon icon-name="utility:chevrondown" class="tableicon" alternative-text="Connected" size="x-small"></lightning-icon></div></th> -->
+							<!-- removing chevrondown keys -->
+							<th><div class="slds-truncate heading">{labels.Invoice_number}</div></th>
+							<th><div class="slds-truncate heading">{labels.Transaction_Date}</div></th>
+							<th><div class="slds-truncate heading">{labels.DueDate}</div></th>
+							<th><div class="slds-truncate heading">{labels.Days_Late}</div></th>
+							<th><div class="slds-truncate heading">{labels.Status}</div></th>
+							<th><div class="slds-truncate heading">{labels.Class}</div></th>
+							<!-- <th><div class="slds-truncate heading">{labels.Original}</div></th> -->
+							<th><div class="slds-truncate heading">{labels.B2BInvoice_INV_TOTAL}</div></th>
+							<th><div class="slds-truncate heading">{labels.Balance_Due}</div></th>
+							<th><div class="slds-truncate heading">{labels.PO_Number}</div></th>
+							<th><div class="slds-truncate heading">{labels.Term}</div></th>
+							<!--<th style="border-radius: 0px 10px 0 0;"><div class="slds-truncate heading">Action<lightning-icon icon-name="utility:chevrondown" class="tableicon" alternative-text="Connected" size="x-small"></lightning-icon></div></th>-->
+						</tr>
+						
+					</thead>
+					<tbody>
+						
+						<template for:each={recordsToDisplay} for:item="records" for:index="index">
+							<tr style="box-shadow: inset -1px 0px 0px #dbe0e2, inset 0px -1px 0px #dbe0e2, inset -1px 0px 0px #dbe0e2;" key={records.Id} if:false={records.isCreditOpen}>
+								<td class="slds-truncate">{records.index}</td>
+								<td><lightning-input disabled={records.disabled}  type="checkbox" name={records.Id} data-id="checkbox" value={records.Id} id={records.Id} onchange={handleInvoiceSelection}></lightning-input></td>
+								<td  data-label="Name"  class="slds-truncate tabledata" style="cursor: pointer;" onclick={showInvoiceDetails}  data-value={records.Name} id={records.Name}>{records.Name}</td>
+								<td  data-label="Transaction Date" class="slds-truncate tabledata">{records.Invoice_Date__c}</td>
+								<td  data-label="Due Date" class="slds-truncate tabledata">{records.Due_Date__c}</td>
+								<td  data-label="Days Late" class="slds-truncate tabledata">{records.Days_Late__c}</td>
+								<td  data-label="Status" class="slds-truncate tabledata">{records.Status__c}</td>
+								<td  data-label="Class" class="slds-truncate tabledata">{records.Type__c}</td>
+								<!-- <td  data-label="Original" class="slds-truncate tabledata">{records.Original__c}</td> -->
+								<td  data-label="Original" class="slds-truncate tabledata">
+									<lightning-formatted-number format-style="currency" currency-code={currencyCode}
+										class="header-sm"
+										style="font-weight:100"
+										currency-display-as="symbol" maximum-fraction-digits="2"
+										value={records.Total_Amount_With_Tax__c}>
+									</lightning-formatted-number>
+								</td>
+								<td  data-label="Balance Due" class="slds-truncate tabledata">
+									<lightning-formatted-number format-style="currency" currency-code={currencyCode}
+										class="header-sm"
+										style="font-weight:100"
+										currency-display-as="symbol" maximum-fraction-digits="2"
+										value={records.Balance__c}>
+									</lightning-formatted-number>
+								</td>
+								<td  data-label="Balance Due" class="slds-truncate tabledata">{records.PO_Number__c}</td>
+								<td  data-label="Term" class="slds-truncate tabledata">{records.Terms__c}</td>
+								<!--<td  data-label="Term" class="slds-truncate tabledata">
+									<button if:true={records.showAdjustmentBtn} onclick={handleCreateAdjustment}  class="createAdjustmentBtn">Create Adjustment</button>
+								</td>-->
+								
+							</tr>
+							<tr style="box-shadow: inset -1px 0px 0px #dbe0e2, inset 0px -1px 0px #dbe0e2, inset -1px 0px 0px #dbe0e2; background-color:red;" key={records.Id} if:true={records.isCreditOpen}>
+								<td class="slds-truncate">{records.index}</td>
+								<td><lightning-input disabled={records.disabled}  type="checkbox" name={records.Id} data-id="checkbox" value={records.Id} id={records.Id} onchange={handleInvoiceSelection}></lightning-input></td>
+								<td  data-label="Name" class="slds-truncate tabledata">{records.Name}</td>
+								<td  data-label="Transaction Date" class="slds-truncate tabledata">{records.Invoice_Date__c}</td>
+								<td  data-label="Due Date" class="slds-truncate tabledata">{records.Due_Date__c}</td>
+								<td  data-label="Days Late" class="slds-truncate tabledata">{records.Days_Late__c}</td>
+								<td  data-label="Status" class="slds-truncate tabledata">{records.Status__c}</td>
+								<td  data-label="Class" class="slds-truncate tabledata">{records.Type__c}</td>
+								<!-- <td  data-label="Original" class="slds-truncate tabledata">{records.Original__c}</td> -->
+								<td  data-label="Original" class="slds-truncate tabledata">
+									<lightning-formatted-number format-style="currency" currency-code={currencyCode}
+									class="header-sm"
+									style="font-weight:100"
+									currency-display-as="symbol" maximum-fraction-digits="2"
+									value={records.Total_Amount_With_Tax__c}>
+									</lightning-formatted-number>
+								</td>
+								<td  data-label="Balance Due" class="slds-truncate tabledata">
+									<lightning-formatted-number format-style="currency" currency-code={currencyCode}
+										class="header-sm"
+										style="font-weight:100"
+										currency-display-as="symbol" maximum-fraction-digits="2"
+										value={records.Balance__c}>
+									</lightning-formatted-number>
+								</td>
+								<td  data-label="Balance Due" class="slds-truncate tabledata">{records.PO_Number__c}</td>
+								<td  data-label="Term" class="slds-truncate tabledata">{records.Terms__c}</td>
+								<!--<td  data-label="Term" class="slds-truncate tabledata">
+									<button if:true={records.showAdjustmentBtn} onclick={handleCreateAdjustment}  class="createAdjustmentBtn">Create Adjustment</button>
+								</td>-->
+								
+							</tr>
+						</template>
+						
+					</tbody>
+				</table>
+				
+				
+
+
+		</div>
+	</div>
+
+	<div  style="padding-top: 0.5em;">
+		<!--RECORDS PER PAGE-->
+		<!--<div class="slds-col">
+			<div class="slds-list_inline slds-p-bottom_xx-small">
+				<label class="slds-text-color_weak slds-p-horizontal_x-small" for="recordsPerPage">&nbsp; Page Size:</label>
+				<div class="slds-select_container">
+					<select class="slds-select" id="recordsPerPage" onchange={handleRecordsPerPage}>
+                            <template for:each={pageSizeOptions} for:item="option">
+                                <option key={option} value={option}>{option}</option>
+                            </template>
+                        </select>
+				</div>
+			</div>
+		</div>-->
+		<!--PAGE NAVIGATION-->
+		<div class="slds-p-around_small">
+			<!--<lightning-button disabled={bDisableFirst} icon-name="utility:jump_to_left" label="First"
+				class="slds-p-horizontal_x-small" alternative-text="first page" onclick={firstPage}></lightning-button>
+			<lightning-button disabled={bDisableFirst} icon-name="utility:chevronleft" label="Previous"
+				alternative-text="Previous" onclick={previousPage}></lightning-button>
+			&nbsp;
+			<span class="slds-badge">Showing {pageNumber} &nbsp;of&nbsp; {totalPages} &nbsp;&nbsp;Page(s)</span>
+			&nbsp;
+			<lightning-button disabled={bDisableLast} icon-name="utility:chevronright" label="Next"
+				alternative-text="Next" onclick={nextPage} class="slds-p-horizontal_x-small" icon-position="right">
+			</lightning-button>
+			<lightning-button disabled={bDisableLast} icon-name="utility:jump_to_right" label="Last"
+				alternative-text="last page" onclick={lastPage} icon-position="right"></lightning-button>-->
+				<!--button onclick={previousPage} disabled={bDisableFirst} class="cstmbtn"><lightning-icon icon-name="utility:chevronleft" size="x-small" alternative-text="Previous" class="icon"></lightning-icon></button>
+				<span class="pageNumber">{pageNumber}</span><button onclick={nextPage} disabled={bDisableLast} class="cstmbtn"><lightning-icon icon-name="utility:chevronright" size="x-small" alternative-text="Next" class="icon"></lightning-icon></button-->
+				<c-search-paginator
+					if:true={hasMorePages}
+					page-number={pageNumber}
+					page-size={pageSize}
+					total-item-count={totalRecords}
+					onprevious={handlePreviousPage}
+					onnext={handleNextPage}
+					onpageselect={handlePageSelect}
+				>
+				</c-search-paginator>
+		</div>
+		<!--TOTAL RECORDS-->
+		<!--<div class="slds-clearfix">
+			<div class="slds-float_right">
+				<span class="slds-badge"> Total Records: {totalRecords}</span>
+			</div>
+		</div>-->
+	</div>
+	<template if:true={isPaymentScreen}>
+		<section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
+			class="slds-modal slds-fade-in-open">
+			<div class="slds-modal__container">
+				<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <!-- <span class="slds-assistive-text">Cancel and close</span> -->
+					<span class="slds-assistive-text">{labels.B2BInvoice_CancelAndClose}</span>
+                </button>
+				<div class="slds-modal__header">
+					<h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">{labels.B2BInvoice_TotalAmountToPay} &nbsp;
+						<lightning-formatted-number format-style="currency" currency-code={currencyCode}
+							class="header-sm"
+							style="font-weight:100"
+							currency-display-as="symbol" maximum-fraction-digits="2"
+							value={totalAmountToPay}>
+						</lightning-formatted-number>
+					</h1>
+				</div>
+				<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+					<lightning-datatable  key-field="Id" data={selectedRecords} columns={paymentScreenColumns}
+						onrowselection={handleCheck} hide-checkbox-column show-row-number-column></lightning-datatable>
+				</div>
+				<div class="slds-modal__footer">
+					<button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={nexthandlecancel}>{labels.cancelButton}</button>
+					<button class="slds-button slds-button_brand" onclick={handleNextClick}>{labels.B2BInvoice_Next}</button>
+				</div>
+			</div>
+		</section>
+		<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+	</template>
+	<template if:true={isNewCardScreen}>
+		<section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-03"
+			class="slds-modal slds-fade-in-open">
+			<div class="slds-modal__container">
+				<!--<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Cancel and close</span>
+                </button>
+				<div class="slds-modal__header">
+					<h1 id="modal-heading-03" class="slds-modal__title slds-hyphenate">Add New Payment Method</h1>
+				</div> -->
+				<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-3">
+					<c-b2-b_-cyber-source-invoice-form oncardradiochanged={handleCardRadioSelection} render-cyber-source-form={randerForm} save-from-wallets={saveCardFromWallet}></c-b2-b_-cyber-source-invoice-form>
+				</div>
+				<div class="slds-modal__footer">
+					<button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={handleBackForm}>{labels.B2B_Back_Btn}</button>
+					<button class="slds-button slds-button_brand" onclick={handlePayClickP}>{labels.B2B_Submit_Payment}</button>
+				</div>
+			</div>
+		</section>
+		<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+	</template>
+	
+</template>
+
+<template if:true={isDetailView}>
+	<c-b2b-invoice-detail-view invoice-name={selectedInvoice} onbacktoallinvoice={backtoallinvoice}></c-b2b-invoice-detail-view>
+</template>
+
+<template if:true={showAdjPopup}>
+	<section role="dialog" tabindex="-1"  aria-modal="true" aria-labelledby="modal-heading-02" class="slds-modal slds-fade-in-open slds-modal_small">
+		<div class="slds-modal__container" >
+		  <div class="slds-modal__header">
+			<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+				<lightning-icon icon-name="utility:close"
+					alternative-text="close"
+					variant="inverse"
+					size="small" ></lightning-icon>
+				<span class="slds-assistive-text">Close</span>
+			</button>
+			<h1 id="modal-heading-02" class="slds-modal__title slds-hyphenate">Adjustments</h1>
+		  </div>
+		  <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+			<lightning-input type="text" label="Enter Invoice Number" onchange={handleAdjInput}></lightning-input>
+		  </div>
+		  <div class="slds-modal__footer">
+			<lightning-button label="Submit" onclick={handleAdjustmentSubmitBtn}></lightning-button>
+		  </div>
+		</div>
+	  </section>
+</template>
+
+</template>

@@ -1,0 +1,35 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="Sample Custom Theme Layout">
+
+    <aura:attribute name = "search" type = "Aura.Component[]" required = "false"/>
+    <aura:attribute name = "profileMenu" type = "Aura.Component[]" required = "false"/>
+    <aura:attribute name = "language" type = "Aura.Component[]" required = "true"/>
+    <aura:attribute name = "newHeader" type = "Aura.Component[]" required = "false"/>
+    <aura:attribute name = "showSearch" type="Boolean" default="true" />
+
+
+    <div class="landing-theme">        
+        <div class="landing-header">
+            
+            
+            <div class="header-language">
+                <div class="header-language_icon">
+                    <span class="slds-button slds-button_icon" tabindex="0" title="Language">
+                        <lightning:icon class="left-world" iconName="utility:world" size="small" alternativeText="Language"/>
+                    </span>
+                </div>
+
+                <div class="header-language_selection">
+                    {!v.language}  
+                </div>
+            </div>
+
+           
+        </div>
+        <div class="landing-content">
+            <div class="landing-body">
+                {!v.body}
+            </div>
+    
+        </div>        
+    </div>
+</aura:component>

@@ -1,0 +1,12 @@
+.slds-button_brand-cstm-zimvie, .slds-button_brand-cstm-azure{
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 25px;
+    border-radius: 30px ;
+    color:#fff;
+    background: #0A2043;
+}
+.slds-button_brand-cstm-zimvie:hover{
+    color:#E6DC19;
+    background: #0A2043;
+}

@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="currentUser" type="User"/> 
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!$SObjectType.CurrentUser.Id}" 			
+                      fields="FirstName" 
+                      targetFields="{!v.currentUser}"/>  
+    <div class="c-container">
+     <lightning:layout class="slds-align_absolute-center">
+        <lightning:layoutItem>
+            <div class="header-align">
+                <h1> <b> Welcome {!v.currentUser.FirstName} to the Voyager Homepage </b> </h1>
+            </div>
+            <div>
+                <p>Please use this solution to keep track</p>
+            	<p>of your sales pursuits, collaborate</p>
+            	<p>and win together as one team.</p>
+            </div>
+    	</lightning:layoutItem>
+    </lightning:layout> 
+   </div>
+</aura:component>

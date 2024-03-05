@@ -1,0 +1,31 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" title="At Risk Surgeon">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_At_Risk_Surgeon" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "At Risk Surgeon",
+	"tabs": [
+		{
+			"name": "Dashboard",
+			"content": "TableauAVPAtRiskDashboard",
+			"id": 1558636149323
+		},
+		{
+			"name": "At Risk Surgeons",
+			"content": "{!gridPage}gname=At Risk Knee Surgeons&amp;sh=0&amp;sfname=default",
+			"id": 1558636229579
+		}
+	],
+	"id": 1558636149323,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": false,
+	"object": "Opportunity",
+	"height": "750",
+	"showHeader": false,
+	"showSidebar": false
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

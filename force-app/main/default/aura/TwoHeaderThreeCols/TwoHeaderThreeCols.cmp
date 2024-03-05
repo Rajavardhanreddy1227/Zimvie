@@ -1,0 +1,22 @@
+<aura:component implements="lightning:homeTemplate" description="Two Headers and One Main Column">
+    
+  <aura:attribute name="left" type="Aura.Component[]" />
+  <aura:attribute name="right" type="Aura.Component[]" />
+  <aura:attribute name="main" type="Aura.Component[]" />
+    <div><lightning:layout>
+      <lightning:layoutItem class="main" size="6">
+       {!v.left}
+      </lightning:layoutItem>
+      <lightning:layoutItem class="main" size="6">
+       {!v.right}
+      </lightning:layoutItem>
+    </lightning:layout></div>
+  
+  <div>
+  <lightning:layout>
+  <lightning:layoutItem class="main" size="12">
+         {!v.main}
+      </lightning:layoutItem>
+      </lightning:layout>
+  </div>
+</aura:component>

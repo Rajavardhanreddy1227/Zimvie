@@ -1,0 +1,85 @@
+<template>
+  <div class="container">
+    <template if:true={show}>
+      <article class="slds-card kpi-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <span
+                  class="slds-card__header-link slds-truncate"
+                  title={product}
+                >
+                  <span>{product}</span>
+                </span>
+              </h2>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+          <div class="slds-grid slds-wrap slds-grid_align-center slds-grid_vertical-stretch">
+            <template if:true={showMonthly}> 
+            <div class="slds-col slds-size_1-of-3 slds-p-around_xx-small">                        
+              <!-- Monthly KPI -->
+              <c-ortho-kpi
+                current={monthlyCurrent}
+                target={monthlyTarget}
+                description={monthlyLabel}
+                targettxt={monthlyTargetText}
+                prd={product}
+              ></c-ortho-kpi>                    
+            </div>
+          </template> 
+          
+             
+            <template if:true={showQuarterly}> 
+            <div class="slds-col slds-size_1-of-3 slds-p-around_xx-small">
+              <!-- Quarterly KPI -->
+              
+              <c-ortho-kpi
+                current={quarterlyCurrent}
+                target={quarterlyTarget}
+                description={quarterlyLabel}
+                targettxt={quarterlyTargetText}
+                prd={product}
+              ></c-ortho-kpi>   
+            </div>
+            </template>    
+            
+            <template if:true={showYearly}>
+            <div class="slds-col slds-size_1-of-3 slds-p-around_xx-small">
+              <!-- Yearly KPI -->              
+              <c-ortho-kpi
+                current={yearlyCurrent}
+                target={yearlyTarget}
+                description={yearlyLabel}
+                targettxt={yearlyTargetText}
+                prd={product}
+              ></c-ortho-kpi>              
+            </div>            
+            </template>
+
+            <template if:true={showYearlyWithoutQtr}>
+            <div class="slds-col slds-size_1-of-3 slds-p-around_xx-small">
+              <!-- Yearly Without Qtr KPI -->              
+              <c-ortho-kpi
+                current={yearlyWithoutQtrCurrent}
+                target={yearlyWithoutQtrTarget}
+                description={yearlyWithoutQtrLabel}
+                targettxt={yearlyWithoutQtrTargetText}
+                prd={product}
+              ></c-ortho-kpi>              
+            </div>
+            </template>
+
+          </div>
+          </div>
+      </article>
+      <template if:true={showReportLink}>
+        <div class="report-link">
+          <c-ortho-link url={reportLink} show={showReportLink} button-text={linkText}></c-ortho-link>
+        </div>
+      </template>
+    </template>
+  </div>
+</template>

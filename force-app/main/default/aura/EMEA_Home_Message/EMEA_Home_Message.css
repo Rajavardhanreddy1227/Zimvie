@@ -1,0 +1,11 @@
+.THIS.c-container {
+    font-size: 1rem;
+    background-image: url('/resource/1634204731000/EMEA_ZB_Background');
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+}
+
+.THIS .header-align {
+    margin-bottom: .7rem;
+}

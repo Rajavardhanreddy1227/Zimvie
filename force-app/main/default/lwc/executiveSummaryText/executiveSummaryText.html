@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Update Executive Summary" icon-name="standard:record">
+        <lightning-button label="Update  Executive Summary" variant="brand" onclick={updateSummary}></lightning-button>
+        <div class="slds-m-around_medium" style="min-block-size: 450px">
+            <template if:true={executiveSymmaryTextfld.data}>
+                <lightning-input-rich-text label="Executive Summary" 
+                                    value={executiveSymmaryTextfld.data.Executive_Summary_fld__c}                                   
+                                    onchange={handleChange} 
+                                    formats={formats} >
+                </lightning-input-rich-text >
+                <lightning-input    label="Id" 
+                                    disabled value={executiveSymmaryTextfld.data.Id}
+                                    onchange={handleChange} 
+                                    data-field="ID"
+                                    style="visibility: hidden; max-height:1px"
+                                    class="slds-p-top_xx-large" >
+                </lightning-input>    
+            </template>    
+        </div>
+    </lightning-card>
+</template>

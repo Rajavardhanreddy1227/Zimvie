@@ -1,0 +1,26 @@
+body {
+    background-color:#EFF0F1;
+}
+
+#container {
+    width:1028px;
+    background-color:#fff;
+    background:transparent url(images/regBackground.gif) repeat scroll 0 0;
+}
+
+#header {
+    text-align:center;
+}
+
+#containerFooter {      
+    text-align:center;
+}
+
+#footer {
+    margin:0 auto;
+    padding:40px 0 20px;
+    position:relative;
+    text-align:center;
+    width:1028px;
+    background:transparent url(images/regFooter.gif) no-repeat scroll 0 0;
+}

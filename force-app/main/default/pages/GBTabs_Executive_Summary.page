@@ -1,0 +1,27 @@
+<apex:page standardController="Business_Plan__c" showHeader="false" sidebar="false" title="Executive Summary">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Executive_Summary" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Executive Summary",
+	"tabs": [
+		{
+			"name": "Summary",
+			"content": "{!gridPage}gname=BP Executive Summary&amp;sh=0&amp;sfname=default&amp;fpf=Business_Plan__c&amp;fpv={!Business_Plan__c.id}",
+			"id": 1555439293397
+		}
+	],
+	"id": 1555439293397,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": false,
+	"object": "Business_Plan__c",
+	"height": "750",
+	"showHeader": false,
+	"showSidebar": false,
+	"pageAPIName": "GBTabs_Executive_Summary"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

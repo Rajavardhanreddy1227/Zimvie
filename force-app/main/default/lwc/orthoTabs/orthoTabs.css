@@ -1,0 +1,46 @@
+.indicator {
+  background: #0081c9;
+  height: .4rem;
+  width: 25%;
+  margin: 0 4.167%;
+  border: none;
+  transition: .3s ease-in-out;
+}
+.tabs{
+  background-color: white;
+}
+:host { 
+  width: 100%;
+  margin-top: 0;
+  margin-left: auto;
+  margin-bottom: -0.75rem;
+  margin-right: 0;
+  
+}
+
+.indicator.comms {
+  margin-left: 37.5%;
+}
+
+.indicator.apps {
+  margin-left: 70.83%;
+}
+
+ul li {
+  display: inline;
+  text-align: center;
+}
+a {
+  display: inline-block;
+  width: 33%;
+  padding: .75rem 0;
+  margin: 0;
+  text-decoration: none;
+  color: #333;
+}
+iframe {
+  display: block;     
+  border: none;         /* Reset default border */
+  width: 100%;
+  height: 100%;
+}

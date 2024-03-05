@@ -1,0 +1,55 @@
+<template>
+   <button onclick={displayPopup} class="slds-button slds-button_neutral bgColour" title={labels.Clickheretochangethecountry} style="color:white;border:0px;">
+      <img src={checkinIcon} style="width:12px;" class="slds-m-right_x-small">
+      {locale}
+   </button>
+   <template if:true={showPopup}>
+      <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+         <div class="slds-modal__container">
+            <!-- <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={closeModal}> -->
+            <!-- <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+               </svg>
+            <span class="slds-assistive-text">Cancel and close</span>
+            </button> -->
+            <div class="slds-modal__header">
+               <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">{labels.CountrySelector}</h1>
+            </div>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+               <p>
+                  <template if:true={localePicklist}>
+                     <lightning-combobox name="locale" label="Country Name" value={countryValue}
+                        options={localePicklist} onchange={handleChange}>
+                     </lightning-combobox>
+                  </template>
+               </p>
+              <template if:true={terms}>
+                 <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+               <p>
+                  {labels.countrySelectorTermsContent}
+               </p>
+                <br />
+            <lightning-input
+               type="checkbox"
+               label="Please accept the checkbox to confirm you are a health professional!"
+               name="input"
+               required="true" 
+               onchange={handleChkboxChange}>         
+               ></lightning-input>
+            </div>
+              </template>
+            </div>
+            
+            <div class="modal-footer slds-modal__footer">
+               <lightning-button-group>
+                  <lightning-button class="slds-button slds-button--brand" label="Save" variant="brand" onclick={handleClick}></lightning-button>
+                  <!-- <lightning-button label="Close" class="lds-button slds-button--neutral " variant="neutral" onclick={closeModal}></lightning-button> -->
+               </lightning-button-group>
+            </div>
+          
+         </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open" role="presentation" style="backdrop-filter: blur(10px)"></div>
+   </template>
+   
+</template>

@@ -1,0 +1,205 @@
+<template>
+
+	<lightning-spinner if:true={isLoading} alternative-text={labels.loading} class="slds-is-absolute slds-align_absolute-center" size="medium" variant="brand">
+	</lightning-spinner>
+
+	<template if:true={objOrder}>
+		<lightning-button variant="base" label="Back to All Orders" icon-name="utility:chevronleft" class="slds-m-left_x-small" onclick={handleBacktoallorder}></lightning-button>
+		<!-- <button class="slds-button backbutton slds-m-bottom_large" onclick={handleBacktoallorder}><lightning-button variant="base" label={labels.BackToAllOrder} icon-name="utility:chevronleft" class="slds-m-left_x-small" onclick={handleBacktoallorder}></lightning-button> {labels.Back_to_All_Orders}</button> -->
+		<div class="header-lg slds-m-bottom_large">{labels.Order}: {objOrder.OrderNumber}</div> 
+		<!--
+		<button class="slds-button slds-button_brand slds-m-right_large">Start Reorder</button><button class="slds-button slds-button_neutral">Cancel Order</button>
+		<div class="slds-m-top_medium slds-m-bottom_medium">You can cancel this order within: 14m 32s</div>
+		-->
+		<c-b2bcancelorder record-id={recordId}></c-b2bcancelorder>
+
+		<div class="order-ctr slds-m-top_x-large slds-m-bottom_medium">
+			<div class="slds-grid slds-wrap slds-gutters">
+				<div class="slds-col slds-col-1-of-2">
+					<div class="order-details-ctr slds-p-around_x-large slds-m-bottom_large">
+						<div class="header-lg slds-m-bottom_medium">{labels.Order_Details}</div>
+						<p class="slds-m-bottom_small"><b>{labels.Purchase_Order_Number}:</b> {objOrder.B2B_PO_Number__c}</p>
+						<p class="slds-m-bottom_small"><b>{labels.Ordered_Date}:&nbsp;</b>
+							<lightning-formatted-date-time value={objOrder.OrderedDate} year="numeric"
+										month="numeric" day="numeric" hour="numeric" minute="numeric">
+							</lightning-formatted-date-time>
+						</p>
+						<p class="slds-m-bottom_small"><b>{labels.Account}:</b> {objOrder.Account.Name}</p>
+						<p class="slds-m-bottom_small"><b>{labels.Placed_By}:</b> {objOrder.CreatedBy.Name}</p>
+						<p class="slds-m-bottom_small"><b>{labels.Status}:</b> {objOrder.Status}</p>
+						<p class="slds-m-bottom_small"><b>{labels.Oracle_Order}:</b> {objOrder.OracleOrderId__c}</p>
+						<p class="slds-m-bottom_small"><b>{labels.Source}:</b> {objOrder.Order_Source__c}</p>
+					</div>
+				</div>
+				<div class="slds-col slds-col-1-of-2">
+					<div class="order-details-ctr slds-p-around_x-large slds-m-bottom_large">
+						<div class="header-lg slds-m-bottom_medium">{labels.checkoutCartSummary_OrderSummary}</div>
+						<p class="slds-m-bottom_small"><b>{labels.checkoutCartSummary_OrderSubtotal}</b>
+							<span class="slds-text-align_right slds-float_right" >
+								<lightning-formatted-number value={objOrder.TotalProductAmount}
+									format-style="currency" currency-code={objOrder.CurrencyIsoCode}>
+								</lightning-formatted-number>
+							</span>
+						</p>
+						<p class="slds-m-bottom_small"><b>{labels.checkoutCartSummary_DiscountAdjustments}</b>
+							<span class="slds-text-align_right slds-float_right" >
+							   <lightning-formatted-number value={objOrder.TotalAdjDistAmountCustom}
+									format-style="currency" currency-code={objOrder.CurrencyIsoCode}>
+								</lightning-formatted-number>
+							</span>
+						</p>
+						<p class="slds-m-bottom_small"><b>{labels.checkoutCartSummary_Tax}</b>
+							<span class="slds-text-align_right slds-float_right" >
+								<lightning-formatted-number value={objOrder.TotalAdjustedProductTaxAmount}
+									format-style="currency" currency-code={objOrder.CurrencyIsoCode}>
+								</lightning-formatted-number>
+							</span>
+						</p>
+						<p class="slds-m-bottom_small"><b>{labels.checkoutCartSummary_Shipping}</b>
+							<span class="slds-text-align_right slds-float_right" >
+								<lightning-formatted-number value={objOrder.TotalAdjustedDeliveryAmount}
+									format-style="currency" currency-code={objOrder.CurrencyIsoCode}>
+								</lightning-formatted-number>
+							</span>
+						</p>
+						<p class="slds-m-bottom_small"><b>{labels.checkoutCartSummary_ShippingDiscount}</b>
+							<span class="slds-text-align_right slds-float_right" >
+								<lightning-formatted-number value={objOrder.TotalDeliveryAdjDistAmtWithTax}
+									format-style="currency" currency-code={objOrder.CurrencyIsoCode}>
+								</lightning-formatted-number>
+							</span>
+						</p>
+						<p class="slds-m-bottom_small"><b>{labels.checkoutCartSummary_ShippingTax}</b>
+							<span class="slds-text-align_right slds-float_right" >
+								<lightning-formatted-number value={objOrder.TotalAdjustedDeliveryTaxAmount}
+									format-style="currency" currency-code={objOrder.CurrencyIsoCode}>
+								</lightning-formatted-number>
+							</span>
+						</p>
+						<template if:true={tissueHandlingFee}>
+							<p class="slds-m-bottom_small"><b>{labels.checkoutCartSummary_TissueHandlingFee}</b>
+								<span class="slds-text-align_right slds-float_right" >
+									<lightning-formatted-number value={tissueHandlingFee}
+										format-style="currency" currency-code={objOrder.CurrencyIsoCode}>
+									</lightning-formatted-number>
+								</span>
+							</p>
+						</template>
+						<div class="hr slds-m-top_large slds-m-bottom_large slds-border_bottom "></div>
+						<p class="slds-m-bottom_small"><b class="header-md">Total</b>
+							<span class="header-md slds-text-align_right slds-float_right">
+								<lightning-formatted-number value={objOrder.GrandTotalAmount}
+									format-style="currency" currency-code={objOrder.CurrencyIsoCode}>
+								</lightning-formatted-number>
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<template if:true={objShipping}>
+			<div class="header-md slds-m-bottom_large">{labels.Shipment_Details}</div>
+			<div class="order-ctr slds-m-top_medium slds-m-bottom_medium">
+				<div class="slds-grid slds-wrap slds-gutters">
+					<div class="slds-col">
+						<div class="order-details-ctr slds-p-around_small slds-m-bottom_large">
+							<div class="header-sm slds-m-bottom_xx-small">{objShipping.Name}</div>
+							<p class="slds-m-bottom_large">
+								{objShipping.Address} </br>
+								{objShipping.Country}
+							</p>
+							<div class="header-sm slds-m-bottom_xx-small">{labels.Shipment_Method}:</div>
+							<p class="slds-m-bottom_large">
+								{objShipping.ShipmentMethod}
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+		<template for:each={shipments} for:item="objShipment">
+			<div key={objShipment.Id} class="shipment-bar slds-m-bottom_large">
+				<div>{labels.Shipment} ({objShipment.indxVal}/{shipments.length})</div>
+				<div class="ml-auto d-flex">
+					<div class="slds-m-right_x-large">{labels.Tracking} #:&nbsp;
+						<b>
+							<a href={objShipment.TrackingURL} target="_blank">
+								<span style="color: #fff; text-decoration-line: underline;">{objShipment.TrackingNumber}</span>
+							</a>
+						</b>
+					</div>
+					<div>{labels.Status}: {objShipment.Status}</div>
+				</div>
+			</div>
+			<template for:each={objShipment.ShipmentItems} for:item="objShipmentItem">
+				<div key={objShipmentItem.Id} class="shipment-details">
+					<div class="img-ctr slds-m-right_large">
+						<img src={objShipmentItem.ImageURL} alt={objShipmentItem.Product2Name}>
+					</div>
+						<div class="d-flex flex-column">
+							<div class="product-name brand">
+								<a data-productid={objShipmentItem.Product2Id} onclick={handleProductDetailNavigation}>
+									{objShipmentItem.Product2Name}
+								</a>
+							</div>
+							<div class="product-sku">{labels.SKULabel}: {objShipmentItem.Product2StockKeepingUnit}</div>
+						</div>
+					</div>
+			</template>
+		</template>
+
+		<template if:true={showItemSummary}>
+			<div class="item-summary">
+				<div class="header-md slds-m-bottom_large">{labels.Item_Summary} ({allOrderItems.length} {labels.Items})</div>
+				<template for:each={allOrderItems} for:item="objItem">
+					<div key={objItem.Id} class="slds-grid slds-wrap slds-border_bottom slds-m-bottom_large ">
+						<div
+							class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12 bl h200">
+							<div class="shipment-details" style="border-bottom:0">
+								<div class="img-ctr slds-m-right_large">
+									<img src={objItem.ImageURL} alt={objItem.Product2Name}>
+								</div>
+								<div class="d-flex flex-column">
+									<div class="product-name soleil-bold">
+										<a data-productid={objItem.Product2Id}
+											onclick={handleProductDetailNavigation}>
+											{objItem.Product2Name}
+										</a>
+									</div>
+									<div class="product-sku">{labels.SKULabel}: {objItem.Product2StockKeepingUnit}</div>
+									<div class="product-diementions soleil-semibold">
+										<template if:true={objItem.Length}> {labels.LengthLabel}: {objItem.Length} <br></template>
+										<template if:true={objItem.Diameter}>{labels.DiameterLabel}: {objItem.Diameter}</template>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div
+							class="slds-col slds-size_4-of-12 slds-medium-size_2-of-12 slds-large-size_2-of-12 pi h200">
+							<span class="btn-label">{objItem.Status}</span>
+						</div>
+						<div
+							class="slds-col slds-size_4-of-12 slds-medium-size_2-of-12 slds-large-size_2-of-12 pi h200">
+							<span>{labels.qtyLabel}: {objItem.Quantity}</span>
+						</div>
+						<div
+							class="slds-col slds-size_4-of-12 slds-medium-size_2-of-12 slds-large-size_2-of-12 re h200 slds-text-align_right">
+							<p>
+								<lightning-formatted-number value={objItem.Price} format-style="currency" currency-code={objOrder.CurrencyIsoCode}>
+								</lightning-formatted-number> / {labels.item}
+							</p>
+							<p><b>{labels.Discount}: </b>
+								<lightning-formatted-number value={objItem.Discount} format-style="currency" currency-code={objOrder.CurrencyIsoCode}>
+								</lightning-formatted-number>
+							</p>
+							<p><b>{labels.Total}: </b>
+								<lightning-formatted-number value={objItem.Total} format-style="currency" currency-code={objOrder.CurrencyIsoCode}>
+								</lightning-formatted-number>
+							</p>
+						</div>
+					</div>
+				</template>
+			</div>
+		</template>
+	</template>
+</template>

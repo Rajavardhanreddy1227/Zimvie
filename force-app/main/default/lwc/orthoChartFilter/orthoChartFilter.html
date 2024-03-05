@@ -1,0 +1,22 @@
+<template>
+
+  <!-- <ui:scrollerWrapper class="scrollerSize">
+       <lightning-combobox
+         name="filter"
+         label={filter.label}
+         value={value} 
+         placeholder={filterPlaceholder}
+         options={options}
+         onchange={handleChange} > 
+ 
+       </lightning-combobox> 
+     </ui:scrollerWrapper>-->
+
+     <div>{filter.label}</div>
+     <select class="slds-select" id="select-01" name="filter" onchange={handleChange}>
+         <template for:each = {options} for:item="listViewItem">
+            <option key={listViewItem.value} value={listViewItem.value}>{listViewItem.value}</option>
+         </template>
+     </select>  
+   
+ </template>

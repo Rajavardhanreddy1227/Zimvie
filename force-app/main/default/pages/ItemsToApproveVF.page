@@ -1,0 +1,43 @@
+<apex:page controller="ItemstoApproveController" sidebar="false" showHeader="false" tabStyle="Business_Plan__c" >
+    <apex:includeLightning />
+    <apex:form >
+    <apex:slds />
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+         
+    <div class="slds-scope">
+        <apex:pageBlock title="Items To Approve">
+            <apex:pageBlockTable value="{!items_to_approve}" var="item_to_approve">
+                <apex:column headerValue="Action" width="160 px" >
+                    <apex:commandLink target="_top" value="Reassign |" action="{!REASSIGNnavigation}" style="text-decoration:none;color: #015ba7;" styleClass="cactionLink">
+                        <apex:param name="myParam" value="{!item_to_approve.approvalid }" />
+                    </apex:commandLink>
+                    <apex:commandLink target="_top" value=" Approve / Reject" action="{!ApproveRejectnavigation}" style="text-decoration:none;color: #015ba7;"  >
+                        <apex:param name="myParam" value="{!item_to_approve.approvalid }" />
+                    </apex:commandLink>
+                </apex:column>
+                <apex:column headerValue="Type"  width="100 px">
+                    <apex:outputText >{!item_to_approve.objtype}
+                    </apex:outputText>
+                </apex:column>
+                <!-- 
+                <apex:column headerValue="Deal" width="300 px">
+                    <apex:outputLink target="_top" value="/lightning/_classic/{!item_to_approve.id}">{!item_to_approve.name}
+                      </apex:outputLink>
+                </apex:column>
+              
+              
+                <apex:column headerValue="Meeting Notes">
+                    <apex:outputtext >{!item_to_approve.tcmeetingcomments}
+                      </apex:outputtext>
+                </apex:column>
+                -->
+                <apex:column headerValue="Date Submitted" width="150 px">
+                    <apex:outputtext >{!item_to_approve.DateSubmited }
+                      </apex:outputtext>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </div>
+    </html>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,26 @@
+<template>
+    <section class="component-wrapper" if:true={canDisplayRecommendations}>
+        <h1>Product Recommendations</h1>
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>List Price</th>
+                <th>Unit Price</th>
+            </tr>
+            <template for:each={products} for:item="product">
+                <tr key={product.id}>
+                    <td><img src={product.defaultImage.url}></img></td>
+                    <td>
+                        <a key={product.id} class="product-line"
+                        onclick={handleClickProduct} pid={product.id}>
+                        {product.fields.Name}
+                        </a>
+                    </td>
+                    <td>{product.prices.listPrice} {product.prices.currencyIsoCode}</td>
+                    <td>{product.prices.unitPrice} {product.prices.currencyIsoCode}</td>
+                </tr>
+            </template>
+        </table>
+    </section>
+</template>

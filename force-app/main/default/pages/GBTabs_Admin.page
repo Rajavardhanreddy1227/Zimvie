@@ -1,0 +1,37 @@
+<apex:page standardController="User" showHeader="false" sidebar="false" title="Admin">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Admin" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"pageAPIName": "GBTabs_Admin",
+	"showSidebar": false,
+	"showHeader": false,
+	"height": "750",
+	"object": "User",
+	"globalButtons": false,
+	"description": "",
+	"selectedCustomJSIds": [],
+	"selectedCustomCSSIds": [],
+	"id": 1562929162330,
+	"tabs": [
+		{
+			"id": 1562929162330,
+			"content": "{!gridPage}gname=Territory Headcount Roster&amp;sh=0&amp;sfname=default",
+			"name": "Roster Maintenance"
+		},
+		{
+			"name": "Access &amp; Subscriptions",
+			"content": "{!gridPage}gname=Access And Subcriptions&amp;sh=0&amp;sfname=default",
+			"id": 1586885664362
+		},
+		{
+			"name": "Surgeon Data",
+			"content": "{!gridPage}gname=Surgeon Data&amp;sh=0&amp;sfname=default",
+			"id": 1588260952614
+		}
+	],
+	"name": "Admin"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

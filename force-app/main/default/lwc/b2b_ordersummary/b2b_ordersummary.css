@@ -1,0 +1,148 @@
+:host {
+  --slds-c-card-heading-font-weight:800;
+}
+.headerCSS{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.recent-order-block{
+    padding:16px;
+    border:1px solid #DBE0E2;
+    border-radius: 8px;
+    margin-bottom:8px;
+}
+.profile-section label{
+    font-size: 16px !important;
+}
+.profile-section .slds-form-element__control{
+    color:#758591;
+    font-size:16px;
+}
+
+
+.slds-button_brand{
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 25px;
+    border-radius: 30px ;
+    background: #0A2043 !important;
+    color:white !important;
+    letter-spacing: 0.48px;
+}
+.slds-button_brand:hover{
+    /*color:#E6DC19;*/
+    background: #0A2043;
+    color:#E6DC19 !important;
+}
+.slds-button{
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 25px;
+    border-radius: 30px ;
+    color:#0A2043;
+
+}
+ 
+.slds-form-element{
+    margin-bottom:5px;
+}
+/*
+.slds-button_brand{
+    color:#fff;
+    color:#0A2043;
+    background: #fff;;
+}*/
+
+
+.customth{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    /*font-family: Soleil;*/
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 20px */
+    padding:16px 24px;
+    background: #DBE0E2;
+}
+
+.customtd{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    /*font-family: Soleil;*/
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    padding:30px 24px;
+    line-height: 125%; /* 20px */
+}
+
+.c-table th{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    /*font-family: Soleil;*/
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 20px */
+    padding:16px 24px;
+    background: #DBE0E2;
+    
+    }
+    .c-table td{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    /*font-family: Soleil;*/
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    padding:30px 24px;
+    line-height: 125%; /* 20px */
+    }
+    .c-table .link{
+    font-weight: 600;
+    color:#2C9DD8;
+    }
+    .c-table a{
+    color:#2C9DD8;
+    }
+
+.applybtn{
+    background-color: #0A2043;
+    color: white;
+    /* padding: 6px 18px; */
+    /* text-align: center; */
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 30px;
+    width: 83px;
+    height: 33px;
+}
+.resetbtn{
+    background-color: white;
+    color: rgb(10, 32, 67);
+    padding: 6px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid rgb(10, 32, 67);
+    border-radius: 30px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    height: 33px;
+    width: 83px;
+}
+
+.myTable table>thead .slds-cell-fixed.slds-has-button-menu, .myTable table>thead .slds-cell-fixed.slds-has-button-menu:hover{
+    background: antiquewhite;
+  }

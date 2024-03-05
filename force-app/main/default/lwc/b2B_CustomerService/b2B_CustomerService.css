@@ -1,0 +1,49 @@
+/* .langLabel{
+    color: black;
+    font-family: 'benton-sans',sans-serif;
+    font-size: .85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer !important;
+}
+
+.highlightCSS{
+    color : rgb(255, 215, 0) !important;
+} */
+  
+.language-picker-img-block img {
+    width: 16px;
+}
+
+.language-picker-picklist {
+    border: 0px;
+    padding-top: 4px;
+}
+
+.language-picker-picklist option {
+    color: black;
+}
+
+.language-picker-picklist-block {
+    vertical-align: middle;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.language-border {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.btn-link{
+    /*font-family: 'Soleil';*/
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    /* ZimVie/Primary/Navy */
+    color: #0A2043 !important;
+    text-decoration: none;
+}

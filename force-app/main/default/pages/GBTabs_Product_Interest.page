@@ -1,0 +1,37 @@
+<apex:page standardController="Product_Interest__c" showHeader="false" sidebar="false" title="Product Interest">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Product_Interest" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"pageAPIName": "GBTabs_Product_Interest",
+	"showSidebar": false,
+	"showHeader": false,
+	"height": "",
+	"object": "Product_Interest__c",
+	"globalButtons": true,
+	"description": "",
+	"selectedCustomJSIds": [],
+	"selectedCustomCSSIds": [],
+	"id": 1606940571207,
+	"tabs": [
+		{
+			"id": 1606940571208,
+			"content": "{!gridPage}gname=SurgeonProductIntrest&amp;sh=0&amp;sfname=default",
+			"name": "Existing Surgeon"
+		},
+		{
+			"id": 1606940592138,
+			"content": "{!gridPage}gname=FellowShipProductInterest&amp;sh=0&amp;sfname=default",
+			"name": "Fellowship Program"
+		},
+		{
+			"name": "Outgoing Fellows",
+			"content": "{!gridPage}gname=OutgoingFellowProductInterest&amp;sh=0&amp;sfname=default",
+			"id": 1607949292631
+		}
+	],
+	"name": "Product Interest"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

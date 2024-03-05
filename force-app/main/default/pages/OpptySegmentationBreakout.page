@@ -1,0 +1,44 @@
+<apex:page showHeader="false" standardController="Opportunity" lightningStylesheets="true" extensions="SegBreakoutSummary">
+    <!--<apex:relatedList list="Segmentation_Breakout_Opps__r" />-->
+    <apex:includeLightning />
+<div id="lightning" />
+    <apex:outputLabel >Total Revenue:</apex:outputLabel>    
+    <apex:outputText style="font-style:bold" value="{0, number, ###########}">{! Opportunity.CurrencyIsoCode}<apex:param value="{!totalRevenue}" />
+    </apex:outputText>
+    <apex:relatedList list="Segmentation_Breakout_Opps__r" />
+   <!-- <apex:form >
+
+    <apex:outputLabel >Total Revenue:</apex:outputLabel>    
+    <apex:outputText style="font-style:bold" value="{0, number, ###########}">{! Opportunity.CurrencyIsoCode}<apex:param value="{!totalRevenue}" />
+    </apex:outputText>
+    
+   
+    
+    <apex:pageBlock title="Segmentation Breakouts" mode="edit">
+    <apex:pageBlockButtons location="top"><apex:outputLink style="align:right" value="{!URLFOR($Action.Segmentation_Breakout__c.New)}">Create Segmentation Breakout</apex:outputLink>
+        
+    </apex:pageBlockButtons>
+	<apex:pageBlockTable value="{!Opportunity.Segmentation_Breakout_Opps__r}" var="sb">        
+        <apex:column ><apex:facet name="header">Action</apex:facet><apex:outputLink value="{!URLFOR($Action.Segmentation_Breakout__c.Edit, sb.id)}">Edit</apex:outputLink></apex:column>
+        
+        <apex:column ><apex:facet name="header">Name</apex:facet><apex:outputText value="{!sb.name}"/></apex:column>
+		<apex:column value="{!sb.Product_Segment__c}"/>
+        <apex:column value="{!sb.Surgeon__c}"/>
+        
+        <apex:column style="align:right"><apex:facet name="header">Quantity</apex:facet>
+            <apex:outputText value="{0, number, ###########0}" ><apex:param value="{!sb.Case_Quantity__c}"/></apex:outputText>
+    	</apex:column>
+        <apex:column ><apex:facet name="header">Price Point</apex:facet>
+            <apex:outputText value="{0, number, ###########0}" >{! Opportunity.CurrencyIsoCode}<apex:param value="{!sb.Price_Point__c}"/></apex:outputText>
+    	</apex:column>
+        <apex:column ><apex:facet name="header">Total Revenue</apex:facet>
+            <apex:outputText value="{0, number, ###########0}" >{! Opportunity.CurrencyIsoCode}<apex:param value="{!sb.Total_Revenue__c}"/></apex:outputText>
+    	</apex:column>
+        <apex:column value="{!sb.Type__c}"/>
+        <apex:column value="{!sb.Bactisure__c}"/>        
+
+	</apex:pageBlockTable>
+   </apex:pageBlock>
+    </apex:form>-->
+
+</apex:page>

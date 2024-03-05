@@ -1,0 +1,12 @@
+.container { 
+  background-color: #ffffff;
+  margin-bottom: -0.75rem
+}
+
+.report-link { 
+  margin-bottom: 1.5rem;
+}
+
+.kpi-card {
+  border: none;
+}

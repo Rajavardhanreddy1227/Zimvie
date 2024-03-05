@@ -1,0 +1,8 @@
+.header-lg{
+	color: var(--zim-vie-primary-navy, #0A2043);
+	font-family: Soleil;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}

@@ -1,0 +1,9 @@
+<apex:page >
+    <apex:pageBlock >
+        <h1> You are being redirected to another page. Please ensure your pop-up blocker is turned off.</h1>
+        <script>
+            <!--window.open('https://zimmerbiometdental.icm.ibmcloud.com/ICM/login.html','_blank');-->
+            window.open('https://zbdprod.spm.varicent.com/payeeweb/login.html?nextPath=home.html','_blank');
+        </script>
+    </apex:pageBlock>
+</apex:page>

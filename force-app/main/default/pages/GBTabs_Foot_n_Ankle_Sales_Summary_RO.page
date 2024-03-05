@@ -1,0 +1,31 @@
+<apex:page standardController="Business_Plan__c" showHeader="false" sidebar="false" title="Foot n Ankle Sales Summary RO">
+    <GBLite:TabbedPageComponent pageAPIName="GBTabs_Foot_n_Ankle_Sales_Summary_RO" customJsIds="" customCssIds="">
+    <GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+        <script>
+            var pageDefinition = {
+    "name": "Foot n Ankle Sales Summary RO",
+    "tabs": [
+        {
+            "name": "Foot n Ankle Sales Summary",
+            "content": "{!gridPage}gname=Foot n Ankle Sales Summary Read&amp;sh=0&amp;sfname=default&amp;fpf=Business_Plan__c&amp;fpv={!Business_Plan__c.id}",
+            "id": 1563937995610
+        },
+        {
+            "name": "Chart",
+            "content": "/apex/BP_ProductSalesSummaryChart?bpid={!Business_Plan__c.id}&amp;productgroup=Foot%20&amp%20Ankle",
+            "id": 1563938106960
+        }
+    ],
+    "id": 1563937995610,
+    "selectedCustomCSSIds": [],
+    "selectedCustomJSIds": [],
+    "description": "",
+    "globalButtons": false,
+    "object": "Business_Plan__c",
+    "height": "750",
+    "showHeader": false,
+    "showSidebar": false
+};
+        </script>
+    </GBLite:TabbedPageComponent>
+</apex:page>

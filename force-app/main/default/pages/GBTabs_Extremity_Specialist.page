@@ -1,0 +1,32 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" title="Extremity Specialist">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Extremity_Specialist" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Extremity Specialist",
+	"tabs": [
+		{
+			"name": "Market Segmentation",
+			"content": "{!gridPage}gname=Surgeon List Extremity Specialist&amp;sh=0&amp;sfname=default",
+			"id": 1615583481564
+		},
+		{
+			"name": "Aligned Teams",
+			"content": "{!gridPage}gname=Surgeon List Extremity Spec-MrktSeg&amp;sh=0&amp;sfname=default",
+			"id": 1615583395001
+		}
+	],
+	"id": 1615583395001,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": true,
+	"object": "Opportunity",
+	"height": "",
+	"showHeader": false,
+	"showSidebar": false,
+	"pageAPIName": "GBTabs_Extremity_Specialist"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

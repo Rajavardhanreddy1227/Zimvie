@@ -1,0 +1,250 @@
+.header-lg{
+	color: var(--zim-vie-primary-navy, #0A2043);
+	font-family: Soleil;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.dummy{
+	color : black;
+}
+.btncls{
+	float: right;
+    /*border-radius: 20px;*/
+    padding: 0.25rem 1rem;
+    height: 32px;
+    background-color: white;
+    border: 0px;
+    color: #2C9DD8;
+	width: 145px;
+	text-decoration: underline;
+	
+}
+.enrollbtncls{
+	
+    padding: 0.25rem 1rem;
+    background-color: white;
+    border: 0px;
+    color: #2C9DD8;
+	text-decoration: underline;
+	font-size:16px;
+	font-weight: 500;
+	line-height:22px;
+	margin-left:10px;
+	
+}
+.qstbold{
+	font-weight:600;
+	font-size:16px;
+	color:#000000;
+	margin-left:12px;
+}
+.silveritem{
+	background-color:#DBE0E2;
+}
+.silver{
+	font-weight:700;
+	font-size:18px;
+	color:#0A2043;
+	text-align: center;
+	background-color:#DBE0E2;
+}
+.silverpts{
+	font-weight:500;
+	font-size:14px;
+	color:#0A2043;
+	text-align: center;
+	background-color:#DBE0E2;
+}
+.golditem{
+	background-color:#F1C321;
+}
+.gold{
+	font-weight:700;
+	font-size:18px;
+	color:#0A2043;
+	text-align: center;
+	background-color:#F1C321;
+}
+.goldpts{
+	font-weight:500;
+	font-size:14px;
+	color:#0A2043;
+	text-align: center;
+	background-color:#F1C321;
+}
+.titaniumitem{
+	background-color:#AAA9AD;
+}
+.titanium{
+	font-weight:700;
+	font-size:18px;
+	color:#0A2043;
+	text-align: center;
+	background-color:#AAA9AD;
+}
+.titaniumpts{
+	font-weight:500;
+	font-size:14px;
+	color:#0A2043;
+	text-align: center;
+	background-color:#AAA9AD;
+}
+.tantalumitem{
+	background-color:#272E33;
+}
+.tantalum{
+	font-weight:700;
+	font-size:18px;
+	color:#FFFFFF;
+	text-align: center;
+	background-color:#272E33;
+	;
+}
+.tantalumpts{
+	font-weight:500;
+	font-size:14px;
+	color:#FFFFFF;
+	text-align: center;
+	background-color:#272E33;
+}
+.qst{
+	font-weight:400;
+	font-size:16px;
+	color:#000000;
+}
+.passcls{
+	font-weight:700;
+	font-size:20px;
+	line-height:25.4px;
+	color:#0A2043;
+}
+.passcodecls{
+	font-weight:500;
+	font-size:16px;
+	line-height:22px;
+	color:#0A2043;
+	margin-left:25px;
+}
+.passbtn{
+	font-weight:500;
+	font-size:16px;
+	line-height:22px;
+	color:#2C9DD8;
+	text-decoration: underline;
+	float:right;
+	margin-right:25px;
+}
+.datacls{
+	display: block;
+	margin-left: 14px;
+    padding: 9px;
+    margin-top: -12px;
+	color: #0A2043;
+}
+.prodName{
+	font-size: 16px;
+	color: #0A2043;
+}
+.prodSKU{
+	font-size:12px;
+	font-weight: bold;
+	color: #0A2043;
+}
+.prodDesc{
+	font-size:10px;
+	color: #0A2043;
+}
+/* Profile*/
+.section-head{
+	color:#0A2043;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom:8px;
+	margin-left:25px;
+}
+.accountLabel{
+	color:#0A2043;
+	font-size:16px;
+	font-weight:600;
+	margin-left:25px;
+}
+.accountData{
+	font-size:16px;
+	font-weight:400;
+	color:#0A2043;
+	margin-left:25px;
+}
+.loyaltyData{
+	font-size:16px;
+	font-weight:400;
+	color:#0A2043;
+	
+}
+.renewloyaltyData{
+	font-size:16px;
+	font-weight:400;
+	color:#AAA9AD;
+	line-height: 20.32px;
+	
+}
+.activeLoyaltyStatus{
+	font-weight: 400;
+	font-size:20px;
+	color:#0A2043;
+	text-align: center;
+
+}
+.enrollvalue{
+	font-size:16px;
+	font-weight:400;
+	line-height:20.32px;
+	color:#0A2043;
+	margin-left:25px;
+	margin-top:20px;
+}
+.statusValue{
+	font-weight:700;
+	font-size:20px;
+	color:#0A2043;
+	text-align: center;
+}
+.loyaltypoints{
+	font-size:48px;
+	font-weight:700;
+	color:#0A2043;
+	text-align: center;
+}
+.loyltylabel{
+	font-size:18px;
+	font-weight:700;
+	color:#0A2043;
+	text-align: center;
+}
+.loyltyinfo{
+	text-align:center;
+	margin-top:50px;
+	
+}
+.renewLabel{
+	font-size:16px;
+	font-weight:600;
+	color:#AAA9AD;
+	margin-left:25px;
+	line-height: 22px;
+
+}
+.section-top-head{
+	color:#0A2043;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom:8px;
+	margin-left:25px;
+}
+.profile-section label{
+	color:#AAA9AD;
+}
+.profile-section .slds-form-element__control{
+	font-size: 16px;
+}

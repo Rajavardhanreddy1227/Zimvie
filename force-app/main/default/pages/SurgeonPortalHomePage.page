@@ -1,0 +1,2 @@
+<apex:page action="{!URLFOR('/home/home.jsp')}" sidebar="false" showHeader="false">
+</apex:page>

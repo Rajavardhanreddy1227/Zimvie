@@ -1,0 +1,8 @@
+<apex:page >
+    <apex:pageBlock >
+        <h1> You are being redirected to another page. Please ensure your pop-up blocker is turned off.</h1>
+        <script>
+            window.open('https://app.powerbi.com/links/dKhjDqL5iq?ctid=2be130e1-371c-4638-9f1c-d613012e5d76&pbi_source=linkShare');
+        </script>
+    </apex:pageBlock>
+</apex:page>

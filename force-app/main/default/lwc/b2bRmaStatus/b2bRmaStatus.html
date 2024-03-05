@@ -1,0 +1,88 @@
+<template>
+	<template if:true={loader}>
+		<lightning-spinner size="large"></lightning-spinner>
+	</template>
+	<template if:true={showRMASTatusListView}>
+			<div class="slds-p-around_small" style="font-size: x-large;"><b>{labels.rmaStatus}</b></div>
+			<div class="slds-p-left_small slds-p-bottom_xx-small slds-p-top_small"><b>{labels.Filter_by_date}</b></div>
+			<lightning-layout>
+				<lightning-layout-item padding="around-small">
+					<div class="slds-form-element">	
+						<label class="slds-form-element__label" for="text-input-id-53">{labels.rmaType}</label>
+						<div class="slds-form-element__control">
+							<select class="slds-select" id="select-01" onchange={handleGetSelectedValueForRMAType}>
+                                <template for:each = {rmaTypes} for:item="rmaTypeItem">
+                                   <option key={rmaTypeItem.key} value={rmaTypeItem.key}>{rmaTypeItem.value}</option>
+                                </template>
+                           </select>
+                        </div>
+					</div>
+				</lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+					<div class="slds-form-element">
+						<label class="slds-form-element__label" for="text-input-id-53">{labels.StartDate}</label>
+						<div class="slds-form-element__control">
+							<input type="date" data-id="startdate" class="slds-input" onchange={handleStartDateSearch}/>
+                        </div>
+					</div>
+				</lightning-layout-item>
+				<lightning-layout-item padding="around-small">
+					<div class="slds-form-element">
+						<label class="slds-form-element__label" for="text-input-id-53">{labels.EndDate}</label>
+						<div class="slds-form-element__control">
+							<input type="date" data-id="enddate" class="slds-input" onchange={handleEndDateSearch}/>
+                        </div>
+					</div>
+				</lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+					<div class="slds-form-element">
+						<label class="slds-form-element__label" for="text-input-id-53">{labels.status}</label>
+						<div class="slds-form-element__control">
+							<select class="slds-select" id="select-02" onchange={handleGetSelectedValueForRMAStatus}>
+                                <template for:each = {rmaStatuses} for:item="rmaStatusItem">
+                                   <option key={rmaStatusItem.key} value={rmaStatusItem.key}>{rmaStatusItem.value}</option>
+                                </template>
+                           </select>
+                        </div>
+					</div>
+				</lightning-layout-item>
+			</lightning-layout>
+
+			<lightning-layout>
+				<lightning-layout-item padding="around-small">
+					<button class="applybtn" aria-disabled="false" type="button" onclick={startsearch}>{labels.APPLY}</button>
+				</lightning-layout-item>
+				<lightning-layout-item padding="around-small">
+					<button class="resetbtn" aria-disabled="false" type="button" onclick={clearFilter}>{labels.RESET}</button>
+				</lightning-layout-item>
+				<lightning-layout-item padding="around-small" alignment-bump="right">
+					<div class="slds-align_absolute-right">
+						<div class="slds-text-heading_small">{labels.Total_Records} {totalRecords}</div>
+					</div>
+				</lightning-layout-item>
+			</lightning-layout>
+			<div class="rmaStatusTable">
+				<lightning-datatable 
+					class="slds-table slds-table_striped slds-no-row-hover c-table slds-max-medium-table_stacked" 
+					hide-checkbox-column="true" 
+					data={rmaStatusTableData} 
+					columns={columns} 
+					key-field="Id"
+					sorted-by={sortBy}
+					sorted-direction={sortDirection}
+					onsort={doSorting}
+					onrowaction={showRMAStatusDetailView}
+					>
+				</lightning-datatable>
+			</div>
+			<lightning-button-group style="float:right" class="slds-m-top_small slds-m-bottom_medium">
+				<lightning-button label="Previous" icon-name="utility:chevronleft" onclick={goPrevious}
+					disabled={isPrevDisabled}></lightning-button>
+				<lightning-button label="Next" icon-name="utility:chevronright" icon-position="right" onclick={gonext}
+					disabled={isNextDisabled}></lightning-button>
+			</lightning-button-group>
+	</template>
+    <template if:false={showRMASTatusListView}>
+        <c-b2b-r-m-a-status-detail onbacktoallrmastatus={hideRMAStatusDetailView} record-id={selectedRMAStatusRecordId}></c-b2b-r-m-a-status-detail>
+    </template>
+</template>

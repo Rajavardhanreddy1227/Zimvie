@@ -1,0 +1,197 @@
+.setSize{
+    width: 220px;
+    height: 220px;
+}
+.headerCSS{
+    color: #0A2043;
+    text-align: center;
+    font-family: Soleil;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.headerDescriptionCSS{
+    color: #758591;
+    text-align: center;
+    font-family: Soleil;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.imageCss{
+    cursor: pointer;
+    padding:24px 0 24px 0;
+}
+.imageCss p{
+    padding-top:16px;
+    color:#0A2043 !important;
+}
+.imageCss:hover {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+.imageCss:hover p {
+    cursor: pointer;
+    color: #005DA6 !important;
+    text-decoration: none;
+}
+.imageCss:hover a {
+    text-decoration: none;
+}
+.imageDescriptionCSS{
+    align-self: stretch;
+    color: #758591;
+    font-family: Soleil;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.imageTitleCSS{
+    align-self: stretch;
+    color: #0A2043;
+    font-family: Soleil;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.new-product-block{
+    /*width:298px;*/    
+    width:auto;
+    height:528px;
+    border-radius: 8px;
+    border: 1px solid rgba(219, 224, 226, 0.40);
+    background: var(--zim-vie-neutrals-white, #FFF);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.m24-around{
+    margin:24px;
+}
+.m24-bottom{
+    margin-bottom:24px; 
+}
+.m40-bottom{
+    margin-bottom:40px; 
+}
+.img-holder{
+    background: #F8F9F9;
+    width:auto;
+    height: 250px;
+    text-align: center;
+}
+.img-holder img{
+    height: 250px;
+    background: #F8F9F9;
+    text-align: center;
+}
+.new-product-title{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.new-product-description{
+    color: var(--zim-vie-neutrals-pewter, #758591);
+    font-family: Soleil;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+.new-tag-zimvie{
+    position: absolute;
+    left:0;
+    top:0;
+    height: 61px;
+    padding: 18px 10px 10px 10px;
+    justify-content: center;
+    border-radius: 0px 0px 60px 0px;
+    background: var(--zim-vie-primary-lemon, #E6DC19);
+    color: var(--zim-vie-primary-rich-gray, #272E33);
+    font-feature-settings: 'calt' off;
+    font-family: Soleil;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 17.5px */
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
+.new-tag-azure{
+    position: absolute;
+    left:0;
+    top:0;
+    height: 61px;
+    padding: 18px 10px 10px 10px;
+    justify-content: center;
+    border-radius: 0px 0px 60px 0px;
+    color: var(--zim-vie-neutrals-white, #FFF);
+    background: var(--zim-vie-azure-html-blue, #0044FC);
+    font-feature-settings: 'calt' off;
+    font-family: Soleil;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 17.5px */
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
+.slds-button_brand-cstm-zimvie, .slds-button_brand-cstm-azure{
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 25px;
+    border-radius: 30px ;
+    color:#fff;
+    background: #0A2043;
+}
+.slds-button_brand-cstm-zimvie:hover{
+    color:#E6DC19;
+    background: #0A2043;
+}
+.slds-button_brand-cstm-azure:hover{
+    background: var(--zim-vie-azure-html-blue, #0044FC);
+}
+.categoryButtonCSS{
+    text-align: center;
+    color: #0A2043;
+    font-family: Soleil;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top:16px;
+}
+.slds-button_brand-cstm-zimvie .white-arrow{
+    display:block;
+}
+.slds-button_brand-cstm-zimvie .yello-arrow{
+    display: none;
+}
+.slds-button_brand-cstm-zimvie:hover .white-arrow{
+    display:none;
+}
+.slds-button_brand-cstm-zimvie:hover .yello-arrow{
+    display: block;
+}
+.ml--86{
+    margin-left: -85px;
+}
+.mr--86{
+    margin-right: -85px;
+}
+.mt--16{
+    margin-top: -16px;
+}
+.btn-bottom{
+    position: absolute;
+    bottom:25px;
+    left:10px;
+    right:10px;
+}

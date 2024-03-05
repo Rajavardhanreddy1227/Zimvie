@@ -1,0 +1,36 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,lightning:isUrlAddressable"
+  controller="Ortho_CommunicationsController"
+  access="global"
+>
+  <aura:attribute name="options" type="List" />
+  <aura:attribute
+    name="type"
+    type="String"
+    default="Groups"
+    description="The type of feed"
+    access="GLOBAL"
+  />
+  <aura:attribute
+    name="subjectId"
+    type="String"
+    default=""
+    description="The subject id of feed"
+    access="GLOBAL"
+  />
+  <aura:attribute
+    name="isGroupAdmin"
+    type="Boolean"
+    default=""
+    description="whether the current user is an admin of the currently selected group"
+    access="GLOBAL"
+  />
+  <aura:attribute name="pageReference" type="Object"/>
+  <aura:handler name="init" value="{!this}" action="{!c.onPageReferenceChange}"/>
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.onPageReferenceChange}"/>
+
+  <c:orthoGroupSelector value="all" onselection="{!c.handleSelection}" />
+  <div aura:id="feedContainer" class="feed-container">
+    <forceChatter:feed type="{!v.type}" subjectId="{!v.subjectId}" />
+  </div>
+</aura:component>

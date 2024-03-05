@@ -1,0 +1,246 @@
+<template>
+    <lightning-spinner if:true={isLoading}  class="slds-is-absolute slds-align_absolute-center" size="medium" variant="brand">
+	</lightning-spinner>
+    <template if:true={invoiceData}>
+        <div>
+        <button onclick={handleBacktoallinvoice} class="backbtn"><lightning-icon icon-name="utility:chevronleft" alternative-text="Back" class="iconcls" title="Back" size="x-small"></lightning-icon>{labels.B2B_Back_to_All_Invoices}</button>
+        <!--<lightning-button variant="base" label="Back to All Invoices" icon-name="utility:chevronleft" class="slds-m-left_x-small" onclick={handleBacktoallinvoice}></lightning-button>-->
+        <div style="margin-left: 20px;">
+            <span class="invnumb">{labels.B2B_Invoice_Number}: {invoiceData.invoiceNumber}</span>
+        </div>
+        <div class="headsection">
+            <span class="invdetails">{labels.B2B_Invoice_Details}</span>
+        </div>
+        <div class="infosection">
+           
+            <lightning-layout>
+                
+                <lightning-layout-item size="4">
+                    <div class="borderline">
+                        <div class="insideblock">
+                    <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12">
+                           <span class="invtitle"> {labels.date}: </span> <span if:true = {invoiceData.invoiceDate} class="invvalue">{invoiceData.invoiceDate}</span><span if:false = {invoiceData.invoiceDate} class="invvalue">-</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="invtitle"> {labels.Order_Number}: </span> <span if:true = {invoiceData.orderNumber} class="invvalue">{invoiceData.orderNumber}</span> <span if:false = {invoiceData.orderNumber} class="invvalue">-</span>
+                         </lightning-layout-item>
+                         <lightning-layout-item size="12">
+                            <span class="invtitle"> {labels.Order_Date}: </span> <span if:true = {invoiceData.orderDate} class="invvalue">{invoiceData.orderDate}</span> <span if:false = {invoiceData.orderDate} class="invvalue">-</span>
+                         </lightning-layout-item>
+                         <lightning-layout-item size="12">
+                            <span class="invtitle"> {labels.B2B_Delivery_Number}: </span> <span class="invvalue">-</span>
+                         </lightning-layout-item>
+                    </lightning-layout>
+                </div>
+                </div>
+                </lightning-layout-item>
+            
+                <lightning-layout-item size="4">
+                    <div class="borderline">
+                        <div class="insideblock">
+                    <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12">
+                           <span class="invtitle"> {labels.Customer_Number} : </span> <span if:true = {invoiceData.customerNumber} class="invvalue">{invoiceData.customerNumber}</span> <span if:false = {invoiceData.customerNumber} class="invvalue">-</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="invtitle"> {labels.B2B_Customer_PO_Number}: </span> <span if:true = {invoiceData.customerPONumber} class="invvalue">{invoiceData.customerPONumber}</span> <span if:false = {invoiceData.customerPONumber} class="invvalue">-</span>
+                         </lightning-layout-item>
+                         <lightning-layout-item size="12">
+                            <span class="invtitle"> {labels.B2B_Patient_Ref}: </span> <span class="invvalue">-</span>
+                         </lightning-layout-item>
+                         
+                    </lightning-layout>
+                </div>
+                </div>
+                </lightning-layout-item>
+                <lightning-layout-item size="4">
+                    <div class="borderline">
+                        <div class="insideblock">
+                    <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12">
+                           <span class="invtitle"> {labels.B2B_Total_Amount} : </span> <span if:true={invoiceData.totalAmount} class="invvalue">{invoiceData.totalAmount}</span> <span if:false={invoiceData.totalAmount} class="invvalue">-</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="invtitle"> {labels.DueDate}: </span> <span if:true={invoiceData.dueDate} class="invvalue">{invoiceData.dueDate}</span> <span if:false={invoiceData.dueDate} class="invvalue">-</span>
+                         </lightning-layout-item>
+                         <lightning-layout-item size="12">
+                            <span class="invtitle"> {labels.B2B_Payment_Terms}: </span> <span if:true={invoiceData.paymentTerms} class="invvalue">{invoiceData.paymentTerms}</span> <span if:false={invoiceData.paymentTerms} class="invvalue">-</span>
+                         </lightning-layout-item>
+                         <lightning-layout-item size="12">
+                            <span class="invtitle"> {labels.B2B_Remit_to}: </span> <span class="invvalue">-</span>
+                         </lightning-layout-item>
+                    </lightning-layout>
+                </div>
+                </div>
+                </lightning-layout-item>
+            </lightning-layout>
+        
+        </div>
+
+        <div class="addsection">
+            <lightning-layout>
+                <lightning-layout-item size="6">
+                    <div class="borderClass">
+                        <div class="addsectioninside">
+                    <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12">
+                            <img class="brandimg" src={brandimg}/>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="adddata">{labels.Address}: </span><span class="adddatavalue">{labels.B2B_Zimvie_Address}</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="adddata">{labels.Phone}: </span><span class="adddatavalue">{labels.B2B_Zimvie_Phone}</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="adddata">{labels.Website}: </span><span class="adddatavalue">{labels.B2B_Zimvie_Website}</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="adddata">{labels.B2B_EIN}: </span><span class="adddatavalue">{labels.B2B_Zimvie_EIN}</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="adddata">{labels.Orders}: </span><span class="adddatavalue">{labels.B2B_Zimvie_Orders_Number}</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="adddata">{labels.B2B_Orders_Fax}: </span><span class="adddatavalue">{labels.B2B_Zimvie_Orders_Fax}</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="adddata">{labels.B2B_Accounting}: </span><span class="adddatavalue">{labels.B2B_Zimvie_Accounting_No}</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="adddata">{labels.B2B_Accounting_Fax}: </span><span class="adddatavalue">{labels.B2B_Zimvie_Accounting_Fax}</span>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                    </div>
+                </div>
+                </lightning-layout-item>
+                <lightning-layout-item size="6">
+                    <div class="borderClass">
+                        <div class="addsectioninside">
+                    <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12">
+                            <span class="addheading">{labels.B2B_Ship_To}:</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span></span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="adddata2">{invoiceData.shippingAddress.street}</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="adddata2">{invoiceData.shippingAddress.city}, {invoiceData.shippingAddress.stateCode}, {invoiceData.shippingAddress.countryCode}, {invoiceData.shippingAddress.postalCode}</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span></span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="addheading">{labels.B2B_Bill_To}:</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span></span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="adddata2">{invoiceData.billingAddress.street}</span>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12">
+                            <span class="adddata2">{invoiceData.billingAddress.city}, {invoiceData.billingAddress.stateCode}, {invoiceData.billingAddress.countryCode}, {invoiceData.billingAddress.postalCode}</span>
+                        </lightning-layout-item>
+                        
+                    </lightning-layout>
+                    </div>
+                </div>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+
+        <div class="summarysection" if:true={invoiceData.invoiceLines}>
+            <div class="summaryBorderClass">
+            <div></br></div>
+            
+            <div class="summarylabel">
+                <span>{labels.B2B_Item_Summary} ({invoiceData.invoiceLines.length} {labels.Items})</span>
+            </div>
+            <div for:each={invoiceData.invoiceLines} for:item="line" key={line.id}>
+                <lightning-layout>
+                    <lightning-layout-item size="3">
+                        <img class="prodimg" src={defaultimg}/>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3">
+                        <div style="padding-right:20px;">
+                        <lightning-layout multiple-rows="true">
+                            <lightning-layout-item size="12">
+                                <span class="prodname">{line.productName}</span>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12">
+                                <span class="prodsku">{line.productSKU}</span>
+                            </lightning-layout-item>
+                            <!--<lightning-layout-item size="12">
+                                <span class="prodattribute">Diameter</span>
+                            </lightning-layout-item>-->
+                        </lightning-layout>
+                    </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3">
+                        <div style="padding-left:50px;">
+                        <lightning-layout multiple-rows="true">
+                            <lightning-layout-item size="12">
+                                <span class="sumtitle">{labels.B2B_Qty_Ordered}: </span><span class="sumvalue">{line.quantity}</span></br>
+                            </lightning-layout-item>
+                            <!--<lightning-layout-item size="12">
+                                <span class="sumtitle">{labels.B2B_Qty_Backordered}: </span><span class="sumvalue">150</span></br>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12">
+                                <span class="sumtitle">{labels.B2B_Qty_Shipped}: </span><span class="sumvalue">150</span></br>
+                            </lightning-layout-item>-->
+                        </lightning-layout>
+                    </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3">
+                        <lightning-layout multiple-rows="true">
+                            <lightning-layout-item size="12">
+                                <p style="float:right;"><span if:true={line.unitPrice} class="disvalue">${line.unitPrice} / unit</span></p>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12">
+                                <p style="float:right;"><span class="distitle">Line Amount:</span><span if:true={line.lineAmount} class="disvalue">${line.lineAmount}</span></p>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12">
+                                <p style="float:right;"><span class="distitle">Tax:</span><span if:true={line.taxAmount} class="disvalue">${line.taxAmount}</span></p>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12">
+                                <p style="float:right;"><span if:true={line.lineAmount} class="distitle">Amount : ${line.lineAmount}</span></p>
+                            </lightning-layout-item>
+                            <!--<lightning-layout-item size="12">
+                                <p style="float:right;"><span class="distitle">Discount $ (Each):</span><span class="disvalue">$29.99</span></p>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12">
+                                <p style="float:right;"><span class="distitle">Discount % (Each):</span><span class="disvalue">64%</span></p>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12">
+                                <p style="float:right;"><span class="distitle">Overall Promo Disc % (Each):</span><span class="disvalue">0%</span></p>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="12">
+                                <p style="float:right;"><span class="distitle">Amount Due: $2,521.50</span></p>
+                            </lightning-layout-item>-->
+                        </lightning-layout>
+                    </lightning-layout-item>
+<hr class="line">
+                </lightning-layout>
+
+            </div>
+            <div>
+             </br>
+            </div>
+        
+            </div>
+        </div>
+        <div class="printsec">
+            <button class="printbtn" onclick={handlePrint}>{labels.B2B_Print}</button>
+        </div>
+        <div class="lastsection">
+            <span class="pagedata">{labels.B2B_Invoice_Detail_Data}</span>
+        </div>
+    </div>
+
+    </template>
+</template>

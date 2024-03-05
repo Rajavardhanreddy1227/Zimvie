@@ -1,0 +1,164 @@
+<template>
+    <template if:true={loading}>
+        <c-custom_spinner></c-custom_spinner>
+    </template>
+    
+    <div class="header-lg">{labels.Addresses}</div>
+    <div class="slds-form-element" style="margin-top:15px;">
+    <!--<lightning-button variant="base" label="Add New Address" onclick={showPopup} style="float:right;" icon-name="utility:add" ></lightning-button>-->
+    <button class="btncls" label="+ Add New Address" onclick={showPopup}>{labels.Add_New_Address}</button>
+    
+    
+    <!--<lightning-input
+        name="enter-search"
+        label=""
+        variant="label-hidden"
+        type="search"
+        placeholder={labels.SearchAddress} onchange={handleSearch}
+        style="width:35%;"
+    ></lightning-input>-->
+    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right" style="width: 495px;height:50px;">
+        <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" icon-name="utility:search"></lightning-icon>
+        <input type="search" placeholder={labels.SearchAddress} oninput={handleSearch} class="srchbtncls">
+    </div>
+    </div>
+    
+    
+    <!--template if:true={showRelatedList}>
+    <template if:true={hasRecords}-->
+    <!--lightning-datatable class="slds-max-medium-table_stacked" onrowaction={handleRowAction}
+                            columns={columns}
+                            data={addressData}
+                            key-field="Id"
+                            hide-checkbox-column="true"
+                            resize-column-disabled="true">
+    </lightning-datatable-->   
+    <div>   
+    <table class="slds-max-medium-table_stacked">
+        <thead>
+            <tr class="zinToken" style="position:sticky;top:0;">
+                <th style="border-radius: 10px 0px 0 0;width:100px;"><div class="slds-truncate"></div></th>
+                <th><div class="slds-truncate heading">{labels.Nick_Name}</div></th>
+                <th><div class="slds-truncate heading">{labels.Street}</div></th>
+                <th><div class="slds-truncate heading">{labels.City}</div></th>
+                <th><div class="slds-truncate heading">{labels.State}</div></th>
+                <th><div class="slds-truncate heading">{labels.PostalCode}</div></th>
+                <th><div class="slds-truncate heading">{labels.Country}</div></th>
+                <th style="border-radius: 0px 10px 0 0;"><div class="slds-truncate heading">{labels.Default}</div></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background: #758591;color: white;">
+                <td class="barhead" colspan="8">
+                    <h2>{labels.Favorites}</h2>
+                </td>
+            </tr>
+            <template if:false={favAddAvailable}>
+                <tr style="color: red;box-shadow: inset -1px 0px 0px #dbe0e2, inset 0px -1px 0px #dbe0e2, inset -1px 0px 0px #dbe0e2;">
+                    <td style="padding:20px;text-align: center;" colspan="8">
+                        You do not have any favorites added yet.
+                    </td>
+                </tr>
+            </template>
+            <template for:each={favoriteAddresses} for:item="address">
+                <tr style="box-shadow: inset -1px 0px 0px #dbe0e2, inset 0px -1px 0px #dbe0e2, inset -1px 0px 0px #dbe0e2;" key={address.Id}>
+                    <td style="padding:20px;text-align: center;" data-label="Favorite" class="slds-truncate">
+                        <lightning-icon style="cursor:pointer;" data-id={address.Id} onclick={handleUnFav} size="small" icon-name="utility:favorite" alternative-text="favorite" title="favorite" class="solidicon">
+                        </lightning-icon>
+                    </td>
+                    <td  data-label="Street" class="slds-truncate tabledata">{address.Name}<span class={address.cssClass}><br/><a href="#" data-id={address.Id} onclick={handleEditRecord} >{labels.Edit}</a>&nbsp;&nbsp;<a href="#" data-id={address.Id} onclick={handleDeleteRecord} >{labels.Remove}</a></span></td>
+                    <td  data-label="Street" class="slds-truncate tabledata">{address.Street}</td>
+                    <td  data-label="City" class="slds-truncate tabledata">{address.City}</td>
+                    <td  data-label="State" class="slds-truncate tabledata">{address.State}</td>
+                    <td  data-label="Postal Code" class="slds-truncate tabledata">{address.PostalCode}</td>
+                    <td  data-label="Country" class="slds-truncate tabledata">{address.Country}</td>
+                    <td  data-label="Default" class="slds-truncate tabledata">
+                        <template if:true={address.IsDefault}>
+                            <!--span class="slds-radio">
+                                <input type="radio" name="isDefault" data-id={address.Id} id={address.Id} checked/>
+                                <label class="slds-radio__label" for={address.Id}>
+                                  <span class="slds-radio_faux"></span>
+                                  <span class="slds-form-element__label"></span>
+                                </label>
+                            </span-->
+                            <label class="">&nbsp;
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="slds-radio_faux"></span>
+                            </label>
+                        </template>
+                        <template if:false={address.IsDefault}>
+                            <!--span class="slds-radio">
+                                <input type="radio" name="isDefault" data-id={address.Id} id={address.Id} onclick={handleMakeDefault}/>
+                                <label class="slds-radio__label" for={address.Id}>
+                                  <span class="slds-radio_faux"></span>
+                                  <span class="slds-form-element__label"></span>
+                                </label>
+                            </span-->
+                            <label class="">&nbsp;
+                                <input type="radio" name="radio" data-id={address.Id} onclick={handleMakeDefault}>
+                                <span class="slds-radio_faux"></span>
+                            </label>
+                        </template>
+                    </td>
+                </tr>
+            </template>
+            <tr style="background: #758591;color: white;">
+                <td class="barhead" colspan="8">
+                    <h2 >{labels.All_Addresses}</h2>
+                </td>
+            </tr>
+            <template for:each={nonFavoriteAddresses} for:item="address">
+                <tr style="box-shadow: inset -1px 0px 0px #dbe0e2, inset 0px -1px 0px #dbe0e2, inset -1px 0px 0px #dbe0e2;" key={address.Id}>
+                    <td style="padding:20px;text-align: center;" data-label="Favorite" class="slds-truncate">
+                        <lightning-icon style="cursor:pointer;" data-id={address.Id} onclick={handleFav} size="small" icon-name="utility:favorite_alt" alternative-text="favorite" title="Non-favorite" class="iconcls">
+                        </lightning-icon>
+                    </td>
+                    <td  data-label="Street" class="slds-truncate tabledata">{address.Name}<span class={address.cssClass}><br/><a href="#" data-id={address.Id} onclick={handleEditRecord} >Edit</a>&nbsp;&nbsp;<a href="#" data-id={address.Id} onclick={handleDeleteRecord} >Remove</a></span></td>
+                    <td  data-label="Street" class="slds-truncate tabledata">{address.Street}</td>
+                    <td  data-label="City" class="slds-truncate tabledata">{address.City}</td>
+                    <td  data-label="State" class="slds-truncate tabledata">{address.State}</td>
+                    <td  data-label="Postal Code" class="slds-truncate tabledata">{address.PostalCode}</td>
+                    <td  data-label="Country" class="slds-truncate tabledata">{address.Country}</td>
+                    <td  data-label="Default" class="slds-truncate tabledata">
+                        <template if:true={address.IsDefault}>
+                            <!--span class="slds-radio">
+                                <input type="radio" name="isDefault" data-id={address.Id} id={address.Id} checked/>
+                                <label class="slds-radio__label" for={address.Id}>
+                                  <span class="slds-radio_faux"></span>
+                                  <span class="slds-form-element__label"></span>
+                                </label>
+                            </span-->
+                            <label class="">&nbsp;
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="slds-radio_faux"></span>
+                            </label>
+                        </template>
+                        <template if:false={address.IsDefault}>
+                            <!--span class="slds-radio">
+                                <input type="radio" name="isDefault" data-id={address.Id} id={address.Id} onclick={handleMakeDefault}/>
+                                <label class="slds-radio__label" for={address.Id}>
+                                  <span class="slds-radio_faux"></span>
+                                  <span class="slds-form-element__label"></span>
+                                </label>
+                            </span-->
+                            <label class="">&nbsp;
+                                <input type="radio" name="radio" data-id={address.Id} onclick={handleMakeDefault}>
+                                <span class="slds-radio_faux"></span>
+                            </label>
+                        </template>
+                    </td>
+                </tr>
+            </template>
+            <template if:true={allAddressNull}>
+                <tr style="color: red;box-shadow: inset -1px 0px 0px #dbe0e2, inset 0px -1px 0px #dbe0e2, inset -1px 0px 0px #dbe0e2;">
+                    <td style="padding:20px;text-align: center;" colspan="8">
+                        No address in this section.
+                    </td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+    </div> 
+    <!--/template>
+    </template-->
+</template>

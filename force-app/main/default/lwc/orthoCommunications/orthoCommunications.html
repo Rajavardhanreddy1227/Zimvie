@@ -1,0 +1,16 @@
+<template>
+  <template if:true={announcements.data}>
+    <div class="slds-grid">
+      <div class="slds-col slds-feed slds-size_12-of-12">
+        <ul class="slds-feed__list">
+          <template for:each={announcements.data} for:item="announcement">
+            <c-ortho-communications-post
+              communication={announcement.feedElement}
+              key={announcement.id}
+            ></c-ortho-communications-post>
+          </template>
+        </ul>
+      </div>
+    </div>
+  </template>
+</template>

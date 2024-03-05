@@ -1,0 +1,29 @@
+<template lwc:render-mode="light">
+    <div>
+    <div class="para">
+        <lightning-formatted-rich-text>If you would like assistance paying your open invoice or need any copies please contact out accounting department at:</lightning-formatted-rich-text>
+    </div>
+    <div class="">
+        <div class="d-flex" style="display:flex;align-items:baseline">
+            <div class="slds-m-right_xx-small">
+                <input
+                    type={labels.checkbox}
+                    id="termsandconditions"
+                    name="terms"
+                    checked={checked}
+                    onchange={handleChange} />
+                <!-- </input> -->
+            </div>
+            <div>
+                <p class="slds-m-bottom_large slds-m-top_medium">I accept and agree to the <a href="https://www.zimvie.com/en/legal-notice/dental-Terms-n-conditions-of-sale-usa.html" target="_blank">United States Terms and Conditions</a> of sale.</p>
+                <!--
+                <p class="slds-m-bottom_large slds-m-top_medium">I accept and agree to the <a href="https://www.zimvie.com/en/legal-notice/dental-terms-n-conditions-of-sale-ca.html" target="_blank">Canada Terms and Conditions</a> of sale.</p>
+                -->
+            </div>
+        </div>
+    </div>
+    </div>
+    <label if:true={showError} class="slds-text-color_error">
+        {error}
+    </label>
+</template>

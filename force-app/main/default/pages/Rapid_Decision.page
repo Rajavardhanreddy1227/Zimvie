@@ -1,0 +1,8 @@
+<apex:page >
+    <apex:pageBlock >
+        <h1> You are being redirected to another page. Please ensure your pop-up blocker is disabled.</h1>
+        <script>
+            window.open('http://redestaging.com/zb/','_blank');
+        </script>
+    </apex:pageBlock>
+</apex:page>

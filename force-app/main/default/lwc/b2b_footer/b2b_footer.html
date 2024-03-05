@@ -1,0 +1,127 @@
+<template>
+	<lightning-spinner class="slds-is-fixed slds-align_absolute-center" if:true={showSpinner}
+		alternative-text={labels.loading} size="medium" variant="brand"></lightning-spinner>
+	<div class="slds-container_x-large slds-container_center">
+		<div class="c-container pl-90 pr-90">
+			<div class="slds-grid slds-wrap">
+				<div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12 slds-large-size_3-of-12">
+					<img src="https://shop.zimviedental.com/file/general/ZimVie_Logo_Final_ko-white-Horizontal.png"
+                alt="Zimvie Logo" width="120px" style="padding:0 0 20px 0">
+            </div>
+					<div class="slds-col slds-size_12-of-12 slds-medium-size_9-of-12 slds-large-size_9-of-12 ">
+						<a href="https://www.zimvie.com/en/careers.html" class="socialLink"
+							target="_blank">{labels.Careers}</a>
+						<a href="https://investor.zimvie.com/" class="socialLink" target="_blank">{labels.Investors}</a>
+						<a href="https://www.zimvie.com/en/locations-global-contacts.html" class="socialLink"
+							target="_blank">{labels.Global_Contacts}</a>
+						<a href="https://www.zimvie.com/en/customer-service/dental.html" class="socialLink"
+							target="_blank">{labels.Contact_US}</a>
+					</div>
+				</div>
+				<div class="slds-grid slds-wrap">
+					<div class="slds-col slds-size_12-of-12 slds-medium-size_8-of-12 slds-large-size_8-of-12">
+						<div class="slds-m-top_large slds-m-bottom_large">
+							<a href="https://www.zimvie.com/en/privacy-notice.html" class="socialLink2"
+								target="_blank">{labels.Privacy_Notice}</a>
+							<span>|</span>
+							<a href="https://www.zimvie.com/en/legal-notice.html" class="socialLink2"
+								target="_blank">{labels.Legal_Notices}</a>
+							<span>|</span>
+							<a href="https://www.zimvie.com/en/websites-apps.html" class="socialLink2"
+								target="_blank">{labels.Other_Websites_Mobile_Apps}</a>
+						</div>
+					</div>
+					<div class="slds-col slds-size_12-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12">
+						<div class="socialFooter" style="text-align:right">
+							<a href=https://www.facebook.com/ class="socialLink2" size="8" target="_blank">
+								<img src="https://shop.zimviedental.com/file/general/facebook.svg" width="36px" />
+                    </a>
+								<a href="https://www.instagram.com/accounts/login/?next=/zimvie/" class="socialLink2"
+									target="_blank">
+									<img src="https://shop.zimviedental.com/file/general/Instagram.svg" width="36px" />
+                    </a>
+									<a href="https://www.linkedin.com/company/zimvie/" class="socialLink2"
+										target="_blank">
+										<img src="https://shop.zimviedental.com/file/general/Linked_In.svg" width="36px" />
+                    </a>
+										<a href="https://vimeo.com/zimvie" class="socialLink2" target="_blank">
+											<img src="https://shop.zimviedental.com/file/general/Vimeo.svg" width="36px"
+                            class="slds-m-horizontal_small" />
+                    </a>
+						</div>
+					</div>
+				</div>
+				<div class="slds-grid slds-wrap slds-border_top slds-m-top_large ">
+					<div
+						class="slds-col slds-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12 h200 slds-text-align_right">
+						<span style="color:#fff">{labels.Copyright_2023_ZimVie_Inc}</span>
+					</div>
+				</div>
+
+				<br><br>
+				<div style="display:none">
+					<lightning-layout multiple-rows vertical-align="flex-start" class="x-medium">
+						<lightning-layout-item padding="around-small" size="2" flexibility="auto">
+							<div class="page-section page-right img-con">
+								<img src="https://shop.zimviedental.com/file/general/ZimVie_Logo_Final_ko-white-Horizontal.png"
+                        alt="Zimvie Logo" width="120px">
+                </div>
+						</lightning-layout-item>
+						<lightning-layout-item padding="around-small" size="7" flexibility="auto">
+							<div class="page-section page-main">
+								<a href="https://www.zimvie.com/en/careers.html" class="socialLink"
+									target="_blank">{labels.Careers}</a>
+								<a href="https://investor.zimvie.com/" class="socialLink"
+									target="_blank">{labels.Investors}</a>
+								<a href="https://www.zimvie.com/en/locations-global-contacts.html" class="socialLink"
+									style="white-space:nowrap" target="_blank">{labels.Global_Contacts}</a>
+								<a href="https://www.zimvie.com/en/customer-service/dental.html" class="socialLink"
+									target="_blank">{labels.Contact_US}</a>
+							</div>
+						</lightning-layout-item>
+
+					</lightning-layout>
+
+					<div class="slds-grid slds-gutters">
+						<div class="slds-col slds-size_2-of-3">
+							<lightning-layout-item padding="around-small" size="8" flexibility="auto">
+								<div class="page-section page-main">
+									<a href="https://www.zimvie.com/en/privacy-notice.html" class="socialLink2"
+										style="white-space:nowrap" target="_blank">{labels.Privacy_Notice}</a>
+									<span>.</span>
+									<a href="https://www.zimvie.com/en/legal-notice.html" class="socialLink2"
+										style="white-space:nowrap" target="_blank">{labels.Legal_Notices}</a>
+									<span>.</span>
+									<a href="https://www.zimvie.com/en/websites-apps.html" class="socialLink2"
+										style="white-space:nowrap"
+										target="_blank">{labels.Other_Websites_Mobile_Apps}</a>
+								</div>
+							</lightning-layout-item>
+						</div>
+						<div class="slds-col slds-size_1-of-3">
+							<div class="socialFooter" style="text-align:right">
+								<a href=https://www.facebook.com/ class="socialLink2" size="8" target="_blank">
+									<img src="https://shop.zimviedental.com/file/general/facebook.svg" width="36px" />
+                    </a>
+									<a href="https://www.instagram.com/accounts/login/?next=/zimvie/"
+										class="socialLink2" target="_blank">
+										<img src="https://shop.zimviedental.com/file/general/Instagram.svg" width="36px" />
+                    </a>
+										<a href="https://www.linkedin.com/company/zimvie/" class="socialLink2"
+											target="_blank">
+											<img src="https://shop.zimviedental.com/file/general/Linked_In.svg" width="36px" />
+                    </a>
+											<a href="https://vimeo.com/zimvie" class="socialLink2" target="_blank">
+												<img src="https://shop.zimviedental.com/file/general/Vimeo.svg" width="36px"
+                            class="slds-m-horizontal_small" />
+                    </a>
+							</div>
+						</div>
+					</div>
+					<div class="Border-Line"></div>
+					<div class="copyright slds-m-bottom_x-large">{labels.Copyright_2023_ZimVie_Inc}</div>
+					<!-- <img src="https://shop.zimviedental.com/file/general/Linked_In.svg" width="36px" /> https://vimeo.com/zimvie -->
+				</div>
+			</div>
+		</div>
+</template>

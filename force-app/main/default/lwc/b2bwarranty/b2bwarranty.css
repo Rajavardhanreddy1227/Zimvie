@@ -1,0 +1,166 @@
+.form-container {
+    margin-top: 20px;
+}
+.header-lg{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align:left;
+    }
+    .header-md{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align:left;
+    }
+    .header-sm{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align:left;
+    }
+    .h-text{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+    .h-text a{
+    color: var(--zim-vie-primary-sky-blue, #2C9DD8);
+    font-family: Soleil;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+    }
+    .c-form .slds-form-element__label{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 16px!important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align:left;
+    }
+    .c-form .slds-input{
+    border-radius: 8px;
+    border: 1px solid var(--zim-vie-neutrals-chrome, #DBE0E2);
+    background: var(--zim-vie-neutrals-white, #FFF);
+    padding: 16px;
+    }
+    .c-form .slds-select{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 16px!important;
+    font-style: normal;
+    line-height: normal;
+    height:64px;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--zim-vie-neutrals-chrome, #DBE0E2);
+    background: var(--zim-vie-neutrals-white, #FFF);
+    }
+    
+    .slds-radio .slds-form-element__label{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align:left;
+    }
+    .slds-checkbox .slds-form-element__label{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align:left;
+    }
+    .c-select{
+      color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+    
+    .mt-45{
+    margin-top: 45px;
+    }
+    
+    .c-outline-btn{
+    border-radius: 30px;
+    border: 2px solid var(--zim-vie-primary-navy, #0A2043);
+    background: var(--zim-vie-neutrals-white, #FFF);
+    padding: 14px 16px;
+    justify-content: center;
+    align-items: center;
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-feature-settings: 'calt' off;
+    font-family: Soleil;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 19.2px */
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    }
+    .c-outline-btn:hover{
+    background-color: #f1f1f1;
+    color: var(--zim-vie-primary-navy, #0A2043);
+    border: 2px solid var(--zim-vie-primary-navy, #0A2043);
+    }
+    .c-fill-btn{
+    border-radius: 30px;
+    border: 1px solid var(--zim-vie-primary-navy, #0A2043);
+    background: var(--zim-vie-primary-navy, #0A2043);
+    padding: 14px 16px;
+    color: var(--zim-vie-neutrals-white, #FFF);
+    font-feature-settings: 'calt' off;
+    font-family: Soleil;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 19.2px */
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    }
+    .c-fill-btn:hover{
+    color: var(--zim-vie-primary-lemon, #E6DC19);
+    border: 1px solid var(--zim-vie-primary-navy, #0A2043);
+    background: var(--zim-vie-primary-navy, #0A2043);
+    }
+    
+    /*Mobile*/
+    @media only screen and (max-width:480px) {
+      .mt-auto{
+        margin-top:auto !important;
+        /* background: khaki; */
+        }
+    
+    }
+    .text-align-left{
+        text-align: left;
+    }
+    /* @media only screen and (max-width:768px) {
+      .mt-auto{
+        background: pink;
+        }
+    
+    } */

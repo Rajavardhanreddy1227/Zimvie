@@ -1,0 +1,15 @@
+<!----------------------------------------------------------------------------
+    Page Name:    ZBConnectTableauSupplyDemandDashboard
+    Purpose:      to display the tableau Supply demand dashboard in the salesforce
+                  ZB connect Sales Operation dashboard page
+    Developed By: Prosenjit Saha
+
+----------------------------------------------------------------------------->
+<apex:page >
+  <!-- Custom Settings (hierarchy type): ZBConnectTableauUrls created to get the URL of the ORG  -->
+  <apex:iframe src="{!$Setup.ZBConnectTableauUrls__c.Supply_Demand_URL__c}?:embed=y&:showShareOptions=false&:toolbar=false&:display_count=no&:showVizHome=no" 
+               height="500px" 
+               width="100%"
+               id="theIframe" />
+  
+</apex:page>

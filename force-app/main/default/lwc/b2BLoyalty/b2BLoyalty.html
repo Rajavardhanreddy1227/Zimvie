@@ -1,0 +1,393 @@
+<template>
+  <div class='header-lg'>{labels.My_profile_and_password}</div>
+    <template if:true={loyaltyData}>
+      <lightning-layout multiple-rows="true">
+        <lightning-layout-item size="12" padding="around-small">
+          <lightning-layout if:false={mobileDevice}>
+            <lightning-layout-item size="6" padding="around-small">
+              <lightning-card>
+                <div class='section-head'>{labels.Account_Profile}</div>
+                <lightning-layout multiple-rows="true">
+                  <lightning-layout-item size="12">
+                    <div>
+                      <label class="slds-form-element__label"></br><span class="accountLabel">{labels.First_Name}</span></label>
+                      <div class="slds-form-element__control">
+                       <span class="accountData">{loyaltyData.firstName}</span>
+                      </div>
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div>
+                      <label class="slds-form-element__label"></br><span class="accountLabel">{labels.Last_Name}</span></label>
+                      <div class="slds-form-element__control">
+                      <span class="accountData">{loyaltyData.lastName}</span>
+                      </div>
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div>
+                      <label class="slds-form-element__label"></br><span class="accountLabel">{labels.Company_Name}</span></label>
+                      <div class="slds-form-element__control">
+                        <span class="accountData">{loyaltyData.accountName}</span>
+                      </div>
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div>
+                      <label class="slds-form-element__label"></br><span class="accountLabel">{labels.Customer_Number}</span></label>
+                      <div class="slds-form-element__control">
+                        <span class="accountData">{loyaltyData.customerNumber}</span>
+                      </div>
+                    </div>
+                  </lightning-layout-item>
+                </lightning-layout>
+              </lightning-card>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+              <lightning-card>
+                <div class='section-head'>{labels.Password}<a class="slds-button passbtn" onclick={handleResetPassword}>{labels.Reset_Password}</a></div>
+                <p><span class="passcodecls">************</span></p>
+                <!--<lightning-layout>
+                  <lightning-layout-item size="6" padding="around-small">
+                    <lightning-layout multiple-rows="true">
+                      <lightning-layout-item size="12" padding="around-small">
+                        <span class="passcls">Password</span>
+                      </lightning-layout-item>
+                      <lightning-layout-item size="12" padding="around-small">
+                        <span class="passcodecls">************</span>
+                      </lightning-layout-item>
+                      
+                    </lightning-layout>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="6" padding="around-small">
+                    <a class="slds-button passbtn" onclick={handleResetPassword}>Reset Password</a>
+                  </lightning-layout-item>
+                </lightning-layout>-->
+              </lightning-card>
+            </lightning-layout-item>
+          </lightning-layout>
+
+          <lightning-layout if:true={mobileDevice}>
+            <lightning-layout-item size="7" padding="around-small">
+              <lightning-card>
+                <div class='section-head'>Account Profile</div>
+                <lightning-layout multiple-rows="true">
+                  <lightning-layout-item size="12">
+                    <div>
+                      <label class="slds-form-element__label"></br><span class="accountLabel">First Name</span></label>
+                      <div class="slds-form-element__control">
+                       <span class="accountData">{loyaltyData.firstName}</span>
+                      </div>
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div>
+                      <label class="slds-form-element__label"></br><span class="accountLabel">Last Name</span></label>
+                      <div class="slds-form-element__control">
+                      <span class="accountData">{loyaltyData.lastName}</span>
+                      </div>
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div>
+                      <label class="slds-form-element__label"></br><span class="accountLabel">{labels.Company_Name}</span></label>
+                      <div class="slds-form-element__control">
+                        <span class="accountData">{loyaltyData.accountName}</span>
+                      </div>
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div>
+                      <label class="slds-form-element__label"></br><span class="accountLabel">{labels.Customer_Number}</span></label>
+                      <div class="slds-form-element__control">
+                        <span class="accountData">{loyaltyData.customerNumber}</span>
+                      </div>
+                    </div>
+                  </lightning-layout-item>
+                </lightning-layout>
+              </lightning-card>
+            </lightning-layout-item>
+            <lightning-layout-item size="5" padding="around-small">
+              <lightning-card>
+                <div class='section-head'>{labels.Password}<a class="slds-button passbtn" onclick={handleResetPassword}>{labels.Reset_Password}</a></div>
+                <p><span class="passcodecls">************</span></p>
+                <!--<lightning-layout>
+                  <lightning-layout-item size="6" padding="around-small">
+                    <lightning-layout multiple-rows="true">
+                      <lightning-layout-item size="12" padding="around-small">
+                        <span class="passcls">Password</span>
+                      </lightning-layout-item>
+                      <lightning-layout-item size="12" padding="around-small">
+                        <span class="passcodecls">************</span>
+                      </lightning-layout-item>
+                      
+                    </lightning-layout>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="6" padding="around-small">
+                    <a class="slds-button passbtn" onclick={handleResetPassword}>Reset Password</a>
+                  </lightning-layout-item>
+                </lightning-layout>-->
+              </lightning-card>
+            </lightning-layout-item>
+          </lightning-layout>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" padding="around-small" if:true={showLoyaltyData}>
+          <lightning-layout if:false={mobileDevice}>
+            <lightning-layout-item size="6" padding="around-small">
+              <lightning-card>
+                <lightning-layout multiple-rows="true" if:true={showActiveLoyalty}>
+                  <lightning-layout-item size="12">
+                    <div class='section-head'>{labels.Excel_Loyalty_Program}</div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label"><span class="accountLabel">{labels.Coordinator_Name}</span></label><span class="loyaltyData">{loyaltyData.coordinatorName}</span>
+                      
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label"><span class="accountLabel">{labels.Coordinator_Email}</span></label><span class="loyaltyData">{loyaltyData.coordinatorEmail}</span>
+                      
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label"><span class="accountLabel">{labels.Enrollment}</span></label><span class="loyaltyData">
+                        <lightning-formatted-date-time value={loyaltyData.loyaltyStartDate}></lightning-formatted-date-time>-<lightning-formatted-date-time value={loyaltyData.loyaltyEndDate}></lightning-formatted-date-time></span>
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label"><span class="accountLabel">{labels.Status}</span></label><span class="loyaltyData">{loyaltyData.enrollmentStatus}</span>
+                    </div>
+                  </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout multiple-rows="true" if:true={showRenewal}>
+                  <lightning-layout-item size="12">
+                    <lightning-layout>
+                      <lightning-layout-item size="6">
+                        <div class='section-head'>{labels.Excel_Loyalty_Program}</div>
+                        
+                      </lightning-layout-item>
+                      <lightning-layout-item size="6">
+                        <div class="btncls">
+                        <a if:true={showRenewal} onclick={handleRenewLoyalty} >{labels.Renew}</a>
+                        <!--<button if:true={showRenewal} title="Renew Loyalty" onclick={handleRenewLoyalty} class="slds-m-top_small btncls">Renew</button>-->
+                      </div>
+                      </lightning-layout-item>
+
+                    </lightning-layout>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div>
+                      <label class="slds-form-element__label"><span class="renewLabel">{labels.Coordinator_Name}</span></label><span class="renewloyaltyData">{loyaltyData.coordinatorName}</span>
+                      
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div>
+                      <label class="slds-form-element__label"><span class="renewLabel">{labels.Coordinator_Email}</span></label><span class="renewloyaltyData">{loyaltyData.coordinatorEmail}</span>
+                      
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div>
+                      <label class="slds-form-element__label"><span class="renewLabel">{labels.Enrollment}</span></label><span class="renewloyaltyData"><lightning-formatted-date-time value={loyaltyData.loyaltyStartDate}></lightning-formatted-date-time>-<lightning-formatted-date-time value={loyaltyData.loyaltyEndDate}></lightning-formatted-date-time></span>
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div >
+                      <label class="slds-form-element__label"><span class="renewLabel">{labels.Status_Tier}</span></label><span class="renewloyaltyData">{loyaltyData.statusTier}</span>
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div >
+                      <label class="slds-form-element__label"><span class="renewLabel">{labels.Points}</span></label><span class="renewloyaltyData">{loyaltyData.loyaltypoints}</span>
+                    </div>
+                  </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout multiple-rows="true" if:true={showEnroll}>
+                  <lightning-layout-item size="12">
+                    <div class='section-head'>{labels.Excel_Loyalty_Program}</div>
+                    <p class="enrollvalue">{labels.This_account_is_not_enrolled_in_Loyalty_program}</p>
+                    <button if:true={showEnroll}  onclick={handleEnrollLoyalty} class="slds-m-top_small enrollbtncls">{labels.Enroll_in_Loyalty_Program}</button>
+                  </lightning-layout-item>
+                    
+                </lightning-layout>
+              </lightning-card>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small" if:true={showActiveLoyalty}>
+              <div>
+                <p class="loyltyinfo"><span class="activeLoyaltyStatus">{labels.Status}</span><span class="statusValue">{loyaltyData.statusTier}</span></p>
+                <p class="loyaltypoints">{loyaltyData.loyaltypoints}</p>
+                <p class="loyltylabel">{labels.Your_Loyalty_Points}</p>
+              </div>
+            </lightning-layout-item>
+          </lightning-layout>
+
+
+          <lightning-layout if:true={mobileDevice} multiple-rows="true">
+            <lightning-layout-item size="12" padding="around-small">
+              <lightning-card>
+                <lightning-layout multiple-rows="true" if:true={showActiveLoyalty}>
+                  <lightning-layout-item size="12">
+                    <div class='section-head'>{labels.Excel_Loyalty_Program}</div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label"><span class="accountLabel">{labels.Coordinator_Name}</span></label><span class="loyaltyData">{loyaltyData.coordinatorName}</span>
+                      
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label"><span class="accountLabel">{labels.Coordinator_Email}</span></label><span class="loyaltyData">{loyaltyData.coordinatorEmail}</span>
+                      
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label"><span class="accountLabel">{labels.Enrollment}</span></label><span class="loyaltyData">
+                        <lightning-formatted-date-time value={loyaltyData.loyaltyStartDate}></lightning-formatted-date-time>-<lightning-formatted-date-time value={loyaltyData.loyaltyEndDate}></lightning-formatted-date-time></span>
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label"><span class="accountLabel">{labels.Status}</span></label><span class="loyaltyData">{loyaltyData.enrollmentStatus}</span>
+                    </div>
+                  </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout multiple-rows="true" if:true={showRenewal}>
+                  <lightning-layout-item size="12">
+                    <lightning-layout>
+                      <lightning-layout-item size="6">
+                        <div class='section-head'>{labels.Excel_Loyalty_Program}</div>
+                        
+                      </lightning-layout-item>
+                      <lightning-layout-item size="6">
+                        <div class="btncls">
+                        <a if:true={showRenewal} onclick={handleRenewLoyalty} >{labels.Renew}</a>
+                        <!--<button if:true={showRenewal} title="Renew Loyalty" onclick={handleRenewLoyalty} class="slds-m-top_small btncls">Renew</button>-->
+                      </div>
+                      </lightning-layout-item>
+
+                    </lightning-layout>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div>
+                      <label class="slds-form-element__label"><span class="renewLabel">{labels.Coordinator_Name}</span></label><span class="renewloyaltyData">{loyaltyData.coordinatorName}</span>
+                      
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div>
+                      <label class="slds-form-element__label"><span class="renewLabel">{labels.Coordinator_Email}</span></label><span class="renewloyaltyData">{loyaltyData.coordinatorEmail}</span>
+                      
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div>
+                      <label class="slds-form-element__label"><span class="renewLabel">{labels.Enrollment}</span></label><span class="renewloyaltyData"><lightning-formatted-date-time value={loyaltyData.loyaltyStartDate}></lightning-formatted-date-time>-<lightning-formatted-date-time value={loyaltyData.loyaltyEndDate}></lightning-formatted-date-time></span>
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div >
+                      <label class="slds-form-element__label"><span class="renewLabel">{labels.Status_Tier}</span></label><span class="renewloyaltyData">{loyaltyData.statusTier}</span>
+                    </div>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="12">
+                    <div >
+                      <label class="slds-form-element__label"><span class="renewLabel">{labels.Points}</span></label><span class="renewloyaltyData">{loyaltyData.loyaltypoints}</span>
+                    </div>
+                  </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout multiple-rows="true" if:true={showEnroll}>
+                  <lightning-layout-item size="12">
+                    <div class='section-head'>{labels.Excel_Loyalty_Program}</div>
+                    <p class="enrollvalue">{labels.This_account_is_not_enrolled_in_Loyalty_program}</p>
+                    <button if:true={showEnroll}  onclick={handleEnrollLoyalty} class="slds-m-top_small enrollbtncls">{labels.Enroll_in_Loyalty_Program}</button>
+                  </lightning-layout-item>
+                    
+                </lightning-layout>
+              </lightning-card>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-small" if:true={showActiveLoyalty}>
+              <div>
+                <p class="loyltyinfo"><span class="activeLoyaltyStatus">Status:</span><span class="statusValue">{loyaltyData.statusTier}</span></p>
+                <p class="loyaltypoints">{loyaltyData.loyaltypoints}</p>
+                <p class="loyltylabel">{labels.Your_Loyalty_Points}</p>
+              </div>
+            </lightning-layout-item>
+          </lightning-layout>
+
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" if:true={showActiveLoyalty}>
+          <lightning-layout>
+            <lightning-layout-item size="3" padding="around-small" class="silveritem">
+              <p class="silver">{labels.SILVER}</p>
+              <P class="silverpts">{labels.X1_199_999_pts}</P>
+            </lightning-layout-item>
+            <lightning-layout-item size="3" padding="around-small" class="golditem">
+              <p class="gold">{labels.Gold}</p>
+              <P class="goldpts">{labels.X200_000_499_999_pts}</P>
+            </lightning-layout-item>
+            <lightning-layout-item size="3" padding="around-small" class="titaniumitem">
+              <p class="titanium">{labels.Titanium}</p>
+              <P class="titaniumpts">{labels.X500_000_999_999_pts}</P>
+            </lightning-layout-item>
+            <lightning-layout-item size="3" padding="around-small" class="tantalumitem">
+              <p class="tantalum">{labels.Tantalum}</p>
+              <P class="tantalumpts">{labels.X1_000_000_pts}</P>
+            </lightning-layout-item>
+          </lightning-layout>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small">
+          <span class="qstbold">{labels.Questions_on_your_account_information}</span><span class="qst"> {labels.Call_800_345_6789}</span>
+        </lightning-layout-item>
+
+      </lightning-layout>
+    </template>
+
+
+    <div if:true={showModal} class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    <template if:true={showModal}>
+        <template if:true={showLoader}>
+            <lightning-spinner alternative-text={alternativetext} size="small">
+            </lightning-spinner>
+         </template>
+        <section role="dialog" tabindex="-1"  aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_small">
+            
+            <div class="slds-modal__container" >
+              <div class="slds-modal__header">
+                <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">{loyaltyProd.fields.Name}</h1>
+              </div>
+              <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <lightning-layout>
+                  <lightning-layout-item size="6" padding="around-small">
+                    <img src={productImage}></img>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="6" padding="around-small">
+                    <lightning-layout multiple-rows="true">
+                      <lightning-layout-item size="12">
+                        <span class="prodName">{loyaltyProd.fields.Name}</span>
+                      </lightning-layout-item>
+                      <lightning-layout-item size="12">
+                        <span class="prodSKU">SKU: {loyaltyProd.fields.StockKeepingUnit}</span>
+                      </lightning-layout-item>
+                      <lightning-layout-item size="12">
+                        <span class="prodDesc">{loyaltyProd.fields.Description}</span>
+                      </lightning-layout-item>
+                    </lightning-layout>
+                  </lightning-layout-item>
+                </lightning-layout>
+                </div>
+              <div class="slds-modal__footer">
+                <lightning-button variant="base" label="Add to Cart" title="Add to Cart" onclick={addToCart} class="slds-m-left_x-small"></lightning-button>&nbsp;&nbsp;
+                <lightning-button variant="base" label="Cancel" title="Cancel" onclick={handleCancel} class="slds-m-left_x-small"></lightning-button>
+              </div>
+            </div>
+          </section>
+    </template>
+</template>

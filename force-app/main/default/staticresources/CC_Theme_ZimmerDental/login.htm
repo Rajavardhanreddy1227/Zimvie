@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cloudburst - Responsive - Login</title>
+
+<!-- NEW FILES ADDED TO THE HEADER -->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">--> <!--ORIGINAL META DATA-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /> <!--THIS REMOVES THE ZOOM FROM THE FIELDS-->
+<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<!-- END FILES ADDED TO THE HEADER -->
+
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="css/fonts.css" rel="stylesheet" type="text/css" />
+
+<!-- NEW CSS TO OVERRIDE BOOTSTRAP.CSS -->
+<link href="css/bootstrap_overwrite.css" rel="stylesheet" media="screen">
+<!-- END NEW CSS TO OVERRIDE BOOTSTRAP.CSS -->
+
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="css/ie8.css">
+<![endif]-->
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<!-- START BOOTSTRAP ROW FOR THE HEADER -->
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="top_navigation hidden-phone">
+					<div class="search_form">
+						<form>
+							<input type="text" name="#" value="Search" class="search_input" onfocus="myFocus(this);" onblur="myBlur(this);"/>
+							<input type="button" name="#" id="#" value=">>" class="search_button"/>
+						</form>
+					</div>
+					<p><a href="#">My Account</a>|<a href="#">My Wishlist</a>|<a href="#">My Quote: 0 Item(s)</a>|<a href="#">Logout</a>|<a href="#">Contact Us</a></p>
+				</div>
+
+				<div class="logo_tagline hidden-phone">
+					<div class="logo"><img src="images/homepage_header_graphic.png"></div>
+				</div>					
+			</div>
+		</div>
+		<!-- END BOOTSTRAP ROW FOR THE HEADER -->
+
+		<!-- START BOOTSTRAP MAIN NAVIGATION -->
+		<div class="navbar main_navigation_container">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">          
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="brand_phone visible-phone"><img src="images/phone_logo.png" width="200" height="39" /></a>
+					<a class="brand visible-tablet">Main Navigation</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li>
+								<a href="./url.html">Home</a>
+							</li>
+							<li class="hidden-desktop">
+								<a href="./url.html">Store</a>
+							</li>
+							<li>
+								<a href="./url.html">About</a>
+							</li>
+							<li>
+								<a href="./url.html">Our Products</a>
+							</li>
+							<li>
+								<a href="./url.html">Locations</a>
+							</li>
+							<li>
+								<a href="./url.html">Promotions</a>
+							</li>
+							<li>
+								<a href="./url.html">Contact Us</a>
+							</li>
+						 </ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END BOOTSTRAP MAIN NAVIGATION -->
+
+<!-- START MAIN HEADER IMAGE CODE -->
+<div class="home_slider hidden-phone">
+    <div class="main_page_title MyAccount"></div>
+    <div class="breadcrumbs hidden">
+    	<div class="breadcrumbs_container">
+	        <a href="index_homepage.htm">Home</a> >  <a href="categories.htm">Categories</a> > <a href="product_list.htm" class="onlink">Product List</a>
+        </div>
+    </div>
+</div>
+<!-- END MAIN HEADER IMAGE CODE -->
+
+<div class="container-fluid">
+<div class="row-fluid">
+
+<div class="content_container">
+
+<div class="span12">
+
+<div class="single_column_layout">
+
+<div class="main_content_single_column_container">
+
+<form action="" class="horizontal_form">
+
+<fieldset>
+
+<legend>New Customers</legend>
+
+<p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+
+<p><input name="" type="button" value="Create an Account" class="button right"/></p>
+
+</fieldset>
+
+<fieldset>
+
+<legend>Registered Customers</legend>
+
+<p>If you have an account with us, please log in.</p>
+
+<label>Email Address *
+<input type="text" value="Email address" name="#" id="#" onfocus="myFocus(this);" onblur="myBlur(this);">
+</label>
+
+<label>Password *
+<input type="text" value="Password" name="#" id="#" onfocus="myFocus(this);" onblur="myBlur(this);">
+</label>
+
+<p class="right clear">* Required Field</p>
+
+<p class="link_button"><input name="" type="button" value="Login" class="button right"/><span><a href="#">Forgot Your Password?</a></span></p>
+
+</fieldset>
+
+<fieldset>
+
+<legend>Forgot Your Password?</legend>
+
+<p>Please enter your email address below and we'll send you a new password.</p>
+
+<label>Email Address *
+<input type="text" value="Email address" name="#" id="#" onfocus="myFocus(this);" onblur="myBlur(this);">
+</label>
+
+<p class="right clear">* Required Field</p>
+
+<p class="link_button"><input name="" type="submit" value="Submit" class="button right"/><span><a href="#"><< Back to Login</a></span></p>
+
+</fieldset>
+
+<fieldset>
+
+<legend>Enter New Password Below</legend>
+
+<p>Password must be 8 characters or more and contain at least one capital letter.</p>
+
+<label>New Password *
+  <input type="text" value="New password" name="#2" id="#2" onfocus="myFocus(this);" onblur="myBlur(this);" />
+</label>
+
+
+<label>Confirm Password *
+  <input type="text" value="Confirm password" name="#" id="#" onfocus="myFocus(this);" onblur="myBlur(this);">
+</label>
+
+<p class="right clear">* Required Field</p>
+
+<p class="link_button"><input name="" type="submit" value="Submit" class="button right"/><span><a href="#"><< Back to Login</a></span></p>
+
+</fieldset>
+
+</form>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- START BOTTOM FOOTER COLUMN CODE -->
+
+	<div class="row-fluid clear">
+		<div class="span12">
+        	<div class="footer">
+          		<p><a href="#">Home</a>|<a href="#">Products</a>|<a href="#">About Us</a>|<a href="#">Services</a>|<a href="#">Contact Us</a> Copyright 2013 MyCompany, Inc.  All Rights Reserved.</p>
+        </div>
+
+		</div>
+	</div>
+</div>
+    
+<!-- END BOTTOM FOOTER COLUMN CODE -->
+
+</div>
+</div>
+</div>
+<!-- NEW JS CODE AT BOTTOM OF THE PAGE CODE -->
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="js/controllers.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery.hoverIntent.minified.js"></script>
+<script type="text/javascript" src="js/jquery.accordion.2.7.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- END JS CODE AT BOTTOM OF THE PAGE CODE -->
+</body>
+</html>

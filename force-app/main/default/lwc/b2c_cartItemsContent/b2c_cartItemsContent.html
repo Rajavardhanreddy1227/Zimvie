@@ -1,0 +1,82 @@
+<template>
+
+
+    <c-b2b-spinner 
+        if:true={customLoader}
+        message-state={messageState}>
+    </c-b2b-spinner>
+    <!-- <template if:true={customLoader}>
+        <c-custom_spinner></c-custom_spinner>
+    </template> -->
+    <!-- <div class="slds-var-m-top_large">
+    <c-b2c_paths category-path={path.journey}></c-b2c_paths>
+    </div> -->
+    <!-- Cart Header-->
+    <header class="slds-p-bottom_large">
+        <div class="header-lg">{cartHeader}</div>
+    </header>
+
+    <template if:true={spinnerValue}>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation">
+            <lightning-spinner
+            if:true={spinnerValue}
+            alternative-text="Loading"
+            variant="brand"
+            >
+            </lightning-spinner>
+        </div>
+    </template>
+    <!-- Active Cart with Cart Items -->
+    <!-- Active Cart with Cart Items -->
+    <template if:false={isCartClosed}>
+        <c-b2c_cartitems
+            cart-items={cartItems}
+            currency-code={currencyCode}
+            is-discount-applied={isDiscountApplied}
+            onquantitychanged={handleQuantityChanged}
+            onsinglecartitemdelete={handleCartItemDelete}
+            is-cart-disabled={isCartDisabled}
+        >
+        </c-b2c_cartitems>
+        <lightning-spinner
+            if:true={isCartItemListIndeterminate}
+            alternative-text={labels.loadingCartItems}
+            class="slds-is-relative slds-align_absolute-center slds-m-around_large"
+            variant="brand"
+        >
+        </lightning-spinner>
+        <div
+            if:true={isCartEmpty}
+            class="slds-text-align_center slds-text-color_weak slds-p-top_xx-large"
+        >
+            <h3 class="slds-text-heading_medium">
+                {labels.emptyCartHeaderLabel}
+            </h3>
+            <p class="slds-text-body_regular slds-p-top_small">
+                {labels.emptyCartBodyLabel}
+            </p>
+        </div>
+        <footer class="slds-p-around_small slds-border_top">
+            <lightning-button
+                if:false={isCartEmpty}
+                class="footer-action"
+                variant="base"
+                label={labels.clearCartButton}
+                onclick={handleClearCartButtonClicked}
+            >
+            </lightning-button>
+        </footer>
+    </template>
+
+    <!-- Closed/Deleted Cart -->
+    <template if:true={isCartClosed}>
+        <div
+            class="slds-text-align_center slds-text-color_weak slds-p-top_xx-large"
+        >
+            <h3 class="slds-text-heading_medium">{labels.closedCartLabel}</h3>
+        </div>
+    </template>
+
+    <c-b2b-show-toast-message>
+    </c-b2b-show-toast-message>
+</template>

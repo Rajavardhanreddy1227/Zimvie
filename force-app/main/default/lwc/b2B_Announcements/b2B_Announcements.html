@@ -1,0 +1,7 @@
+<template>
+    <div style="color:white;" if:true={announcements} class="bgColour slds-var-p-around_medium slds-grid slds-grid_vertical slds-align_absolute-center">
+        <template for:each={announcements} for:item="ann">
+            <p class="slds-col" key={ann.Id}>{ann.Announcement_Message__c}</p>
+        </template>
+    </div>
+</template>

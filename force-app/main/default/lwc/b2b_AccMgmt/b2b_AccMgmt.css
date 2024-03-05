@@ -1,0 +1,83 @@
+.header-lg{
+  color: var(--zim-vie-primary-navy, #0A2043);
+  font-family: Soleil;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin:30px;
+}
+.mobileTabs{
+	display: none;
+}
+@media screen and (max-width: 600px) {
+  .mobileTabs{
+    display: block;
+  }
+  .desktopTabs{
+	  display:none;
+  }
+}
+
+.season_tabs {
+  position: relative;   
+  min-height: 360px; /* This part sucks */
+  clear: both;
+  margin-top: 9px;
+}
+.season_tab {
+  /*
+  float: left;  
+  clear: both;
+  width: 190px;*/
+  margin-right: 20px;
+  margin-left: 30px;
+}
+.season_tab label {
+    /*
+    padding: 8px;
+    font-weight: 800;
+    font-size: small;
+    vertical-align: middle;
+    position: relative;
+    width: 200px;
+    display: table-cell;
+    color: var(--zim-vie-neutrals-white, #FFF);*/
+  font-family: Soleil;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: block;
+  padding:14px 16px;
+}
+.season_tab label:hover {   
+  background: #f1f1f1;
+}
+
+.season_tab [type=radio] {
+  display: none;   
+}
+.season_content {
+  position: absolute;
+  top: -9px;
+  left: 170px;
+  background: white;
+  right: 0;
+  bottom: 2px;
+  padding: 10px;
+  display: none;
+  /*bottom: 0;
+  zoom:80%;
+  overflow: hidden;*/
+ }
+.season_content span {
+  animation: 0.5s ease-out 0s 1 slideInFromTop; 
+}
+[type=radio]:checked ~ label {
+  background: #2C9DD8;
+  color:white;
+}
+[type=radio]:checked ~ label ~ .season_content {
+  display: block;
+}

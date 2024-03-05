@@ -1,0 +1,12 @@
+<apex:page >
+<script>
+var strWindowFeatures = "location=yes,height=570,width=520,scrollbars=yes,status=yes";
+
+//
+var URL = "https://zimmer-biomet.grovo.com";
+
+//Call Function
+var win = window.open(URL, "_parent", strWindowFeatures);
+
+</script>
+</apex:page>

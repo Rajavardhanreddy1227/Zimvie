@@ -1,0 +1,8 @@
+<apex:page >
+    <apex:pageBlock >
+        <h1> You are being redirected to another page. Please ensure your pop-up blocker is turned off.</h1>
+        <script>
+            window.open('https://app.smartsheet.com/b/publish?EQBCT=688dba679baf4c68851615052eec1e06');
+        </script>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,6 @@
+<apex:page standardController="Case"  sidebar="true" showHeader="true"  tabStyle="Case" > 
+  
+  
+   <font size="5" color="black"> <b> Attention: This record must be created by using the SPM Wizards. </b> </font>
+
+</apex:page>

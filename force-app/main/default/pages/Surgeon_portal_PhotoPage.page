@@ -1,0 +1,21 @@
+<apex:page standardController="GPL_Profile__c" extensions="GplManageProfilePhotoController">
+    <apex:form enctype="multipart/form-data">
+        <apex:pageMessages />
+        <apex:pageBlock title="Manage Photo">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!savePhoto}" value="Save"/>
+                <apex:commandButton action="{!cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection showHeader="false" columns="2" id="block">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Filename" for="filename"/>
+                    <apex:inputText value="{!photo.name}" id="filename"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="File" for="file"/>
+                    <apex:inputFile value="{!photo.body}" filename="{!photo.name}" id="file"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

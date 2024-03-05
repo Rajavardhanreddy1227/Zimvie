@@ -1,0 +1,142 @@
+.backbutton{
+    color: #2C9DD8 !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-left:0 !important;;
+    padding-right:0 !important;;
+}
+.header-lg{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;    
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.header-md{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.header-sm{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.order-ctr{
+    xwidth:890px;
+}
+.order-details-ctr{
+    border-radius: 10px;
+    background: rgba(219, 224, 226, 0.20);
+    width: 100%;
+    color: var(--zim-vie-primary-navy, #0A2043);
+}
+.hr{
+    width:100%;
+}
+.shipment-bar{
+    background: var(--zim-vie-neutrals-pewter, #758591);
+    display: flex;
+    height: 36px;
+    padding: 0px 24px;
+    align-items: center;
+    color:#fff;
+    font-weight: 600;
+}
+.shipment-details{
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #DBE0E2;
+    padding-bottom: 15px;
+}
+.shipment-details .img-ctr{
+    width:100px;
+    height:100px;
+    border-radius: 10px;
+    text-align: center;
+}
+.d-flex{
+    display: flex;
+}
+.ml-auto{
+    margin-left:auto;
+}
+.flex-column{
+    flex-direction:column;
+}
+.brand{
+    color: #2C9DD8 !important;
+}
+.img-ctr{
+    width:150px;
+    height:150px;
+    border-radius: 10px;
+    background: #F8F9F9;
+    background-blend-mode: normal, multiply;
+}
+.product-name{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.product-sku{
+    color: var(--zim-vie-neutrals-pewter, #758591);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top:8px;
+}
+.product-diementions{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top:8px;
+}
+.product-qty{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top:8px;
+}
+.itm-summary{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 24px;
+}
+.item-summary{
+    padding: 32px;
+    border-radius: 10px;
+    background: rgba(219, 224, 226, 0.20);
+}
+.item-summary .img-ctr{
+    width:100px;
+    height:100px;
+    border-radius: 10px;
+    background: #fff;
+}
+.btn-label{
+    border-radius: 20px;
+    background: rgba(219, 224, 226, 0.40);
+    text-transform: capitalize !important;
+    padding: 5px 12px 4px 12px;
+}

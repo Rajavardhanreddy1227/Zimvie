@@ -1,0 +1,23 @@
+<apex:page controller="MassAttachmentsController" lightningStylesheets="true">
+    <style type="text/css">
+        .container, .buttonsArea {
+            margin: 30px;
+        }
+
+        .buttonsArea.pbButton {
+            text-align: left;
+        }
+    </style>
+
+    <apex:form >
+        <apex:pageMessages />
+        <section id="container" class="container" >
+            <div class="fileInputArea">
+                <apex:inputFile value="{!file}" fileName="{!fileName}" />
+            </div>
+        </section>
+        <section class="buttonsArea pbButton">
+            <apex:commandButton action="{!upload}" value="Upload" />            
+        </section>        
+    </apex:form>
+</apex:page>

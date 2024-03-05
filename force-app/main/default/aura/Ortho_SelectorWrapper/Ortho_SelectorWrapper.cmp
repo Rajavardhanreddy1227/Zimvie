@@ -1,0 +1,6 @@
+<aura:component 
+  implements="force:hasSObjectName,force:hasRecordId,flexipage:availableForAllPageTypes">
+    <aura:attribute name="sObjectName" type="String" />
+    <aura:attribute name="recordId" type="String" />
+    <c:orthoGroupSelector value="{!v.recordId}" objectApiName="{!v.sObjectName}"></c:orthoGroupSelector>
+</aura:component>

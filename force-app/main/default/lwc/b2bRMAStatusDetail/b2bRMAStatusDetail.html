@@ -1,0 +1,40 @@
+<template>
+    <lightning-spinner if:true={isLoading} alternative-text={labels.loading} class="slds-is-absolute slds-align_absolute-center" size="medium" variant="brand">
+	</lightning-spinner>
+
+	<template if:true={objRMAStatusDetail}>
+		<lightning-button variant="base" label={labels.BacktoAllRMSStatus} icon-name="utility:chevronleft" class="slds-m-left_x-small" onclick={handleBacktoallRMAStatus}></lightning-button>
+		
+		<div class="header-lg slds-m-bottom_large">{labels.rmaStatus}: {objRMAStatusDetail.rmaName}</div> 
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+                <h2 class="slds-card__header-title">
+                    {labels.rmaStatusDetail}
+                </h2>
+            </div>
+            <div class="slds-card__body">
+                <div class="order-ctr slds-m-top_x-large slds-m-bottom_medium">
+                    <div class="slds-grid slds-wrap slds-gutters">
+                        <div class="slds-col slds-col-1-of-2">
+                            <div class="order-details-ctr slds-p-around_x-large slds-m-bottom_large">
+                                <p class="slds-m-bottom_small"><b>{labels.rmaType}:</b> {objRMAStatusDetail.rmaType}</p>
+                                <p class="slds-m-bottom_small"><b>{labels.createdDate}:</b> {objRMAStatusDetail.createdDate}</p>
+                                <p class="slds-m-bottom_small"><b>{labels.status}:</b> {objRMAStatusDetail.rmaStatus}</p>
+                                <!--<p class="slds-m-bottom_small"><b>{labels.CurrencyIsoCode}:</b> {objRMAStatusDetail.currencyISOCode}</p>-->
+                                <p class="slds-m-bottom_small"><b>{labels.rmaOrderType}:</b> {objRMAStatusDetail.rmaOrderType}</p>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-col-1-of-2">
+                            <div class="order-details-ctr slds-p-around_x-large slds-m-bottom_large">
+                                <p class="slds-m-bottom_small"><b>{labels.cancellationReason}:</b> {objRMAStatusDetail.cancellationReason}</p>
+                                <p class="slds-m-bottom_small"><b>{labels.shipToAddress}:</b> {objRMAStatusDetail.shipToAddress}</p>
+                                <p class="slds-m-bottom_small"><b>{labels.raisedBy}:</b> {objRMAStatusDetail.raisedBy}</p>
+                                <!--<p class="slds-m-bottom_small"><b>{labels.rmaTotalIncludingTax}:</b> {objRMAStatusDetail.rmaTotalIncludingTax}</p>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+	</template>
+</template>

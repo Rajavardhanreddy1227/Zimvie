@@ -1,0 +1,389 @@
+<template>
+    <template if:true={showModal}>
+        <c-b2b_wishlistmodal 
+            onclose={handleModalClose} 
+            product-id={wishlistproductId} 
+            community-id={communityId}
+            effective-account-id={resolvedEffectiveAccountId}>
+        </c-b2b_wishlistmodal>
+    </template>
+    <ul>
+        <div class="all-items cart-min-height">
+        <template for:each={displayItems} for:item="lineItem">
+            <div key={lineItem.id}>
+                <div class="slds-grid slds-wrap grid-border">
+                    <div class="slds-col slds-size_12-of-12 slds-medium-size_8-of-12 slds-large-size_8-of-12">
+                        <div class="d-flex mobile-column">
+                            <div class="slds-m-right_medium">
+                                <div class="mobile-center">
+                                    <figure class="itemImage">
+                                    <!-- <a tabindex="-1" href={lineItem.productUrl}
+                                        data-productid={lineItem.ProductDetails.productId}
+                                        onclick={handleProductDetailNavigation}> -->
+                                        <a tabindex="-1" href={lineItem.productUrl}
+                                        data-productid={lineItem.ProductDetails.productId}>
+                                        <img src={lineItem.productImageUrl} alt={lineItem.productImageAlternativeText}
+                                        data-productid={lineItem.ProductDetails.productId} />
+                                        </a>
+                                    </figure>
+                                    <div class="d-flex" style="align-items:baseline">
+                                        <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.08756 3.58164L8.08644 3.58502L6.60256 7.15127C6.58274 7.19886 6.55022 7.24008 6.50856 7.27043C6.46689 7.30079 6.41769 7.31911 6.36631 7.3234L2.51544 7.63165H2.51206L2.40519 7.64065L1.73806 7.69464C1.60707 7.70498 1.48207 7.7539 1.37886 7.83523C1.27565 7.91656 1.19885 8.02665 1.15816 8.1516C1.11747 8.27655 1.11473 8.41075 1.15026 8.53726C1.18579 8.66376 1.25802 8.77691 1.35781 8.8624L1.86631 9.29777L1.94844 9.36752L1.95069 9.36977L4.88469 11.883C4.9237 11.9167 4.95272 11.9604 4.96859 12.0094C4.98446 12.0584 4.98657 12.1108 4.97469 12.1609L4.07919 15.9184L4.07806 15.9218L4.05331 16.0264L3.89806 16.6778C3.86772 16.8055 3.87587 16.9393 3.92147 17.0624C3.96708 17.1855 4.04811 17.2924 4.15434 17.3695C4.26058 17.4466 4.38727 17.4906 4.51844 17.4958C4.64961 17.501 4.7794 17.4673 4.89144 17.3989L5.46181 17.0501L5.55406 16.9939L5.55744 16.9928L8.85369 14.979C8.89775 14.9522 8.94835 14.938 8.99994 14.938C9.05153 14.938 9.10212 14.9522 9.14619 14.979L12.4424 16.9928L12.4458 16.995L12.5381 17.0513L13.1084 17.4C13.2206 17.4686 13.3505 17.5024 13.4818 17.4971C13.6131 17.4919 13.7399 17.4478 13.8462 17.3705C13.9525 17.2932 14.0336 17.1862 14.079 17.0629C14.1245 16.9396 14.1325 16.8056 14.1018 16.6778L13.9466 16.0264L13.9218 15.9218V15.9184L13.0252 12.1609C13.0133 12.1108 13.0154 12.0584 13.0313 12.0094C13.0472 11.9604 13.0762 11.9167 13.1152 11.883L16.0492 9.36977L16.0514 9.36752L16.1336 9.29777L16.6421 8.8624C16.7419 8.77691 16.8141 8.66376 16.8496 8.53726C16.8852 8.41075 16.8824 8.27655 16.8417 8.1516C16.801 8.02665 16.7242 7.91656 16.621 7.83523C16.5178 7.7539 16.3928 7.70498 16.2618 7.69464L15.5947 7.64065L15.4878 7.63165H15.4844L11.6347 7.3234C11.5831 7.31931 11.5337 7.30108 11.4918 7.27071C11.4499 7.24035 11.4172 7.19902 11.3973 7.15127L9.91344 3.58502L9.91231 3.58164L9.87069 3.48152L9.61419 2.86389C9.56386 2.74241 9.47864 2.63858 9.36931 2.56553C9.25997 2.49248 9.13143 2.45349 8.99994 2.45349C8.86844 2.45349 8.7399 2.49248 8.63057 2.56553C8.52123 2.63858 8.43602 2.74241 8.38569 2.86389L8.12919 3.48264L8.08756 3.58164ZM8.99994 5.78215L8.16069 7.79815C8.02157 8.13242 7.79296 8.42185 7.50001 8.63462C7.20705 8.84739 6.8611 8.97525 6.50019 9.00415L4.32331 9.17852L5.98156 10.5994C6.25679 10.835 6.46166 11.142 6.57361 11.4866C6.68556 11.8312 6.70025 12.2 6.61606 12.5524L6.10981 14.6764L7.97394 13.5379C8.28291 13.3492 8.63792 13.2494 8.99994 13.2494C9.36196 13.2494 9.71697 13.3492 10.0259 13.5379L11.8901 14.6764L11.3838 12.5513C11.2998 12.199 11.3147 11.8305 11.4266 11.4861C11.5385 11.1417 11.7433 10.8349 12.0183 10.5994L13.6766 9.17852L11.4997 9.00415C11.1388 8.97525 10.7928 8.84739 10.4999 8.63462C10.2069 8.42185 9.97831 8.13242 9.83919 7.79815L8.99994 5.78215Z" fill="#0A2043"/>
+                                            </svg>
+                                        </div>
+                                        <div class="ml-auto" >
+                                            <button class="slds-button" onclick={addToList} data-productid={lineItem.ProductDetails.productId}>Save for later</button>
+                                            <!--<lightning-button variant="base" label={labels.AddToList} title="save for later" class="header-sm" style="text-decoration:underline" onclick={addToList} data-productid={lineItem.ProductDetails.productId}>
+                                            </lightning-button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             
+                            <div class="">
+                                <div class="item-details-main">
+                                    <h3 class="item-name"
+                                        title={lineItem.ProductDetails.name}>
+                                        <a href={lineItem.productUrl} data-productid={lineItem.ProductDetails.productId}
+                                        tabindex="0" class="header-md">
+                                        {lineItem.ProductDetails.name}
+                                        </a>
+                                    <!-- <a href={lineItem.productUrl} data-productid={lineItem.ProductDetails.productId}
+                                        onclick={handleProductDetailNavigation} tabindex="0" class="soleil-bold">
+                                        {lineItem.ProductDetails.name}
+                                    </a> -->
+                                        <div class="sku">{labels.SKULabel}# {lineItem.ProductDetails.sku}</div>
+                                        <div if:true={lineItem.varaiationArray} class="header-sm" style="font-weight:100">{lineItem.varaiationArray}</div>
+                                        <div class="header-sm">{labels.Discount}: <lightning-formatted-number format-style="currency" currency-code={currencyCode}
+                                            class="header-sm"
+                                            style="font-weight:100"
+                                            currency-display-as="symbol" maximum-fraction-digits="2"
+                                            value={lineItem.data.totalAdjustmentAmount}>
+                                            </lightning-formatted-number>
+                                        </div>
+                                        <div if:true={lineItem.data.inStock} class="slds-p-bottom_small">
+                                            <lightning-icon
+                                            icon-name="utility:check"
+                                            class="iconcls"
+                                            size="x-small">
+                                            </lightning-icon>
+                                            <span class="slds-p-horizontal_small instocklabel soleil">{labels.InstockLabel}</span>
+                                        </div>
+                                        <div if:false={lineItem.data.inStock} class="slds-p-bottom_small">
+                                            <lightning-icon
+                                                icon-name="utility:back"
+                                                size="x-small"
+                                                class="backiconcls">
+                                            </lightning-icon>
+                                            <span class="slds-p-horizontal_small backorderlabel soleil">{labels.BackOrder}</span>
+                                        </div>
+                                    <!-- <div if:true={lineItem.data.inStock} class=" item-inventory slds-p-top_medium description soleil">In Stock — Alt Shipping Message</div>
+                                    <div if:false={lineItem.data.inStock} class=" item-inventory slds-p-top_medium description soleil">In Stock — Alt Shipping Message</div> -->
+                                    </h3>
+                                </div>
+                                <div class="item-quantity-main">
+                                    <div if:false={lineItem.hidequantity} class="count-select-block slds-p-around_x-small">
+                                        <button
+                                            data-item-id={lineItem.id} 
+                                            onclick={subQuanity} 
+                                            class="block-btn minus" 
+                                            value={lineItem.quantity}>
+                                            &#8722;
+                                        </button>
+                                        <input type="tel" min="1" required
+                                            data-item-id={lineItem.id} 
+                                            id={lineItem.id}
+                                            onblur={handleQuantitySelectorBlur}
+                                            onclick={handleQuantitySelectorClick}
+                                            onkeyup={handleOnlyNaturalkeyup}  
+                                            onafterpaste={handleOnlyNaturalAfterPaste}
+                                            value={lineItem.quantity}
+                                            disabled={isDiscountApplied}>
+                                        <!-- onchange={quantityFieldValue}  -->
+                                        <button
+                                            data-item-id={lineItem.id}
+                                            onclick={addQty} 
+                                            class="block-btn plus" 
+                                            value={lineItem.quantity}>
+                                            +
+                                        </button>
+                                    </div>
+                                    <div if:false={lineItem.hidedelete}>
+                                        <button class="slds-button delete-btn slds-m-left_x-small" onclick={handleDeleteCartItem}
+                                        disabled={isCartDisabled} data-cartitemid={lineItem.id}>Delete</button>
+
+                                    <!-- <lightning-button variant="base" label={labels.Delete} title="Delete" 
+                                        onclick={handleDeleteCartItem} class="slds-m-left_x-small" 
+                                        disabled={isCartDisabled} data-cartitemid={lineItem.id}>
+                                    </lightning-button> -->
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-medium-size_2-of-12 slds-large-size_2-of-12">
+                            <div class="slds-text-align_right f-left ">
+                                <label class="only-mobile">Price</label>
+                                <div class="item-unitPrice">
+                                    <lightning-formatted-number 
+                                        format-style="currency" currency-code={currencyCode}
+                                        class="item-price cvalue"
+                                        currency-display-as="symbol" maximum-fraction-digits="2"
+                                        value={lineItem.salesPrice}>
+                                    </lightning-formatted-number>/{labels.item}                           
+                                </div>
+                            </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-medium-size_2-of-12 slds-large-size_2-of-12">
+                            <div class="slds-text-align_right">
+                                <label  class="only-mobile">{labels.TotalPrice}</label>
+                                <div class="item-totalPrice">
+                                    <lightning-formatted-number format-style="currency" currency-code={currencyCode}
+                                        class="item-price"
+                                        currency-display-as="symbol" maximum-fraction-digits="2"
+                                        value={lineItem.data.TotalPrice}>
+                                    </lightning-formatted-number>
+                                </div>
+                            </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="firstChild" style="display:none">
+                    <figure class="itemImage">
+                        <a tabindex="-1" href={lineItem.productUrl}
+                            data-productid={lineItem.ProductDetails.productId}
+                            onclick={handleProductDetailNavigation}>
+                            <img src={lineItem.productImageUrl} alt={lineItem.productImageAlternativeText}
+                                data-productid={lineItem.ProductDetails.productId} />
+                        </a>
+                    </figure>
+                    <div class="header-sm" style="text-decoration:underline">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.08756 3.58164L8.08644 3.58502L6.60256 7.15127C6.58274 7.19886 6.55022 7.24008 6.50856 7.27043C6.46689 7.30079 6.41769 7.31911 6.36631 7.3234L2.51544 7.63165H2.51206L2.40519 7.64065L1.73806 7.69464C1.60707 7.70498 1.48207 7.7539 1.37886 7.83523C1.27565 7.91656 1.19885 8.02665 1.15816 8.1516C1.11747 8.27655 1.11473 8.41075 1.15026 8.53726C1.18579 8.66376 1.25802 8.77691 1.35781 8.8624L1.86631 9.29777L1.94844 9.36752L1.95069 9.36977L4.88469 11.883C4.9237 11.9167 4.95272 11.9604 4.96859 12.0094C4.98446 12.0584 4.98657 12.1108 4.97469 12.1609L4.07919 15.9184L4.07806 15.9218L4.05331 16.0264L3.89806 16.6778C3.86772 16.8055 3.87587 16.9393 3.92147 17.0624C3.96708 17.1855 4.04811 17.2924 4.15434 17.3695C4.26058 17.4466 4.38727 17.4906 4.51844 17.4958C4.64961 17.501 4.7794 17.4673 4.89144 17.3989L5.46181 17.0501L5.55406 16.9939L5.55744 16.9928L8.85369 14.979C8.89775 14.9522 8.94835 14.938 8.99994 14.938C9.05153 14.938 9.10212 14.9522 9.14619 14.979L12.4424 16.9928L12.4458 16.995L12.5381 17.0513L13.1084 17.4C13.2206 17.4686 13.3505 17.5024 13.4818 17.4971C13.6131 17.4919 13.7399 17.4478 13.8462 17.3705C13.9525 17.2932 14.0336 17.1862 14.079 17.0629C14.1245 16.9396 14.1325 16.8056 14.1018 16.6778L13.9466 16.0264L13.9218 15.9218V15.9184L13.0252 12.1609C13.0133 12.1108 13.0154 12.0584 13.0313 12.0094C13.0472 11.9604 13.0762 11.9167 13.1152 11.883L16.0492 9.36977L16.0514 9.36752L16.1336 9.29777L16.6421 8.8624C16.7419 8.77691 16.8141 8.66376 16.8496 8.53726C16.8852 8.41075 16.8824 8.27655 16.8417 8.1516C16.801 8.02665 16.7242 7.91656 16.621 7.83523C16.5178 7.7539 16.3928 7.70498 16.2618 7.69464L15.5947 7.64065L15.4878 7.63165H15.4844L11.6347 7.3234C11.5831 7.31931 11.5337 7.30108 11.4918 7.27071C11.4499 7.24035 11.4172 7.19902 11.3973 7.15127L9.91344 3.58502L9.91231 3.58164L9.87069 3.48152L9.61419 2.86389C9.56386 2.74241 9.47864 2.63858 9.36931 2.56553C9.25997 2.49248 9.13143 2.45349 8.99994 2.45349C8.86844 2.45349 8.7399 2.49248 8.63057 2.56553C8.52123 2.63858 8.43602 2.74241 8.38569 2.86389L8.12919 3.48264L8.08756 3.58164ZM8.99994 5.78215L8.16069 7.79815C8.02157 8.13242 7.79296 8.42185 7.50001 8.63462C7.20705 8.84739 6.8611 8.97525 6.50019 9.00415L4.32331 9.17852L5.98156 10.5994C6.25679 10.835 6.46166 11.142 6.57361 11.4866C6.68556 11.8312 6.70025 12.2 6.61606 12.5524L6.10981 14.6764L7.97394 13.5379C8.28291 13.3492 8.63792 13.2494 8.99994 13.2494C9.36196 13.2494 9.71697 13.3492 10.0259 13.5379L11.8901 14.6764L11.3838 12.5513C11.2998 12.199 11.3147 11.8305 11.4266 11.4861C11.5385 11.1417 11.7433 10.8349 12.0183 10.5994L13.6766 9.17852L11.4997 9.00415C11.1388 8.97525 10.7928 8.84739 10.4999 8.63462C10.2069 8.42185 9.97831 8.13242 9.83919 7.79815L8.99994 5.78215Z" fill="#0A2043"/>
+                        </svg>
+                            <lightning-button variant="base" label={labels.AddToList} title="save for later" class="header-sm" style="text-decoration:underline" onclick={addToList} data-productid={lineItem.ProductDetails.productId}>
+                        </lightning-button>
+                    </div>
+                </div>  
+                <div class="secondChild"  style="display:none">
+                    <div class="item-details-main">
+                        <h3 class="item-name"
+                            title={lineItem.ProductDetails.name}>
+                            <a href={lineItem.productUrl} data-productid={lineItem.ProductDetails.productId}
+                                tabindex="0" class="header-md">
+                                {lineItem.ProductDetails.name}
+                            </a>
+                            <!-- <a href={lineItem.productUrl} data-productid={lineItem.ProductDetails.productId}
+                                onclick={handleProductDetailNavigation} tabindex="0" class="soleil-bold">
+                                {lineItem.ProductDetails.name}
+                            </a> -->
+                            <div class="sku">{labels.SKULabel}# {lineItem.ProductDetails.sku}</div>
+                            <div if:true={lineItem.varaiationArray} class="header-sm" style="font-weight:100">{lineItem.varaiationArray}</div>
+                            <div class="header-sm">{labels.Discount}: <lightning-formatted-number format-style="currency" currency-code={currencyCode}
+                                    class="header-sm"
+                                    style="font-weight:100"
+                                    currency-display-as="symbol" maximum-fraction-digits="2"
+                                    value={lineItem.data.totalAdjustmentAmount}>
+                                </lightning-formatted-number>
+                            </div>
+                            <div if:true={lineItem.data.inStock} class="slds-p-bottom_small">
+                                <lightning-icon
+                                    icon-name="utility:check"
+                                    class="iconcls"
+                                    size="x-small"
+                                ></lightning-icon>
+                                <span class="slds-p-horizontal_small instocklabel soleil">{labels.InstockLabel}</span>
+                            </div>
+                            <div if:false={lineItem.data.inStock} class="slds-p-bottom_small">
+                                <lightning-icon
+                                    icon-name="utility:back"
+                                    size="x-small"
+                                    class="backiconcls"
+                                    
+                                ></lightning-icon>
+                                <span class="slds-p-horizontal_small backorderlabel soleil">{labels.BackOrder}</span>
+                            </div>
+                            <!-- <div if:true={lineItem.data.inStock} class=" item-inventory slds-p-top_medium description soleil">In Stock — Alt Shipping Message</div>
+                            <div if:false={lineItem.data.inStock} class=" item-inventory slds-p-top_medium description soleil">In Stock — Alt Shipping Message</div> -->
+                        </h3>
+                        
+                    </div>
+                    <div if:false={lineItem.hidequantity} class="item-quantity-main">
+                        <div class="count-select-block slds-p-around_x-small">
+                            <button
+                                data-item-id={lineItem.id} 
+                                onclick={subQuanity} 
+                                class="block-btn minus" 
+                                value={lineItem.quantity}>
+                                &#8722;
+                            </button>
+                            <input type="tel" min="1" required
+                                data-item-id={lineItem.id} 
+                                id={lineItem.id}
+                                onblur={handleQuantitySelectorBlur}
+                                onclick={handleQuantitySelectorClick}
+                                onkeyup={handleOnlyNaturalkeyup}  
+                                onafterpaste={handleOnlyNaturalAfterPaste}
+                                value={lineItem.quantity}
+                                disabled={isDiscountApplied}>
+                                <!-- onchange={quantityFieldValue}  -->
+                            <button
+                                data-item-id={lineItem.id}
+                                onclick={addQty} 
+                                class="block-btn plus" 
+                                value={lineItem.quantity}>
+                                +</button>
+                        </div>
+                        <lightning-button variant="base" label={labels.Delete} title="Delete" 
+                            onclick={handleDeleteCartItem} class="slds-m-left_x-small" 
+                            disabled={isCartDisabled} data-cartitemid={lineItem.id}>
+                        </lightning-button>
+                    </div>
+                </div>
+                <div class="thirdChild"  style="display:none">
+                    <div class="item-unitPrice">
+                        <lightning-formatted-number 
+                                    format-style="currency" currency-code={currencyCode}
+                                    class="item-price cvalue"
+                                    currency-display-as="symbol" maximum-fraction-digits="2"
+                                    value={lineItem.salesPrice}>
+                        </lightning-formatted-number>/{labels.item}
+                    </div>
+ 
+                </div>
+                <div class="thirdChild"  style="display:none">
+                    <div class="item-totalPrice">
+                        <lightning-formatted-number format-style="currency" currency-code={currencyCode}
+                                        class="item-price cvalue"
+                                        currency-display-as="symbol" maximum-fraction-digits="2"
+                                        value={lineItem.data.TotalPrice}>
+                        </lightning-formatted-number>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class=" slds-card__header slds-p-around_small slds-p-left_medium slds-p-right_medium" key={lineItem.id}>
+                <li key={lineItem.id} class="cart-item slds-p-vertical_medium slds-grid slds-gutters">
+                    <figure class="slds-col slds-size_1-of-1 slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_3-of-12">
+                        <a tabindex="-1" href={lineItem.productUrl}
+                            data-productid={lineItem.ProductDetails.productId}
+                            onclick={handleProductDetailNavigation}>
+                            <img src={lineItem.productImageUrl} alt={lineItem.productImageAlternativeText}
+                                data-productid={lineItem.ProductDetails.productId} />
+                        </a>
+                    </figure>
+                    <div class="details slds-col slds-size_1-of-1 slds-small-size_10-of-12 slds-medium-size_10-of-12 slds-large-size_7-of-12">
+                        <h3 class="item-name"
+                            title={lineItem.ProductDetails.name}>
+                            <a href={lineItem.productUrl} data-productid={lineItem.ProductDetails.productId}
+                                onclick={handleProductDetailNavigation} tabindex="0" class="soleil-bold">--
+                                {lineItem.ProductDetails.name}
+                            </a>
+                            <div class="slds-p-top_medium description soleil">SKU# {lineItem.ProductDetails.sku}</div>
+                            <div class="slds-p-top_medium description soleil">Length: 8.5mm(L), Diameter: 4.0mm(D)</div>
+                            <div class="slds-p-top_medium description soleil">Discount: <lightning-formatted-number format-style="currency" currency-code={currencyCode}
+                                    class="negotiated-price soleil-bold"
+                                    currency-display-as="symbol" maximum-fraction-digits="2"
+                                    value={lineItem.data.totalAdjustmentAmount}>
+                                </lightning-formatted-number>
+                            </div>
+                        </h3>
+                        <div class="price ">
+                            <lightning-formatted-number 
+                                    format-style="currency" currency-code={currencyCode}
+                                    class="negotiated-price slds-p-around_large soleil-bold"
+                                    currency-display-as="symbol" maximum-fraction-digits="2"
+                                    value={lineItem.salesPrice}>
+                            </lightning-formatted-number>
+
+                            <lightning-formatted-number format-style="currency" currency-code={currencyCode}
+                                        class="negotiated-price slds-p-around_large soleil-bold"
+                                        currency-display-as="symbol" maximum-fraction-digits="2"
+                                        value={lineItem.data.TotalPrice}>
+                                    </lightning-formatted-number>
+                        </div>
+                        <div class="line-item-properties">
+
+                            <div class="quantity-price-remove">
+                                <div class="quantity-selector slds-grid slds-grid_vertical-align-center slds-text-title_caps">
+                                    <template if:false={lineItem.discountPercent}>
+                                    <div class="count-select-block slds-p-around_x-small">
+                                
+                                        <button
+                                            data-item-id={lineItem.id} 
+                                            onclick={subQuanity} 
+                                            class="block-btn minus" 
+                                            value={lineItem.quantity}>
+                                            &#8722;
+                                        </button>
+                                        <input type="tel" min="1" required
+                                            data-item-id={lineItem.id} 
+                                            id={lineItem.id}
+                                            onblur={handleQuantitySelectorBlur}
+                                            onclick={handleQuantitySelectorClick}
+                                            onkeyup={handleOnlyNaturalkeyup}  
+                                            onafterpaste={handleOnlyNaturalAfterPaste}
+                                            value={lineItem.quantity}
+                                            disabled={isDiscountApplied}>
+                                        <button
+                                            data-item-id={lineItem.id}
+                                            onclick={addQty} 
+                                            class="block-btn plus" 
+                                            value={lineItem.quantity}>
+                                            +</button>
+                                        
+                                    </div>
+                                </template>
+
+                                </div>
+                                
+                            </div>  
+                        </div>
+                        <div class="slds-p-vertical_medium description soleil-bold">
+                            <div>
+                                {lineItem.ProductDetails.fields.Description}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-12 slds-medium-size_1-of-12 slds-large-size_1-of-12 slds-p-around_xx-small slds-p-top_small remove">
+                        <lightning-button variant="base" label="Delete" title="Delete" 
+                            onclick={handleDeleteCartItem} class="slds-m-left_x-small" 
+                            disabled={isCartDisabled} data-cartitemid={lineItem.id}>
+                        </lightning-button>
+                    </div>
+                </li>
+            </div> -->
+        </template>
+    </div>
+    </ul>
+
+    <template if:true={discountErrorModal}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-02" aria-modal="true"
+            aria-describedby="modal-content-id-2" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close" onclick={closeModal}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
+                            size="small"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                </header>
+
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id2">
+                    {label.discountedCartChangeMessage}
+                </div>
+
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral address-ticket-cancelbtn"
+                        onclick={closeModal}>Ok</button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    <c-b2b-show-toast-message>
+    </c-b2b-show-toast-message>
+</template>

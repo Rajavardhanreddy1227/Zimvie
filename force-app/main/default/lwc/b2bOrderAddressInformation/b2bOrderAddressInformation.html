@@ -1,0 +1,60 @@
+<template>
+    <div class="slds-grid slds-wrap slds-p-top--xx-large">
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-p-around_medium">
+            <article class="slds-card slds-p-around_medium borderClass">
+                <div class="slds-card__body slds-card__body_inner">
+                    <div class="slds-m-vertical_x-small">
+                        <h1 class="slds-text-heading_small fontbold">
+                            {labels.BillingAddress}
+                        </h1>
+                        <p if:true={billingAddress.Street} class="slds-p-top_small">
+                            {billingAddress.Street}, {billingAddress.City} <br>
+                            {billingAddress.State}, {billingAddress.PostalCode}, {billingAddress.Country} <br>
+                            <!--{billingAddress.Country} <br>-->
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-p-around_medium">
+            <article class="slds-card slds-p-around_medium borderClass">
+                <div class="slds-card__body slds-card__body_inner">
+                    <div class="slds-m-vertical_x-small">
+                        <h1 class="slds-text-heading_small fontbold">
+                            {labels.ShippingAddress}
+                        </h1>
+                        <p if:true={shippingAddress} class="slds-p-top_small">
+                            {shippingAddress.Street}, {shippingAddress.City} <br>
+                            {shippingAddress.State}, {shippingAddress.PostalCode}, {shippingAddress.Country}  <br>
+                            <!--{shippingAddress.Country} <br>-->
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-p-around_medium">
+            <article class="slds-card slds-p-around_medium borderClass">
+                <div class="slds-card__body slds-card__body_inner">
+                    <div class="slds-m-vertical_x-small">
+                        <p >
+                            <span class="slds-text-heading_small fontbold ">{labels.ShippingMethod}:</span>&nbsp;<span class="slds-p-top_small" if:true={shippingMethodName}>{shippingMethodName}</span>
+                        </p>
+                        <!--<h1 class="slds-text-heading_small fontbold">
+                            {labels.ShippingMethod}
+                        </h1>
+                        <p class="slds-p-top_small">
+                            <span if:true={shippingMethodName}>{shippingMethodName}</span>
+                        </p>-->
+                        <p class="slds-p-top_small">
+                            <span class="slds-text-heading_small fontbold ">{labels.PaymentMethod}:</span> &nbsp;<span if:true={PoNumber}>{labels.Terms}</span>
+                            <span if:true={DisplayCardNumber}>{labels.B2B_Checkout_CreditCard}</span>
+                        </p>
+                        <p class="slds-p-top_small">
+                            <span if:true={DisplayCardNumber} class="slds-text-heading_small fontbold">{labels.CardNumber}:</span> &nbsp;<span if:true={DisplayCardNumber}>{DisplayCardNumber}</span> 
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</template>

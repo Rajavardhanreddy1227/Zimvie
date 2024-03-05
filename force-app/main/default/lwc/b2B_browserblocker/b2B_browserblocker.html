@@ -1,0 +1,14 @@
+<template>
+  <div class="container">
+    <template if:true={isUnsupportedBrowser}>
+      <h1>Unsupported Browser</h1>
+      <p>We're sorry, but this application does not support Internet Explorer.</p>
+      <p>Please switch to a modern browser such as Chrome, Safari, Firefox, or Edge for optimal performance.</p>
+    </template>
+    <template if:false={isUnsupportedBrowser}>
+      <!-- Your component content goes here -->
+      <h1>Welcome to the LWR Runtime!</h1>
+      <p>This component is compatible with modern browsers.</p>
+    </template>
+  </div>
+</template>

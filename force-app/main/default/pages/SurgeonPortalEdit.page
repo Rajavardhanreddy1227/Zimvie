@@ -1,0 +1,288 @@
+<apex:page standardController="GPL_Profile__c" extensions="SurgeonPortalExtension" id="SurgeonPortalEdit" title="Surgeon Portal Form" sidebar="false">
+
+<head>
+<style type="text/css">
+/*body {background-image:url("{!URLFOR($Resource.LoginPageBackGround2)}");}*/
+/*body {background:url(http://www.zimmer.com/images/common/bg-body.jpg) 0% 0% repeat-x;font-family:"ff-meta-web-pro",arial,sans-serif;}*/
+body {background:url("{!URLFOR($Resource.bg_body)}") 0% 0% repeat-x;font-family:"ff-meta-web-pro",arial,sans-serif;}
+#phHeaderLogoImage{padding:24px 23px 15px 5px;}
+#tabsNewBar{width:1000px;margin:0 auto;z-index:1000!important;}
+.tabNavigation{background:none;padding-bottom:0;padding-left:0!important}
+#tabBar td{background:none;border:none!important;}
+#tabBar div{
+    /*background:url("http://dev2-www.web.zimmer.com/images/common/tab_white2.png") no-repeat scroll 100% 100% transparent;*/
+    background:url("{!URLFOR($Resource.tab_white2)}") no-repeat scroll 100% 100% transparent;
+    padding:10px 20px;
+    width:100px;
+    margin-bottom:-1px;
+    position:relative;
+    z-index:1;            
+}
+#tabBar div a{color:#0064A6;font-size:13px;font-weight:bold;text-decoration:none;}
+#home_Tab{
+    /*background:url("http://dev2-www.web.zimmer.com/images/common/tab_orange2.png") no-repeat scroll 100% 100% transparent!important;*/
+    background:url("{!URLFOR($Resource.tab_orange2)}") no-repeat scroll 100% 100% transparent!important;
+}
+#home_Tab a{color:#FFFFFF!important;font-size:13px;font-weight:bold;text-decoration:none;}   
+.bodyDiv{width:1000px;margin:0 auto;min-height:600px;background-color:#FFFFFF;border:1px solid #EF8F00;padding-top:25px;}   
+#SurgeonPortalEdit\3ArequestForm\3Apb .pbHeader{display:none;}
+#SurgeonPortalEdit\3ArequestForm\3Aj_id89 .pbHeader{background:none;}
+.bPageBlock .labelCol, .bPageBlock .dataCol{font-family:Arial,Helvetica,sans-serif!important;color:#333333;font-size:11px!important;}
+.bPageBlock .labelCol {color:#006BB5!important;}
+.pbBody a{color:#006BB5;}
+.pbBody a:hover{color:#009DDC;}
+tr.headerRow th div{color:#006BB5;}
+.bPageBlock, .individualPalette .bPageBlock{border:none!important;border-bottom:1px solid #EF8F00!important;margin-bottom:50px;}
+.pbSubheader{background:none!important;color:#009CDB!important;font-size:16px;font-weight:bold;font-family:Arial,Helvetica,sans-serif!important;}
+.pbTitle{width:0!important;}
+.pbButton, .pbButtonb{text-align:center;}
+/*.btn{background:url("http://www.zimmer.com/images/common/btn-readmore-4.png") no-repeat scroll 0 0 transparent;height:25px!important;line-height:23px;border:none;padding:0 5px 0 15px;}*/
+.btn{background:url("{!URLFOR($Resource.btn_readmore_4)}") no-repeat scroll 0 0 transparent;height:25px!important;line-height:23px;border:none;padding:0 5px 0 15px;}
+.btn:hover{background-position:0 -31px;color:#FFFFFF;}
+.bPageFooter{border:0;}
+.bPageFooter{
+    /*background:url("http://www.zimmer.com/images/common/bg-bottom-nav-left.png") no-repeat scroll transparent;*/
+    background:url("{!URLFOR($Resource.bg_bottom_nav_left)}") no-repeat scroll transparent;
+    bottom:0;
+    height:35px;
+    position:fixed;
+    width:167px;
+    z-index:11000!important;
+    padding:0!important;
+    right:0;    
+}
+.bPageFooter .body{
+    /*background:url("http://www.zimmer.com/images/common/bg-bottom-nav-right.png") repeat scroll left top transparent;*/
+    background:url("{!URLFOR($Resource.bg_bottom_nav_right)}") repeat scroll left top transparent;
+    display:inline;
+    float:right;
+    height:35px;
+    line-height:35px;
+    z-index:2;
+    min-width:120px;
+    color:transparent;
+}
+.bPageFooter .body a{
+    /*background:url("http://www.zimmer.com/images/common/bg-line-1.gif") no-repeat scroll left center transparent;*/
+    background:url("{!URLFOR($Resource.bg_line_1)}") no-repeat scroll left center transparent;
+    float:left;
+    padding:0 9px;
+    position:relative;
+    z-index:1;
+    margin-left:0;
+    color:#009DDC;
+    font-size:12px;
+    text-decoration:none;
+    border:0 none;
+    font-weight:normal;
+    margin:0;    
+}
+.bPageFooter .body a:first-child{background:none repeat scroll 0 0 transparent;}
+.bPageFooter .body a:hover{color:#005D9E;}            
+</style>
+{!lt}!--[if IE 9]{!gt}<style>.bPageFooter{width:166px!important;}</style>{!lt}![endif]--{!gt}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script>$(function(){ $('div.body a:first-child')[0].nextSibling.nodeValue = '';$('div.body a').last().html('My Profile');$('#tabBar .last div a').html('My Profile');});</script>
+</head>
+
+<!-- <apex:sectionHeader title="My Profile"></apex:sectionHeader>  -->
+<apex:pageMessages escape="false"></apex:pageMessages>
+
+<apex:form id="requestForm">
+<apex:pageBlock mode="edit" id="pb">
+
+<apex:pageBlockSection columns="2" showHeader="true" collapsible="false" id="spheader">
+<apex:facet name="header">General Information</apex:facet>
+
+<apex:pageBlockSectionItem rendered="{!AND($Site.CurrentSiteURL!='' , GPL_Profile__c.Surgeon_Country__c!='AU')}">
+    <apex:outputLabel value="Image" style="font-weight:bold"/>
+    <img src="/sp/servlet/servlet.FileDownload?file={!GPL_Profile__c.PhotoId__c}" height="150" width="150"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem rendered="{!AND($Site.CurrentSiteURL ='', GPL_Profile__c.Surgeon_Country__c!='AU')}">
+    <apex:outputLabel value="Image" style="font-weight:bold"/>
+    <img src="/servlet/servlet.FileDownload?file={!GPL_Profile__c.PhotoId__c}" height="150" width="150"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Salutation" style="font-weight:bold"/>
+    <apex:outputField value="{!GPL_Profile__c.Salutation__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="First Name" style="font-weight:bold"/>
+    <apex:outputField value="{!GPL_Profile__c.FirstName__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Last Name" style="font-weight:bold"/>
+    <apex:outputField value="{!GPL_Profile__c.LastName__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Middle Name" style="font-weight:bold"/>
+    <!--<apex:inputField value="{!GPL_Profile__c.Middle_Name__c}"/>-->
+    <apex:outputField value="{!GPL_Profile__c.Middle_Name__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Suffix" style="font-weight:bold"/>
+    <apex:outputField value="{!GPL_Profile__c.Suffix__c}"/>
+</apex:pageBlockSectionItem>
+
+
+<apex:pageBlockSectionItem helpText="Preferred name replaces First Name (above) when displayed on the Physician Locator. First name is your Legal Name and can only be edited by contacting your sales representative." >
+    <apex:outputLabel value="Preferred Name" style="font-weight:bold"/>
+    <!--<apex:outputField value="{!GPL_Profile__c.PreferredFirstName__c}"/>-->
+    <apex:inputField value="{!GPL_Profile__c.PreferredName__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem rendered="{!AND($Site.CurrentSiteURL!='' , GPL_Profile__c.Surgeon_Country__c!='AU')}">
+    <apex:outputLabel value="Medical Devices (Product Specialities)" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Profile__c.Devices__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Medical School" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Profile__c.MedicalSchool__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Joint Specialities" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Profile__c.Specialties__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Residency" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Profile__c.Residency__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Procedures" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Profile__c.Procedures__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Fellowship" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Profile__c.Fellowship__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Languages" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Profile__c.Languages__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+</apex:pageBlockSectionItem>
+
+<!--
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Honors" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Profile__c.Honors__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Groups" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Profile__c.Groups__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Publications" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Profile__c.Publications__c}"/>
+</apex:pageBlockSectionItem>
+
+-->
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Facebook" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Profile__c.Facebook__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="LinkedIn" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Profile__c.LinkedIn__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Twitter" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Profile__c.Twitter__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="YouTube" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Profile__c.YouTube__c}"/>
+</apex:pageBlockSectionItem>
+
+</apex:pageBlockSection>
+
+<apex:pageBlockButtons >
+ 
+<apex:commandLink styleClass="btn" style="display:inline-block;height:16px;text-decoration:none;" value="Save" action="{!save}">
+    <apex:param name="returnURL" value="{!URLFor('/apex/SurgeonPortalView?id='+GPL_Profile__c.id)}"/>
+</apex:commandLink>
+<!--<apex:commandLink styleClass="btn" style="display:inline-block;height:16px;text-decoration:none;" value="Cancel" action="{!URLFor('/apex/SurgeonPortalView?id='+GPL_Profile__c.id)}"/>-->
+<apex:commandLink styleClass="btn" style="display:inline-block;height:16px;text-decoration:none;" value="Cancel" action="{!URLFor('/home/home.jsp')}"/>
+
+</apex:pageBlockButtons>
+
+</apex:pageBlock>
+
+<apex:pageBlock >
+<apex:pageBlockButtons location="top" >
+    <apex:commandLink styleClass="btn" style="display:inline-block;height:16px;text-decoration:none;" value="New Practice Location" action="{!newLocation}"/>
+</apex:pageBlockButtons>
+<apex:pageBlockSection showHeader="true" columns="1" collapsible="false">
+<apex:facet name="header">My Locations</apex:facet>
+<apex:outputLabel value="In order to display on zimmer.com surgeon locator, at least one practice location must exist. Please click the ‘New Practice Location’ button to add a location." rendered="{!(If((GPL_Profile__c.Location_Count__c=0),True,false))}" style="color:#0000A0" ></apex:outputLabel>
+<apex:pageBlockTable value="{!gplLocations}" var="location" rendered="{!(If((GPL_Profile__c.Location_Count__c>0),True,false))}">
+
+    <apex:column >
+        <apex:facet name="header" >Action</apex:facet>
+        <apex:outputLink value="{!'/apex/SurgeonPortalDetailEdit?id='+location.id}">Edit</apex:outputLink>   
+        <apex:outputPanel rendered="{!(If((GPL_Profile__c.Location_Count__c=1),false,true))}"> | <a href="javascript:if (window.confirm('Are you sure you want to delete this location?')) deleteLocation('{!location.Id}');" >Del</a></apex:outputPanel>
+          
+    </apex:column>
+    
+    <apex:column >
+        <apex:facet name="header">Name</apex:facet>
+        <apex:outputLink value="{!'/apex/SurgeonPortalDetailView?id='+location.id}">{!location.Name__c}</apex:outputLink>
+    </apex:column>
+    
+    <apex:column >
+        <apex:facet name="header">City</apex:facet>
+        <apex:outputField value="{!location.City__c}" />
+    </apex:column>
+    
+    <apex:column >
+        <apex:facet name="header">State</apex:facet>
+        <apex:outputField value="{!location.State__c}" />
+    </apex:column>
+    
+    <apex:column >
+        <apex:facet name="header">Postal Code</apex:facet>
+        <apex:outputField value="{!location.PostalCode__c}" />
+    </apex:column>
+    
+    <apex:column >
+        <apex:facet name="header">Country</apex:facet>
+        <apex:outputField value="{!location.Country__c}" />
+    </apex:column>
+    
+</apex:pageBlockTable>
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+
+<apex:actionFunction action="{!deleteLocation}" name="deleteLocation" oncomplete="window.location.reload( true );" >
+   <apex:param name="locationid" value="" assignTo="{!SelectedLocationId}"/>
+</apex:actionFunction>
+
+</apex:form>
+</apex:page>

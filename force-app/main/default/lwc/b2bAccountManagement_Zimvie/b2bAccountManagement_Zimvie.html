@@ -1,0 +1,85 @@
+<template>
+   <!--lightning-tabset>
+      <lightning-tab label="Address">
+         <c-b2b-account-management-address_-zimvie acc-id={effectiveAccountId}></c-b2b-account-management-address_-zimvie>
+      </lightning-tab>
+      <lightning-tab label="Orders">
+         <div class="slds-grid slds-gutters slds-wrap">
+            <template for:each={orderDetails} for:item="order">
+               <div key={order.Id} class="slds-col slds-size_1-of-3 slds-p-around_medium slds-m-around_medium" style="border-style: ridge;;background:#eaeaea;">
+                    Order Date:<lightning-formatted-date-time value={order.OrderedDate}></lightning-formatted-date-time><br/>
+                     Account: {order.Account.Name}<br/>
+                     Placed By: {order.CreatedBy.Name}<br/>
+                     Status: {order.Status}
+                 
+               </div>
+               
+            </template>
+            <div class=" slds-box slds-grid slds-grid_align-spread slds-align-middle slds-m-bottom_small">
+   <div class="commerce_my_account-order_order field-ctn commerce_my_account-orderLineItemFields_orderLineItemFields-host" data-cell-id="orderInfo" role="gridcell" tabindex="-1">
+      <div class="slds-grid slds-wrap">
+         <div class="slds-p-right_small slds-grid slds-wrap slds-m-vertical_xx-small three-column-layout">
+            <span class="slds-no-space" title="Order Number">
+               <span class="bold-name" aria-hidden="true">Order Number</span>
+               <lightning-formatted-rich-text class="slds-rich-text-editor__output" aria-hidden="true"><span>:&nbsp;</span></lightning-formatted-rich-text>
+            </span>
+            <div class="bold-name">
+               <div class="commerce_my_account-recordLink_recordLink-host"><a class="commerce_my_account-recordLink_recordLink" href="/Zimvie/OrderSummary/1Os8L000000GntWSAS" aria-label="">OIQLR-G6BIW-4Z5HB-W3UHY</a></div>
+            </div>
+         </div>
+         <div class="commerce_my_account-orderLineItemFields_orderLineItemFields slds-p-right_small slds-grid slds-wrap slds-m-vertical_xx-small three-column-layout">
+            <span class="commerce_my_account-orderLineItemFields_orderLineItemFields slds-no-space" title="Ordered Date">
+               <span class="commerce_my_account-orderLineItemFields_orderLineItemFields" aria-hidden="true">Ordered Date</span>
+               <lightning-formatted-rich-text class="commerce_my_account-orderLineItemFields_orderLineItemFields slds-rich-text-editor__output" aria-hidden="true"><span>:&nbsp;</span></lightning-formatted-rich-text>
+            </span>
+            <div class="commerce_my_account-orderLineItemFields_orderLineItemFields">
+               <lightning-formatted-date-time>6/6/2023, 10:21 AM</lightning-formatted-date-time>
+            </div>
+         </div>
+         <div class="commerce_my_account-orderLineItemFields_orderLineItemFields slds-p-right_small slds-grid slds-wrap slds-m-vertical_xx-small three-column-layout">
+            <span class="commerce_my_account-orderLineItemFields_orderLineItemFields slds-no-space" title="Status">
+               <span class="commerce_my_account-orderLineItemFields_orderLineItemFields" aria-hidden="true">Status</span>
+               <lightning-formatted-rich-text class="commerce_my_account-orderLineItemFields_orderLineItemFields slds-rich-text-editor__output" aria-hidden="true"><span>:&nbsp;</span></lightning-formatted-rich-text>
+            </span>
+            <div class="commerce_my_account-orderLineItemFields_orderLineItemFields">
+               <lightning-formatted-rich-text class="slds-rich-text-editor__output"><span>Created</span></lightning-formatted-rich-text>
+            </div>
+         </div>
+         <div class=" slds-p-right_small slds-grid slds-wrap slds-m-vertical_xx-small three-column-layout">
+            <span class="slds-no-space" title="Total">
+               <span class="" aria-hidden="true">Total</span>
+               <lightning-formatted-rich-text class=" slds-rich-text-editor__output" aria-hidden="true"><span>:&nbsp;</span></lightning-formatted-rich-text>
+            </span>
+            <div class="">
+               <div>$552.95</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="commerce_my_account-order_order slds-grid small-region slds-align-middle width_20" data-cell-id="actions" role="gridcell" tabindex="-1">
+      <div class="slds-m-bottom_medium commerce_my_account-orderLineItemActions_orderLineItemActions-host"><button class="commerce_my_account-orderLineItemActions_orderLineItemActions slds-button slds-button_neutral slds-button_stretch" data-event="reorder" aria-label="Start reorder for OIQLR-G6BIW-4Z5HB-W3UHY.">Start Reorder</button></div>
+      <div class="slds-align_absolute-center commerce_my_account-recordLink_recordLink-host"><a class="commerce_my_account-recordLink_recordLink" href="/Zimvie/OrderSummary/1Os8L000000GntWSAS" aria-label="View details of OIQLR-G6BIW-4Z5HB-W3UHY.">View Details</a></div>
+   </div>
+</div>
+         </div>
+      </lightning-tab>
+      <lightning-tab label="Invoices"-->
+      <c-list-of-records-to-update object-api-name="Invoice__c" 
+         -data-table-column-response={invColumns} 
+         fields-name="Name,Invoice_Date__c,Due_Date__c,Related_To_Account__r.Name,Status__c,Bill_To_Contact__r.Name,Description__c,Total_Tax__c,Total_Amount_With_Tax__c,Type__c,Balance__c,Terms__c,Days_Late__c,Original__c,Sequence__c,PO_Number__c,Number_of_Installments__c" 
+         action-name={labels.PayNow} 
+         onactionclicked={invoiceAction}
+         show-export-button=true
+         export-button-name = {labels.Export} 
+         accid ={effectiveAccountId}
+         >
+      </c-list-of-records-to-update>
+      <!--/lightning-tab>
+      <lightning-tab label="Loyalty">
+         <c-b2-b-loyalty acc-id={effectiveAccountId} is-guest={isGuestUser}></c-b2-b-loyalty>
+      </lightning-tab>
+      <lightning-tab label="Wallet">
+         Wallet Content !
+      </lightning-tab>
+   </lightning-tabset-->
+</template>

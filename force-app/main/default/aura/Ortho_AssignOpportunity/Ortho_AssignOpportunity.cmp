@@ -1,0 +1,4 @@
+<aura:component implements="force:appHostable,force:hasRecordId,flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="showCancelButton" type="boolean" default="false" />
+    <c:orthoReassignOpportunity recordId="{!v.recordId}" showCancelButton="{!v.showCancelButton}"/>
+</aura:component>

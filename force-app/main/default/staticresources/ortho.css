@@ -1,0 +1,41 @@
+.ortho-tabs ul.slds-tabs_default__nav{
+  display: flex;
+  padding: .5rem 1.2rem;
+  justify-content: space-between;
+  align-items: stretch;
+  font-size: small;
+}
+.slds-post__footer-actions-list{
+  display:none;
+}
+.forceChatterFeedCommentInput{
+  display: none;
+}
+.ortho-tabs li.slds-tabs_default__item{
+  flex: 0 1 auto;
+  margin-right: -10px;
+  padding-right: 18px;
+}
+
+.ortho-tabs 
+.slds-tabs_default__overflow-button{
+  display: none;
+}
+
+.ortho-tabs
+.slds-tabs_default__item:after{
+  margin-bottom: -.5rem;
+  padding-top: 0.3rem;
+}
+
+.cuf-commentInput{
+  display: none;
+}
+
+.forceChatterToggleLike{
+  display: none;
+}
+
+header.flexipageHeader{
+  display:none;
+}

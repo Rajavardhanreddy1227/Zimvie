@@ -1,0 +1,17 @@
+<apex:page sidebar="false">   
+  <style>
+  body {background:url(http://www.zimmer.com/images/common/bg-body.jpg) 0% 0% repeat-x;font-family:"ff-meta-web-pro",arial,sans-serif;}
+  #phHeaderLogoImage{padding:24px 23px 15px 5px;}
+  .tabsNewBar{display:none;}
+  .bodyDiv{width:700px;margin:67px auto 0 auto;min-height:173px;background-color:#FFFFFF;border:1px solid #EF8F00;padding-top:25px;}
+  .bodyDiv .noSidebarCell {padding-top:60px!important;padding-left:10px;text-align:left!important;} 
+  .bodyDiv .noSidebarCell h1 {color:#006BB5;font-size:16px;font-family:Arial,Helvetica,sans-serif;font-weight:bold;}
+  .bPageFooter{border:0;}
+  .bPageFooter{background:url("http://www.zimmer.com/images/common/bg-bottom-nav-left.png") no-repeat scroll transparent;bottom:0;height:35px;position:fixed;width:145px;z-index:11000!important;padding:0!important;right:0;}
+  .bPageFooter .body{background:url("http://www.zimmer.com/images/common/bg-bottom-nav-right.png") repeat scroll left top transparent;display:inline;float:right;height:35px;line-height:35px;z-index:2;min-width:100px;color:transparent;}
+  .bPageFooter .body a{background:url("http://www.zimmer.com/images/common/bg-line-1.gif") no-repeat scroll left center transparent;float:left;padding:0 9px;position:relative;z-index:1;margin-left:0;color:#009DDC;font-size:12px;text-decoration:none;border:0 none;font-weight:normal;margin:0;}
+  .bPageFooter .body a:first-child{background:none repeat scroll 0 0 transparent;}
+  .bPageFooter .body a:hover{color:#005D9E;}  
+  </style>   
+   <h1>An error has occurred while loading your profile. Please contact your administrator.</h1>   
+</apex:page>

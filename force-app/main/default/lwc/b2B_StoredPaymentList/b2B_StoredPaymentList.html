@@ -1,0 +1,56 @@
+<!--
+  @description       : 
+  @author            : asood@rafter.one
+  @group             : 
+  @last modified on  : 08-24-2023
+  @last modified by  : asood@rafter.one
+-->
+<template>
+  <template if:false={hideAllWallets}>
+    <div if:true={isLoadedMain} class="slds-is-relative">
+      <lightning-spinner
+        class="spins"
+        alternative-text="Loading"
+        size="large"
+      ></lightning-spinner>
+    </div>
+    <template for:each={storedWallets} for:item="StoredWallet">
+        <div key={StoredWallet.Id} class="color-blue">
+          <template if:true={StoredWallet.IsDefault__c}>
+            <input
+                class="singleRadio"
+                type="radio"
+                id={StoredWallet.Id}
+                data-id={StoredWallet.Id}
+                onchange={handleStorePaymentSelection}
+                value={StoredWallet.Id}
+                name="payment-type-option"
+                checked
+              />
+              <label for={StoredWallet.Id} class="slds-radio__label slds-p-horizontal_x-small">
+                <span class="slds-form-element__label slds-text-title_bold"><p>{StoredWallet.Card_Type__c} - {labels.card_ending_no} {StoredWallet.Display_Card_Number__c}</p></span>
+                  <template if:true={StoredWallet.IsDefault__c}>
+                    <span class="slds-p-horizontal_x-small">
+                      {labels.Default}
+                    </span>
+                </template>
+              </label>
+          </template>  
+          <template if:false={StoredWallet.IsDefault__c}>
+            <input
+                class="singleRadio"
+                type="radio"
+                id={StoredWallet.Id}
+                data-id={StoredWallet.Id}
+                onchange={handleStorePaymentSelection}
+                value={StoredWallet.Id}
+                name="payment-type-option"
+              />
+              <label for={StoredWallet.Id} class="slds-radio__label slds-p-horizontal_x-small">
+                <span class="slds-form-element__label slds-text-title_bold"><p>{StoredWallet.Card_Type__c} - {labels.card_ending_no} {StoredWallet.Display_Card_Number__c}</p></span>
+              </label>
+          </template>
+          </div>
+      </template>
+    </template>
+</template>

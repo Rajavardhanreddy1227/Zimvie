@@ -1,0 +1,52 @@
+<template>
+  <div if:false={showTeamSelection}>
+    <lightning-card>
+      <div data-id="topSpinner" class="slds-align_absolute-center slds-m-top_medium">
+        <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+      </div>
+    </lightning-card>
+  </div>
+  <div if:true={showTeamSelection}>
+    <lightning-card>
+      <h3 slot="title">
+        <lightning-icon icon-name="action:new_group" size="x-small"></lightning-icon>
+        &nbsp;&nbsp;{label.selectTeamLabel}
+      </h3>
+      <div slot="footer">
+        <div data-id="submitBlock" class="slds-align_absolute-center">
+          <template if:true={showButton}>
+            <lightning-button if:true={showCancelButton} label={label.cancelButton} title="Cancel" onclick={onCancelClick} class="slds-button">
+            </lightning-button>
+          </template>
+          <template if:true={isSuccess}>
+            <lightning-button variant="brand" label={label.submitButton} title="Submit" onclick={onSubmitClick} class="slds-button">
+            </lightning-button>
+          </template>
+        </div>
+      </div>
+      <p class="slds-p-horizontal_small address-box">
+        <template if:true={isSuccess}>
+          <lightning-radio-group data-id="ipField" name="radioGroup" label="" options={options} value={value}
+            type="radio">
+          </lightning-radio-group>
+        </template>
+        <template if:true={isError}>
+          <div class="error-box slds-notify_container slds-notify_container--inline">
+            <div class="slds-notify slds-notify--alert slds-theme--error slds-theme--alert-texture slds-banner"
+              role="alert">
+              <span class="slds-assistive-text">Error</span>
+              <h2>
+                <svg aria-hidden="true" class="slds-icon icon-text-email slds-icon--x-small slds-m-right--x-small">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+                </svg>{errorMessage}
+              </h2>
+            </div>
+          </div>
+        </template>
+      </p>
+      <div data-id="spinnerBlock" class="slds-align_absolute-center slds-m-top_medium slds-hide">
+        <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+      </div>
+    </lightning-card>
+  </div>
+</template>

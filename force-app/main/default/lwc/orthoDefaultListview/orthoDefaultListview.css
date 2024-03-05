@@ -1,0 +1,11 @@
+.box {
+  height: 100vh; 
+  overflow-y: hidden;
+}
+
+.message {
+  margin-top: 7rem;
+}
+.orthoSpinner {
+  background-color: transparent;
+}

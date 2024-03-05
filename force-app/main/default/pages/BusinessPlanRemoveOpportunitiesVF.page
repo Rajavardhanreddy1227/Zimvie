@@ -1,0 +1,18 @@
+<apex:page controller="BusinessPlanRemoveOpportunities" lightningStylesheets="true">
+    <style type="text/css">
+        .container, .buttonsArea {
+            margin: 30px;
+        }
+
+        .buttonsArea.pbButton {
+            text-align: left;
+        }
+    </style>
+
+    <apex:form >
+        <apex:pageMessages />
+        <section class="buttonsArea pbButton">
+            <apex:commandButton action="{!upload}" value="update" />            
+        </section>        
+    </apex:form>
+</apex:page>

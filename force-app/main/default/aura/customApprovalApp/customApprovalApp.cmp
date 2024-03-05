@@ -1,0 +1,27 @@
+<aura:component controller="SubmitForApprovalGen" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="comment" type="String" default="" />
+    <aura:attribute name="loaded" type="Boolean" default="true" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:html tag="style">
+        .modal-footer, .THIS .slds-modal__footer {
+        display: none;
+        }
+    </aura:html> 
+    <div class="inputArea">
+        <lightning:textarea name="comment" label="Comments" value="{!v.comment}" placeholder="type here..." />
+    </div>
+    
+    <div class="Holder">
+        <div class="slds-text-align_center slds-p-top_small">
+            <aura:if isTrue="{! v.loaded }">
+                <lightning:button variant="brand" label="Submit" onclick="{!c.handleClick}" />
+                <aura:set attribute="else">
+                    <lightning:spinner alternativeText="Loading..." />
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,54 @@
+<template>
+  <lightning-modal-header label={labels.NewAddress}></lightning-modal-header>
+  <lightning-modal-body>
+    <div if:true={errors} class="slds-notify slds-notify_alert slds-alert_error">
+      {errors}
+    </div>
+    <lightning-messages> </lightning-messages>
+    <lightning-input-address
+      variant="label-hidden"
+      address-label={labels.Address}
+      street-label={labels.Street}
+      city-label={labels.City}
+      country-label={labels.Country}
+      province-label={labels.State}
+      postal-code-label={labels.PostalCode}
+      street={street}
+      city={city}
+      country={country}
+      province={state}
+      postal-code={postalcode}
+      address-lookup-label={labels.SearchAddress}
+      country-options={countries}
+      province-options={states}
+      show-address-lookup 
+      onchange={handleAddressChange}>
+    </lightning-input-address>
+    <lightning-input type="text" label={labels.Name} variant="label-stacked" onchange={handleChangeAddName}> </lightning-input>
+    <lightning-record-edit-form
+      object-api-name="ContactPointAddress"
+      onsubmit={handleSubmit}
+      onsuccess={handleSuccess}
+    >
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field field-name="AddressType" variant="label-stacked"> </lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field field-name="IsDefault" label={labels.Makethismydefaultaddress} value={address.isdefault} variant="label-stacked"> </lightning-input-field>
+        </div>
+      </div>
+      
+      
+      
+      <lightning-button
+          class="slds-m-around_small"
+          type="submit"
+          name="update"
+          label={labels.Save}
+          style="float:right;"
+      >
+      </lightning-button>
+    </lightning-record-edit-form>
+  </lightning-modal-body>
+</template>

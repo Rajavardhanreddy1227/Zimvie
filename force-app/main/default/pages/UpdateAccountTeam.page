@@ -1,0 +1,63 @@
+<apex:page standardController="User" extensions="AccTeamMemberHandler" sidebar="false" showHeader="false" lightningStylesheets="true"  title="Update Account Teams">
+    
+    <script>
+    window.onload = function(){
+        //alert('On Load');
+        window.resizeTo(screen.width-800px,screen.height-550px);
+    }
+    </script>
+    
+    <apex:form id="casePageForm" >
+        
+        <apex:pageMessages id="msgs"></apex:pageMessages>
+        
+        <apex:pageBlock title="Update Account Teams" id="casePageBlock">
+            <apex:pageBlockSection title="Detail" columns="1" collapsible="false" id="caseDetail">
+   
+                <apex:pageBlockSectionItem id="caseContactItem">
+                    <apex:outputText > Click Confirm </apex:outputText>
+                    <apex:commandButton action="{!updateISRNameOnAccounts}" onclick="showSpinner()" value="Confirm !" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton value="Close" onClick="closeWindow()" style="float:right;"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+        
+        <div id="opaque" style="display:none">
+            <div id="spinner">
+                <p align="center" style='{font-family:"Arial", Helvetica, sans-serif; font-size:20px; height:20px; width:20px;}'>
+                    <apex:image value="/img/loading.gif"/>
+                    &nbsp;Please wait
+                </p>
+            </div>
+        </div>
+        
+        <script type = "text/javascript">
+        
+        function showSpinner(){
+            var myDiv = document.getElementById("opaque"),
+                
+                show = function(){
+                    myDiv.style.display = "block";
+                    setTimeout(hide, 5000); // 5 seconds
+                },
+                
+                hide = function(){
+                    myDiv.style.display = "none";
+                };
+            
+            show();
+        }
+        
+        function closeWindow()
+        {
+            window.close();    
+        }
+        
+        
+        </script>
+    </apex:form>
+</apex:page>

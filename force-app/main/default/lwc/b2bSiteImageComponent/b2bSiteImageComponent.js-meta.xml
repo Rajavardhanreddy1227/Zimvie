@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>57.0</apiVersion>
+	<isExposed>true</isExposed>
+	<masterLabel>b2bSiteImageComponent</masterLabel>
+	<targets>
+		<target>lightningCommunity__Page</target>
+		<target>lightningCommunity__Default</target>
+		<target>lightning__HomePage</target>
+        <target>lightning__Tab</target>
+	</targets>
+	<targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property
+                name="metaconfgroupkey"
+                type="String"
+                label="Metadata Configuration Key"
+                description="Please select the metadata configuration key"
+				default=""
+            />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

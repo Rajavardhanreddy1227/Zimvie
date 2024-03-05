@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'soleil';
+    src: url('Soleil-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'soleil-semi-bold';
+    src: url('Soleil-Semibold.woff') format('woff');
+}
+@font-face {
+    font-family: 'soleil-bold';
+    src: url('Soleil-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'soleil-light';
+    src: url('Soleil-Light.woff') format('woff');
+}
+ 
+ 
+ .soleil{
+    font-family:soleil;
+ }
+ .soleil-semi-bold{
+    font-family:soleil-semi-bold;
+    font-weight: 400;
+ }
+ .soleil-bold{
+    font-family:soleil-bold;
+    font-weight: 700;
+ }
+ .soleil-light{
+    font-family:soleil-light;
+    font-weight: 100;
+ }

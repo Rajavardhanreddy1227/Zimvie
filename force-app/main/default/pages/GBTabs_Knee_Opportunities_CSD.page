@@ -1,0 +1,37 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" title="Knee Opportunities CSD">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Knee_Opportunities_CSD" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"pageAPIName": "GBTabs_Knee_Opportunities_CSD",
+	"showSidebar": false,
+	"showHeader": false,
+	"height": "750",
+	"object": "Opportunity",
+	"globalButtons": false,
+	"description": "Knee Opportunities CSD",
+	"selectedCustomJSIds": [],
+	"selectedCustomCSSIds": [],
+	"id": 1574109505491,
+	"tabs": [
+		{
+			"id": 1574109505491,
+			"content": "/apex/TableauKneePipelineDashboard",
+			"name": "Dashboard"
+		},
+		{
+			"id": 1574109554510,
+			"content": "{!gridPage}gname=Knee Opportunities CSD&amp;sh=0&amp;sfname=default",
+			"name": "Knee Opportunities "
+		},
+		{
+			"id": 1574109575693,
+			"content": "{!gridPage}gname=Open Tasks&amp;sh=0&amp;sfname=default",
+			"name": "Tasks/Activities"
+		}
+	],
+	"name": "Knee Opportunities CSD"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

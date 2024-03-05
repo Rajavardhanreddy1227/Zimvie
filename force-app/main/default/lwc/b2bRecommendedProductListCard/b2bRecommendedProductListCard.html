@@ -1,0 +1,77 @@
+<!--
+  @description       : 
+  @author            : Akash Arora
+  @group             : 
+  @last modified on  : 25-05-2023
+  @last modified by  : Akash Arora
+-->
+<template>
+    <article class="slds-box card-layout-grid">
+         <section class="image-area">
+            <figure if:true={imageUrl} onclick={notifyShowDetail}>
+                <img src={imageUrl} alt={productName} />
+            </figure>
+        </section>
+
+        <section class="fields-area">
+            <div>
+                <a  title={productName}
+                class="field-item slds-text-link_reset slds-p-top_xx-small slds-p-bottom_xx-small"
+                onclick={notifyShowDetail}
+                >
+                <lightning-formatted-rich-text
+                    class="slds-truncate slds-text-heading_medium breakSpace"
+                    style="font-weight: bold !important;"
+                    value={productName}
+                    title={productName}
+                ></lightning-formatted-rich-text>
+            </a>
+            </div>
+            <div>
+                <lightning-formatted-rich-text
+                    class="slds-truncate slds-text-heading_small"
+                    value={productCode} if:true={productCode}
+                    title={productCode}
+                ></lightning-formatted-rich-text>    
+            </div>
+             
+        </section>
+        <section class="price-area">
+            <div if:false={hasPrice} class="slds-grid slds-wrap">
+                <div class="slds-col">{productQOM}</div>
+                <div
+                    if:false={hasPrice}
+                    class="slds-col slds-text-heading_small alignRight"
+                    >{label.PriceUnavailableLabel}</div>
+                </div>
+            <span class="slds-p-top_xx-small slds-p-bottom_xx-small">
+                <span if:true={hasPrice}>{productQOM}</span>
+                        <lightning-formatted-number 
+                    if:true={hasPrice}
+                    class="slds-text-heading_medium selling-price slds-float_right"
+                    currency-code={currency} 
+                    format-style="currency"
+                    value={price}
+                >
+                </lightning-formatted-number>
+                <span if:true={canShowListingPrice} class="slds-align-bottom">
+                    <span class="slds-assistive-text">{label.OriginalPriceLabel}</span>
+                    <lightning-formatted-number 
+                        class=" listing-price slds-float_right"
+                        value={listingPrice}
+                        currency-code={currency} 
+                        format-style="currency" 
+                    >
+                    </lightning-formatted-number>
+                </span>
+            </span>
+        </section>
+        <section class="action-area slds-border_top">
+            <lightning-button variant="base"
+                label={label.ViewDetailsLabel}
+                onclick={notifyShowDetail}
+                class="slds-p-top_xx-small"
+            ></lightning-button>
+        </section>
+    </article>
+</template>

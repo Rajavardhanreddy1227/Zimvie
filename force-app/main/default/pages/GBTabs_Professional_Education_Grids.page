@@ -1,0 +1,37 @@
+<apex:page standardController="Resident_Fellow_HCF_Relationship__c" showHeader="false" sidebar="false" title="Professional Education Grids">
+    <GBLite:TabbedPageComponent pageAPIName="GBTabs_Professional_Education_Grids" customJsIds="" customCssIds="">
+    <GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+        <script>
+            var pageDefinition = {
+    "name": "Professional Education Grids",
+    "tabs": [
+        {
+            "name": "Fellowship",
+            "content": "{!gridPage}gname=Fellowship&amp;sh=0&amp;sfname=default",
+            "id": 1556895913233
+        },
+        {
+            "name": "Corporate Contact Tracker",
+            "content": "{!gridPage}gname=Corporate Contact Tracker&amp;sh=0&amp;sfname=default",
+            "id": 1556895988005
+        },
+        {
+            "name": "Training Tracker",
+            "content": "{!gridPage}gname=Training Tracker&amp;sh=0&amp;sfname=default",
+            "id": 1556895988005
+        }
+    ],
+    "id": 1556895913232,
+    "selectedCustomCSSIds": [],
+    "selectedCustomJSIds": [],
+    "description": "",
+    "globalButtons": false,
+    "object": "Resident_Fellow_HCF_Relationship__c",
+    "height": "750",
+    "showHeader": false,
+    "showSidebar": false,
+    "pageAPIName": "GBTabs_Professional_Education_Grids"
+};
+        </script>
+    </GBLite:TabbedPageComponent>
+</apex:page>

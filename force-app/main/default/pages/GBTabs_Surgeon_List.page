@@ -1,0 +1,26 @@
+<apex:page standardController="Surgeon_Focus_List__c" showHeader="false" sidebar="false" title="Surgeon List">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Surgeon_List" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Surgeon List",
+	"tabs": [
+		{
+			"name": "Surgeon List ",
+			"content": "{!gridPage}gname=Surgeon Focus List&amp;sh=0&amp;sfname=default",
+			"id": 1608176983437
+		}
+	],
+	"id": 1608176983437,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": true,
+	"object": "Surgeon_Focus_List__c",
+	"height": "",
+	"showHeader": false,
+	"showSidebar": false
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

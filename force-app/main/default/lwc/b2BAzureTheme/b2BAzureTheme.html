@@ -1,0 +1,43 @@
+<template>
+    <header data-f6-region>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_4-of-12 slds-p-around_small">
+                <slot name="brandbar"></slot>
+            </div>
+            <div class="slds-col slds-size_4-of-12 slds-p-around_small">
+                <slot name="searchbar"></slot>
+            </div>
+            <div class="slds-col slds-size_4-of-12 slds-p-around_small">
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <slot name="countrybar"></slot>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <slot name="languagebar"></slot>
+                    </div>
+                </div>
+            </div>
+            <!--div class="slds-col slds-size_2-of-12 slds-p-around_small">
+                <slot name="sitelogo"></slot>
+            </div-->
+            <div class="slds-col slds-size_12-of-12 slds-p-around_small">
+                <div class="slds-grid slds-wrap" style="">
+                    <div class="slds-col slds-size_10-of-12">
+                        <slot name="navBar"></slot>
+                    </div>
+                    
+                    <div class="slds-col slds-size_2-of-12">
+                        <lightning-layout style="padding-top:25px;">
+                            <lightning-layout-item class="slds-p-around_small"><slot name="icon1"></slot></lightning-layout-item>
+                            <lightning-layout-item class="slds-p-around_small"><slot name="icon2"></slot></lightning-layout-item>
+                            <lightning-layout-item class="slds-p-around_small"><slot name="icon3"></slot></lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section data-f6-region>
+        <slot></slot>
+    </section>
+</template>

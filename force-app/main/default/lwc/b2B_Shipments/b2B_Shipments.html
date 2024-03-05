@@ -1,0 +1,19 @@
+<template>
+<lightning-card title="shipments">
+<template if:true={shipments}>
+<ul>
+<template for:each={shipments} for:item="shipment">
+<li key={shipment.Id}>
+<p><strong>Tracking Number:</strong> {shipment.TrackingNumber}</p>
+<p><strong>Product Name:</strong> {shipment.Product2.Name}</p>
+<p><strong>Status:</strong> {shipment.Shipment.Status}</p>
+<p><strong>Quantity:</strong> {shipment.Quantity}</p>
+</li>
+</template>
+</ul>
+</template>
+<template if:true={error}>
+<p>Error fetching shipments: {error}</p>
+</template>
+</lightning-card>
+</template>

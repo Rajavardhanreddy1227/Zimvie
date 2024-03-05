@@ -1,0 +1,42 @@
+<template>
+    <template if:false={isFeatured}>
+        <ul role="listbox" class={layoutContainerClass}>
+            <template iterator:it={displayData}>
+                <li key={it.value.id} class="slds-border_bottom" role="option">
+                    <c-search-card
+                        display-data={it.value}
+                        config={config.cardConfig}
+                        class="layout-card"
+                        is-featured ={isFeatured}
+                    >
+                    </c-search-card>
+                </li>
+            </template>
+        </ul>
+    </template>
+    <template if:true={isFeatured}>
+        <div class="slideshow-container slds-align_absolute-center">
+            <a class="prev" onclick={previousSlides}>❮</a>
+            <!--div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-3"-->
+                    
+                    <template for:each={displayData} for:item="item" for:index="index">
+                        <div key={item.id} data-index={index} class="mySlides fade">
+                            <c-search-card
+                            display-data={item}
+                            config={config.cardConfig}
+                            class="layout-featurecard"
+                            is-featured={isFeatured}
+                            >
+                            </c-search-card>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    </template>
+                    
+                <!--/div>
+            </div-->          
+            
+            <a class="next" onclick={nextSlides}>❯</a>
+        </div>          
+    </template>
+</template>

@@ -1,0 +1,157 @@
+<!--
+  @description       : 
+  @author            : asood@rafter.one
+  @group             : 
+  @last modified on  : 09-12-2023
+  @last modified by  : Gaurav Setia
+-->
+
+<template>
+ 
+    <!-- <lightning-tabset>
+      <lightning-tab label="Credit Card">  -->
+        <!-- <c-b2-b_-stored-payment-list onstoredpaymentvaluechange={handleStorePaymentSelectionP} hide-all-wallets={hideWallets}></c-b2-b_-stored-payment-list> -->
+          <div class="slds-m-top_small">
+
+            <button class="slds-button" onclick={handleCardRadio}>
+              <svg class="slds-button__icon slds-button__icon_small slds-button__icon_left" aria-hidden="true">
+                  <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#add"></use>
+              </svg> Add New Credit Card
+            </button>
+            <!--
+            <input type="radio" id="creditCard" name="payment-type-option" value="CreditCardPayment" onchange={handleCardRadio} />
+            <label for="creditCard" class="slds-radio__label slds-p-horizontal_x-small">
+              <span class="slds-form-element__label slds-text-title_bold">{label.Add_New_Card}</span>
+            </label>
+            -->
+                <template if:true={renderCyberSourceForm}>
+                  <div if:true={isLoadedMain} class="slds-is-relative">
+                    <lightning-spinner class="spins" alternative-text="Loading" size="large"></lightning-spinner>
+                  </div>
+                  <!--<lightning-card title="Credit Card"><!-{label.creditCard}-->
+                  <div class="slds-p-left_medium slds-p-right_medium">
+                    <div if:true={errorMessage}>
+                      <p style="color: red">{errorMessage}</p>
+                    </div>
+                    <div class="slds-form-element slds-p-around_xx-small">
+                      <div class="slds-form-element__control">
+                        <lightning-input name="input1" label={label.cardNickName} required placeholder={label.cardNickName}
+                          onchange={handleCardNickname}></lightning-input>
+                        <!--{label.cardNickName} -->
+                      </div>
+                    </div>
+                    <div class="slds-form-element slds-p-around_xx-small">
+                      <div class="slds-form-element__control">
+                        <lightning-input name="input1" label={label.cardName} required
+                          placeholder={label.cardName} onchange={handleCardName}></lightning-input>
+                        <!--{label.cardName}-->
+                      </div>
+                    </div>
+        
+                    <div class="slds-form-element slds-p-around_xx-small">
+                      <div class="slds-form-element__control">
+                        <lightning-combobox name="progress" label={label.cardType} required value="inProgress"
+                          placeholder={label.cardType} options={cardTypes} onchange={handleCardTypeChange}>
+                        </lightning-combobox>
+                        <!--{label.cardType}-->
+                      </div>
+                    </div>
+                    <div if:false={isLoaded} class="slds-is-relative">
+                      <lightning-spinner class="spins" alternative-text="Loading" size="large"></lightning-spinner>
+                    </div>
+                    <div class="slds-grid">
+                      <div class="slds-form-element slds-size_2-of-3 slds-p-around_xx-small">
+                        <label class="slds-form-element__label">
+                          {label.cardNumber}
+                          <!--{label.cardNumber}-->
+                        </label>
+                        <div class="slds-form-element__control">
+                          <div class="form-control slds-input cardNumberContainer" style="height: 32px"></div>
+                        </div>
+                      </div>
+                      <div class="slds-form-element slds-size_1-of-3 slds-p-around_xx-small">
+                        <label class="slds-form-element__label">
+                          {label.cardCVV}
+                          <!--{label.cardCVV}-->
+                        </label>
+                        <div class="slds-form-element__control">
+                          <div class="form-control slds-input cvvContainer" style="height: 32px"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-grid">
+                      <div class="slds-form-element slds-size_1-of-2">
+                        <div class="slds-form-element__control slds-p-around_xx-small">
+                          <div class="slds-form-element">
+                            <label class="slds-form-element__label">
+                              <abbr title="required" style="color:red;">*</abbr>
+                              <span class="">{label.cardExpMonth}</span>
+                            </label>
+                            <div class="slds-form-element__control">
+                              <div class="slds-select_container">
+                                <select class="slds-select" onchange={handleMonthChange} required>
+                                  <option value="Select">{label.SelectLabel}</option>
+                                  <template for:each={months} for:item="option">
+                                    <option key={option.label} class="uiInputSelectOption" value={option.value}>{option.value}
+                                    </option>
+                                  </template>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slds-form-element slds-size_1-of-2">
+                        <div class="slds-form-element__control slds-p-around_xx-small">
+                          <div class="slds-form-element">
+                            <label class="slds-form-element__label">
+                              <abbr title="required" style="color:red;">*</abbr>
+                              <span class="">{label.cardExpYear}</span>
+                            </label>
+                            <div class="slds-form-element__control">
+                              <div class="slds-select_container">
+                                <select class="slds-select" onchange={handleYearChange} required>
+                                  <option value="Select">{label.SelectLabel}</option>
+                                  <template for:each={years} for:item="option">
+                                    <option key={option.label} class="uiInputSelectOption" value={option.value}>{option.value}
+                                    </option>
+                                  </template>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--Checkbox for save card -->
+                    <!-- REmove Star
+                      t<lightning-input type="checkbox" label={label.Save_This_Card_For_Future_Purchase} onchange={handleSaveCardButton}> </lightning-input>
+                    Remove end -->
+                    <button class="slds-button" onclick={handlePayClick}>Save</button>
+                  </div>
+
+                </template>
+          </div>
+  
+        <!-- Remove start-->
+          <!-- <template if:false={isShowGenricMsg}> -->
+            <!--Show term and condition checkbox-->
+      
+
+            <!-- <c-b2-b_-payment-by-term ontermselected={handlePaymentTerm}></c-b2-b_-payment-by-term> -->
+            <!-- <div class="slds-clearfix slds-m-top_small slds-m-bottom_medium">
+              <div class="slds-float_right">
+                <template if:true={cardNumber}>
+                  <lightning-button label="Place Order " onclick={handlePayClick} class="slds-m-left_x-small" variant="brand">
+                  </lightning-button>
+                </template>
+                <template if:false={hideWallets}>
+                  <lightning-button label="Place Order W" onclick={useStoredPayment} class="slds-m-left_x-small" variant="brand">
+                  </lightning-button>
+                </template>
+              </div>
+            </div> -->
+          <!-- </template> -->
+        <!--remove end-->
+    </template>

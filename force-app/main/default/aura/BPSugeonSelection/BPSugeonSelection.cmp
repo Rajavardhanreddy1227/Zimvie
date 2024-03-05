@@ -1,0 +1,258 @@
+<!--
+
+Author : Prosenjit Saha
+Date : 09/13/2019
+-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global" 
+                controller="BPSurgeonSelectionController">
+    <!-- call doInit method on component load -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!-- aura attributes to store data/values --> 
+    <aura:attribute name="arrowDirection" type="string" default="arrowup" description="Use for change arrow sign direction on header based on click"/>
+    <aura:attribute name="isAsc" type="boolean" default="false" description="boolean flag for pass sorting condition to apex class"/> 
+    <aura:attribute name="selectedTabsoft" type="string" default="firstName" description="Use for show/hide arraow sign on header based on conditions"/>
+
+    <aura:attribute name="Productgroup" type="String" access="Public"/>
+    <aura:attribute name="recordId" type="Id" access="global"/>
+	<aura:attribute name="listOfAllAccounts" type="list"/> 
+    <aura:attribute name="PaginationList" type="list"/> 
+    <aura:attribute name="selectedCount" type="integer" default="0"
+                    description="selected Records Count"/>
+    <aura:attribute name="startPage" type="Integer" />
+    <aura:attribute name="endPage" type="Integer"/>
+    <aura:attribute name="totalRecordsCount" type="Integer"/>
+    <aura:attribute name="pageSize" type="Integer" default="50"
+                    description="number of records to be display on per page"/>
+    <aura:attribute name="currentPage" type="integer" default="1"/>
+    <aura:attribute name="totalPagesCount" type="integer"/>
+    <aura:attribute name="bNoRecordsFound" type="boolean"/>
+    <aura:attribute name="filter" type="String" />
+    <aura:attribute name="segment" type="String" />
+    <aura:attribute name="dashboardName" type="String" />
+    <aura:attribute name="dashboardUrl" type="String" />
+    <!-- create 2 aura handler with waiting and donewaiting events--> 
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <!--create a component attributs -->
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <!--loading spinner start... style=Brand Medium (blue dots)-->
+    <aura:if isTrue="{!v.Spinner}">
+    <div aura:id="spinnerId" class="slds-spinner_container">
+        <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+            <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+        </div>
+    </div>
+    </aura:if>
+    <!-- Loading spinner end--> 
+    
+    <lightning:input type="text" onchange="{!c.filter}" value="{!v.filter}" label="Surgeon Name" />
+    <lightning:select name="segment" label="Segmentation" required="false" onchange="{!c.filter}"  value="{!v.segment}">
+        <option value="">choose one...</option>
+        <option value="Platinum">Platinum</option>
+        <option value="Gold">Gold</option>
+        <option value="Silver">Silver</option>
+        <option value="Bronze">Bronze</option>
+        <!--<option value="Green">Green</option>-->
+    </lightning:select>
+    <aura:if isTrue="{!v.bNoRecordsFound}">
+        <!--display error message if there is no records available -->
+        
+		<div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" role="alert">
+            <span class="slds-assistive-text">error</span>
+            <h2>No record found.</h2>
+        </div>
+        <aura:set attribute="else">
+         <!-- lightning:button to get selected rows data -->          
+            <div class="slds-clearfix slds-m-around_small">
+                <div class="slds-clearfix">
+                    
+                    <div class="slds-float_right">                       
+                        <lightning:button variant="destructive"
+                                          label="Add to Business Plan"
+                                          onclick="{! c.getSelectedRecords }"
+                                          disabled="{!v.selectedCount == 0}"/>
+                    </div>
+                </div>
+            </div>
+         <!-- display total record and selected record count -->    
+            <p class="slds-m-around_small">
+                <span class="slds-badge slds-badge_lightest" style="display:inline-block">
+                    Total Records : {!v.selectedCount > 0 ? v.selectedCount + '/' : ''} {!v.totalRecordsCount} 
+                </span>
+            </p>
+			
+           <!-- data table start-->  
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr class="slds-text-title_caps">
+					<!--header checkbox for select all-->
+                        <th style="width:3.25rem;" class="slds-text-align_right">
+                            <div class="slds-form-element">
+                                <div class="slds-form-element__control">
+                                    <label class="slds-checkbox">
+                                        <ui:inputCheckbox disabled="true"                                                    
+                                                          aura:id="selectAllId"
+                                                          change="{!c.selectAllCheckbox}"/><!-- disabled="{!v.totalRecordsCount == 0}" -->
+                                        <span class="slds-checkbox_faux"></span>
+                                        <span class="slds-form-element__label"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="slds-is-sortable slds-text-title--caps slds-truncate" scope="col" onclick="{!c.sortSurgeonName}">
+                            <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                <span class="slds-assistive-text">Sort</span>
+                                <span class="slds-truncate" title="Name">Surgeon Name</span>  
+                                <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'Surgeon_Name__r.name') }">&nbsp;  &#9660; </aura:if>  
+                                <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'Surgeon_Name__r.name') }"> &nbsp;  &#9650; </aura:if>                        
+                            </a>
+                            </th>
+                           
+                            <th class="slds-is-sortable slds-text-title--caps slds-truncate" scope="col" onclick="{!c.sortSegementation}">
+                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                    <span class="slds-assistive-text">Sort</span>
+                                    <span class="slds-truncate" title="Segementation">Segementation</span>
+                                    <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'Segementation__c') }">&nbsp;  &#9660;</aura:if>
+                                    <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'Segementation__c') }">&nbsp;  &#9650;</aura:if>     
+                                </a>
+                            </th>
+
+                            <th class="slds-is-sortable slds-text-title--caps slds-truncate" scope="col" onclick="{!c.sortAlignedTeam}">
+                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                    <span class="slds-assistive-text">Sort</span>
+                                    <span class="slds-truncate" title="Aligned Team">Aligned Team</span>
+                                    <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'Aligned_Team__c') }">&nbsp;  &#9660;</aura:if>
+                                    <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'Aligned_Team__c') }">&nbsp;  &#9650;</aura:if>     
+                                </a>
+                            </th>
+
+                            <th class="slds-is-sortable slds-text-title--caps slds-truncate" scope="col" onclick="{!c.sortMarketProcedure}">
+                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                    <span class="slds-assistive-text">Sort</span>
+                                    <span class="slds-truncate" title="Market Procedure">2018 Market Procedure</span>
+                                    <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'Market_Procedures__c') }">&nbsp;  &#9660;</aura:if>
+                                    <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'Market_Procedures__c') }">&nbsp;  &#9650;</aura:if>     
+                                </a>
+                            </th>
+                            
+                            <th class="slds-is-sortable slds-text-title--caps slds-truncate" scope="col" onclick="{!c.sortZBProcedure}">
+                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                    <span class="slds-assistive-text">Sort</span>
+                                    <span class="slds-truncate" title="ZB Procedure">2019 ZB Procedure</span>
+                                    <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'Zimmer_Biomet_Procedures__c') }">&nbsp;  &#9660;</aura:if>
+                                    <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'Zimmer_Biomet_Procedures__c') }">&nbsp;  &#9650;</aura:if>     
+                                </a>
+                            </th>   
+                            <th class="slds-is-sortable slds-text-title--caps slds-truncate" scope="col" onclick="{!c.sortmailingCity}">
+                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                    <span class="slds-assistive-text">Sort</span>
+                                    <span class="slds-truncate" title="Mailing City">Mailing City</span>
+                                    <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'Surgeon_Name__r.PersonMailingCity') }">&nbsp;  &#9660;</aura:if>
+                                    <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'Surgeon_Name__r.PersonMailingCity') }">&nbsp;  &#9650;</aura:if>     
+                                </a>
+                            </th>
+                            <th class="slds-is-sortable slds-text-title--caps slds-truncate" scope="col" onclick="{!c.sortmailingState}">
+                                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                    <span class="slds-assistive-text">Sort</span>
+                                    <span class="slds-truncate" title="Mailing City">Mailing State</span>
+                                    <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'Surgeon_Name__r.PersonMailingState') }">&nbsp;  &#9660;</aura:if>
+                                    <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'Surgeon_Name__r.PersonMailingState') }">&nbsp;  &#9650;</aura:if>     
+                                </a>
+                            </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.PaginationList}" var="obj">
+                        <tr class="{! 'bp' + obj.bptarget}"  >
+                            <th scope="row" class="slds-text-align_right" style="width:3.25rem;">
+                                <div class="slds-form-element">
+                                    <div class="slds-form-element__control">
+                                        <label class="slds-checkbox">
+                                            <ui:inputCheckbox text="{!obj.objAccount.Id}"
+                                                              value="{!obj.isChecked}"
+                                                              change="{!c.checkboxSelect}"
+                                                              disabled="{!obj.bptarget}"  />
+                                            <span class="slds-checkbox_faux"></span>
+                                            <span class="slds-form-element__label text"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </th>
+                            <th scope="row" >
+                                <div class="{! 'bp' + obj.bptarget}" title="{!obj.objAccount.NSurgeon_Name__r.Name}">
+                                    <a style="text-transform:uppercase" href="{!'https://tableau.zimmerbiomet.com/#/site/USCommercialSales/views/'+v.dashboardName+'/SalesPerformance?Surgeon%20Name='+ obj.SurgeonName}" target="_blank"> {!obj.objAccount.Surgeon_Name__r.Name} </a>
+                                </div>
+                            </th> 
+                            
+                            <th scope="row">
+                                <div class="{! obj.objAccount.Segementation__c == 'Gold' ? ' gold ' : 
+                                obj.objAccount.Segementation__c == 'Platinum' ? ' platinum   ' : 
+                                obj.objAccount.Segementation__c == 'Silver' ? ' silver   ' : 
+                                obj.objAccount.Segementation__c == 'Bronze' ? ' bronze   ': 
+                                obj.objAccount.Segementation__c =='Green' ? ' green   ' : ''}" 
+                                title="{!obj.objAccount.Segementation__c}">
+                                    {!obj.objAccount.Segementation__c}
+                                </div>
+                            </th>
+                            <th scope="row">
+                                <div class="slds-truncate, slds-cell-wrap " title="{!obj.objAccount.Aligned_Team__c}">
+                                    {!obj.objAccount.Aligned_Team__c}
+                                </div>
+                            </th>
+                            <th scope="row">
+                                <div class="slds-truncate" title="{!obj.objAccount.Market_Procedures__c}">
+                                    <p><lightning:formattedNumber value="{!obj.objAccount.Market_Procedures__c}" style="decimal" maximumFractionDigits="0"/></p>                                                                       
+                                </div>
+                            </th>
+                            <th scope="row">
+                                <div class="slds-truncate" title="{!obj.objAccount.Zimmer_Biomet_Procedures__c}">
+                                   <p><lightning:formattedNumber value="{!obj.objAccount.Zimmer_Biomet_Procedures__c}" style="decimal" maximumFractionDigits="0"/></p>                                    
+                                </div>
+                            </th>
+                            <th scope="row">
+                                <div class="slds-truncate" title="{!obj.objAccount.Surgeon_Name__r.PersonMailingState}">
+                                    {!obj.objAccount.Surgeon_Name__r.PersonMailingCity}
+                                </div>
+                            </th>
+                            <th scope="row">
+                                <div class="slds-truncate" title="{!obj.objAccount.Surgeon_Name__r.PersonMailingState}">
+                                    {!obj.objAccount.Surgeon_Name__r.PersonMailingState}
+                                </div>
+                            </th>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+             <!-- DataTable End -->
+            <br/>
+            <!--  Pagination Buttons Start -->
+            <div class="slds-align_absolute-center">         
+                <lightning:button label="Previous"
+                                  disabled="{!v.startPage == 0}"  
+                                  onclick="{!c.navigation}"
+                                  variant="brand"
+                                  iconName="utility:back"
+                                  name="previous"/>
+                
+                <span class="slds-badge slds-badge_lightest"
+                      style="margin-right: 10px; margin-left: 10px;">
+                    Page {!v.currentPage} out of {!v.totalPagesCount}
+                </span>
+                
+                <lightning:button label="Next"
+                                  disabled="{!(v.endPage + 1) >= v.totalRecordsCount}" 
+                                  onclick="{!c.navigation}"
+                                  variant="brand"
+                                  iconName="utility:forward"
+                                  iconPosition="right"
+                                  name="next"/>
+            </div>  
+            <!--  Pagination Buttons End -->
+        </aura:set> 
+    </aura:if>
+</aura:component>

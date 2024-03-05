@@ -1,0 +1,21 @@
+<template>
+    <template if:true={loading}>
+        <c-custom_spinner></c-custom_spinner>
+    </template>
+    <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container" style="width:25% !important;">
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <c-b2b_wishlist community-id={communityId} effective-account-id={effectiveAccountId} selection="true" onrowselect={setWishlistId}></c-b2b_wishlist>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_1-of-2">
+                    <span><button onclick={closeModal} class="Cancelbutton button1">Cancel</button></span>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                    <span><button onclick={handleAddToWishlist} class="button button2">Add to Wishlist</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+</template>

@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : Akash Arora
+  @group             : 
+  @last modified on  : 26-06-2023
+  @last modified by  : Akash Arora
+-->
+<template>
+    
+        <lightning-spinner if:true={showSpinner} variant="brand">
+        </lightning-spinner>
+
+        <div class="language-picker-block">
+            <div class="language-picker-picklist-block slds-show_inline">
+                <select onchange={selectLanguage} class="language-picker-picklist bgColour" style="color:white;">
+                    <template if:true={showSwitcher} for:each={languages} for:item="lang">
+                        <option value={lang.code} key={lang.code} selected={lang.selected}>
+                            {lang.language}
+                        </option>
+                    </template>
+                </select>
+            </div>
+        </div>
+</template>

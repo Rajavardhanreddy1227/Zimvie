@@ -1,0 +1,8 @@
+<design:component label="One Region Tabbed layout for Ortho Mobile App">
+    <flexipage:template >
+        <flexipage:region name="headerLeft" label="Left Header Content Section" defaultWidth="LARGE"/>
+        <flexipage:region name="headerRight" label="Right Header Content Section" defaultWidth="LARGE"/>
+
+        <flexipage:region name="main" label="Main Content Section" defaultWidth="LARGE"/>
+    </flexipage:template>
+</design:component>

@@ -1,0 +1,12 @@
+.errormsg{
+    color:red;
+    text-align: left;
+}
+.inputfieldscls{
+    -webkit-text-fill-color: #0A2043;
+}
+.heading{
+    -webkit-text-fill-color: #0A2043;
+    font-size:24px;
+    font-weight:700;
+}

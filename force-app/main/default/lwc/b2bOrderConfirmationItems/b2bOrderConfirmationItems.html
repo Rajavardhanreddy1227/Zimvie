@@ -1,0 +1,36 @@
+<template>
+    <div if:true={orderLineItems} class="slds-p-top--xx-large slds-p-horizontal--small">
+        <template  for:each={orderLineItems} for:item="item">
+            <div key={item.Id} class="slds-box slds-grid slds-m-bottom--medium bgColor">
+                <div class="slds-size--2-of-12">
+                    <img src={item.productImage} alt={item.Product2.Name} class="imgHeight">
+                </div>
+                <div class="slds-size--2-of-12 slds-m-top--x-large">
+                    <div class="textColor fontName">
+                        <a data-productid={item.Product2.Id} onclick={handleProductDetailNavigation}>
+                            {item.Product2.Name}
+                        </a>
+                    </div>
+                   
+                </div>
+                
+                <div class="slds-size--2-of-12 slds-m-top--x-large alignPrice">
+                    <lightning-formatted-number maximum-fraction-digits="0"
+                        value={item.Quantity}>
+                    </lightning-formatted-number>
+                </div>
+                <div class="slds-size--2-of-12 slds-m-top--x-large alignPrice">
+                    <lightning-formatted-number value={item.UnitPrice}
+                        format-style="currency" minimum-fraction-digits="2" currency-code={item.CurrencyIsoCode}>
+                    </lightning-formatted-number>/item
+                </div>
+                
+                <div class="slds-size--2-of-12 slds-m-top--x-large alignPrice fontName">
+                    <lightning-formatted-number value={item.TotalPrice}
+                        format-style="currency" minimum-fraction-digits="2" currency-code={item.CurrencyIsoCode}>
+                    </lightning-formatted-number>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

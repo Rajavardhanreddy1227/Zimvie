@@ -1,0 +1,30 @@
+<apex:page standardController="GDL_Profile__c" recordSetVar="profiles">
+<apex:pageBlock title="Distributor Sites">
+ <apex:pageBlockTable value="{!profiles}" var="profile">
+    <apex:column >
+        <apex:facet name="header">Action</apex:facet>
+        <apex:outputLink value="{!$Page.GdlEditProfile}?id={!profile.id}" target="_blank">Manage</apex:outputLink>
+    </apex:column>
+    <apex:column >
+        <apex:facet name="header">Name</apex:facet>
+        <apex:outputText value="{!profile.Name__c}"/>
+    </apex:column>
+    <apex:column >
+        <apex:facet name="header">Owner</apex:facet>
+        <apex:outputText value="{!profile.owner.name}"/>
+    </apex:column>
+    <apex:column >
+        <apex:facet name="header">Last Modified</apex:facet>
+        <apex:outputText value="{!profile.lastmodifieddate}"/>
+    </apex:column>
+    <apex:column >
+        <apex:facet name="header">Last Modified By</apex:facet>
+        <apex:outputText value="{!profile.lastmodifiedby.name}"/>
+    </apex:column>
+ </apex:pageBlockTable>
+ <apex:form >
+        <apex:commandLink action="{!previous}">Previous</apex:commandLink>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <apex:commandLink action="{!next}">Next</apex:commandLink>
+ </apex:form>
+</apex:pageBlock>
+</apex:page>

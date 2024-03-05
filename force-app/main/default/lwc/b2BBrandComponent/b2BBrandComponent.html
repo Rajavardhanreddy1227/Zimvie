@@ -1,0 +1,49 @@
+<template>
+	<template if:false={hideComponent}>
+		<div class="tabset pl-90 pr-90">
+			<c-b2-b_-announcements tabcolour={tabcolour}></c-b2-b_-announcements> 
+			<!-- Tab 1 -->
+			<input type="radio" name="tabset" id="tab1" data-id="zimvietile" aria-controls="zimvie" onclick={changebrand}>
+			<label for="tab1">
+				<img src={zimVie_Logo}>
+			</label>
+
+			<!-- Tab 2 -->
+			<template if:true={isAzure}>
+				<input type="radio" name="tabset" id="tab2" data-id="azuretile" aria-controls="azure" onclick={changebrand}>
+				<label for="tab2">
+					<img src={azure_Logo}>
+				</label>
+			</template>
+
+			<div style="float:right;">
+				<c-b2b-language-switcher tabcolour={tabcolour}></c-b2b-language-switcher>
+			</div>
+
+			<template if:true={isGuestUser}>
+				<div style="float:right;">
+					<c-b2-b-country-selector tabcolour={tabcolour}></c-b2-b-country-selector>
+				</div>
+			</template>
+
+		</div>
+	</template>
+	<template if:true={hideComponent}>
+		<div class="tabset checkoutTab">
+			<c-b2-b_-announcements tabcolour={tabcolour}></c-b2-b_-announcements>
+			<template if:true={isZimvieSelected}>
+				<input type="radio" name="tabset" id="tabZimVie" data-id="zimvietile" aria-controls="zimvie" onclick={changebrand}>
+				<label for="tabZimVie" class="checkoutBrand">
+				<img src={zimVie_Logo_Checkout}>
+			</label>
+			</template>
+			<!-- Tab 2 -->
+			<template if:true={isAzureSelected}>
+				<input type="radio" name="tabset" id="tabAzure" data-id="azuretile" aria-controls="azure" onclick={changebrand}>
+				<label for="tabAzure" class="checkoutBrand">
+					<img src={azure_Logo_Checkout}>
+				</label>
+			</template>
+		</div>
+	</template>
+</template>

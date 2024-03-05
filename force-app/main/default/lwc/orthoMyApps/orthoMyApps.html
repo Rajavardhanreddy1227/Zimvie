@@ -1,0 +1,55 @@
+<template>
+  <lightning-layout multiple-rows="true">
+    <template if:true={favorites}>
+      <lightning-layout-item size="12">
+        <fieldset class="slds-form-element">
+          <legend class="slds-form-element__legend slds-form-element__label">
+            {labels.Ortho_Mobile_My_App_Favorites_Label}
+          </legend>
+
+          <div class="slds-form-element__control">
+            <div class="slds-grid slds-wrap">
+              <template for:each={favorites} for:item="favorite">
+                <div
+                  key={favorite.Id}
+                  class="slds-col slds-small-size_1-of-2 slds-medium-size_1-of-6"
+                >
+                  <c-ortho-my-app-item
+                    appitem={favorite}
+                    isfavorite="true"
+                    onrefreshapps={handleRefresh}
+                  ></c-ortho-my-app-item>
+                </div>
+              </template>
+            </div>
+          </div>
+        </fieldset>
+      </lightning-layout-item>
+    </template>
+
+    <template if:true={apps}>
+      <lightning-layout-item size="12">
+        <fieldset class="slds-form-element">
+          <legend class="slds-form-element__legend slds-form-element__label">
+            {labels.Ortho_Mobile_My_App_Apps_Label}
+          </legend>
+          <div class="slds-form-element__control ">
+            <div class="slds-grid slds-wrap">
+              <template for:each={apps} for:item="app">
+                <div
+                  key={app.Id}
+                  class="slds-col slds-small-size_1-of-2 slds-medium-size_1-of-6"
+                >
+                  <c-ortho-my-app-item
+                    appitem={app}
+                    onrefreshapps={handleRefresh}
+                  ></c-ortho-my-app-item>
+                </div>
+              </template>
+            </div>
+          </div>
+        </fieldset>
+      </lightning-layout-item>
+    </template>
+  </lightning-layout>
+</template>

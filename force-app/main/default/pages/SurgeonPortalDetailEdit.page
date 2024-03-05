@@ -1,0 +1,196 @@
+<apex:page standardController="GPL_Location__c" extensions="SurgeonPortalDetailExtension" id="SurgeonPortalDetailEdit" title="Surgeon Portal Detail Form" sidebar="false">
+
+<head>
+<style type="text/css">
+/*body {background-image:url("{!URLFOR($Resource.LoginPageBackGround2)}");}*/
+/*body {background:url(http://www.zimmer.com/images/common/bg-body.jpg) 0% 0% repeat-x;font-family:"ff-meta-web-pro",arial,sans-serif;}*/
+body {background:url("{!URLFOR($Resource.bg_body)}") 0% 0% repeat-x;font-family:"ff-meta-web-pro",arial,sans-serif;}
+#phHeaderLogoImage{padding:24px 23px 15px 5px;}
+#tabsNewBar{width:1000px;margin:0 auto;z-index:1000!important;}
+.tabNavigation{background:none;padding-bottom:0;padding-left:0!important}
+#tabBar td{background:none;border:none!important;}
+#tabBar div{
+    /*background:url("http://dev2-www.web.zimmer.com/images/common/tab_white2.png") no-repeat scroll 100% 100% transparent;*/
+    background:url("{!URLFOR($Resource.tab_white2)}") no-repeat scroll 100% 100% transparent;
+    padding:10px 20px;
+    width:100px;
+    margin-bottom:-1px;
+    position:relative;
+    z-index:1;            
+}
+#tabBar div a{color:#0064A6;font-size:13px;font-weight:bold;text-decoration:none;}
+#home_Tab{
+    /*background:url("http://dev2-www.web.zimmer.com/images/common/tab_orange2.png") no-repeat scroll 100% 100% transparent!important;*/
+    background:url("{!URLFOR($Resource.tab_orange2)}") no-repeat scroll 100% 100% transparent!important;    
+}
+#home_Tab a{color:#FFFFFF!important;font-size:13px;font-weight:bold;text-decoration:none;} 
+
+.bodyDiv{width:1000px;margin:0 auto;min-height:600px;background-color:#FFFFFF;border:1px solid #EF8F00;padding-top:25px;}   
+.pbHeader{display:none;}
+.bPageBlock .detailList .labelCol, .bPageBlock .detailList .dataCol{font-family:Arial,Helvetica,sans-serif!important;color:#333333;font-size:11px!important;border-bottom:none;}
+.bPageBlock .detailList .labelCol {color:#006BB5!important;}
+.pbBody a{color:#006BB5;}
+.pbBody a:hover{color:#009DDC;}
+.pbSubsection{padding:25px 0;}
+tr.headerRow th div{color:#006BB5;}
+
+.bPageBlock .detailList td{padding-bottom:15px;}
+.bPageBlock .detailList tr:last-of-type td{padding-bottom:0!important;}
+
+.bPageBlock, .individualPalette .bPageBlock{border:none!important;}
+.pbSubheader{background:none!important;color:#009CDB!important;font-size:16px;font-weight:bold;font-family:Arial,Helvetica,sans-serif!important;}
+.pbTitle{width:0!important;}
+.pbButton, .pbButtonb{text-align:center;}
+/*.btn{background:url("http://www.zimmer.com/images/common/btn-readmore-4.png") no-repeat scroll 0 0 transparent;height:25px!important;line-height:23px;border:none;padding:0 5px 0 15px;}*/
+.btn{background:url("{!URLFOR($Resource.btn_readmore_4)}") no-repeat scroll 0 0 transparent;height:25px!important;line-height:23px;border:none;padding:0 5px 0 15px;}
+.btn:hover{background-position:0 -31px;color:#FFFFFF;}
+.bPageFooter{border:0;}
+.bPageFooter{
+    /*background:url("http://www.zimmer.com/images/common/bg-bottom-nav-left.png") no-repeat scroll transparent;*/
+    background:url("{!URLFOR($Resource.bg_bottom_nav_left)}") no-repeat scroll transparent;
+    bottom:0;
+    height:35px;
+    position:fixed;
+    width:167px;
+    z-index:11000!important;
+    padding:0!important;
+    right:0;    
+}
+.bPageFooter .body{
+    /*background:url("http://www.zimmer.com/images/common/bg-bottom-nav-right.png") repeat scroll left top transparent;*/
+    background:url("{!URLFOR($Resource.bg_bottom_nav_right)}") repeat scroll left top transparent;
+    display:inline;
+    float:right;
+    height:35px;
+    line-height:35px;
+    z-index:2;
+    min-width:120px;
+    color:transparent;
+}
+.bPageFooter .body a{
+    /*background:url("http://www.zimmer.com/images/common/bg-line-1.gif") no-repeat scroll left center transparent;*/
+        background:url("{!URLFOR($Resource.bg_line_1)}") no-repeat scroll left center transparent;
+    float:left;
+    padding:0 9px;
+    position:relative;
+    z-index:1;
+    margin-left:0;
+    color:#009DDC;
+    font-size:12px;
+    text-decoration:none;
+    border:0 none;
+    font-weight:normal;
+    margin:0;    
+}
+.bPageFooter .body a:first-child{background:none repeat scroll 0 0 transparent;}
+.bPageFooter .body a:hover{color:#005D9E;}            
+</style>
+<style>.bPageFooter{width:166px!important;}</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script>$(function(){ $('div.body a:first-child')[0].nextSibling.nodeValue = '';$('div.body a').last().html('My Profile');$('#tabBar .last div a').html('My Profile');});</script> 
+</head>
+
+<apex:pageMessages escape="false"></apex:pageMessages>
+
+<apex:form id="requestForm">
+<apex:pageBlock id="pb">
+
+<apex:pageBlockSection columns="2" showHeader="true" collapsible="false" id="spheader">
+<apex:facet name="header">Location Information</apex:facet>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Name" style="font-weight:bold" />
+    <apex:inputField value="{!GPL_Location__c.Name__c}" style="height:50px;width:200px"/>
+</apex:pageBlockSectionItem>
+<!-- 
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Location" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Location__c.GPL_Profile__c}"/>
+</apex:pageBlockSectionItem>
+
+ -->
+ 
+ <apex:pageBlockSectionItem >
+    <apex:outputLabel value="Street Address" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Location__c.Street__c}" style="height:50px;width:200px"/>
+</apex:pageBlockSectionItem>
+
+
+<apex:pageBlockSectionItem >   
+    <apex:outputLabel value="Area Code" style="font-weight:bold"/>  
+     <apex:inputField value="{!GPL_Location__c.Area_Code__c}"/>
+     </apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="City" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Location__c.City__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >   
+     <apex:outputLabel value="Phone" style="font-weight"/> 
+    <apex:inputField value="{!GPL_Location__c.Phone__c}"/>
+</apex:pageBlockSectionItem>
+
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="State" style="font-weight:bold"/>
+    <apex:outputPanel styleClass="requiredInput" layout="block">
+    <apex:outputPanel styleClass="requiredBlock" layout="block" />
+    <apex:inputField value="{!GPL_Location__c.State__c}"/>
+    </apex:outputPanel>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Fax" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Location__c.Fax__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Post Code" style="font-weight:bold" />
+      <apex:inputField value="{!GPL_Location__c.PostalCode__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Website" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Location__c.Website__c}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Country" style="font-weight:bold"/>
+    <apex:outputPanel styleClass="requiredInput" layout="block">
+    <apex:outputPanel styleClass="requiredBlock" layout="block" />
+    <apex:inputField value="{!GPL_Location__c.Country__c}"/>
+    </apex:outputPanel>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Location Type" style="font-weight:bold"/>
+<apex:inputField value="{!GPL_Location__c.Location_Type__c}"/>
+</apex:pageBlockSectionItem>
+<!--
+<apex:pageBlockSectionItem >
+    <apex:outputLabel value="Services" style="font-weight:bold"/>
+    <apex:inputField value="{!GPL_Location__c.Services__c}"/>
+</apex:pageBlockSectionItem>
+-->
+</apex:pageBlockSection>
+
+<apex:pageBlockButtons >
+
+<apex:commandLink styleClass="btn" style="display:inline-block;height:16px;text-decoration:none;" value="Save" action="{!save}">
+<apex:param name="returnURL" value="{!URLFor('/apex/SurgeonPortalView?id='+GPL_Location__c.GPL_Profile__c)}"/>
+</apex:commandLink>
+
+<!-- <apex:commandLink styleClass="btn" style="display:inline-block;height:16px;text-decoration:none;" value="Save & New" action="{!saveAndNew}"/>
+<apex:commandLink styleClass="btn" style="display:inline-block;height:16px;text-decoration:none;" value="Cancel" action="{!Cancel}" immediate="true"/>-->
+<apex:commandLink styleClass="btn" style="display:inline-block;height:16px;text-decoration:none;" value="Cancel" action="{!doClose}" immediate="true">
+<apex:param name="returnURL" value="{!URLFor('/apex/SurgeonPortalView?id='+GPL_Location__c.GPL_Profile__c)}"/>
+</apex:commandLink>
+
+</apex:pageBlockButtons>
+
+</apex:pageBlock>
+</apex:form>
+
+
+</apex:page>

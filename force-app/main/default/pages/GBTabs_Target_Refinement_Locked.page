@@ -1,0 +1,67 @@
+<apex:page standardController="Territory_Name__c" showHeader="false" sidebar="false" title="Target Refinement Locked">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Target_Refinement_Locked" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Target Refinement Locked",
+	"tabs": [
+		{
+			"name": "Alignment Changes",
+			"content": "{!gridPage}gname=Alignment Changes Locked&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1552574798102
+		},
+		{
+			"name": "New Hires",
+			"content": "{!gridPage}gname=New Hires Locked&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1551197600867
+		},
+		{
+			"name": "Terms",
+			"content": "{!gridPage}gname=Terms Locked&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1551197634521
+		},
+		{
+			"name": "Role Changes",
+			"content": "{!gridPage}gname=Role Change Locked&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1551197638945
+		},
+		{
+			"name": "Team Changes",
+			"content": "{!gridPage}gname=Team Changes Locked&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1551197653612
+		},
+		{
+			"name": "Product Changes",
+			"content": "{!gridPage}gname=Product Changes Locked&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1551197663918
+		},
+		{
+			"name": "Target Changes",
+			"content": "{!gridPage}gname=Target Changes Locked&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1551197673551
+		},
+		{
+			"name": "Sales Managers",
+			"content": "{!gridPage}gname=Sales Managers Locked&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1553025396900
+		},
+		{
+			"name": "Product Specialists",
+			"content": "{!gridPage}gname=Product Specialists Locked&amp;sh=0&amp;sfname=default&amp;fpf=Territory_Master__c&amp;fpv={!Territory_Name__c.id}",
+			"id": 1553025375469
+		}
+	],
+	"id": 1551197600867,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": false,
+	"object": "Territory_Name__c",
+	"height": "750",
+	"showHeader": false,
+	"showSidebar": false,
+	"pageAPIName": "GBTabs_Target_Refinement_Locked"
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

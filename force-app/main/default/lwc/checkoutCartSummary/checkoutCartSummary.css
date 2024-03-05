@@ -1,0 +1,175 @@
+:host {
+    --com-c-cart-summary-label-font-size: var(--dxp-s-text-heading-small-font-size);
+    --com-c-cart-summary-total-label-font-size: var(--dxp-s-text-heading-medium-font-size);
+    --com-c-cart-summary-total-font-weight: var(--dxp-c-strong-text-weight);
+    --com-c-cart-summary-a-color: var(--dxp-g-warning-contrast-2);
+}
+.header-lg{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.ccontent{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.cvalue{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.cartContent {
+    border: 1px solid #E5E5E5;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+    border-radius: 4px;
+    padding: 2rem;
+    min-height: 100px;
+    background-color: #ffffff;
+}
+
+.original-price {
+    display: inline-flex;
+    text-decoration: line-through;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: var(--com-c-cart-summary-original-text-color);
+    font-size: var(--com-c-cart-summary-original-text-size, var(--com-c-cart-summary-label-font-size));
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.subtotal-price  {
+    color: var(--com-c-cart-summary-subtotal-text-color);
+    font-size: var(--com-c-cart-summary-subtotal-text-size, var(--com-c-cart-summary-label-font-size));
+}
+
+.discount-amount  {
+    color: var(--com-c-cart-summary-discount-amount-text-color);
+    font-size: var(--com-c-cart-summary-discount-amount-text-size, var(--com-c-cart-summary-label-font-size));
+}
+
+.shipping-price  {
+    color: var(--com-c-cart-summary-shipping-text-color);
+    font-size: var(--com-c-cart-summary-shipping-text-size, var(--com-c-cart-summary-label-font-size));
+}
+
+.tax-price  {
+    color: var(--com-c-cart-summary-tax-text-color);
+    font-size: var(--com-c-cart-summary-tax-text-size, var(--com-c-cart-summary-label-font-size));
+}
+
+.total-price  {
+    color: var(--com-c-cart-summary-total-text-color);
+    font-size: var(--com-c-cart-summary-total-text-size, --com-c-cart-summary-total-label-font-size);
+    font-weight: var(--com-c-cart-summary-total-font-weight);
+}
+
+.item-name a{
+    color: var(--com-c-cart-summary-a-color) !important;
+}
+.item-name a:focus{
+    color: rgb(140, 200, 220) !important;
+    text-decoration: none !important;
+    transition-duration: .2s !important;
+}
+.item-name a:hover{
+    color: rgb(140, 200, 220) !important;
+    text-decoration: none !important;
+    transition-duration: .2s !important;
+}
+.negotiated-price
+{
+    color: slategrey !important;
+} 
+
+.negotiated-price-inline{
+    display: inline-flex !important;
+}
+
+.Headline3_UntitledSans{
+    line-height: 2.1 !important;
+}
+
+.price .negotiated-price{
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.d-flex{
+    display: flex;
+} 
+.a-c{
+    align-items: center;
+}
+.j-c{
+    justify-content: center;
+}
+
+.checkout-cart-summary{
+    background: rgba(219, 224, 226, 0.20);
+    border-radius: 10px;
+    padding: 32px; 
+    /* position: fixed; */
+    position: fixed;
+    width:29%; 
+    /*margin-top:80px; */
+    margin-left:25px;
+}
+
+.summary-header {
+    padding-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.service-terms{
+    background-color: #E6F1FC;
+    color: var(--subTextColor);
+    line-height: 2.1;
+}
+
+.contact-support{
+    align-content: center;
+    text-align: center;
+}
+/* .contact-support a{
+    color: var(--blueLight);
+} */
+
+.ServiceTerm_Headline4_CiscoSans{
+    font-family: 'CiscoSans';
+    font-size: 12px;
+}
+@media only screen and (max-width:1023px) {
+    .cart-summary{
+        position:relative;
+        width:350px;
+        margin-top:auto;
+        margin-left:0;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .cart-summary{
+        position:relative;
+        width:100%;
+        margin-top:auto;
+        margin-left:0;
+    }    
+}

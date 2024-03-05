@@ -1,0 +1,175 @@
+.header-lg{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;    
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.header-md{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.header-sm{
+    color: var(--zim-vie-primary-navy, #0A2043);
+    font-family: Soleil;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.dummy{
+	color : blue;
+}
+.p{
+	background: pink;
+}
+.c-card{
+	/*width: 450px;*/
+	width:100%;
+	height: 175px;
+	padding:16px;
+	border-radius: 10px;
+	margin-bottom:16px;
+	border: 1px solid var(--zim-vie-neutrals-chrome, #DBE0E2);
+	background: var(--zim-vie-neutrals-white, #FFF);
+
+}
+.c-card b{
+	color: var(--zim-vie-primary-navy, #0A2043);
+	font-family: Soleil;
+	font-size: 20px;
+	font-style: normal;
+	line-height: normal;
+}
+.c-card p{
+	color: var(--zim-vie-primary-navy, #0A2043);
+	font-family: Soleil;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.slds-button{
+	color: #2C9DD8;
+	font-family: Soleil;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.slds-button_brand{
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 25px;
+    border-radius: 30px ;
+	background: #0A2043;
+    color:white;
+}
+.slds-button_brand:hover{
+    /*color:#E6DC19;*/
+}
+
+.slds-button_popup{
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 25px;
+    border-radius: 30px ;
+    color:#0A2043;
+}
+
+.dafault-badge{
+	padding: 5px 12px 4px 12px;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+background: rgba(219, 224, 226, 0.40);
+color: var(--zim-vie-primary-navy, #0A2043);
+font-family: Soleil;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.slds-button_cancel{
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 25px;
+    border-radius: 30px ;
+    color:#0A2043;
+	background-color: white;
+	margin-right: 10px;
+}
+
+.slds-button_delete{
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 25px;
+    border-radius: 30px ;
+    color: white;
+	background-color: #0A2043;
+	margin-left: 10px;
+	margin-top: 15px;
+}
+
+.header_text{
+	color:#0A2043;
+	font-size: 24px;
+	margin-bottom: 15px;
+	text-align: initial;
+}
+
+.body_text{
+	color:#0A2043;
+	font-size: 18px;
+	text-align: initial;
+}
+
+.border_radius{
+	border-radius: 10px!important;
+}
+
+.slds-modal__content{
+    text-align : center;
+}
+
+.window_width{
+	width: fit-content!important;
+}
+
+.c-button{
+	color: var(--zim-vie-primary-navy, #0A2043);
+	font-family: Soleil;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 120%; /* 18px */
+	text-decoration-line: underline;
+}
+.pr{
+	position: relative;
+}
+.pa{
+	position: absolute;
+}
+.tr-0{
+	top:0;
+	right: 16px;
+}
+.br-0{
+	bottom:0;
+	right: 16px;
+}
+.bl-0{
+	bottom:0;
+	left: 16px;
+}
+.h100{
+	height: 100%;
+}

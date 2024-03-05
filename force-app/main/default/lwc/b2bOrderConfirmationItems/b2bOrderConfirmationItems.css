@@ -1,0 +1,17 @@
+.bgColor{
+    background-color: #f0f1f3;
+    border: none;
+    border-radius: 10px;
+}
+.imgHeight{
+    height:100px;
+}
+.fontName{
+    font-weight: 600;
+}
+.textColor{
+    color: #8c1f31;
+}
+.alignPrice{
+    text-align: center;
+}

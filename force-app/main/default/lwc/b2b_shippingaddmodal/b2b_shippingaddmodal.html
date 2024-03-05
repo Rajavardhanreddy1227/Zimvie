@@ -1,0 +1,106 @@
+<template>
+
+  <c-b2b-spinner 
+        if:true={showLoader}
+        message-state={messageState}>
+  </c-b2b-spinner>
+
+  <!-- <template if:true={showLoader}>
+    <lightning-spinner alternative-text={alternativetext} size="large">
+    </lightning-spinner>
+  </template> -->
+
+  <lightning-modal-header label={modalHeaderText} class="heading"></lightning-modal-header>
+  <lightning-modal-body>
+    <div if:true={errors} class="slds-notify slds-notify_alert slds-alert_error">
+      {errors}
+    </div>
+    <lightning-messages></lightning-messages>
+    <div class="slds-p-around_medium">
+      
+    <lightning-record-edit-form
+      object-api-name="ContactPointAddress"
+      onload={handleonloadrecord}
+      onsuccess={handleSuccess}
+      record-id={recordId}
+    >
+      <!--lightning-input-field variant="label-stacked" data-id="name" field-name="Name" > </lightning-input-field>
+      <lightning-input-field variant="label-stacked" data-id="phone" field-name="PhoneNumber" label="Phone" > </lightning-input-field>
+      <lightning-input-field variant="label-stacked" data-id="fname" field-name="First_Name__c" label="First Name" > </lightning-input-field>
+      <lightning-input-field variant="label-stacked" data-id="lname" field-name="Last_Name__c" label="Last Name" > </lightning-input-field>
+      lightning-input-field variant="label-stacked" field-name="IsDefault" label={labels.Makethismydefaultaddress} > </lightning-input-field>
+      <lightning-input-field variant="label-stacked" field-name="IsFavourite__c" label='Is Favorite?' > </lightning-input-field>
+      -->
+
+      <lightning-layout multiple-rows="true">
+        <lightning-layout-item size="12" padding="around-small">
+          <label for="name" class="inputfieldscls"><sup>*</sup>Address Nickname</label>
+          <lightning-input-field  data-id="name" field-name="Name" variant="label-hidden" onchange={handleNickNameChange} required></lightning-input-field>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" padding="around-small">
+          <label for="fname" class="inputfieldscls"><sup>*</sup>First Name</label>
+          <lightning-input-field  data-id="fname" field-name="First_Name__c" variant="label-hidden" required></lightning-input-field>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" padding="around-small">
+          <label for="lname" class="inputfieldscls"><sup>*</sup>Last Name</label>
+          <lightning-input-field  data-id="lname" field-name="Last_Name__c" variant="label-hidden" required></lightning-input-field>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small">
+          <label for="phone" class="inputfieldscls"><sup>*</sup>Phone Number</label>
+          <lightning-input-field  data-id="phone" field-name="PhoneNumber" variant="label-hidden" required></lightning-input-field>
+        </lightning-layout-item>
+      </lightning-layout>
+      </lightning-record-edit-form>
+     <lightning-layout multiple-rows="true">
+      <lightning-layout-item size="12" padding="around-small">
+        <lightning-input-address
+        variant="label-hidden"
+        address-label={labels.Address}
+        street-label={labels.Street}
+        city-label={labels.City}
+        country-label={labels.Country}
+        province-label={labels.State}
+        postal-code-label={labels.PostalCode}
+        street={address.street}
+        city={address.city}
+        country={address.country}
+        province={address.province}
+        postal-code={address.postalcode}
+        address-lookup-label={labels.SearchAddress}
+        country-options={countries}
+        province-options={states}
+        show-address-lookup 
+        onchange={handleAddressChange}
+        style="padding-left:4px;padding-right:5px;-webkit-text-fill-color: #0A2043;"
+        
+        >
+      </lightning-input-address>
+      </lightning-layout-item>
+      <lightning-layout-item size="6" padding="around-small">
+        <lightning-input variant="label-stacked" type="checkbox" label="Make this my default address" data-id="defAdd"></lightning-input>
+      </lightning-layout-item>
+      <lightning-layout-item size="6" padding="around-small">
+        <lightning-input variant="label-stacked" type="checkbox" label="Add this to my favorite addresses" data-id="favAdd"></lightning-input>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" padding="around-small">
+        <!-- <lightning-button
+        class="slds-p-bottom_medium slds-p-right_x-small slds-button_brand"
+        name="update"
+        label={labels.Save}
+        style="float:right;"
+        onclick={submitForm}>
+        </lightning-button> -->
+        <lightning-button
+        variant="brand"
+        class="slds-button_brand"
+        name="update"
+        label={labels.Save}
+        style="float:right;"
+        onclick={submitForm}>
+        </lightning-button>
+      </lightning-layout-item>
+     </lightning-layout>
+    </div>
+    <!--lightning-input type="text" label={labels.Name} variant="label-stacked" onchange={handleChangeAddName}> </lightning-input-->
+  </lightning-modal-body>
+</template>

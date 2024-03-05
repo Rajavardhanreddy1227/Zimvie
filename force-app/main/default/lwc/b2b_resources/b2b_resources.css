@@ -1,0 +1,47 @@
+.resources_ctr{
+    background: #005DA6;
+}
+.re_block{
+    width:30%;
+    float:left;
+    color:#fff;
+
+}
+.re_block_head{
+    /*font-family: 'Soleil';*/
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom:5px;
+
+}
+.re_block ul{
+    padding:0;
+    margin: 0;
+
+}
+.re_block li{
+    padding:0;
+    margin: 0;
+
+}
+.re_block li a{
+   /* font-family: 'Soleil';*/
+    font-style: normal;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 200%;    
+    color: #FFFFFF;
+}
+.clr{
+    clear: both;
+}
+
+.slds-container_x-large {
+    max-width: 112.5rem;
+    margin-bottom: -24px;
+}

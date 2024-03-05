@@ -1,0 +1,205 @@
+<ion-view title="Profile">
+
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <!-- account level can be bronze/silver/gold setting it once here will affect trim and icon color through the rest of the page -->
+
+    <ion-content class="has-header surgeonProfile {{ profile.accountLevelStyleClass }}">
+    	<div class="profileTop">
+    		<div class="row responsive-sm responsive-md photo">
+                <div class="col">
+                    <div class="back">
+                        <span class="backText">< Back</span>
+                    </div>
+                    <img class="blurred" src="css/placeholderProfile.jpg" />
+                    <img class="centered" src="css/placeholderProfile.jpg" />
+                </div>
+    		</div>
+            <div class="row responsive-sm responsive-md titleContainer">
+                <div class="col">
+                    <div class="iconHolder">
+                        <img class="logo" src="css/ZimmerLogoBlue.png" /> 
+                    </div>
+                    <div class="nameContainer">
+                        <h5 class="name">{{ profile.First_Name }} {{ profile.Last_Name }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profileMain">
+            <div class="row account">
+                <div class="col col-10">
+                    <span class="icon fa fa-star"></span> 
+                </div>
+                <div class="col col-offset-2 accountContainer">
+                    <span class="smallText accountHeader">Rating</span>
+                    <div class="levelContainer">
+                        <span class="icon fa fa-circle"></span>
+                        <span class="level">{{ profile.accountLevel }} Account</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row address">
+                <div class="col col-10">
+                    <span class="icon fa fa-map-marker"></span> 
+                </div>
+                <div class="col col-offset-2 addressContainer">
+                    <span class="addressPart">{{ profile.Address_1 }}</span>
+                    <span class="addressPart">{{ profile.Address_2 }}</span>
+                    <span class="addressPart">{{ profile.City }}</span>
+                    <span class="addressPart">{{ profile.Country }}</span>            
+                </div>
+            </div>
+
+        	<div class="relatedObjects">
+        		<div class="row relatedContainer">
+                    <div class="col col-center">
+                        <span class="icon fa fa-pie-chart"></span> 
+                    </div>
+                    <div class="col col-66 col-offset-2">
+                        <span class="name">Product Usage</span>
+                    </div>
+                    <div class="col col-offset-5 center">
+                        <span class="badge badge-assertive">125</span>
+                    </div>
+                    <div class="col right">
+                        <span class="caret"> > </span>
+                    </div>
+                </div>
+                <div class="row relatedContainer">
+                    <div class="col">
+                        <span class="icon fa fa-dollar"></span> 
+                    </div>
+                    <div class="col col-66 col-offset-2">
+                        <span class="name">Sunshine Payments</span>
+                    </div>
+                    <div class="col col-offset-5 center">
+                        <span class="badge badge-assertive">1</span>
+                    </div>
+                    <div class="col right">
+                        <span class="caret"> > </span>
+                    </div>
+                </div>
+                <div class="row relatedContainer">
+                    <div class="col">
+                        <span class="icon fa fa-bar-chart"></span> 
+                    </div>
+                    <div class="col col-66 col-offset-2">
+                        <span class="name">Activites</span>
+                    </div>
+                    <div class="col col-offset-5 center">
+                        <span class="badge badge-assertive">162</span>
+                    </div>
+                    <div class="col right">
+                        <span class="caret"> > </span>
+                    </div>
+                </div>
+                <div class="row relatedContainer">
+                    <div class="col">
+                        <span class="icon fa fa-calendar"></span> 
+                    </div>
+                    <div class="col col-66 col-offset-2">
+                        <span class="name">Schedules</span>
+                    </div>
+                    <div class="col col-offset-5 center">
+                        <span class="badge badge-assertive">12</span>
+                    </div>
+                    <div class="col right">
+                        <span class="caret"> > </span>
+                    </div>
+                </div>
+                <div class="row relatedContainer">
+                    <div class="col">
+                        <span class="icon fa fa-heart"></span> 
+                    </div>
+                    <div class="col col-66 col-offset-2">
+                        <span class="name">Healthcare Facility Rel.</span>
+                    </div>
+                    <div class="col col-offset-5 center">
+                        <span class="badge badge-assertive">12</span>
+                    </div>
+                    <div class="col right">
+                        <span class="caret"> > </span>
+                    </div>
+                </div>
+                <div class="row relatedContainer">
+                    <div class="col">
+                        <span class="icon fa fa-bar-chart"></span> 
+                    </div>
+                    <div class="col col-66 col-offset-2">
+                        <span class="name">Market Usage</span>
+                    </div>
+                    <div class="col col-offset-5 center">
+                        <span class="badge badge-assertive">12</span>
+                    </div>
+                    <div class="col right">
+                        <span class="caret"> > </span>
+                    </div>
+                </div>
+                <div class="row relatedContainer">
+                    <div class="col">
+                        <span class="icon fa fa-bullhorn"></span> 
+                    </div>
+                    <div class="col col-66 col-offset-2">
+                        <span class="name">Native Campaigns</span>
+                    </div>
+                    <div class="col col-offset-5 center">
+                        <span class="badge badge-assertive">12</span>
+                    </div>
+                    <div class="col right">
+                        <span class="caret"> > </span>
+                    </div>
+                </div>
+                <div class="row relatedContainer">
+                    <div class="col">
+                        <span class="icon fa fa-money"></span> 
+                    </div>
+                    <div class="col col-66 col-offset-2">
+                        <span class="name">Payor</span>
+                    </div>
+                    <div class="col col-offset-5 center">
+                        <span class="badge badge-assertive">12</span>
+                    </div>
+                    <div class="col right">
+                        <span class="caret"> > </span>
+                    </div>
+                </div>
+                <div class="row relatedContainer">
+                    <div class="col">
+                        <span class="icon fa fa-users"></span> 
+                    </div>
+                    <div class="col col-66 col-offset-2">
+                        <span class="name">Peer Networks</span>
+                    </div>
+                    <div class="col col-offset-5 center">
+                        <span class="badge badge-assertive">12</span>
+                    </div>
+                    <div class="col right">
+                        <span class="caret"> > </span>
+                    </div>
+                </div>
+                <div class="row relatedContainer">
+                    <div class="col">
+                        <span class="icon fa fa-comments-o"></span> 
+                    </div>
+                    <div class="col col-66 col-offset-2">
+                        <span class="name">Public Engagements</span>
+                    </div>
+                    <div class="col col-offset-5 center">
+                        <span class="badge badge-assertive">12</span>
+                    </div>
+                    <div class="col right">
+                        <span class="caret"> > </span>
+                    </div>
+                </div>
+        	</div>
+        </div>
+
+    </ion-content>
+
+</ion-view>
+

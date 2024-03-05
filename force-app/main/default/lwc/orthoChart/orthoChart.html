@@ -1,0 +1,21 @@
+<template>
+  <template if:true={chartShown}>
+    <div class="filter-bar slds-grid slds-grid_align-end">
+      <div class="slds-col">
+        <template for:each={filters} for:item="filter">
+          <div key={filter.field}>
+            <c-ortho-chart-filter
+              filter={filter}
+              onfilterchange={handleFilterChange}
+            ></c-ortho-chart-filter>
+          </div>
+        </template>
+      </div>
+    </div>
+  </template>
+  <div class="ortho-chart slds-align_absolute-center">
+    <!-- Chart Container -->
+    <canvas class="chart" height="240" lwc:dom="manual"></canvas>
+  </div>
+  <c-ortho-link url={reportLink} show={chartShown} button-text={linkText}></c-ortho-link>
+</template>

@@ -1,0 +1,2 @@
+.modalBackground{filter:Alpha(Opacity=50); -moz-opacity:0.50; opacity:0.50; background-color:#FFFFFF; position:absolute; left:0px; top:0px; z-index:450;} 
+.modalContainer{position:absolute; z-index:500; }

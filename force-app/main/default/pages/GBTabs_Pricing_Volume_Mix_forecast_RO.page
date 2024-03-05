@@ -1,0 +1,31 @@
+<apex:page standardController="Business_Plan__c" showHeader="false" sidebar="false" title="Pricing Volume Mix forecast RO">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_Pricing_Volume_Mix_forecast_RO" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "Pricing Volume Mix forecast RO",
+	"tabs": [
+		{
+			"name": "Pricing Forecast",
+			"content": "{!gridPage}gname=Pricing forecast RO&amp;sh=0&amp;sfname=default&amp;fpf=Business_Plan__c&amp;fpv={!Business_Plan__c.id}",
+			"id": 1569250952974
+		},
+		{
+			"name": "Volume/Mix Forecast",
+			"content": "{!gridPage}gname=Volume Mix Forecast RO&amp;sh=0&amp;sfname=default&amp;fpf=Business_Plan__c&amp;fpv={!Business_Plan__c.id}",
+			"id": 1569251006432
+		}
+	],
+	"id": 1569250952974,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": false,
+	"object": "Business_Plan__c",
+	"height": "750",
+	"showHeader": false,
+	"showSidebar": false
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

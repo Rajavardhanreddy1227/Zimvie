@@ -1,0 +1,108 @@
+<apex:page sidebar="false" showheader="false" standardStylesheets="false" title="Surgeon 360">
+<ion-view title="Search Form">
+
+    <ion-content class="search">
+        <div class="row photo">
+            <img src="{!URLFOR($Resource.surgeon_360_styling, 'css/surgeon.png')}" />
+        </div>
+        <div class="row titleContainer">
+            <div class="blueSquare"></div>
+            <div class="triangleRight"></div>
+            <div>
+                <img class="logo" src="{!URLFOR($Resource.surgeon_360_styling, 'css/zlogo-white.svg')}" /> 
+                <h5 class="title">Welcome to Surgeon 360</h5>
+            </div>
+        </div>
+
+        <form novalidate="" class="css-form">
+            <div class="row searchContainer responsive-sm responsive-md responsive-lg">
+                <div class="col col-75 inputContainer">
+                    <span class="icon fa fa-search"></span>
+                    <input ng-model="search.criteria.firstName" class="searchInput" type="text" autocorrect="off" placeholder="Search by surgeon first name" nm-minlength="1" max-length="200" />
+                </div>
+            </div>
+            <div class="row searchContainer responsive-sm responsive-md responsive-lg">
+                <div class="col col-75 inputContainer">  
+                    <span class="icon fa fa-search"></span>              
+                    <input ng-model="search.criteria.lastName" class="searchInput" type="text" autocorrect="off" placeholder="Surgeon last name" nm-minlength="1" max-length="200" />
+                </div>
+            </div>
+            <div class="row searchContainer responsive-sm responsive-md responsive-lg">
+                <div class="col col-75 inputContainer">  
+                    <span class="icon fa fa-search"></span>
+                    <input ng-model="search.criteria.city" class="searchInput" type="text" autocorrect="off" placeholder="City" nm-minlength="1" max-length="200" />
+                </div>
+            </div>
+            <div class="row searchContainer sec">
+                <div class="col col-33 inputContainer">
+                    <span class="icon fa fa-search"></span>
+                    <input ng-model="search.criteria.state" class="searchInput" type="text" autocorrect="off" placeholder="State" nm-minlength="1" max-length="200" />
+                </div>
+                <div class="col col-33 inputContainer"> 
+                    <span class="icon fa fa-search"></span>               
+                    <input ng-model="search.criteria.zip" class="searchInput" type="text" autocorrect="off" placeholder="ZIP" nm-minlength="1" max-length="200" />
+                </div>
+                <div class="col col-offset-5  miniSort">
+                    <label class="sort-wrapper" ng-if="results.length > 0">
+                        <span class="icon fa fa-sort-amount-desc"></span>
+                        <select class="searchSort" name="searchSort" ng-model="data.resultsSort" ng-options="o.label for o in sortOptions | orderBy: o.label track by o.value">
+                        </select>
+                    </label>
+                    <button type="submit" class="button button-small button-light search" style="position: absolute; left: -5000px;" ng-click="doSearch(search.criteria);">Search</button>
+                </div>
+                    <!--
+                    <button class="button button-small button-light clear" ng-click="search.criteria=search.defaultCriteria;clear();">Clear</button>
+                    -->
+            </div>
+        </form>
+
+        <div class="row intro" ng-if="searchAttempted == true && results.length == 0">
+             <div class="col">
+                <span class="icon fa fa-info-circle"></span> 
+            </div>
+            <div class="col col-90">
+                <p class="blurb">No results were found.</p>
+            </div>
+        </div>
+
+        <div class="row intro" ng-if="searchFailure">
+            <div class="col">
+                <span class="icon fa fa-info-circle"></span> 
+            </div>
+            <div class="col col-90">
+                <p class="blurb">Sorry, an error occured during search.</p>
+            </div>
+        </div>
+
+        <ion-list>
+            <ion-item ng-repeat="result in results | orderBy: data.resultsSort.value" class="item searchResult">
+              <a style="color: inherit; text-decoration: inherit;" href="#" ng-click="$event.preventDefault(); goToProfile(result.id);">
+                <div class="row">
+                    <div class="col">
+                        <div class="thumb-container">
+                            <img class="thumb" src="{!URLFOR($Resource.surgeon_360_styling, 'css/surgeon-placeholder.png')}" ng-if="result.photo === 'placeholder'" />
+                            <img class="thumb" src="{{ result.photo }}" ng-if="result.photo !== 'placeholder'" />
+                        </div>
+                        <div class="text-container">
+                            <h3 class="name">{{ result.First_Name }} {{ result.Last_Name }}</h3>
+                            <span class="address">{{ result.City }}, {{ result.State }} {{ result.Country }}</span>
+                        </div>
+                    </div>
+                </div>
+              </a>
+            </ion-item>
+        </ion-list>
+
+        <div class="row">
+            <div class="col get-more-container">
+                <button ng-if="results.length >= 25" class="get-more button button-small button-light" ng-click="addPage(search.criteria)">Get More Results</button>
+            </div>
+        </div>
+
+        <div id="spinner-box">
+            <img id="spinner" src="{!URLFOR($Resource.surgeon_360_styling, '/css/img/spinner.gif')}" ng-show="loading" /> 
+        </div>
+
+    </ion-content>
+</ion-view>
+</apex:page>

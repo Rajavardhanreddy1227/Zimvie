@@ -1,0 +1,299 @@
+<apex:page standardController="GDL_Profile__c" extensions="GdlManageWebsiteController" showHeader="false" sidebar="false" standardStylesheets="false">
+<apex:stylesheet value="{!$Resource.zui}/css/bootstrap.min.css"/>
+<apex:stylesheet value="{!$Resource.zui}/css/zimmer-bootstrap-overrides.css"/>
+<apex:stylesheet value="{!$Resource.zui}/css/bootstrap-responsive.min.css"/>
+<apex:stylesheet value="{!$Resource.zui}/css/datepicker.css"/>
+<apex:includeScript value="{!$Resource.zui}/js/jquery-1.7.1.min.js"/>
+<apex:includeScript value="{!$Resource.zui}/js/bootstrap.min.js"/>
+<apex:includeScript value="{!$Resource.tiny_mce}/jquery.tinymce.js"/>
+<apex:includeScript value="{!$Resource.zui}/js/bootstrap-datepicker.js"/>
+
+<script type="text/javascript"> 
+$(document).ready(function(){
+	$(".tinymcetextarea").tinymce({
+		script_url : "{!$Resource.tiny_mce}/tiny_mce.js",
+		theme : "advanced",
+		theme_advanced_buttons1 : "bold,italic,underline,formatselect,charmap,separator,cut,copy,paste,undeo,redo,separator,removeformat",
+		theme_advanced_blockformats : "p,h5"
+	});
+	$(".hiddenselect > option").each(function(){
+		if (this.value.length > 0){
+			var div = jQuery('<div/>',{
+				id : this.value,
+				"class": "item"
+			});
+			if ($(".hiddenselect").val() == this.value){
+				$(div).addClass("active");
+			}
+			jQuery('<img/>',{
+				src : "{!$Resource.distributor_images}/" + this.value
+			}).appendTo(div);
+			$(div).appendTo(".carousel-inner");
+		}
+	});
+	//
+	$(".carousel").carousel("pause");
+	$("#imgCarousel").bind("slid", function(){
+		$(".hiddenselect").val($(".active").attr("id"));
+	});
+	$("#linkModal").modal({
+		show : false
+	});	
+	$(".dp").datepicker();
+	$("[id$=newEventStartDate]").prop("disabled",true);
+	$("[id$=newEventEndDate]").prop("disabled",true);
+});
+
+function validateLink(){
+	$("[id$=newLinkTitle]").parent().removeClass("error");
+	$("[id$=newLinkTitle]").siblings(".help-block").text("The text that will be displayed on the page for the link");
+	$("[id$=newLinkTarget]").parent().removeClass("error");
+	$("[id$=newLinkTarget]").siblings(".help-block").text("The address of the page where the link should take the user");
+	var valid = true;
+	if ($("[id$=newLinkTitle]").val() == ""){
+		$("[id$=newLinkTitle]").parent().addClass("error");
+		$("[id$=newLinkTitle]").siblings(".help-block").text("The link text is required");
+		valid = false;
+	}
+	var urlregex = new RegExp("^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]*)?$");
+	if(($("[id$=newLinkTarget]").val() == "") || !urlregex.test($("[id$=newLinkTarget]").val())){
+		$("[id$=newLinkTarget]").parent().addClass("error");
+		$("[id$=newLinkTarget]").siblings(".help-block").text("A valid link URL is required.");
+		valid = false;
+	}
+ 	if (valid){
+ 		$("#linkModal").modal("hide");
+ 	}
+ 	return valid;
+}
+function validateEvent(){
+	$("[id$=newEventTitle]").parent().removeClass("error");
+	$("[id$=newEventTitle]").siblings(".help-block").text("The name of the event");
+	$("[id$=newEventDate]").parent().parent().removeClass("error");
+	$("[id$=newEventDate]").parent().siblings(".help-block").text("The date of the event");
+	var valid = true;
+	if ($("[id$=newEventTitle]").val() == ""){
+		$("[id$=newEventTitle]").parent().addClass("error");
+		$("[id$=newEventTitle]").siblings(".help-block").text("The event name is required");
+		valid = false;
+	}
+	if ($("[id$=newEventStartDate]").val() == ""){
+		$("[id$=newEventStateDate]").parent().parent().addClass("error");
+		$("[id$=newEventStartDate]").parent().siblings(".help-block").text("The start date is required");
+		valid = false;
+	}
+	if ($("[id$=newEventEndDate]").val() == ""){
+		$("[id$=newEventEndDate]").parent().parent().addClass("error");
+		$("[id$=newEventEndDate]").parent().siblings(".help-block").text("The end date is required");
+		valid = false;
+	}
+	if (valid){
+		$("#eventModal").modal("hide");
+	}
+	return valid;
+}
+
+function clearFormElements(element){
+	$(element).find(':input').each(function(){
+		switch (this.type) {
+			case 'password':
+			case 'text':
+			case 'select-multiple':
+			case 'select-one':
+			case 'text':
+			case 'textarea':
+				$(this).val('');
+				break;
+			case 'checkbox':
+			case 'radio':
+				this.checked = false;
+		}
+	});
+}
+
+</script>
+<apex:form >
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="brand" href="#">Distributor Site Maintenance: {!profile.Name__c}</a>
+			<div class="nav-collapse">
+				<ul class="nav pull-right">
+					<li>
+						<p class="navbar-text">Last Modified: {!lastSaved} &nbsp;&nbsp;</p>
+					</li>
+					<li>
+						<apex:commandButton action="{!save}" value="Save" styleClass="btn btn-primary"/>&nbsp;&nbsp;
+					</li>
+					<li>
+						<input type="button" class="btn" value="Close" onclick="window.close()"/>		
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<apex:pageMessages />
+	<div class="row">
+		<div class="span11 alert alert-warning">
+			<span><strong>Changes made to distributor sites are live immediately!</strong>  Please perform due diligence to ensure all content is correct and accurate before saving.</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span7">
+			<div class="well">
+				<h4>Image</h4>
+				<div class="alert alert-info">
+					<span>Use the arrows to choose an image that will be used as the main image on the distributor site.</span>
+				</div>
+				<div id="imgCarousel" class="carousel slide" style="width:460px;">
+				<!-- <div id="imgCarousel" class="carousel slide" style="width:494px"> -->
+					<div class="carousel-inner"></div>
+					<a class="carousel-control left" href="#imgCarousel" data-slide="prev">&lsaquo;</a>
+					<a class="carousel-control right" href="#imgCarousel" data-slide="next">&rsaquo;</a>
+				</div>
+			  	<apex:inputField id="image" label="Image"  value="{!profile.Image__c}" styleClass="hiddenselect" style="display:none"/>
+		  	</div>	
+		  	<div class="well">
+		  		<h4>Main Content</h4>
+				<div class="alert alert-info">
+					<span>The text below will be shown in the main content area of the distributor site.</span>
+				</div>   
+			  	<apex:inputTextarea id="content" label="Content" value="{!profile.Content__c}" style="width:460px;height:300px;" styleClass="tinymcetextarea"/><br/>
+		  	</div>
+		</div>  
+		
+		<div class="span4">
+			<div class="well">
+				<h4>Offices</h4>
+				<div class="alert alert-info">
+					<span>This list of office locations is driven from the distributor account hierarchy maintained in Salesforce.com by the Sales Operations team.</span>
+				</div>		
+				<apex:dataTable value="{!locations}" var="location" styleClass="table">
+					<apex:column >
+						<strong>{!location.Name}</strong>
+					</apex:column>
+				</apex:dataTable>
+			</div>
+			<div class="well">
+				<h4>Local Events</h4>
+				<div class="alert alert-info">
+					<span>This list of events will be displayed along the right hand side of the distributor site.</span>
+				</div>	
+			
+				<apex:dataTable value="{!events}" var="item" id="events" styleClass="table">
+					<apex:facet name="footer"><a data-toggle="modal" href="#eventModal" class="pull-right" title="Add a new event"><i class="icon-plus-sign"></i>New Event</a></apex:facet>
+					<apex:column >
+						<apex:commandLink action="{!removeEvent}" rerender="events" title="Remove this event">
+							<i class="icon-minus-sign"></i>
+							<apex:param name="index" value="{!item.index}"/>
+						</apex:commandLink>
+					</apex:column>
+					<apex:column >
+						<apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+							<apex:param value="{!item.event.StartDate__c}"/>
+						</apex:outputText> -
+						<apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+							<apex:param value="{!item.event.EndDate__c}"/>
+						</apex:outputText>
+					</apex:column>
+					<apex:column >
+						<apex:outputText value="{!item.event.Title__c}"/> 
+					</apex:column>
+				</apex:dataTable>
+			</div>
+			<div class="well">
+				<h4>Links</h4>
+				<div class="alert alert-info">
+					<span>This list of links will be displayed along the right hand side of the distributor site.</span>
+				</div>		
+				
+				<apex:dataTable value="{!links}" var="item" id="links" styleClass="table"> 
+					<apex:facet name="footer">
+						<a data-toggle="modal" href="#linkModal" class="pull-right" title="Add a new link"><i class="icon-plus-sign"></i>New Link</a>
+					</apex:facet>
+					<apex:column >
+						<apex:commandLink action="{!removeLink}" rerender="links" title="Remove this link">
+							<i class="icon-minus-sign"></i>
+							<apex:param name="index" value="{!item.index}"/>
+						</apex:commandLink>
+					</apex:column>
+					<apex:column style="width:100%" >
+						<apex:outputLink value="{!item.link.Target__c}" target="_blank">
+							<apex:outputText value="{!item.link.Title__c}"/>
+						</apex:outputLink>
+					</apex:column>
+				</apex:dataTable>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="linkModal" class="modal hide">
+	<div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal">×</button>
+	    <h3>New Link</h3> 
+	</div>
+	<apex:outputPanel id="linkForm" layout="block" styleClass="modal-body">
+	<!-- <div class="modal-body"> -->
+		<div class="control-group">
+			<apex:outputLabel for="newLinkTitle" value="Text"/>
+			<apex:inputText id="newLinkTitle" value="{!newLink.Title__c}"/>
+			<p class="help-block">The text that will be displayed on the page for the link</p>
+		</div>
+		<div class="control-group">
+			<apex:outputLabel for="newLinkTarget" value="URL"/>
+			<apex:inputText id="newLinkTarget" value="{!newLink.Target__c}"/>
+			<p class="help-block">The address of the page where the link should take the user</p>
+		</div>
+	<!--  </div> -->
+	</apex:outputPanel>
+	<div class="modal-footer">
+		<apex:commandButton action="{!addLink}" value="Add" rerender="links, linkForm" onclick="validateLink()" styleClass="btn btn-primary"/>
+		<input type="button" value="Cancel" onclick="clearFormElements('#linkModal')" data-dismiss="modal" id="btnCancelNewLink" class="btn"/>
+	</div>
+</div>
+
+<div id="eventModal" class="modal hide">
+	<div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal">×</button>
+	    <h3>New Event</h3>
+	</div>
+	<apex:outputPanel id="eventForm" layout="block" styleClass="modal-body">
+	<!-- <div class="modal-body"> -->
+		<div class="control-group">
+			<apex:outputLabel for="newEventTitle" value="Name"/>
+			<apex:inputText id="newEventTitle" value="{!newEvent.Title__c}"/>
+			<p class="help-block">The name of the event</p>
+		</div>
+		<div class="control-group">
+			<apex:outputLabel for="newEventStartDate" value="Start Date"/>	
+			<div class="input-append date dp" data-date-format="mm/dd/yyyy" data-date="{!todaysDate}">
+				<apex:inputText id="newEventStartDate" value="{!newEvent.StartDate__c}" styleClass="span2"/>
+				<span class="add-on"><i class="icon-th"></i></span>
+			</div>
+			<p class="help-block">The starting date of the event</p>
+		</div>
+		<div class="control-group">
+			<apex:outputLabel for="newEventEndDate" value="End Date"/>	
+			<div class="input-append date dp" data-date-format="mm/dd/yyyy" data-date="{!todaysDate}">
+				<apex:inputText id="newEventEndDate" value="{!newEvent.EndDate__c}" styleClass="span2"/>
+				<span class="add-on"><i class="icon-th"></i></span>
+			</div>
+			<p class="help-block">The ending date of the event</p>
+		</div>
+		<div class="control-group">
+			<apex:outputLabel for="newEventDescription" value="Description"/>
+			<apex:inputTextarea id="newEventDescription" value="{!newEvent.Description__c}"/>
+			<p class="help-block">A brief description of the event</p>
+		</div>
+	<!--  </div> -->
+	</apex:outputPanel>
+	<div class="modal-footer">
+		<apex:commandButton action="{!addEvent}" value="Add" rerender="events, eventForm" onclick="validateEvent()" styleClass="btn btn-primary"/>
+		<input type="button" value="Cancel" onclick="clearFormElements('#eventModal')" data-dismiss="modal" id="btnCancelNewEvent" class="btn"/>
+	</div>
+</div>
+</apex:form>
+</apex:page>

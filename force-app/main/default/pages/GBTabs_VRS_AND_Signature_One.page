@@ -1,0 +1,41 @@
+<apex:page standardController="Task" showHeader="false" sidebar="false" title="VRS_AND_Signature_One">
+	<GBLite:TabbedPageComponent pageAPIName="GBTabs_VRS_AND_Signature_One" customJsIds="" customCssIds="">
+	<GBLite:EmbedComponent baseGridUrl="{!$Page.GBLite__Grid}" />
+		<script>
+			var pageDefinition = {
+	"name": "VRS_AND_Signature_One",
+	"tabs": [
+		{
+			"name": "VRS Open",
+			"content": "{!gridPage}gname=VRS Open&amp;sh=0&amp;sfname=default",
+			"id": 1608118968963
+		},
+		{
+			"name": "VRS Closed",
+			"content": "{!gridPage}gname=VRS Closed&amp;sh=0&amp;sfname=default",
+			"id": 1608118987013
+		},
+		{
+			"name": "Signature One Open",
+			"content": "{!gridPage}gname=Signature One Open&amp;sh=0&amp;sfname=default",
+			"id": 1608118987701
+		},
+		{
+			"name": "Signature One Closed",
+			"content": "{!gridPage}gname=Signature One Closed&amp;sh=0&amp;sfname=default",
+			"id": 1608118988402
+		}
+	],
+	"id": 1608118968963,
+	"selectedCustomCSSIds": [],
+	"selectedCustomJSIds": [],
+	"description": "",
+	"globalButtons": true,
+	"object": "Task",
+	"height": "",
+	"showHeader": false,
+	"showSidebar": false
+};
+		</script>
+	</GBLite:TabbedPageComponent>
+</apex:page>

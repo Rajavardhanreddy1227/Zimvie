@@ -1,0 +1,17 @@
+<template>
+
+     
+        <template if:true={showloaderPo}>
+            <!-- <c-custom_spinner></c-custom_spinner> -->
+            <c-b2b-spinner message-state="We are currently working on processing your order..."></c-b2b-spinner>
+        </template>
+    <div class="p-order">
+        <lightning-input
+            name="po-number"
+            label={labels.PurchaseOrder}
+            onchange={handlePOInput}>
+    </lightning-input>
+
+        
+    </div>
+</template>

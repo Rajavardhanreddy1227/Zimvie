@@ -1,0 +1,133 @@
+<template>
+	<template if:true={loader}>
+        <c-custom_spinner></c-custom_spinner>
+    </template>
+	<div class="slds-grid slds-gutters">
+		<div class="slds-col slds-size_6-of-12 slds-p-bottom_large">
+			<div class="header-lg">Members</div>
+		</div>
+		<div class="slds-col slds-size_6-of-12 slds-text-align_right slds-p-bottom_large">
+			<lightning-button variant="brand" label={labels.Add_Member} onclick={handleAddMember}></lightning-button>
+		</div>
+	</div>
+	<!--div>
+		<lightning-datatable key-field="id" 
+							hide-checkbox-column="true"
+							show-row-number-column="true"
+							onrowaction={handleRowAction} 
+							data={records} 
+							columns={columns}>
+		</lightning-datatable>
+	</div-->
+	<!--Responsive Table-->
+	<div style="position:relative; padding:10px 0">
+		<div class="my-res-table">
+			<table class="slds-table slds-table_cell-buffer slds-table_bordered c-table" aria-labelledby="element-with-table-label other-element-with-table-label" 
+			    style="border: 1px solid #DFE3E5;border-radius: 15px;">
+				<thead>
+					<tr class="slds-line-height_reset">
+						<th class="th-left-raidus" scope="col" style="width:25px">
+							<div class="slds-truncate" title="Opportunity Name">SNo.</div>
+						</th>
+						<th class="" scope="col"  style="width:25%">
+							<div class="slds-truncate" title="Opportunity Name">Name</div>
+						</th>
+						<th class="" scope="col" style="width:35%">
+							<div class="slds-truncate" title="Account Name">Email</div>
+						</th>
+						<th class="" scope="col">
+							<div class="slds-truncate" title="Close Date">Status</div>
+						</th>
+						<th class="th-right-raidus"  scope="col">
+							<div class="slds-truncate" title="Stage">Actions</div>
+						</th>
+					</tr>
+				</thead>
+				<tbody> 
+					<template for:each={records} for:item="conItem" >
+						<tr key={conItem.Id}>
+							<td data-key={conItem.indexKey}>{conItem.index}</td>
+							<td data-key={conItem.nameKey}>{conItem.Name}</td>
+							<td class="slds-icon slds-icon-text-default slds-icon_x-small">{conItem.Email}</td>
+							<td data-key={conItem.ActiveKey}>{conItem.IsActive}</td>
+							<!-- <td>{conItem.IsActive}</td> -->
+							<td><button class="slds-button" data-key={conItem.index} data-id={conItem.Id} onclick={handleActionOnRow}>{conItem.btnLabel}</button></td>
+							<td data-key={conItem.deactivateLinkKey} style="display:none">{conItem.deactivateLink}</td>
+							<td data-key={conItem.idKey} style="display:none">{conItem.Id}</td>
+						</tr>
+					</template>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<template if:true={isConfirmBox}>
+		<section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-02"
+			class="slds-modal slds-fade-in-open">
+			<div class="slds-modal__container">
+				<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={handleCancelConfirmation}>
+      				<svg class="slds-button__icon slds-button__icon_large slds-button_icon-inverse" aria-hidden="true">
+        				<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+      				</svg>
+					  <lightning-icon
+					icon-name="utility:close"
+					size="small"
+					class="slds-button_icon-inverse"
+					alternative-text="Cancel and close"
+				>
+				</lightning-icon>
+      				<span class="slds-assistive-text">Cancel and close</span>
+    			</button>
+				<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+					{actionMsg}
+				</div>
+				<div class="slds-modal__footer">
+					<button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={handleCancelConfirmation}>Cancel</button>
+					<button class="slds-button slds-button_brand" onclick={toggleUserActivation}>Ok</button>
+				  </div>
+			</div>
+		</section>
+		<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+		<!-- Invoke a Screen flow in LWC -->
+
+	</template>
+	<template if:true={isAddMember}>
+		<section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
+			class="slds-modal slds-fade-in-open">
+			<div class="slds-modal__container">
+				<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={handleClose}>
+      				<svg class="slds-button__icon slds-button__icon_large slds-button_icon-inverse" aria-hidden="true">
+        				<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+      				</svg>
+					  <lightning-icon
+					icon-name="utility:close"
+					size="small"
+					class="slds-button_icon-inverse"
+					alternative-text="Cancel and close"
+				>
+				</lightning-icon>
+      				<span class="slds-assistive-text">Cancel and close</span>
+    			</button>
+				<!--<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={handleClose}>
+					<lightning-icon
+					icon-name="utility:close"
+					size="small"
+					alternative-text="Cancel and close"
+				>
+				</lightning-icon>
+				<span class="slds-assistive-text">Cancel and close</span>
+				</button>-->
+				<div class="slds-modal__header">
+					<h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate" tabindex="-1">{labels.Member_Details}</h1>
+				</div>
+				<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+					<lightning-flow flow-api-name={flowApiName} flow-input-variables={flowInputVariables}
+						onstatuschange={handleFlowStatusChange}>
+					</lightning-flow>
+				</div>
+			</div>
+		</section>
+		<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+		<!-- Invoke a Screen flow in LWC -->
+
+	</template>
+</template>

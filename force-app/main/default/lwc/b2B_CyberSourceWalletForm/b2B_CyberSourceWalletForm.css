@@ -1,0 +1,18 @@
+.spins::after {
+    position: absolute;
+    content: "Please wait while loading";
+    width: 100%;
+    text-align: center;
+    top: calc(50% + 3em);
+    font-weight: bold;
+  }
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .mobileTable {
+      width: 350px;
+      overflow: auto;
+    }
+  }
+  .iframeBorder {
+    border: 0px;
+  }

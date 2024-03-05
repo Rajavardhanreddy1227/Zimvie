@@ -1,0 +1,87 @@
+.layout-contiainer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.aside-section {
+    flex: 1 0 20%;
+    max-width: 15rem;
+}
+
+.main-section {
+    flex: 1 0 80%;
+}
+.filter-label{
+    font-size: 14px;
+    font-weight: 700;
+    color:#0A2043;
+}
+.clear-label{
+    font-size: 14px;
+    font-weight: 100;
+    color:#0A2043;
+}
+.clear{
+    color: var(--zim-vie-primary-navy, #0A2043);
+font-family: Soleil;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 18px */
+text-decoration-line: underline;
+}
+.filter{
+    color: var(--zim-vie-primary-navy, #0A2043);
+font-family: Soleil;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.count-label{
+    font-size: 14px;
+    font-weight: 100;
+    color:#0A2043;
+
+}
+.product-list{
+    margin:0 10px 0 0;
+}
+.product-list .image-area img{
+    border-radius: 10px !important;
+    background: #F8F9F9 !important;
+}
+.selling-price{
+    font-size: 14px;
+    font-weight: 100;
+    color:#0A2043;
+}
+
+.filters-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filters-header .clear-all-button {
+    align-self: flex-end;
+}
+
+.blue-icon{
+    --sds-c-icon-color-foreground-default: #005dae !important;
+}
+
+/* 
+    small form factor 
+    SLDS media query reference: https://www.lightningdesignsystem.com/design-tokens/#category-media-query
+*/
+@media only screen and (max-width: 47.9375em) {
+    .layout-contiainer {
+        flex-direction: column;
+    }
+
+    .aside-section {
+        max-width: 100%;
+    }
+}

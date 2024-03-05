@@ -1,0 +1,15 @@
+<template>
+  <div class="slds-box slds-align_absolute-center ortho-kpi">
+      <div class="slds-grid slds-grid_vertical slds-text-align_center" >
+        <template if:true={currentAndTarget}>
+          <div
+            class="slds-col slds-text-color_inverse data-line slds-p-bottom_small" >{prd}<br/>
+            {current}% to {targettxt}
+          </div>
+          <!--<div class="slds-col detail-line slds-text-body_small">
+            {description}
+          </div>-->
+        </template>
+      </div>
+  </div>
+</template>
